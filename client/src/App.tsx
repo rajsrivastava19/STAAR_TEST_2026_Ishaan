@@ -187,7 +187,9 @@ function App() {
     if (entry.status !== 'playable') return;
 
     const response = await fetch(`${import.meta.env.BASE_URL}data/exams/${entry.dataFile}`);
-    const json = (await response.json()) as ExamBundle;
+    const jsonText = await response.text();
+    const processedText = jsonText.replace(/"\/images\//g, `"${import.meta.env.BASE_URL}images/`);
+    const json = JSON.parse(processedText) as ExamBundle;
     setExam(json);
 
     const saved = localStorage.getItem(`math-staar-ishaan:${json.id}`);
