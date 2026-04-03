@@ -20,16 +20,16 @@ const SCENE_H = 1024;
 const HEADER_H = 84; // approx header height in px
 
 const sceneLayout = {
-  titleCard: { x: 120, y: 30, w: 760, h: 260 },
-  lake:      { x: 430, y: 340, w: 540, h: 200 },
+  titleCard: { x: 140, y: 25, w: 680, h: 260 },
+  lake:      { x: 380, y: 370, w: 560, h: 210 },
   levels: [
-    { x: 690, y: 175 },   // L1: Top center
-    { x: 960, y: 245 },   // L2: Upper right
-    { x: 1020, y: 430 },  // L3: Right
-    { x: 830, y: 540 },   // L4: Lower right
-    { x: 560, y: 540 },   // L5: Lower left
-    { x: 370, y: 430 },   // L6: Left
-    { x: 440, y: 245 },   // L7: Upper left
+    { x: 660, y: 200 },   // L1: Top center
+    { x: 900, y: 260 },   // L2: Upper right
+    { x: 970, y: 440 },   // L3: Right
+    { x: 800, y: 560 },   // L4: Lower right
+    { x: 550, y: 560 },   // L5: Lower left
+    { x: 360, y: 440 },   // L6: Left
+    { x: 430, y: 260 },   // L7: Upper left
   ],
   dinoOffsets: [
     { dx: 25,  dy: 8,   h: 85 },   // L1
