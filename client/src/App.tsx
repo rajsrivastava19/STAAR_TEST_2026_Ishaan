@@ -364,7 +364,7 @@ function App() {
 
             <div className="perfect-map-overlay" style={{
               position: 'absolute',
-              top: '8vmax',
+              top: '20vmax',
               left: '50%',
               transform: 'translateX(-50%)',
               width: 'max(100vw, 100vh)',
