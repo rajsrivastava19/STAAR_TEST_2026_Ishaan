@@ -405,7 +405,7 @@ function App() {
                 const dinoOffsets = [
                   { x: 35,  y: 8,   h: 85 }, // L1: straight up
                   { x: 24,  y: -5,  h: 85 }, // L2: upper-right
-                  { x: 60,  y: 10,  h: 85 }, // L3: right
+                  { x: 40,  y: 10,  h: 85 }, // L3: right
                   { x: 15,  y: -20, h: 115 }, // L4: lower-right (larger)
                   { x: -20, y: -16, h: 115 }, // L5: lower-left  (larger)
                   { x: 20,  y: 0,   h: 115 }, // L6: left        (larger)
