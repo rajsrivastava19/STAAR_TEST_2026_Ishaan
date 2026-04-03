@@ -111,7 +111,7 @@ function App() {
   useEffect(() => {
     async function fetchManifest() {
       try {
-        const response = await fetch('/api/manifest');
+        const response = await fetch(`${import.meta.env.BASE_URL}data/exams/manifest.json`);
         const json = (await response.json()) as Manifest;
         setManifest(json);
       } catch {
@@ -186,7 +186,7 @@ function App() {
 
     if (entry.status !== 'playable') return;
 
-    const response = await fetch(`/api/exams/${entry.slug}`);
+    const response = await fetch(`${import.meta.env.BASE_URL}data/exams/${entry.dataFile}`);
     const json = (await response.json()) as ExamBundle;
     setExam(json);
 
