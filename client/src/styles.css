@@ -127,7 +127,7 @@ body:has(.perfect-map-overlay) {
 .dino-ambient-left {
   position: fixed;
   bottom: 0px;
-  left: 20px;
+  left: max(20px, 4vw);
   height: 250px;
   width: auto;
   z-index: 5; 

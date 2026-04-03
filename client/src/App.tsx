@@ -280,14 +280,8 @@ function App() {
   }
 
   function resetProgress() {
-    if (!exam) return;
-    if (confirm('Are you sure you want to completely erase all progress and restart this exam?')) {
-      sessionStorage.removeItem(`math-staar-ishaan:${exam.id}`);
-      setAttempt(emptyAttempt);
-      setQuestionIndex(0);
-      setScreen('home');
-      setShowReview(false);
-    }
+    setScreen('home');
+    setShowReview(false);
   }
 
   const renderQuestionTable = (table: NonNullable<Question['table']>) => (
@@ -363,13 +357,18 @@ function App() {
       )}
 
       {screen !== 'test' && screen !== 'login' && (
-        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center' }}>
+        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
-            <div className="leaf-logo">🌿</div>
-            <h1>Math STAAR Test Prep</h1>
+            <div className="title-badge" style={{ width: '64px', height: '64px', padding: '10px', overflow: 'hidden', background: '#3b8655', borderRadius: '12px', border: '3px solid #6ccb8e' }}>
+              <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px' }} />
+            </div>
+            <div style={{ textAlign: 'left' }}>
+              <p className="eyebrow" style={{ margin: '0 0 4px 0', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '1px', fontWeight: 900, color: '#88bea6' }}>Dino Jungle Safari</p>
+              <h1 style={{ margin: 0 }}>Math STAAR Test Prep</h1>
+            </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', justifyContent: 'center' }}>
-            <span style={{ color: 'white', fontWeight: 800 }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
+            <span style={{ color: 'var(--earth-dark)', fontWeight: 800, fontFamily: '"Comic Sans MS", "Comic Sans", cursive', fontSize: '1.2rem', padding: '0 8px' }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
             <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => {
               localStorage.removeItem('math-staar-user');
               setActiveUser(null);
@@ -517,6 +516,7 @@ function App() {
                         if (!isLocked) chooseYear(entry);
                       }}
                     >
+                      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                         {/* Dino positioned on the outside of the mountain, facing away from center */}
                         <img
                           src={getDinoForYear(entry.year)}
@@ -553,6 +553,7 @@ function App() {
                         {isLocked && (
                           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '3rem', zIndex: 20, background: 'rgba(255, 220, 50, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '50%', width: '70px', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.4)', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }}>🔒</div>
                         )}
+                      </div>
 
                       {/* Info overlay at mountain base */}
                       <div className="mountain-info">
