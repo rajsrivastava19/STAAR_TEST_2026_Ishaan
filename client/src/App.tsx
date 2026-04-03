@@ -516,7 +516,7 @@ function App() {
                   { x: 60,  y: 78,  h: 85 }, // L1: straight up
                   { x: 34,  y: 15,  h: 85 }, // L2: upper-right
                   { x: 50,  y: 30,  h: 85 }, // L3: right
-                  { x: -200, y: 70,  h: 115 }, // L4: lower-right (larger)
+                  { x: -170, y: 60,  h: 115 }, // L4: lower-right (larger)
                   { x: -10, y: 4,   h: 115 }, // L5: lower-left  (larger)
                   { x: 30,  y: 20,  h: 115 }, // L6: left        (larger)
                   { x: -10, y: 10,  h: 85 }, // L7: upper-left
