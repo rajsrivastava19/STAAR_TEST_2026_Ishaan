@@ -5,7 +5,7 @@ const emptyAttempt: AttemptState = {
   answers: {},
   flagged: {},
   elapsedSeconds: 0,
-  timerEnabled: false
+  timerEnabled: true
 };
 
 type Screen = 'login' | 'home' | 'intro' | 'test' | 'results' | 'progress';
@@ -528,10 +528,10 @@ function App() {
                 const hue = mountainHues[index % mountainHues.length];
 
                 // Progression Logic: Unlock if Level 1, or if previous level has score >= 85
-                const toExamId = (slug: string) => `staar-g3-math-${slug}`;
-                const prevLevelSlug = index > 0 ? manifest.years[index - 1].slug : null;
-                const isLocked = index > 0 && (examScores[toExamId(prevLevelSlug!)] || 0) < 85;
-                const currentScore = examScores[toExamId(entry.slug)];
+                const toExamId = (e: ManifestEntry) => `staar-g3-math-${(e.dataFile ?? `${e.slug}.json`).replace('.json', '')}`;
+                const prevEntry = index > 0 ? manifest.years[index - 1] : null;
+                const isLocked = index > 0 && (examScores[toExamId(prevEntry!)] || 0) < 85;
+                const currentScore = examScores[toExamId(entry)];
                 const hasStar = currentScore !== undefined && currentScore >= 85;
 
                 return (
@@ -709,15 +709,6 @@ function App() {
               
               {selectedYear.status === 'playable' && exam ? (
                 <>
-                  <label style={{ display: 'block', fontSize: '1.1rem', fontWeight: 800, marginBottom: '24px', cursor: 'pointer' }}>
-                    <input
-                      type="checkbox"
-                      checked={attempt.timerEnabled}
-                      onChange={(event) => setAttempt((current) => ({ ...current, timerEnabled: event.target.checked }))}
-                      style={{ marginRight: '12px', transform: 'scale(1.5)' }}
-                    />
-                    Enable the Speedy Safari Timer
-                  </label>
                   <div style={{ display: 'flex', gap: '16px' }}>
                     <button className="primary-button" onClick={startExam}>Launch Safari</button>
                     <button className="secondary-button" style={{ backgroundColor: '#ff6b6b' }} onClick={() => {
