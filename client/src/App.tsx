@@ -417,6 +417,9 @@ function App() {
                 <div className="hero-text">
                   <h2>Ready for MATH STAAR Jungle Safari!</h2>
                   <p>Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!</p>
+                  <p style={{ marginTop: '12px', padding: '10px 18px', background: 'rgba(255, 240, 180, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '12px', color: '#8a6300', fontWeight: 'bold', display: 'inline-block', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', textShadow: 'none', fontSize: '1.2rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))' }}>
+                    ⭐ Score at least 85% on a level to unlock the next challenge!
+                  </p>
                 </div>
             </section>
 
@@ -504,7 +507,7 @@ function App() {
                       margin: 0,
                       width: 'auto',
                       zIndex: top > 60 ? 10 : 1,
-                      filter: isLocked ? 'grayscale(1) opacity(0.5)' : 'none',
+                      filter: isLocked ? 'grayscale(0.8)' : 'none',
                       transition: 'all 0.4s ease'
                     }}
                   >
@@ -525,6 +528,7 @@ function App() {
                             top: `calc(-25px + ${dinoOffsetY}px)`,
                             transform: 'translate(-50%, 0)',
                             height: dinoHeight ? `${dinoHeight}px` : undefined,
+                            filter: isLocked ? 'opacity(0.6)' : 'none',
                           }}
                         />
 
@@ -541,14 +545,14 @@ function App() {
                           src={`${import.meta.env.BASE_URL}dinos/mountain_vines_clean.png`}
                           alt="Jungle Mountain" 
                           className="mountain-shape" 
-                          style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(1.2)` }}
+                          style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(${isLocked ? 0.3 : 1.2}) opacity(${isLocked ? 0.6 : 1})` }}
                         />
 
                         {hasStar && (
                           <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
                         )}
                         {isLocked && (
-                          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '4rem', opacity: 0.9, zIndex: 20 }}>🔒</div>
+                          <div style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '4.5rem', zIndex: 20, background: 'rgba(255, 255, 255, 0.4)', borderRadius: '50%', width: '100px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 24px rgba(0,0,0,0.6)', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', backdropFilter: 'blur(3px)' }}>🔒</div>
                         )}
                       </div>
 
