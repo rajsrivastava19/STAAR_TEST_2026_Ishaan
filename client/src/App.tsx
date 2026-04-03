@@ -528,9 +528,10 @@ function App() {
                 const hue = mountainHues[index % mountainHues.length];
 
                 // Progression Logic: Unlock if Level 1, or if previous level has score >= 85
+                const toExamId = (slug: string) => `staar-g3-math-${slug}`;
                 const prevLevelSlug = index > 0 ? manifest.years[index - 1].slug : null;
-                const isLocked = index > 0 && (examScores[prevLevelSlug!] || 0) < 85;
-                const currentScore = examScores[entry.slug];
+                const isLocked = index > 0 && (examScores[toExamId(prevLevelSlug!)] || 0) < 85;
+                const currentScore = examScores[toExamId(entry.slug)];
                 const hasStar = currentScore !== undefined && currentScore >= 85;
 
                 return (
