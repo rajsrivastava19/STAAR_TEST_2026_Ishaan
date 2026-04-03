@@ -359,8 +359,7 @@ function App() {
                 </div>
             </section>
 
-            {/* Spacer so the page scroll logic works normally for smaller heights */}
-            <div style={{ height: '56vw', width: '100%' }} aria-hidden="true" />
+            {/* Removed scroll spacer as it is no longer required and user requested no scrolling */}
 
             <div className="perfect-map-overlay" style={{
               position: 'absolute',

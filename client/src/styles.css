@@ -43,6 +43,11 @@ body {
   flex-direction: column;
 }
 
+/* Dynamically remove vertical scrolling exclusively when the virtual map is mounted */
+body:has(.perfect-map-overlay) {
+  overflow-y: hidden;
+}
+
 /* Animations */
 @keyframes bobbing {
   0% { transform: translateX(-50%) translateY(0px); }
