@@ -588,7 +588,7 @@ function App() {
                         />
 
                         {hasStar && (
-                          <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', color: '#FFD700', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
+                          <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', color: '#FFD700', animation: 'star-glow-spin 3s ease-in-out infinite', zIndex: 20 }}>★</div>
                         )}
                         {isLocked && (
                           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '2.2rem', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))' }}>🔒</div>

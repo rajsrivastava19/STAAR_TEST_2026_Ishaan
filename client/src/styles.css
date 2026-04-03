@@ -507,6 +507,12 @@ button:disabled {
   100% { filter: drop-shadow(0 0 8px rgba(255,202,40,0)); }
 }
 
+@keyframes star-glow-spin {
+  0%   { transform: translateX(-50%) rotateY(0deg);   filter: drop-shadow(0 0 6px rgba(255,215,0,0.6)); }
+  50%  { transform: translateX(-50%) rotateY(180deg); filter: drop-shadow(0 0 18px rgba(255,215,0,1)); }
+  100% { transform: translateX(-50%) rotateY(360deg); filter: drop-shadow(0 0 6px rgba(255,215,0,0.6)); }
+}
+
 .mountain-trail {
   display: flex;
   flex-direction: column;
