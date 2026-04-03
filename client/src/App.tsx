@@ -128,6 +128,7 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [showReview, setShowReview] = useState(false);
   const [unansweredList, setUnansweredList] = useState<number[]>([]);
+  const [adminSelectedUser, setAdminSelectedUser] = useState<string | null>(null);
   const [attemptHistory, setAttemptHistory] = useState<AttemptRecord[]>(() => {
     const user = localStorage.getItem('math-staar-user');
     if (!user) return [];
@@ -713,37 +714,20 @@ function App() {
         {screen === 'admin' && activeUser === ADMIN_ID && manifest && (() => {
           // Scan localStorage for all users
           const allUsers: { id: string; name: string; logins: number; scores: Record<string, number>; history: AttemptRecord[] }[] = [];
+          const seen = new Set<string>();
           for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
-            if (key && key.startsWith('math-staar-scores:')) {
-              const uid = key.replace('math-staar-scores:', '');
-              const scores = JSON.parse(localStorage.getItem(key) || '{}');
+            if (!key) continue;
+            let uid: string | null = null;
+            if (key.startsWith('math-staar-scores:')) uid = key.replace('math-staar-scores:', '');
+            else if (key.startsWith('math-staar-history:')) uid = key.replace('math-staar-history:', '');
+            else if (key.startsWith('math-staar-logins:')) uid = key.replace('math-staar-logins:', '');
+            if (uid && !seen.has(uid)) {
+              seen.add(uid);
+              const scores = JSON.parse(localStorage.getItem(`math-staar-scores:${uid}`) || '{}');
               const history: AttemptRecord[] = JSON.parse(localStorage.getItem(`math-staar-history:${uid}`) || '[]');
               const logins = parseInt(localStorage.getItem(`math-staar-logins:${uid}`) || '0', 10);
               allUsers.push({ id: uid, name: uid.replace('_', ' '), logins, scores, history });
-            }
-          }
-          // Also find users who have history but no scores yet
-          for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            if (key && key.startsWith('math-staar-history:')) {
-              const uid = key.replace('math-staar-history:', '');
-              if (!allUsers.find(u => u.id === uid)) {
-                const history: AttemptRecord[] = JSON.parse(localStorage.getItem(key) || '[]');
-                const logins = parseInt(localStorage.getItem(`math-staar-logins:${uid}`) || '0', 10);
-                allUsers.push({ id: uid, name: uid.replace('_', ' '), logins, scores: {}, history });
-              }
-            }
-          }
-          // Also find users who only have login counts
-          for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            if (key && key.startsWith('math-staar-logins:')) {
-              const uid = key.replace('math-staar-logins:', '');
-              if (!allUsers.find(u => u.id === uid)) {
-                const logins = parseInt(localStorage.getItem(key) || '0', 10);
-                allUsers.push({ id: uid, name: uid.replace('_', ' '), logins, scores: {}, history: [] });
-              }
             }
           }
 
@@ -752,111 +736,182 @@ function App() {
           const handleLevelToggle = (userId: string, levelIndex: number, currentlyComplete: boolean) => {
             const scoresKey = `math-staar-scores:${userId}`;
             const userScores: Record<string, number> = JSON.parse(localStorage.getItem(scoresKey) || '{}');
-
             if (currentlyComplete) {
-              // Reset this level and all subsequent levels to incomplete
               for (let i = levelIndex; i < manifest.years.length; i++) {
                 delete userScores[toExamId(manifest.years[i])];
               }
             } else {
-              // Set this level and all previous levels to complete (85%)
               for (let i = 0; i <= levelIndex; i++) {
                 const eid = toExamId(manifest.years[i]);
-                if ((userScores[eid] || 0) < 85) {
-                  userScores[eid] = 85;
-                }
+                if ((userScores[eid] || 0) < 85) userScores[eid] = 85;
               }
             }
             localStorage.setItem(scoresKey, JSON.stringify(userScores));
-            // Refresh if it's the current user
-            if (userId === activeUser) {
-              setExamScores(userScores);
-            }
+            if (userId === activeUser) setExamScores(userScores);
             // Force re-render
             setScreen('home');
             setTimeout(() => setScreen('admin'), 0);
           };
 
+          const selected = allUsers.find(u => u.id === adminSelectedUser) || null;
+
           return (
-            <main className="main-container" style={{ maxWidth: '1000px' }}>
+            <main className="main-container" style={{ maxWidth: '1100px' }}>
               <section className="card-panel" style={{ padding: '32px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
                   <h2 style={{ fontSize: '2.2rem', color: '#d32f2f', margin: 0 }}>🔧 Admin Panel</h2>
-                  <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => setScreen('home')}>← Back to Dashboard</button>
+                  <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => { setAdminSelectedUser(null); setScreen('home'); }}>← Back to Dashboard</button>
                 </div>
 
                 {allUsers.length === 0 ? (
                   <p style={{ textAlign: 'center', fontSize: '1.2rem', color: 'var(--text-light)' }}>No users found.</p>
                 ) : (
-                  allUsers.map(user => {
-                    const uniqueExams = new Set(user.history.map(a => a.examId)).size;
-                    const avgScore = user.history.length > 0 ? Math.round(user.history.reduce((s, a) => s + a.percent, 0) / user.history.length) : 0;
-                    const bestScore = user.history.length > 0 ? Math.max(...user.history.map(a => a.percent)) : 0;
-
-                    return (
-                      <div key={user.id} style={{ background: 'rgba(255,255,255,0.5)', borderRadius: '16px', padding: '24px', marginBottom: '20px', border: '2px solid rgba(0,0,0,0.08)' }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
-                          <div>
-                            <h3 style={{ margin: 0, fontSize: '1.5rem', color: 'var(--earth-dark)', textTransform: 'capitalize' }}>{user.name}</h3>
-                            <p style={{ margin: '4px 0 0', fontSize: '0.85rem', color: 'var(--text-light)' }}>ID: {user.id}</p>
-                          </div>
-                          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#e3f2fd', borderRadius: '10px' }}>
-                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#1565C0' }}>{user.logins}</div>
-                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#1565C0', opacity: 0.8 }}>Logins</div>
-                            </div>
-                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#e8f5e9', borderRadius: '10px' }}>
-                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#2E7D32' }}>{user.history.length}</div>
-                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#2E7D32', opacity: 0.8 }}>Attempts</div>
-                            </div>
-                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#fff3e0', borderRadius: '10px' }}>
-                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#FF8F00' }}>{uniqueExams}</div>
-                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#FF8F00', opacity: 0.8 }}>Exams</div>
-                            </div>
-                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#f3e5f5', borderRadius: '10px' }}>
-                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#6A1B9A' }}>{avgScore}%</div>
-                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#6A1B9A', opacity: 0.8 }}>Avg</div>
-                            </div>
-                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#fce4ec', borderRadius: '10px' }}>
-                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#c62828' }}>{bestScore}%</div>
-                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#c62828', opacity: 0.8 }}>Best</div>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Level Status Grid */}
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '10px' }}>
-                          {manifest.years.map((entry, idx) => {
-                            const eid = toExamId(entry);
-                            const score = user.scores[eid];
-                            const isComplete = score !== undefined && score >= 85;
-                            return (
-                              <button
-                                key={entry.slug}
-                                onClick={() => handleLevelToggle(user.id, idx, isComplete)}
-                                style={{
-                                  padding: '12px 8px',
-                                  borderRadius: '12px',
-                                  border: isComplete ? '3px solid #2E7D32' : '3px solid #ccc',
-                                  background: isComplete ? 'linear-gradient(135deg, #e8f5e9, #c8e6c9)' : 'rgba(255,255,255,0.6)',
-                                  cursor: 'pointer',
-                                  textAlign: 'center',
-                                  transition: 'all 0.2s ease',
-                                }}
-                              >
-                                <div style={{ fontSize: '1.4rem', marginBottom: '4px' }}>{isComplete ? '⭐' : '🔒'}</div>
-                                <div style={{ fontWeight: 800, fontSize: '0.8rem', color: 'var(--earth-dark)' }}>Level {idx + 1}</div>
-                                <div style={{ fontSize: '0.7rem', color: 'var(--text-light)' }}>{entry.year}</div>
-                                {score !== undefined && (
-                                  <div style={{ fontWeight: 900, fontSize: '0.85rem', color: isComplete ? '#2E7D32' : '#e74c3c', marginTop: '4px' }}>{score}%</div>
-                                )}
-                              </button>
-                            );
-                          })}
-                        </div>
+                  <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+                    {/* User List Sidebar */}
+                    <div style={{ width: '240px', flexShrink: 0 }}>
+                      <p style={{ fontSize: '0.8rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)', marginTop: 0, marginBottom: '12px' }}>Registered Users ({allUsers.length})</p>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                        {allUsers.map(user => {
+                          const isActive = adminSelectedUser === user.id;
+                          const completedLevels = manifest.years.filter((e) => { const s = user.scores[toExamId(e)]; return s !== undefined && s >= 85; }).length;
+                          return (
+                            <button
+                              key={user.id}
+                              onClick={() => setAdminSelectedUser(user.id)}
+                              style={{
+                                padding: '12px 16px',
+                                borderRadius: '12px',
+                                border: isActive ? '3px solid #d32f2f' : '2px solid rgba(0,0,0,0.1)',
+                                background: isActive ? 'linear-gradient(135deg, #ffebee, #ffcdd2)' : 'rgba(255,255,255,0.6)',
+                                cursor: 'pointer',
+                                textAlign: 'left',
+                                transition: 'all 0.2s ease',
+                              }}
+                            >
+                              <div style={{ fontWeight: 800, fontSize: '1rem', color: 'var(--earth-dark)', textTransform: 'capitalize' }}>{user.name}</div>
+                              <div style={{ fontSize: '0.75rem', color: 'var(--text-light)', marginTop: '4px' }}>
+                                {completedLevels}/{manifest.years.length} levels · {user.history.length} attempts
+                              </div>
+                            </button>
+                          );
+                        })}
                       </div>
-                    );
-                  })
+                    </div>
+
+                    {/* Detail Panel */}
+                    <div style={{ flex: 1, minWidth: '300px' }}>
+                      {!selected ? (
+                        <div style={{ textAlign: 'center', padding: '60px 20px', background: 'rgba(255,255,255,0.4)', borderRadius: '16px', border: '2px dashed rgba(0,0,0,0.1)' }}>
+                          <p style={{ fontSize: '3rem', margin: '0 0 12px 0' }}>👤</p>
+                          <p style={{ fontSize: '1.2rem', fontWeight: 700, color: 'var(--earth-dark)' }}>Select a user</p>
+                          <p style={{ fontSize: '1rem', color: 'var(--text-light)' }}>Choose a user from the list to view their stats and manage levels.</p>
+                        </div>
+                      ) : (() => {
+                        const user = selected;
+                        const uniqueExams = new Set(user.history.map(a => a.examId)).size;
+                        const avgScore = user.history.length > 0 ? Math.round(user.history.reduce((s, a) => s + a.percent, 0) / user.history.length) : 0;
+                        const bestScore = user.history.length > 0 ? Math.max(...user.history.map(a => a.percent)) : 0;
+                        return (
+                          <div style={{ background: 'rgba(255,255,255,0.5)', borderRadius: '16px', padding: '24px', border: '2px solid rgba(0,0,0,0.08)' }}>
+                            <div style={{ marginBottom: '20px' }}>
+                              <h3 style={{ margin: 0, fontSize: '1.8rem', color: 'var(--earth-dark)', textTransform: 'capitalize' }}>{user.name}</h3>
+                              <p style={{ margin: '4px 0 0', fontSize: '0.85rem', color: 'var(--text-light)' }}>ID: {user.id}</p>
+                            </div>
+
+                            {/* Stats Row */}
+                            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px' }}>
+                              <div style={{ textAlign: 'center', padding: '10px 18px', background: '#e3f2fd', borderRadius: '10px', flex: 1, minWidth: '80px' }}>
+                                <div style={{ fontWeight: 900, fontSize: '1.5rem', color: '#1565C0' }}>{user.logins}</div>
+                                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#1565C0', opacity: 0.8 }}>Logins</div>
+                              </div>
+                              <div style={{ textAlign: 'center', padding: '10px 18px', background: '#e8f5e9', borderRadius: '10px', flex: 1, minWidth: '80px' }}>
+                                <div style={{ fontWeight: 900, fontSize: '1.5rem', color: '#2E7D32' }}>{user.history.length}</div>
+                                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#2E7D32', opacity: 0.8 }}>Attempts</div>
+                              </div>
+                              <div style={{ textAlign: 'center', padding: '10px 18px', background: '#fff3e0', borderRadius: '10px', flex: 1, minWidth: '80px' }}>
+                                <div style={{ fontWeight: 900, fontSize: '1.5rem', color: '#FF8F00' }}>{uniqueExams}</div>
+                                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FF8F00', opacity: 0.8 }}>Exams</div>
+                              </div>
+                              <div style={{ textAlign: 'center', padding: '10px 18px', background: '#f3e5f5', borderRadius: '10px', flex: 1, minWidth: '80px' }}>
+                                <div style={{ fontWeight: 900, fontSize: '1.5rem', color: '#6A1B9A' }}>{avgScore}%</div>
+                                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#6A1B9A', opacity: 0.8 }}>Avg Score</div>
+                              </div>
+                              <div style={{ textAlign: 'center', padding: '10px 18px', background: '#fce4ec', borderRadius: '10px', flex: 1, minWidth: '80px' }}>
+                                <div style={{ fontWeight: 900, fontSize: '1.5rem', color: '#c62828' }}>{bestScore}%</div>
+                                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#c62828', opacity: 0.8 }}>Best</div>
+                              </div>
+                            </div>
+
+                            {/* Level Management */}
+                            <p style={{ fontSize: '0.8rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)', marginBottom: '12px' }}>Level Management (click to toggle)</p>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '10px' }}>
+                              {manifest.years.map((entry, idx) => {
+                                const eid = toExamId(entry);
+                                const score = user.scores[eid];
+                                const isComplete = score !== undefined && score >= 85;
+                                return (
+                                  <button
+                                    key={entry.slug}
+                                    onClick={() => handleLevelToggle(user.id, idx, isComplete)}
+                                    style={{
+                                      padding: '12px 8px',
+                                      borderRadius: '12px',
+                                      border: isComplete ? '3px solid #2E7D32' : '3px solid #ccc',
+                                      background: isComplete ? 'linear-gradient(135deg, #e8f5e9, #c8e6c9)' : 'rgba(255,255,255,0.6)',
+                                      cursor: 'pointer',
+                                      textAlign: 'center',
+                                      transition: 'all 0.2s ease',
+                                    }}
+                                  >
+                                    <div style={{ fontSize: '1.4rem', marginBottom: '4px' }}>{isComplete ? '⭐' : '🔒'}</div>
+                                    <div style={{ fontWeight: 800, fontSize: '0.8rem', color: 'var(--earth-dark)' }}>Level {idx + 1}</div>
+                                    <div style={{ fontSize: '0.7rem', color: 'var(--text-light)' }}>{entry.year}</div>
+                                    {score !== undefined && (
+                                      <div style={{ fontWeight: 900, fontSize: '0.85rem', color: isComplete ? '#2E7D32' : '#e74c3c', marginTop: '4px' }}>{score}%</div>
+                                    )}
+                                  </button>
+                                );
+                              })}
+                            </div>
+
+                            {/* Recent Attempts */}
+                            {user.history.length > 0 && (
+                              <>
+                                <p style={{ fontSize: '0.8rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)', marginTop: '24px', marginBottom: '12px' }}>Recent Attempts</p>
+                                <div style={{ overflowX: 'auto' }}>
+                                  <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0 6px', fontSize: '0.9rem' }}>
+                                    <thead>
+                                      <tr style={{ textAlign: 'left' }}>
+                                        <th style={{ padding: '8px 12px', fontWeight: 800, color: 'var(--text-light)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Exam</th>
+                                        <th style={{ padding: '8px 12px', fontWeight: 800, color: 'var(--text-light)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Date</th>
+                                        <th style={{ padding: '8px 12px', fontWeight: 800, color: 'var(--text-light)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Score</th>
+                                        <th style={{ padding: '8px 12px', fontWeight: 800, color: 'var(--text-light)', fontSize: '0.75rem', textTransform: 'uppercase' }}>Time</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      {user.history.slice(0, 10).map((rec, i) => {
+                                        const d = new Date(rec.date);
+                                        const mins = Math.floor(rec.elapsedSeconds / 60);
+                                        const secs = rec.elapsedSeconds % 60;
+                                        return (
+                                          <tr key={`${rec.date}-${i}`} style={{ background: 'rgba(255,255,255,0.5)' }}>
+                                            <td style={{ padding: '8px 12px', fontWeight: 700 }}>Year {rec.examYear}</td>
+                                            <td style={{ padding: '8px 12px', color: 'var(--text-light)' }}>{d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} {d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' })}</td>
+                                            <td style={{ padding: '8px 12px', fontWeight: 900, color: rec.percent >= 85 ? '#2E7D32' : '#e74c3c' }}>{rec.percent}% ({rec.correct}/{rec.total})</td>
+                                            <td style={{ padding: '8px 12px', color: 'var(--text-light)' }}>{rec.timerEnabled ? `${mins}m ${secs.toString().padStart(2, '0')}s` : '—'}</td>
+                                          </tr>
+                                        );
+                                      })}
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </>
+                            )}
+                          </div>
+                        );
+                      })()}
+                    </div>
+                  </div>
                 )}
               </section>
             </main>
