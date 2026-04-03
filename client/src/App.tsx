@@ -363,12 +363,12 @@ function App() {
       )}
 
       {screen !== 'test' && screen !== 'login' && (
-        <header className="site-header">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
             <div className="leaf-logo">🌿</div>
             <h1>Math STAAR Test Prep</h1>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', justifyContent: 'center' }}>
             <span style={{ color: 'white', fontWeight: 800 }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
             <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => {
               localStorage.removeItem('math-staar-user');
@@ -882,7 +882,7 @@ function App() {
       )}
 
       {screen === 'results' && exam && results && (
-        <main className="results-layout" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+        <main className="results-layout" style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
           {!showReview ? (
             <section className="score-hero">
               <img src={`${import.meta.env.BASE_URL}dinos/dino2.png`} alt="Happy Dino" className="mascot-img dino-walk" />
