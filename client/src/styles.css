@@ -1118,3 +1118,14 @@ button:disabled {
 .option-stack.grid-6col .option-chip {
   display: none;
 }
+
+/* iOS scaling override for results page */
+body:has(.results-layout) {
+  background-size: 100vw 100vh !important;
+}
+
+@media (max-width: 1024px) {
+  body:has(.results-layout) {
+    background-size: 100vw auto !important;
+  }
+}
