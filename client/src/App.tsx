@@ -364,7 +364,7 @@ function App() {
 
             <div className="perfect-map-overlay" style={{
               position: 'absolute',
-              top: '20vmax',
+              top: '8vmax',
               left: '50%',
               transform: 'translateX(-50%)',
               width: 'max(100vw, 100vh)',
@@ -374,7 +374,7 @@ function App() {
             }}>
               {/* Dashed ellipse trace matching the background oval */}
               <svg className="trail-path-svg" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} aria-hidden="true">
-                <ellipse cx="50%" cy="29.8%" rx="24.3%" ry="17.3%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
+                <ellipse cx="50%" cy="35.8%" rx="24.3%" ry="17.3%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
               </svg>
 
               {/* Realistic Animated Water Lake perfectly aligning with background glow */}
@@ -386,7 +386,7 @@ function App() {
                   <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="B" />
                 </filter>
               </svg>
-              <div className="lake-water" style={{ pointerEvents: 'none', top: '29.8%' }} />
+              <div className="lake-water" style={{ pointerEvents: 'none', top: '35.8%' }} />
 
               {manifest.years.map((entry, index) => {
                 const levelNum = index + 1;
