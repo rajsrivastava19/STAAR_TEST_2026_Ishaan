@@ -723,6 +723,7 @@ function App() {
                     <button className="secondary-button" style={{ backgroundColor: '#ff6b6b' }} onClick={() => {
                       if (confirm('Are you sure you want to clear all your answers and start from scratch?')) {
                         setAttempt(emptyAttempt);
+                        if (exam) sessionStorage.removeItem(`math-staar-ishaan:${exam.id}`);
                       }
                     }}>Reset Exam</button>
                     <button className="secondary-button" onClick={() => setScreen('home')}>Cancel</button>
