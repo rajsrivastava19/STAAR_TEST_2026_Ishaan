@@ -600,7 +600,7 @@ function App() {
                       {/* Info overlay at mountain base */}
                       <div className="mountain-info">
                         <span className={`mountain-status ${entry.status}`}>
-                          {isLocked ? '🔒 Locked' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
+                          {isLocked ? '🔒 Locked' : hasStar ? '✅ Complete' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
                         </span>
                       </div>
                     </button>
