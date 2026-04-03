@@ -452,7 +452,7 @@ function App() {
                 const levelNum = index + 1;
                 // Mapped positions for 100vw/100vh overlay
                 const manualPositions = [
-                  { left: 50, top: 10.8 },  // L1: Top center
+                  { left: 50, top: 11.6 },  // L1: Top center
                   { left: 68.9, top: 16.4 }, // L2: Upper right
                   { left: 72.5, top: 33.2 }, // L3: Right
                   { left: 59, top: 41.6 }, // L4: Lower right
