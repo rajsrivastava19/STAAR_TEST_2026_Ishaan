@@ -503,7 +503,7 @@ function App() {
 
                 // Manual dino offsets (X px, Y px) — user-tunable
                 const dinoOffsets = [
-                  { x: 25,  y: 8,   h: 85 }, // L1: straight up
+                  { x: 35,  y: 23,  h: 85 }, // L1: straight up
                   { x: 24,  y: -5,  h: 85 }, // L2: upper-right
                   { x: 40,  y: 10,  h: 85 }, // L3: right
                   { x: 15,  y: -20, h: 115 }, // L4: lower-right (larger)
@@ -588,7 +588,7 @@ function App() {
                         />
 
                         {hasStar && (
-                          <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
+                          <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', color: '#FFD700', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
                         )}
                         {isLocked && (
                           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '2.2rem', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))' }}>🔒</div>
