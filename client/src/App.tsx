@@ -527,7 +527,7 @@ function App() {
                             top: `calc(-25px + ${dinoOffsetY}px)`,
                             transform: 'translate(-50%, 0)',
                             height: dinoHeight ? `${dinoHeight}px` : undefined,
-                            filter: isLocked ? 'opacity(0.6) grayscale(0.8)' : 'none',
+                            filter: 'none',
                           }}
                         />
 
