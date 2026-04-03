@@ -8,7 +8,9 @@ const emptyAttempt: AttemptState = {
   timerEnabled: true
 };
 
-type Screen = 'login' | 'home' | 'intro' | 'test' | 'results' | 'progress';
+type Screen = 'login' | 'home' | 'intro' | 'test' | 'results' | 'progress' | 'admin';
+
+const ADMIN_ID = 'raj_srivastava19';
 
 type AttemptRecord = {
   examId: string;
@@ -405,6 +407,9 @@ function App() {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', justifyContent: 'center' }}>
             <button className="primary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => setScreen('progress')}>📊 Progress</button>
+            {activeUser === ADMIN_ID && (
+              <button className="primary-button" style={{ padding: '8px 16px', fontSize: '0.9rem', background: 'linear-gradient(135deg, #d32f2f, #f44336)' }} onClick={() => setScreen('admin')}>🔧 Admin</button>
+            )}
             <span style={{ color: 'var(--earth-dark)', fontWeight: 800, fontFamily: '"Comic Sans MS", "Comic Sans", cursive', fontSize: '1.2rem', padding: '0 8px' }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
             <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => {
               localStorage.removeItem('math-staar-user');
@@ -423,11 +428,15 @@ function App() {
             const fn = (e.currentTarget.elements.namedItem('firstName') as HTMLInputElement).value;
             const ln = (e.currentTarget.elements.namedItem('lastName') as HTMLInputElement).value;
             const userId = `${fn.trim().toLowerCase()}_${ln.trim().toLowerCase()}`;
-            if (!userId.match(/^[a-z]+_[a-z]+$/)) {
+            if (!userId.match(/^[a-z0-9]+_[a-z0-9]+$/)) {
               alert('Please enter a valid First and Last name without spaces.');
               return;
             }
             localStorage.setItem('math-staar-user', userId);
+            // Track login count
+            const loginKey = `math-staar-logins:${userId}`;
+            const prevLogins = parseInt(localStorage.getItem(loginKey) || '0', 10);
+            localStorage.setItem(loginKey, String(prevLogins + 1));
             setActiveUser(userId);
             const savedScores = localStorage.getItem(`math-staar-scores:${userId}`);
             setExamScores(savedScores ? JSON.parse(savedScores) : {});
@@ -700,6 +709,159 @@ function App() {
             </section>
           </main>
         )}
+
+        {screen === 'admin' && activeUser === ADMIN_ID && manifest && (() => {
+          // Scan localStorage for all users
+          const allUsers: { id: string; name: string; logins: number; scores: Record<string, number>; history: AttemptRecord[] }[] = [];
+          for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('math-staar-scores:')) {
+              const uid = key.replace('math-staar-scores:', '');
+              const scores = JSON.parse(localStorage.getItem(key) || '{}');
+              const history: AttemptRecord[] = JSON.parse(localStorage.getItem(`math-staar-history:${uid}`) || '[]');
+              const logins = parseInt(localStorage.getItem(`math-staar-logins:${uid}`) || '0', 10);
+              allUsers.push({ id: uid, name: uid.replace('_', ' '), logins, scores, history });
+            }
+          }
+          // Also find users who have history but no scores yet
+          for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('math-staar-history:')) {
+              const uid = key.replace('math-staar-history:', '');
+              if (!allUsers.find(u => u.id === uid)) {
+                const history: AttemptRecord[] = JSON.parse(localStorage.getItem(key) || '[]');
+                const logins = parseInt(localStorage.getItem(`math-staar-logins:${uid}`) || '0', 10);
+                allUsers.push({ id: uid, name: uid.replace('_', ' '), logins, scores: {}, history });
+              }
+            }
+          }
+          // Also find users who only have login counts
+          for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && key.startsWith('math-staar-logins:')) {
+              const uid = key.replace('math-staar-logins:', '');
+              if (!allUsers.find(u => u.id === uid)) {
+                const logins = parseInt(localStorage.getItem(key) || '0', 10);
+                allUsers.push({ id: uid, name: uid.replace('_', ' '), logins, scores: {}, history: [] });
+              }
+            }
+          }
+
+          const toExamId = (e: ManifestEntry) => `staar-g3-math-${(e.dataFile ?? `${e.slug}.json`).replace('.json', '')}`;
+
+          const handleLevelToggle = (userId: string, levelIndex: number, currentlyComplete: boolean) => {
+            const scoresKey = `math-staar-scores:${userId}`;
+            const userScores: Record<string, number> = JSON.parse(localStorage.getItem(scoresKey) || '{}');
+
+            if (currentlyComplete) {
+              // Reset this level and all subsequent levels to incomplete
+              for (let i = levelIndex; i < manifest.years.length; i++) {
+                delete userScores[toExamId(manifest.years[i])];
+              }
+            } else {
+              // Set this level and all previous levels to complete (85%)
+              for (let i = 0; i <= levelIndex; i++) {
+                const eid = toExamId(manifest.years[i]);
+                if ((userScores[eid] || 0) < 85) {
+                  userScores[eid] = 85;
+                }
+              }
+            }
+            localStorage.setItem(scoresKey, JSON.stringify(userScores));
+            // Refresh if it's the current user
+            if (userId === activeUser) {
+              setExamScores(userScores);
+            }
+            // Force re-render
+            setScreen('home');
+            setTimeout(() => setScreen('admin'), 0);
+          };
+
+          return (
+            <main className="main-container" style={{ maxWidth: '1000px' }}>
+              <section className="card-panel" style={{ padding: '32px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
+                  <h2 style={{ fontSize: '2.2rem', color: '#d32f2f', margin: 0 }}>🔧 Admin Panel</h2>
+                  <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => setScreen('home')}>← Back to Dashboard</button>
+                </div>
+
+                {allUsers.length === 0 ? (
+                  <p style={{ textAlign: 'center', fontSize: '1.2rem', color: 'var(--text-light)' }}>No users found.</p>
+                ) : (
+                  allUsers.map(user => {
+                    const uniqueExams = new Set(user.history.map(a => a.examId)).size;
+                    const avgScore = user.history.length > 0 ? Math.round(user.history.reduce((s, a) => s + a.percent, 0) / user.history.length) : 0;
+                    const bestScore = user.history.length > 0 ? Math.max(...user.history.map(a => a.percent)) : 0;
+
+                    return (
+                      <div key={user.id} style={{ background: 'rgba(255,255,255,0.5)', borderRadius: '16px', padding: '24px', marginBottom: '20px', border: '2px solid rgba(0,0,0,0.08)' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '16px' }}>
+                          <div>
+                            <h3 style={{ margin: 0, fontSize: '1.5rem', color: 'var(--earth-dark)', textTransform: 'capitalize' }}>{user.name}</h3>
+                            <p style={{ margin: '4px 0 0', fontSize: '0.85rem', color: 'var(--text-light)' }}>ID: {user.id}</p>
+                          </div>
+                          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#e3f2fd', borderRadius: '10px' }}>
+                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#1565C0' }}>{user.logins}</div>
+                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#1565C0', opacity: 0.8 }}>Logins</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#e8f5e9', borderRadius: '10px' }}>
+                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#2E7D32' }}>{user.history.length}</div>
+                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#2E7D32', opacity: 0.8 }}>Attempts</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#fff3e0', borderRadius: '10px' }}>
+                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#FF8F00' }}>{uniqueExams}</div>
+                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#FF8F00', opacity: 0.8 }}>Exams</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#f3e5f5', borderRadius: '10px' }}>
+                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#6A1B9A' }}>{avgScore}%</div>
+                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#6A1B9A', opacity: 0.8 }}>Avg</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '8px 16px', background: '#fce4ec', borderRadius: '10px' }}>
+                              <div style={{ fontWeight: 900, fontSize: '1.3rem', color: '#c62828' }}>{bestScore}%</div>
+                              <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#c62828', opacity: 0.8 }}>Best</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Level Status Grid */}
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))', gap: '10px' }}>
+                          {manifest.years.map((entry, idx) => {
+                            const eid = toExamId(entry);
+                            const score = user.scores[eid];
+                            const isComplete = score !== undefined && score >= 85;
+                            return (
+                              <button
+                                key={entry.slug}
+                                onClick={() => handleLevelToggle(user.id, idx, isComplete)}
+                                style={{
+                                  padding: '12px 8px',
+                                  borderRadius: '12px',
+                                  border: isComplete ? '3px solid #2E7D32' : '3px solid #ccc',
+                                  background: isComplete ? 'linear-gradient(135deg, #e8f5e9, #c8e6c9)' : 'rgba(255,255,255,0.6)',
+                                  cursor: 'pointer',
+                                  textAlign: 'center',
+                                  transition: 'all 0.2s ease',
+                                }}
+                              >
+                                <div style={{ fontSize: '1.4rem', marginBottom: '4px' }}>{isComplete ? '⭐' : '🔒'}</div>
+                                <div style={{ fontWeight: 800, fontSize: '0.8rem', color: 'var(--earth-dark)' }}>Level {idx + 1}</div>
+                                <div style={{ fontSize: '0.7rem', color: 'var(--text-light)' }}>{entry.year}</div>
+                                {score !== undefined && (
+                                  <div style={{ fontWeight: 900, fontSize: '0.85rem', color: isComplete ? '#2E7D32' : '#e74c3c', marginTop: '4px' }}>{score}%</div>
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    );
+                  })
+                )}
+              </section>
+            </main>
+          );
+        })()}
 
         {screen === 'intro' && selectedYear && (
         <main className="intro-layout">
