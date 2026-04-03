@@ -359,7 +359,7 @@ function App() {
                 </div>
             </section>
 
-            <section className="mountain-trail" style={{ position: 'relative', aspectRatio: '900 / 560', height: 'auto', width: '100%', maxWidth: '900px', margin: '0 auto' }}>
+            <section className="mountain-trail" style={{ position: 'relative', height: '560px', width: '100%', maxWidth: '900px', margin: '0 auto' }}>
               {/* Dashed ellipse trace matching the background oval */}
               <svg className="trail-path-svg" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} aria-hidden="true">
                 <ellipse cx="50%" cy="60%" rx="27%" ry="31%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
