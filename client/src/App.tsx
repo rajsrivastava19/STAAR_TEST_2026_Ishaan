@@ -514,12 +514,12 @@ function App() {
                 // Manual dino offsets (X px, Y px) — user-tunable
                 const dinoOffsets = [
                   { x: 60,  y: 78,  h: 85 }, // L1: straight up
-                  { x: 24,  y: -5,  h: 85 }, // L2: upper-right
-                  { x: 40,  y: 10,  h: 85 }, // L3: right
-                  { x: 15,  y: -20, h: 115 }, // L4: lower-right (larger)
-                  { x: -20, y: -16, h: 115 }, // L5: lower-left  (larger)
-                  { x: 20,  y: 0,   h: 115 }, // L6: left        (larger)
-                  { x: -20, y: -10, h: 85 }, // L7: upper-left
+                  { x: 34,  y: 15,  h: 85 }, // L2: upper-right
+                  { x: 50,  y: 30,  h: 85 }, // L3: right
+                  { x: 25,  y: 0,   h: 115 }, // L4: lower-right (larger)
+                  { x: -10, y: 4,   h: 115 }, // L5: lower-left  (larger)
+                  { x: 30,  y: 20,  h: 115 }, // L6: left        (larger)
+                  { x: -10, y: 10,  h: 85 }, // L7: upper-left
                 ];
                 const dinoOffsetX = dinoOffsets[index].x;
                 const dinoOffsetY = dinoOffsets[index].y;
