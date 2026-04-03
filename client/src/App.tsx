@@ -359,13 +359,25 @@ function App() {
                 </div>
             </section>
 
-            <section className="mountain-trail" style={{ position: 'relative', height: '560px', width: '100%', maxWidth: '900px', margin: '0 auto' }}>
+            {/* Spacer so the page scroll logic works normally for smaller heights */}
+            <div style={{ height: '56vw', width: '100%' }} aria-hidden="true" />
+
+            <div className="perfect-map-overlay" style={{
+              position: 'absolute',
+              top: 0,
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: 'max(100vw, 100vh)',
+              height: 'max(100vw, 100vh)',
+              pointerEvents: 'none',
+              zIndex: 5
+            }}>
               {/* Dashed ellipse trace matching the background oval */}
               <svg className="trail-path-svg" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} aria-hidden="true">
-                <ellipse cx="50%" cy="60%" rx="27%" ry="31%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
+                <ellipse cx="50%" cy="35.8%" rx="24.3%" ry="17.3%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
               </svg>
 
-              {/* Realistic Animated Water Lake in the Center */}
+              {/* Realistic Animated Water Lake perfectly aligning with background glow */}
               <svg width="0" height="0" style={{ position: 'absolute' }}>
                 <filter id="water-filter">
                   <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise">
@@ -374,19 +386,19 @@ function App() {
                   <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="B" />
                 </filter>
               </svg>
-              <div className="lake-water" />
+              <div className="lake-water" style={{ pointerEvents: 'none', top: '35.8%' }} />
 
               {manifest.years.map((entry, index) => {
                 const levelNum = index + 1;
-                // Manual positions (left%, top%) — user-tunable
+                // Mapped positions for 100vw/100vh overlay
                 const manualPositions = [
-                  { left: 50, top: 0 },  // L1: Top center
-                  { left: 71, top: 10 }, // L2: Upper right
-                  { left: 75, top: 40 }, // L3: Right
-                  { left: 60, top: 55 }, // L4: Lower right
-                  { left: 39, top: 55 }, // L5: Lower left
-                  { left: 24, top: 40 }, // L6: Left
-                  { left: 30, top: 10 }, // L7: Upper left
+                  { left: 50, top: 10.8 },  // L1: Top center
+                  { left: 68.9, top: 16.4 }, // L2: Upper right
+                  { left: 72.5, top: 33.2 }, // L3: Right
+                  { left: 59, top: 41.6 }, // L4: Lower right
+                  { left: 40.1, top: 41.6 }, // L5: Lower left
+                  { left: 26.6, top: 33.2 }, // L6: Left
+                  { left: 32, top: 16.4 }, // L7: Upper left
                 ];
                 const { left, top } = manualPositions[index];
 
@@ -476,7 +488,7 @@ function App() {
                   </div>
                 );
               })}
-            </section>
+            </div>
           </div>
         )}
 
