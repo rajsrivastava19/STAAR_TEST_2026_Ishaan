@@ -8,7 +8,7 @@ const emptyAttempt: AttemptState = {
   timerEnabled: false
 };
 
-type Screen = 'home' | 'intro' | 'test' | 'results';
+type Screen = 'login' | 'home' | 'intro' | 'test' | 'results';
 
 function AnimatedMathSky() {
   const symbols = ['+', '−', '×', '÷', '★', '✓'];
@@ -95,7 +95,15 @@ function getDinoForYear(year: number) {
 }
 
 function App() {
-  const [screen, setScreen] = useState<Screen>('home');
+  const [activeUser, setActiveUser] = useState<string | null>(() => localStorage.getItem('math-staar-user') || null);
+  const [examScores, setExamScores] = useState<Record<string, number>>(() => {
+    const user = localStorage.getItem('math-staar-user');
+    if (!user) return {};
+    const saved = localStorage.getItem(`math-staar-scores:${user}`);
+    return saved ? JSON.parse(saved) : {};
+  });
+
+  const [screen, setScreen] = useState<Screen>(() => localStorage.getItem('math-staar-user') ? 'home' : 'login');
   const [showExitModal, setShowExitModal] = useState<boolean>(false);
   const [manifest, setManifest] = useState<Manifest | null>(null);
   const [selectedYear, setSelectedYear] = useState<ManifestEntry | null>(null);
@@ -140,7 +148,7 @@ function App() {
 
   useEffect(() => {
     if (!exam) return;
-    localStorage.setItem(`math-staar-ishaan:${exam.id}`, JSON.stringify(attempt));
+    sessionStorage.setItem(`math-staar-ishaan:${exam.id}`, JSON.stringify(attempt));
   }, [attempt, exam]);
 
   const currentQuestion = exam?.questions[questionIndex];
@@ -192,7 +200,7 @@ function App() {
     const json = JSON.parse(processedText) as ExamBundle;
     setExam(json);
 
-    const saved = localStorage.getItem(`math-staar-ishaan:${json.id}`);
+    const saved = sessionStorage.getItem(`math-staar-ishaan:${json.id}`);
     setAttempt(saved ? (JSON.parse(saved) as AttemptState) : emptyAttempt);
     setQuestionIndex(0);
   }
@@ -248,17 +256,38 @@ function App() {
     if (action === 'next') {
       setQuestionIndex(c => c + 1);
     } else {
-      submitExam();
+      if (!exam) return;
+      // Re-calculate the score here to guarantee freshness
+      const correct = exam.questions.filter((question) => scoreQuestion(question, attempt.answers[question.id])).length;
+      const total = exam.questions.length;
+      const computedPercent = Math.round((correct / total) * 100);
+
+      setExamScores(prev => {
+        const currentBest = prev[exam.id] || 0;
+        if (computedPercent > currentBest) {
+          const nextScores = { ...prev, [exam.id]: computedPercent };
+          if (activeUser) {
+            localStorage.setItem(`math-staar-scores:${activeUser}`, JSON.stringify(nextScores));
+          }
+          return nextScores;
+        }
+        return prev;
+      });
+
+      setScreen('results');
+      window.scrollTo({ top: 0 });
     }
   }
 
   function resetProgress() {
     if (!exam) return;
-    localStorage.removeItem(`math-staar-ishaan:${exam.id}`);
-    setAttempt(emptyAttempt);
-    setQuestionIndex(0);
-    setScreen('home');
-    setShowReview(false);
+    if (confirm('Are you sure you want to completely erase all progress and restart this exam?')) {
+      sessionStorage.removeItem(`math-staar-ishaan:${exam.id}`);
+      setAttempt(emptyAttempt);
+      setQuestionIndex(0);
+      setScreen('home');
+      setShowReview(false);
+    }
   }
 
   const renderQuestionTable = (table: NonNullable<Question['table']>) => (
@@ -333,19 +362,51 @@ function App() {
         </div>
       )}
 
-      {screen !== 'test' && (
+      {screen !== 'test' && screen !== 'login' && (
         <header className="site-header">
-          <div className="title-badge" style={{ width: '64px', height: '64px', padding: '10px', overflow: 'hidden' }}>
-            <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
-          </div>
-          <div>
-            <p className="eyebrow">Dino Jungle Safari</p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div className="leaf-logo">🌿</div>
             <h1>Math STAAR Test Prep</h1>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{ color: 'white', fontWeight: 800 }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
+            <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => {
+              localStorage.removeItem('math-staar-user');
+              setActiveUser(null);
+              setExamScores({});
+              setScreen('login');
+            }}>Log Out</button>
           </div>
         </header>
       )}
 
-      {screen !== 'results' && (
+      {screen === 'login' && (
+        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'rgba(0,0,0,0.4)', zIndex: 100 }}>
+          <form className="card-panel" style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '16px', textAlign: 'center' }} onSubmit={(e) => {
+            e.preventDefault();
+            const fn = (e.currentTarget.elements.namedItem('firstName') as HTMLInputElement).value;
+            const ln = (e.currentTarget.elements.namedItem('lastName') as HTMLInputElement).value;
+            const userId = `${fn.trim().toLowerCase()}_${ln.trim().toLowerCase()}`;
+            if (!userId.match(/^[a-z]+_[a-z]+$/)) {
+              alert('Please enter a valid First and Last name without spaces.');
+              return;
+            }
+            localStorage.setItem('math-staar-user', userId);
+            setActiveUser(userId);
+            const savedScores = localStorage.getItem(`math-staar-scores:${userId}`);
+            setExamScores(savedScores ? JSON.parse(savedScores) : {});
+            setScreen('home');
+          }}>
+            <h2 style={{ fontSize: '2rem', color: '#2d3748' }}>Welcome Explorer!</h2>
+            <p>Enter your name to start tracking your jungle safari progress.</p>
+            <input name="firstName" placeholder="First Name" required minLength={2} className="blank-select" style={{ width: '100%' }} />
+            <input name="lastName" placeholder="Last Name" required minLength={2} className="blank-select" style={{ width: '100%' }} />
+            <button type="submit" className="primary-button" style={{ marginTop: '12px' }}>Start Safari</button>
+          </form>
+        </div>
+      )}
+
+      {screen !== 'results' && screen !== 'login' && (
         <main className="main-container">
           {loading && <div className="card-panel"><p>Loading the jungle trail...</p></div>}
           {error && <div className="card-panel error-card"><p>{error}</p></div>}
@@ -358,8 +419,6 @@ function App() {
                   <p>Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!</p>
                 </div>
             </section>
-
-            {/* Removed scroll spacer as it is no longer required and user requested no scrolling */}
 
             <div className="perfect-map-overlay" style={{
               position: 'absolute',
@@ -427,6 +486,12 @@ function App() {
                 ];
                 const hue = mountainHues[index % mountainHues.length];
 
+                // Progression Logic: Unlock if Level 1, or if previous level has score >= 85
+                const prevLevelSlug = index > 0 ? manifest.years[index - 1].slug : null;
+                const isLocked = index > 0 && (examScores[prevLevelSlug!] || 0) < 85;
+                const currentScore = examScores[entry.slug];
+                const hasStar = currentScore !== undefined && currentScore >= 85;
+
                 return (
                   <div
                     key={entry.slug}
@@ -438,46 +503,59 @@ function App() {
                       transform: 'translate(-50%, -50%)',
                       margin: 0,
                       width: 'auto',
-                      zIndex: top > 60 ? 10 : 1 // bring bottom mountains in front
+                      zIndex: top > 60 ? 10 : 1,
+                      filter: isLocked ? 'grayscale(1) opacity(0.5)' : 'none',
+                      transition: 'all 0.4s ease'
                     }}
                   >
                     <button
                       className={`mountain-button ${entry.status}`}
-                      onClick={() => void chooseYear(entry)}
+                      onClick={() => {
+                        if (!isLocked) chooseYear(entry);
+                      }}
                     >
-                      {/* Dino positioned on the outside of the mountain, facing away from center */}
-                      <img
-                        src={getDinoForYear(entry.year)}
-                        alt={`Level ${levelNum} Dino`}
-                        className="mountain-dino dino-bob"
-                        style={{
-                          left: `calc(50% + ${dinoOffsetX}px)`,
-                          top: `calc(-25px + ${dinoOffsetY}px)`,
-                          transform: 'translate(-50%, 0)',
-                          height: dinoHeight ? `${dinoHeight}px` : undefined,
-                        }}
-                      />
+                      <div style={{ position: 'relative' }}>
+                        {/* Dino positioned on the outside of the mountain, facing away from center */}
+                        <img
+                          src={getDinoForYear(entry.year)}
+                          alt={`Level ${levelNum} Dino`}
+                          className="mountain-dino dino-bob"
+                          style={{
+                            left: `calc(50% + ${dinoOffsetX}px)`,
+                            top: `calc(-25px + ${dinoOffsetY}px)`,
+                            transform: 'translate(-50%, 0)',
+                            height: dinoHeight ? `${dinoHeight}px` : undefined,
+                          }}
+                        />
 
-                      {/* Level flag on peak */}
-                      <div className="mountain-flag">
-                        <div className="flag-pole" />
-                        <div className="flag-banner">
-                          Level {levelNum}
+                        {/* Level flag on peak */}
+                        <div className="mountain-flag">
+                          <div className="flag-pole" />
+                          <div className="flag-banner">
+                            Level {levelNum}
+                          </div>
                         </div>
-                      </div>
 
-                      {/* Mountain image mapped to dino hue */}
-                      <img 
-                        src={`${import.meta.env.BASE_URL}dinos/mountain_vines_clean.png`}
-                        alt="Jungle Mountain" 
-                        className="mountain-shape" 
-                        style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(1.2)` }}
-                      />
+                        {/* Mountain image mapped to dino hue */}
+                        <img 
+                          src={`${import.meta.env.BASE_URL}dinos/mountain_vines_clean.png`}
+                          alt="Jungle Mountain" 
+                          className="mountain-shape" 
+                          style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(1.2)` }}
+                        />
+
+                        {hasStar && (
+                          <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
+                        )}
+                        {isLocked && (
+                          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '4rem', opacity: 0.9, zIndex: 20 }}>🔒</div>
+                        )}
+                      </div>
 
                       {/* Info overlay at mountain base */}
                       <div className="mountain-info">
                         <span className={`mountain-status ${entry.status}`}>
-                          {entry.status === 'playable' ? '▶ Play' : '🔒 Locked'}
+                          {isLocked ? '🔒 Locked' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
                         </span>
                         <span className="mountain-questions" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
                           {entry.playableQuestionCount ?? entry.officialQuestionCount} Q's
@@ -512,6 +590,11 @@ function App() {
                   </label>
                   <div style={{ display: 'flex', gap: '16px' }}>
                     <button className="primary-button" onClick={startExam}>Launch Safari</button>
+                    <button className="secondary-button" style={{ backgroundColor: '#ff6b6b' }} onClick={() => {
+                      if (confirm('Are you sure you want to clear all your answers and start from scratch?')) {
+                        setAttempt(emptyAttempt);
+                      }
+                    }}>Reset Exam</button>
                     <button className="secondary-button" onClick={() => setScreen('home')}>Cancel</button>
                   </div>
                 </>
