@@ -1,4 +1,4 @@
-import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import type { AttemptState, ExamBundle, Manifest, ManifestEntry, Question } from './types';
 
 const emptyAttempt: AttemptState = {
@@ -9,73 +9,6 @@ const emptyAttempt: AttemptState = {
 };
 
 type Screen = 'login' | 'home' | 'intro' | 'test' | 'results';
-
-/* =========================================
-   LOCKED-COMPOSITION STAGE CONFIG
-   All coordinates are in design pixels relative
-   to a 1440×1024 canonical canvas.
-   ========================================= */
-const SCENE_W = 1440;
-const SCENE_H = 1024;
-const HEADER_H = 84; // approx header height in px
-
-const sceneLayout = {
-  titleCard: { x: 140, y: 25, w: 680, h: 260 },
-  lake:      { x: 380, y: 370, w: 560, h: 210 },
-  levels: [
-    { x: 660, y: 200 },   // L1: Top center
-    { x: 900, y: 260 },   // L2: Upper right
-    { x: 970, y: 440 },   // L3: Right
-    { x: 800, y: 560 },   // L4: Lower right
-    { x: 550, y: 560 },   // L5: Lower left
-    { x: 360, y: 440 },   // L6: Left
-    { x: 430, y: 260 },   // L7: Upper left
-  ],
-  dinoOffsets: [
-    { dx: 25,  dy: 8,   h: 85 },   // L1
-    { dx: 24,  dy: -5,  h: 85 },   // L2
-    { dx: 40,  dy: 10,  h: 85 },   // L3
-    { dx: 15,  dy: -20, h: 115 },  // L4
-    { dx: -20, dy: -16, h: 115 },  // L5
-    { dx: 20,  dy: 0,   h: 115 },  // L6
-    { dx: -20, dy: -10, h: 85 },   // L7
-  ],
-  mountainHues: [
-    '-50deg',   // L1: Orange
-    '60deg',    // L2: Teal
-    '230deg',   // L3: Pink
-    '30deg',    // L4: Light Green
-    '0deg',     // L5: Green
-    '-70deg',   // L6: Orange/Red
-    '0deg',     // L7: Green
-  ],
-};
-
-function useStageScale() {
-  const [scale, setScale] = useState(1);
-  const rafRef = useRef(0);
-
-  const recalc = useCallback(() => {
-    cancelAnimationFrame(rafRef.current);
-    rafRef.current = requestAnimationFrame(() => {
-      const vw = window.innerWidth;
-      const vh = window.innerHeight - HEADER_H;
-      const s = Math.min(vw / SCENE_W, vh / SCENE_H);
-      setScale(s);
-    });
-  }, []);
-
-  useEffect(() => {
-    recalc();
-    window.addEventListener('resize', recalc);
-    return () => {
-      window.removeEventListener('resize', recalc);
-      cancelAnimationFrame(rafRef.current);
-    };
-  }, [recalc]);
-
-  return scale;
-}
 
 function AnimatedMathSky() {
   const symbols = ['+', '−', '×', '÷', '★', '✓'];
@@ -159,154 +92,6 @@ function getDinoForYear(year: number) {
     2025: 'dino4_trans.png'
   };
   return `${import.meta.env.BASE_URL}dinos/${mapping[year] || 'dino_main_trans.png'}`;
-}
-
-/* =========================================
-   LOCKED STAGE COMPONENT
-   Renders the home screen as a uniformly-scaled
-   1440×1024 game board.
-   ========================================= */
-function LockedStage({ manifest, examScores, chooseYear }: {
-  manifest: Manifest;
-  examScores: Record<string, number>;
-  chooseYear: (entry: ManifestEntry) => void;
-}) {
-  const scale = useStageScale();
-
-  return (
-    <div className="scene-viewport">
-      <div
-        className="stage-scaler"
-        style={{
-          width: SCENE_W * scale,
-          height: SCENE_H * scale,
-          overflow: 'hidden',
-        }}
-      >
-        <div
-          className="stage-canvas"
-          style={{ transform: `scale(${scale})` }}
-        >
-          {/* Background image — scales with stage */}
-          <img
-            src={`${import.meta.env.BASE_URL}dinos/jungle_bg.png`}
-            alt=""
-            className="stage-bg"
-            aria-hidden="true"
-          />
-
-          {/* Water filter definition */}
-          <svg width="0" height="0" style={{ position: 'absolute' }}>
-            <filter id="water-filter">
-              <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise">
-                <animate attributeName="baseFrequency" values="0.015; 0.025; 0.015" dur="10s" repeatCount="indefinite" />
-              </feTurbulence>
-              <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="B" />
-            </filter>
-          </svg>
-
-          {/* Lake water */}
-          <div
-            className="lake-water"
-            style={{
-              left: sceneLayout.lake.x,
-              top: sceneLayout.lake.y,
-              width: sceneLayout.lake.w,
-              height: sceneLayout.lake.h,
-            }}
-          />
-
-          {/* Title card */}
-          <div
-            className="stage-hero-box"
-            style={{
-              left: sceneLayout.titleCard.x,
-              top: sceneLayout.titleCard.y,
-              width: sceneLayout.titleCard.w,
-            }}
-          >
-            <h2>Ready for MATH STAAR Jungle Safari!</h2>
-            <p>Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!</p>
-            <p style={{ marginTop: '4px', padding: '10px 18px', background: 'rgba(255, 240, 180, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '12px', color: '#8a6300', fontWeight: 'bold', display: 'inline-block', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', textShadow: 'none', fontSize: '1.1rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))' }}>
-              ⭐ Score at least 85% on a level to unlock the next challenge!
-            </p>
-          </div>
-
-          {/* Level hotspots */}
-          {manifest.years.map((entry, index) => {
-            const levelNum = index + 1;
-            const pos = sceneLayout.levels[index];
-            const dino = sceneLayout.dinoOffsets[index];
-            const hue = sceneLayout.mountainHues[index];
-
-            const prevLevelSlug = index > 0 ? manifest.years[index - 1].slug : null;
-            const isLocked = index > 0 && (examScores[prevLevelSlug!] || 0) < 85;
-            const currentScore = examScores[entry.slug];
-            const hasStar = currentScore !== undefined && currentScore >= 85;
-
-            return (
-              <div
-                key={entry.slug}
-                style={{
-                  position: 'absolute',
-                  left: pos.x,
-                  top: pos.y,
-                  transform: 'translate(-50%, -50%)',
-                  zIndex: pos.y > 500 ? 6 : 4,
-                  transition: 'all 0.4s ease',
-                }}
-              >
-                <button
-                  className={`mountain-button ${entry.status}`}
-                  onClick={() => { if (!isLocked) chooseYear(entry); }}
-                >
-                  <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                    <img
-                      src={getDinoForYear(entry.year)}
-                      alt={`Level ${levelNum} Dino`}
-                      className="mountain-dino dino-bob"
-                      style={{
-                        left: `calc(50% + ${dino.dx}px)`,
-                        top: `calc(-25px + ${dino.dy}px)`,
-                        transform: 'translate(-50%, 0)',
-                        height: `${dino.h}px`,
-                        filter: 'none',
-                      }}
-                    />
-                    <div className="mountain-flag" style={{ filter: isLocked ? 'opacity(0.6) grayscale(0.8)' : 'none' }}>
-                      <div className="flag-pole" />
-                      <div className="flag-banner">Level {levelNum}</div>
-                    </div>
-                    <img
-                      src={`${import.meta.env.BASE_URL}dinos/mountain_vines_clean.png`}
-                      alt="Jungle Mountain"
-                      className="mountain-shape"
-                      style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(${isLocked ? 0.2 : 1.2}) opacity(${isLocked ? 0.7 : 1}) grayscale(${isLocked ? 0.8 : 0})` }}
-                    />
-                    {hasStar && (
-                      <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
-                    )}
-                    {isLocked && (
-                      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '2.2rem', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))' }}>🔒</div>
-                    )}
-                  </div>
-                  <div className="mountain-info">
-                    <span className={`mountain-status ${entry.status}`}>
-                      {isLocked ? '🔒 Locked' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
-                    </span>
-                  </div>
-                </button>
-              </div>
-            );
-          })}
-
-          {/* Ambient dinos inside stage */}
-          <img src={`${import.meta.env.BASE_URL}dinos/dino3.webp`} className="dino-ambient-left ambient-bob" alt="Red T-Rex" aria-hidden="true" />
-          <img src={`${import.meta.env.BASE_URL}dinos/dino_right_transparent.png`} className="dino-ambient-right ambient-bob" alt="Pink Dino" aria-hidden="true" />
-        </div>
-      </div>
-    </div>
-  );
 }
 
 function App() {
@@ -535,13 +320,9 @@ function App() {
           <div className="pterodactyl-wrapper">
             <img src={`${import.meta.env.BASE_URL}dinos/pterodactyl.png`} className="pterodactyl-sprite" alt="Flying Pterodactyl" aria-hidden="true" />
           </div>
-          {/* Ambient dinos rendered outside stage for results screen */}
-          {screen === 'results' && (
-            <>
-              <img src={`${import.meta.env.BASE_URL}dinos/dino3.webp`} className="dino-ambient-left ambient-bob" alt="Red T-Rex" aria-hidden="true" />
-              <img src={`${import.meta.env.BASE_URL}dinos/dino_right_transparent.png`} className="dino-ambient-right ambient-bob" alt="Pink Dino" aria-hidden="true" />
-            </>
-          )}
+          
+          <img src={`${import.meta.env.BASE_URL}dinos/dino3.webp`} className="dino-ambient-left ambient-bob" alt="Red T-Rex Ambient" aria-hidden="true" />
+          <img src={`${import.meta.env.BASE_URL}dinos/dino_right_transparent.png`} className="dino-ambient-right ambient-bob" alt="New Right Ambient Dino" aria-hidden="true" />
         </>
       )}
 
@@ -625,51 +406,204 @@ function App() {
       )}
 
       {screen !== 'results' && screen !== 'login' && (
-        <>
-          {loading && <main className="main-container"><div className="card-panel"><p>Loading the jungle trail...</p></div></main>}
-          {error && <main className="main-container"><div className="card-panel error-card"><p>{error}</p></div></main>}
+        <main className="main-container">
+          {loading && <div className="card-panel"><p>Loading the jungle trail...</p></div>}
+          {error && <div className="card-panel error-card"><p>{error}</p></div>}
 
           {!loading && !error && manifest && screen === 'home' && (
-            <LockedStage manifest={manifest} examScores={examScores} chooseYear={chooseYear} />
-          )}
-
-          {screen === 'intro' && selectedYear && (
-            <main className="intro-layout">
-              <section className="card-panel" style={{ display: 'flex', gap: '32px', alignItems: 'center', flexWrap: 'wrap' }}>
-                <img src={getDinoForYear(selectedYear.year)} alt="Friendly Dino Mascot" className="mascot-img ambient-bob" />
-                <div style={{ flex: 1, minWidth: '300px' }}>
-                  <h2 style={{ fontSize: '2.5rem', color: 'var(--earth-brown)', margin: '0 0 16px 0' }}>Year {selectedYear.year} Exam</h2>
-                  <p style={{ fontSize: '1.2rem', marginBottom: '24px', lineHeight: '1.6' }}>Grab your backpack and get ready for an awesome math adventure! Your friendly dinosaur guides are waiting to help you stomp through these questions. Take your time, do your best, and have fun. You've got this—let's go on a jungle safari!</p>
-
-                  {selectedYear.status === 'playable' && exam ? (
-                    <>
-                      <label style={{ display: 'block', fontSize: '1.1rem', fontWeight: 800, marginBottom: '24px', cursor: 'pointer' }}>
-                        <input
-                          type="checkbox"
-                          checked={attempt.timerEnabled}
-                          onChange={(event) => setAttempt((current) => ({ ...current, timerEnabled: event.target.checked }))}
-                          style={{ marginRight: '12px', transform: 'scale(1.5)' }}
-                        />
-                        Enable the Speedy Safari Timer
-                      </label>
-                      <div style={{ display: 'flex', gap: '16px' }}>
-                        <button className="primary-button" onClick={startExam}>Launch Safari</button>
-                        <button className="secondary-button" style={{ backgroundColor: '#ff6b6b' }} onClick={() => {
-                          if (confirm('Are you sure you want to clear all your answers and start from scratch?')) {
-                            setAttempt(emptyAttempt);
-                          }
-                        }}>Reset Exam</button>
-                        <button className="secondary-button" onClick={() => setScreen('home')}>Cancel</button>
-                      </div>
-                    </>
-                  ) : (
-                    <button className="secondary-button" onClick={() => setScreen('home')}>Back to Map</button>
-                  )}
+            <div className="home-grid">
+              <section className="hero-box" style={{ paddingBottom: '12px' }}>
+                <div className="hero-text">
+                  <h2>Ready for MATH STAAR Jungle Safari!</h2>
+                  <p>Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!</p>
+                  <p style={{ marginTop: '7px', padding: '10px 18px', background: 'rgba(255, 240, 180, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '12px', color: '#8a6300', fontWeight: 'bold', display: 'inline-block', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', textShadow: 'none', fontSize: '1.2rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))' }}>
+                    ⭐ Score at least 85% on a level to unlock the next challenge!
+                  </p>
                 </div>
-              </section>
-            </main>
-          )}
-        </>
+            </section>
+
+            <div className="perfect-map-overlay" style={{
+              position: 'absolute',
+              top: '20vmax',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: 'max(100vw, 100vh)',
+              height: 'max(100vw, 100vh)',
+              pointerEvents: 'none',
+              zIndex: 5
+            }}>
+              {/* Dashed ellipse trace matching the background oval */}
+              <svg className="trail-path-svg" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} aria-hidden="true">
+                <ellipse cx="50%" cy="29.8%" rx="24.3%" ry="17.3%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
+              </svg>
+
+              {/* Realistic Animated Water Lake perfectly aligning with background glow */}
+              <svg width="0" height="0" style={{ position: 'absolute' }}>
+                <filter id="water-filter">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise">
+                    <animate attributeName="baseFrequency" values="0.015; 0.025; 0.015" dur="10s" repeatCount="indefinite" />
+                  </feTurbulence>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="B" />
+                </filter>
+              </svg>
+              <div className="lake-water" style={{ pointerEvents: 'none', top: '29.8%' }} />
+
+              {manifest.years.map((entry, index) => {
+                const levelNum = index + 1;
+                // Mapped positions for 100vw/100vh overlay
+                const manualPositions = [
+                  { left: 50, top: 11.6 },  // L1: Top center
+                  { left: 68.9, top: 16.4 }, // L2: Upper right
+                  { left: 72.5, top: 33.2 }, // L3: Right
+                  { left: 59, top: 41.6 }, // L4: Lower right
+                  { left: 40.1, top: 41.6 }, // L5: Lower left
+                  { left: 26.6, top: 33.2 }, // L6: Left
+                  { left: 32, top: 16.4 }, // L7: Upper left
+                ];
+                const { left, top } = manualPositions[index];
+
+                // Manual dino offsets (X px, Y px) — user-tunable
+                const dinoOffsets = [
+                  { x: 25,  y: 8,   h: 85 }, // L1: straight up
+                  { x: 24,  y: -5,  h: 85 }, // L2: upper-right
+                  { x: 40,  y: 10,  h: 85 }, // L3: right
+                  { x: 15,  y: -20, h: 115 }, // L4: lower-right (larger)
+                  { x: -20, y: -16, h: 115 }, // L5: lower-left  (larger)
+                  { x: 20,  y: 0,   h: 115 }, // L6: left        (larger)
+                  { x: -20, y: -10, h: 85 }, // L7: upper-left
+                ];
+                const dinoOffsetX = dinoOffsets[index].x;
+                const dinoOffsetY = dinoOffsets[index].y;
+                const dinoHeight = dinoOffsets[index].h;
+
+                // Mountain color hues to match dinos:
+                const mountainHues = [
+                  '-50deg',  // L1: Orange
+                  '60deg',   // L2: Teal
+                  '230deg',  // L3: Pink
+                  '30deg',   // L4: Light Green
+                  '0deg',    // L5: Green
+                  '-70deg',  // L6: Orange/Red
+                  '0deg',    // L7: Green
+                ];
+                const hue = mountainHues[index % mountainHues.length];
+
+                // Progression Logic: Unlock if Level 1, or if previous level has score >= 85
+                const prevLevelSlug = index > 0 ? manifest.years[index - 1].slug : null;
+                const isLocked = index > 0 && (examScores[prevLevelSlug!] || 0) < 85;
+                const currentScore = examScores[entry.slug];
+                const hasStar = currentScore !== undefined && currentScore >= 85;
+
+                return (
+                  <div
+                    key={entry.slug}
+                    className="mountain-row"
+                    style={{
+                      position: 'absolute',
+                      left: `${left}%`,
+                      top: `${top}%`,
+                      transform: 'translate(-50%, -50%)',
+                      margin: 0,
+                      width: 'auto',
+                      zIndex: top > 60 ? 10 : 1,
+                      filter: 'none',
+                      transition: 'all 0.4s ease'
+                    }}
+                  >
+                    <button
+                      className={`mountain-button ${entry.status}`}
+                      onClick={() => {
+                        if (!isLocked) chooseYear(entry);
+                      }}
+                    >
+                      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                        {/* Dino positioned on the outside of the mountain, facing away from center */}
+                        <img
+                          src={getDinoForYear(entry.year)}
+                          alt={`Level ${levelNum} Dino`}
+                          className="mountain-dino dino-bob"
+                          style={{
+                            left: `calc(50% + ${dinoOffsetX}px)`,
+                            top: `calc(-25px + ${dinoOffsetY}px)`,
+                            transform: 'translate(-50%, 0)',
+                            height: dinoHeight ? `${dinoHeight}px` : undefined,
+                            filter: 'none',
+                          }}
+                        />
+
+                        {/* Level flag on peak */}
+                        <div className="mountain-flag" style={{ filter: isLocked ? 'opacity(0.6) grayscale(0.8)' : 'none' }}>
+                          <div className="flag-pole" />
+                          <div className="flag-banner">
+                            Level {levelNum}
+                          </div>
+                        </div>
+
+                        {/* Mountain image mapped to dino hue */}
+                        <img 
+                          src={`${import.meta.env.BASE_URL}dinos/mountain_vines_clean.png`}
+                          alt="Jungle Mountain" 
+                          className="mountain-shape" 
+                          style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(${isLocked ? 0.2 : 1.2}) opacity(${isLocked ? 0.7 : 1}) grayscale(${isLocked ? 0.8 : 0})` }}
+                        />
+
+                        {hasStar && (
+                          <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
+                        )}
+                        {isLocked && (
+                          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '2.2rem', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))' }}>🔒</div>
+                        )}
+                      </div>
+
+                      {/* Info overlay at mountain base */}
+                      <div className="mountain-info">
+                        <span className={`mountain-status ${entry.status}`}>
+                          {isLocked ? '🔒 Locked' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
+                        </span>
+                      </div>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {screen === 'intro' && selectedYear && (
+        <main className="intro-layout">
+          <section className="card-panel" style={{ display: 'flex', gap: '32px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <img src={getDinoForYear(selectedYear.year)} alt="Friendly Dino Mascot" className="mascot-img ambient-bob" />
+            <div style={{ flex: 1, minWidth: '300px' }}>
+              <h2 style={{ fontSize: '2.5rem', color: 'var(--earth-brown)', margin: '0 0 16px 0' }}>Year {selectedYear.year} Exam</h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: '24px', lineHeight: '1.6' }}>Grab your backpack and get ready for an awesome math adventure! Your friendly dinosaur guides are waiting to help you stomp through these questions. Take your time, do your best, and have fun. You've got this—let's go on a jungle safari!</p>
+              
+              {selectedYear.status === 'playable' && exam ? (
+                <>
+                  <label style={{ display: 'block', fontSize: '1.1rem', fontWeight: 800, marginBottom: '24px', cursor: 'pointer' }}>
+                    <input
+                      type="checkbox"
+                      checked={attempt.timerEnabled}
+                      onChange={(event) => setAttempt((current) => ({ ...current, timerEnabled: event.target.checked }))}
+                      style={{ marginRight: '12px', transform: 'scale(1.5)' }}
+                    />
+                    Enable the Speedy Safari Timer
+                  </label>
+                  <div style={{ display: 'flex', gap: '16px' }}>
+                    <button className="primary-button" onClick={startExam}>Launch Safari</button>
+                    <button className="secondary-button" style={{ backgroundColor: '#ff6b6b' }} onClick={() => {
+                      if (confirm('Are you sure you want to clear all your answers and start from scratch?')) {
+                        setAttempt(emptyAttempt);
+                      }
+                    }}>Reset Exam</button>
+                    <button className="secondary-button" onClick={() => setScreen('home')}>Cancel</button>
+                  </div>
+                </>
+              ) : (
+                <button className="secondary-button" onClick={() => setScreen('home')}>Back to Map</button>
+              )}
+            </div>
+          </section>
+        </main>
       )}
 
       {screen === 'test' && exam && currentQuestion && (
@@ -941,6 +875,8 @@ function App() {
              </div>
            </div>
          </div>
+      )}
+      </main>
       )}
 
       {screen === 'results' && exam && results && (

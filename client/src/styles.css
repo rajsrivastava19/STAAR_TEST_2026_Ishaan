@@ -24,18 +24,16 @@ body {
   padding: 0;
   font-family: 'Nunito', system-ui, -apple-system, sans-serif;
   color: var(--text-dark);
+  
+  /* Global Immersive Background */
   background-color: #122a12;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* Show jungle background on non-home screens (intro, results, etc.) */
-body:not(:has(.scene-viewport)) {
   background-image: url('/STAAR_TEST_2026_Ishaan/dinos/jungle_bg.png');
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .page-shell {
@@ -45,8 +43,8 @@ body:not(:has(.scene-viewport)) {
   flex-direction: column;
 }
 
-/* Dynamically remove vertical scrolling when locked stage is mounted */
-body:has(.scene-viewport) {
+/* Dynamically remove vertical scrolling exclusively when the virtual map is mounted */
+body:has(.perfect-map-overlay) {
   overflow-y: hidden;
 }
 
@@ -97,80 +95,21 @@ body:has(.scene-viewport) {
 
 .dino-walk { animation: walking-in 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
 
-/* =========================================
-   LOCKED-COMPOSITION STAGE SYSTEM
-   ========================================= */
-
-.scene-viewport {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
-  position: relative;
-}
-
-.stage-scaler {
-  flex-shrink: 0;
-}
-
-.stage-canvas {
-  width: 1440px;
-  height: 1024px;
-  position: relative;
-  transform-origin: top center;
-}
-
-.stage-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.stage-hero-box {
-  position: absolute;
-  z-index: 10;
-  background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  border: var(--glass-border);
-  border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-  padding: 24px;
-  padding-bottom: 12px;
-}
-
-.stage-hero-box h2 {
-  font-size: 2.8rem;
-  margin: 0 0 12px 0;
-  color: var(--jungle-green);
-  text-shadow: 2px 2px 0 rgba(255,255,255,0.8);
-  line-height: 1.1;
-}
-
-.stage-hero-box p {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  font-weight: 700;
-  color: var(--earth-dark);
-  margin: 0 0 8px 0;
-}
-
 /* Environment Elements */
 .lake-water {
   position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38%;
+  height: 18%;
   border-radius: 50%;
   background: radial-gradient(ellipse at center, rgba(135, 206, 250, 0.85) 0%, rgba(30, 144, 255, 0.6) 50%, rgba(0, 102, 204, 0) 100%);
   filter: url(#water-filter) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
   box-shadow: inset 0 0 20px rgba(255,255,255,0.4), inset 0 0 50px rgba(0, 191, 255, 0.3);
 }
-
 .pterodactyl-wrapper {
   position: fixed;
   top: 0;
@@ -185,14 +124,13 @@ body:has(.scene-viewport) {
   width: 200px;
 }
 
-/* Ambient dinos — fixed positioning for results/global screens */
 .dino-ambient-left {
   position: fixed;
   bottom: 0px;
   left: max(20px, 4vw);
   height: 250px;
   width: auto;
-  z-index: 5;
+  z-index: 5; 
   filter: drop-shadow(0 15px 15px rgba(0,0,0,0.5));
   pointer-events: none;
 }
@@ -206,24 +144,7 @@ body:has(.scene-viewport) {
   z-index: 5;
   filter: drop-shadow(0 15px 15px rgba(0,0,0,0.5));
   pointer-events: none;
-  transform: scaleX(-1);
-}
-
-/* Ambient dinos inside stage — absolute positioning */
-.stage-canvas .dino-ambient-left {
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  height: 350px;
-  z-index: 8;
-}
-
-.stage-canvas .dino-ambient-right {
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-  height: 280px;
-  z-index: 8;
+  transform: scaleX(-1); /* flip to face inward */
 }
 
 .firefly-layer {
@@ -1118,13 +1039,11 @@ button:disabled {
   .mascot-img {
     width: 200px;
   }
+  .dino-ambient-left, .dino-ambient-right {
+    height: 150px;
+  }
   .pterodactyl-sprite {
     width: 150px;
-  }
-  /* Fixed ambient dinos (results screen) scale down */
-  body:not(:has(.scene-viewport)) .dino-ambient-left,
-  body:not(:has(.scene-viewport)) .dino-ambient-right {
-    height: 150px;
   }
 }
 
@@ -1146,6 +1065,29 @@ button:disabled {
   .mascot-img {
     width: 150px;
   }
+  .mountain-left, .mountain-right {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .mountain-button {
+    width: 110px;
+    height: 140px;
+  }
+  .mountain-dino {
+    height: 75px;
+    top: -15px;
+  }
+  .flag-banner {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+  }
+  .mountain-shape {
+    height: 110px;
+  }
+  .dino-ambient-left, .dino-ambient-right {
+    height: 60px;
+  }
   .pterodactyl-sprite {
     width: 90px;
   }
@@ -1155,11 +1097,6 @@ button:disabled {
   }
   .score-grid {
     grid-template-columns: 1fr;
-  }
-  /* Fixed ambient dinos scale down on mobile */
-  body:not(:has(.scene-viewport)) .dino-ambient-left,
-  body:not(:has(.scene-viewport)) .dino-ambient-right {
-    height: 60px;
   }
 }
 
@@ -1182,12 +1119,13 @@ button:disabled {
   display: none;
 }
 
-/* Short-height fallback: allow scroll if stage can't fit */
-@media (max-height: 768px) {
-  body:has(.scene-viewport) {
-    overflow-y: auto;
-  }
-  .site-header {
-    padding: 8px 24px;
+/* iOS scaling override for results page */
+body:has(.results-layout) {
+  background-size: 100vw 100vh !important;
+}
+
+@media (max-width: 1024px) {
+  body:has(.results-layout) {
+    background-size: 100vw auto !important;
   }
 }
