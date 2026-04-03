@@ -1,0 +1,872 @@
+import { Fragment, useEffect, useMemo, useState } from 'react';
+import type { AttemptState, ExamBundle, Manifest, ManifestEntry, Question } from './types';
+
+const emptyAttempt: AttemptState = {
+  answers: {},
+  flagged: {},
+  elapsedSeconds: 0,
+  timerEnabled: false
+};
+
+type Screen = 'home' | 'intro' | 'test' | 'results';
+
+function AnimatedMathSky() {
+  const symbols = ['+', '−', '×', '÷', '★', '✓'];
+  return (
+    <div className="math-sky" aria-hidden="true">
+      {symbols.map((symbol, index) => (
+        <span
+          key={`${symbol}-${index}`}
+          className="floaty"
+          style={{
+            left: `${8 + index * 14}%`,
+            animationDelay: `${index * 0.6}s`
+          }}
+        >
+          {symbol}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function formatTime(seconds: number) {
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
+function normalizeAnswer(value: string | any) {
+  if (value == null || typeof value !== 'string') return '';
+  return value.replace(/,/g, '').trim().toLowerCase();
+}
+
+function scoreQuestion(question: Question, answer: string | string[] | Record<string, string> | undefined) {
+  if (!answer) return false;
+
+  if (question.answerRule.kind === 'multi_select') {
+    const arr = answer as string[];
+    if (!Array.isArray(arr)) return false;
+    const correctArr = question.answerRule.correct;
+    if (arr.length !== correctArr.length) return false;
+    return correctArr.every((v) => arr.includes(v));
+  }
+
+  if (question.answerRule.kind === 'inline_choice') {
+    const obj = answer as Record<string, string>;
+    if (typeof obj !== 'object') return false;
+    const blanks = question.answerRule.blanks;
+    return blanks.every((b) => normalizeAnswer(obj[b.id] ?? '') === normalizeAnswer(b.correct));
+  }
+
+  if (question.answerRule.kind === 'drag_drop') {
+    const obj = answer as Record<string, string>;
+    if (typeof obj !== 'object') return false;
+    const dropZones = question.answerRule.dropZones;
+    return Object.keys(dropZones).every(
+      (dzId) => normalizeAnswer(obj[dzId] ?? '') === normalizeAnswer(dropZones[dzId])
+    );
+  }
+
+  if (question.answerRule.kind === 'single_choice') {
+    return normalizeAnswer(answer as string) === normalizeAnswer(question.answerRule.correct);
+  }
+
+  if (question.answerRule.kind === 'numeric_equivalent') {
+    return question.answerRule.acceptedValues.some(
+      (accepted) => normalizeAnswer(accepted) === normalizeAnswer(answer as string)
+    );
+  }
+
+  return false;
+}
+
+function getDinoForYear(year: number) {
+  const mapping: Record<number, string> = {
+    2018: 'dino_main_trans.png',
+    2019: 'dino1_trans.png',
+    2021: 'dino2_trans.png',
+    2022: 'dino7_trans.png',
+    2023: 'dino5_trans.png',
+    2024: 'dino6_trans.png',
+    2025: 'dino4_trans.png'
+  };
+  return `/dinos/${mapping[year] || 'dino_main_trans.png'}`;
+}
+
+function App() {
+  const [screen, setScreen] = useState<Screen>('home');
+  const [showExitModal, setShowExitModal] = useState<boolean>(false);
+  const [manifest, setManifest] = useState<Manifest | null>(null);
+  const [selectedYear, setSelectedYear] = useState<ManifestEntry | null>(null);
+  const [exam, setExam] = useState<ExamBundle | null>(null);
+  const [attempt, setAttempt] = useState<AttemptState>(emptyAttempt);
+  const [questionIndex, setQuestionIndex] = useState(0);
+  const [selectedDragOption, setSelectedDragOption] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [showReview, setShowReview] = useState(false);
+  const [unansweredList, setUnansweredList] = useState<number[]>([]);
+
+  useEffect(() => {
+    async function fetchManifest() {
+      try {
+        const response = await fetch('/api/manifest');
+        const json = (await response.json()) as Manifest;
+        setManifest(json);
+      } catch {
+        setError('Could not load the year list.');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    void fetchManifest();
+  }, []);
+
+  useEffect(() => {
+    setSelectedDragOption(null);
+  }, [questionIndex]);
+
+  useEffect(() => {
+    if (screen !== 'test' || !attempt.timerEnabled) return;
+
+    const id = window.setInterval(() => {
+      setAttempt((current) => ({ ...current, elapsedSeconds: current.elapsedSeconds + 1 }));
+    }, 1000);
+
+    return () => window.clearInterval(id);
+  }, [screen, attempt.timerEnabled]);
+
+  useEffect(() => {
+    if (!exam) return;
+    localStorage.setItem(`math-staar-ishaan:${exam.id}`, JSON.stringify(attempt));
+  }, [attempt, exam]);
+
+  const currentQuestion = exam?.questions[questionIndex];
+
+  const results = useMemo(() => {
+    if (!exam) return null;
+
+    const correct = exam.questions.filter((question) => scoreQuestion(question, attempt.answers[question.id])).length;
+    const total = exam.questions.length;
+    const percent = Math.round((correct / total) * 100);
+
+    const byCategory = new Map<string, { correct: number; total: number }>();
+    const byReadiness = new Map<string, { correct: number; total: number }>();
+
+    exam.questions.forEach((question) => {
+      const categoryKey = `Category ${question.metadata.reportingCategory}`;
+      const readinessKey = question.metadata.readinessType;
+      const isCorrect = scoreQuestion(question, attempt.answers[question.id]);
+
+      const category = byCategory.get(categoryKey) ?? { correct: 0, total: 0 };
+      category.total += 1;
+      category.correct += isCorrect ? 1 : 0;
+      byCategory.set(categoryKey, category);
+
+      const readiness = byReadiness.get(readinessKey) ?? { correct: 0, total: 0 };
+      readiness.total += 1;
+      readiness.correct += isCorrect ? 1 : 0;
+      byReadiness.set(readinessKey, readiness);
+    });
+
+    return {
+      correct,
+      total,
+      percent,
+      byCategory: Array.from(byCategory.entries()),
+      byReadiness: Array.from(byReadiness.entries())
+    };
+  }, [attempt.answers, exam]);
+
+  async function chooseYear(entry: ManifestEntry) {
+    setSelectedYear(entry);
+    setScreen('intro');
+
+    if (entry.status !== 'playable') return;
+
+    const response = await fetch(`/api/exams/${entry.slug}`);
+    const json = (await response.json()) as ExamBundle;
+    setExam(json);
+
+    const saved = localStorage.getItem(`math-staar-ishaan:${json.id}`);
+    setAttempt(saved ? (JSON.parse(saved) as AttemptState) : emptyAttempt);
+    setQuestionIndex(0);
+  }
+
+  function startExam() {
+    if (!exam) return;
+    setScreen('test');
+  }
+
+  function updateAnswer(questionId: string, value: string | string[] | Record<string, string>) {
+    setAttempt((current) => ({
+      ...current,
+      answers: {
+        ...current.answers,
+        [questionId]: value
+      }
+    }));
+  }
+
+  function toggleFlag(questionId: string) {
+    setAttempt((current) => ({
+      ...current,
+      flagged: {
+        ...current.flagged,
+        [questionId]: !current.flagged[questionId]
+      }
+    }));
+  }
+
+  function submitExam() {
+    if (!exam) return;
+    const unansweredItems = exam.questions.filter((question) => !attempt.answers[question.id]).map(q => q.itemNumber);
+    if (unansweredItems.length > 0) {
+      setUnansweredList(unansweredItems);
+      return;
+    }
+    setScreen('results');
+  }
+
+  function handleNextOrFinish(action: 'next' | 'finish') {
+    if (!currentQuestion) return;
+
+    if (currentQuestion.answerRule.kind === 'multi_select') {
+      const requiredAnswers = currentQuestion.answerRule.correct.length;
+      const currentAnswers = (attempt.answers[currentQuestion.id] as string[]) || [];
+
+      if (currentAnswers.length > 0 && currentAnswers.length < requiredAnswers) {
+        window.alert(`This question requires ${requiredAnswers} answers, but you only selected ${currentAnswers.length}. You must select all required answers before moving on!`);
+        return;
+      }
+    }
+
+    if (action === 'next') {
+      setQuestionIndex(c => c + 1);
+    } else {
+      submitExam();
+    }
+  }
+
+  function resetProgress() {
+    if (!exam) return;
+    localStorage.removeItem(`math-staar-ishaan:${exam.id}`);
+    setAttempt(emptyAttempt);
+    setQuestionIndex(0);
+    setScreen('home');
+    setShowReview(false);
+  }
+
+  const renderQuestionTable = (table: NonNullable<Question['table']>) => (
+    <div className="question-table-container">
+      {table.title && <h4 className="question-table-title">{table.title}</h4>}
+      <table className="question-table">
+        {table.orientation !== 'horizontal' && table.headers && table.headers.length > 0 && (
+          <thead>
+            <tr>
+              {table.headers.map((h, i) => <th key={`th-${i}`}>{h}</th>)}
+            </tr>
+          </thead>
+        )}
+        <tbody>
+          {table.rows.map((row, i) => (
+            <tr key={`tr-${i}`}>
+              {table.orientation === 'horizontal' ? (
+                <>
+                  <th key={`th-col-${i}`}>{row[0]}</th>
+                  {row.slice(1).map((cell, j) => <td key={`td-${j}`}>{cell}</td>)}
+                </>
+              ) : (
+                row.map((cell, j) => <td key={`td-${j}`}>{cell}</td>)
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+
+  return (
+    <div className="page-shell">
+      {screen !== 'test' && (
+        <>
+          <div className="pterodactyl-wrapper">
+            <img src="/dinos/pterodactyl.png" className="pterodactyl-sprite" alt="Flying Pterodactyl" aria-hidden="true" />
+          </div>
+          
+          <img src="/dinos/dino3.webp" className="dino-ambient-left ambient-bob" alt="Red T-Rex Ambient" aria-hidden="true" />
+          <img src="/dinos/dino_right_transparent.png" className="dino-ambient-right ambient-bob" alt="New Right Ambient Dino" aria-hidden="true" />
+        </>
+      )}
+
+      <div className="firefly-layer" aria-hidden="true">
+        {Array.from({ length: 15 }).map((_, i) => (
+          <div 
+            key={i} 
+            className="firefly" 
+            style={{ 
+              left: `${Math.random() * 100}vw`, 
+              top: `${Math.random() * 100}vh`, 
+              animationDelay: `${Math.random() * 5}s`,
+              transform: `scale(${0.5 + Math.random() * 1.5})`
+            }} 
+          />
+        ))}
+      </div>
+      {showExitModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <h2 style={{ fontSize: '2rem', color: 'var(--earth-brown)', marginTop: 0 }}>Leaving so soon?</h2>
+            <p style={{ fontSize: '1.2rem', color: 'var(--text-dark)' }}>Are you sure you want to stop exploring? Your progress is automatically saved.</p>
+            <div className="modal-actions">
+              <button className="secondary-button" onClick={() => setShowExitModal(false)}>Keep Going!</button>
+              <button className="danger-button" onClick={() => {
+                setShowExitModal(false);
+                setScreen('home');
+              }}>Exit to Camp</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {screen !== 'test' && (
+        <header className="site-header">
+          <div className="title-badge" style={{ width: '64px', height: '64px', padding: '10px', overflow: 'hidden' }}>
+            <img src="/Ishaan.png" alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+          </div>
+          <div>
+            <p className="eyebrow">Dino Jungle Safari</p>
+            <h1>Math STAAR Test Prep</h1>
+          </div>
+        </header>
+      )}
+
+      {screen !== 'results' && (
+        <main className="main-container">
+          {loading && <div className="card-panel"><p>Loading the jungle trail...</p></div>}
+          {error && <div className="card-panel error-card"><p>{error}</p></div>}
+
+          {!loading && !error && manifest && screen === 'home' && (
+            <div className="home-grid">
+              <section className="hero-box">
+                <div className="hero-text">
+                  <h2>Ready for MATH STAAR Jungle Safari!</h2>
+                  <p>Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!</p>
+                </div>
+            </section>
+
+            <section className="mountain-trail" style={{ position: 'relative', height: '560px', width: '100%', maxWidth: '900px', margin: '0 auto' }}>
+              {/* Dashed ellipse trace matching the background oval */}
+              <svg className="trail-path-svg" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} aria-hidden="true">
+                <ellipse cx="50%" cy="60%" rx="27%" ry="31%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
+              </svg>
+
+              {/* Realistic Animated Water Lake in the Center */}
+              <svg width="0" height="0" style={{ position: 'absolute' }}>
+                <filter id="water-filter">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise">
+                    <animate attributeName="baseFrequency" values="0.015; 0.025; 0.015" dur="10s" repeatCount="indefinite" />
+                  </feTurbulence>
+                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="B" />
+                </filter>
+              </svg>
+              <div className="lake-water" />
+
+              {manifest.years.map((entry, index) => {
+                const levelNum = index + 1;
+                // Manual positions (left%, top%) — user-tunable
+                const manualPositions = [
+                  { left: 50, top: 0 },  // L1: Top center
+                  { left: 71, top: 10 }, // L2: Upper right
+                  { left: 75, top: 40 }, // L3: Right
+                  { left: 60, top: 55 }, // L4: Lower right
+                  { left: 39, top: 55 }, // L5: Lower left
+                  { left: 24, top: 40 }, // L6: Left
+                  { left: 30, top: 10 }, // L7: Upper left
+                ];
+                const { left, top } = manualPositions[index];
+
+                // Manual dino offsets (X px, Y px) — user-tunable
+                const dinoOffsets = [
+                  { x: 35,  y: 8,   h: 85 }, // L1: straight up
+                  { x: 24,  y: -5,  h: 85 }, // L2: upper-right
+                  { x: 60,  y: 10,  h: 85 }, // L3: right
+                  { x: 15,  y: -20, h: 115 }, // L4: lower-right (larger)
+                  { x: -20, y: -16, h: 115 }, // L5: lower-left  (larger)
+                  { x: 20,  y: 0,   h: 115 }, // L6: left        (larger)
+                  { x: -20, y: -10, h: 85 }, // L7: upper-left
+                ];
+                const dinoOffsetX = dinoOffsets[index].x;
+                const dinoOffsetY = dinoOffsets[index].y;
+                const dinoHeight = dinoOffsets[index].h;
+
+                // Mountain color hues to match dinos:
+                const mountainHues = [
+                  '-50deg',  // L1: Orange
+                  '60deg',   // L2: Teal
+                  '230deg',  // L3: Pink
+                  '30deg',   // L4: Light Green
+                  '0deg',    // L5: Green
+                  '-70deg',  // L6: Orange/Red
+                  '0deg',    // L7: Green
+                ];
+                const hue = mountainHues[index % mountainHues.length];
+
+                return (
+                  <div
+                    key={entry.slug}
+                    className="mountain-row"
+                    style={{
+                      position: 'absolute',
+                      left: `${left}%`,
+                      top: `${top}%`,
+                      transform: 'translate(-50%, -50%)',
+                      margin: 0,
+                      width: 'auto',
+                      zIndex: top > 60 ? 10 : 1 // bring bottom mountains in front
+                    }}
+                  >
+                    <button
+                      className={`mountain-button ${entry.status}`}
+                      onClick={() => void chooseYear(entry)}
+                    >
+                      {/* Dino positioned on the outside of the mountain, facing away from center */}
+                      <img
+                        src={getDinoForYear(entry.year)}
+                        alt={`Level ${levelNum} Dino`}
+                        className="mountain-dino dino-bob"
+                        style={{
+                          left: `calc(50% + ${dinoOffsetX}px)`,
+                          top: `calc(-25px + ${dinoOffsetY}px)`,
+                          transform: 'translate(-50%, 0)',
+                          height: dinoHeight ? `${dinoHeight}px` : undefined,
+                        }}
+                      />
+
+                      {/* Level flag on peak */}
+                      <div className="mountain-flag">
+                        <div className="flag-pole" />
+                        <div className="flag-banner">
+                          Level {levelNum}
+                        </div>
+                      </div>
+
+                      {/* Mountain image mapped to dino hue */}
+                      <img 
+                        src="/dinos/mountain_vines_clean.png" 
+                        alt="Jungle Mountain" 
+                        className="mountain-shape" 
+                        style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(1.2)` }}
+                      />
+
+                      {/* Info overlay at mountain base */}
+                      <div className="mountain-info">
+                        <span className={`mountain-status ${entry.status}`}>
+                          {entry.status === 'playable' ? '▶ Play' : '🔒 Locked'}
+                        </span>
+                        <span className="mountain-questions" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+                          {entry.playableQuestionCount ?? entry.officialQuestionCount} Q's
+                        </span>
+                      </div>
+                    </button>
+                  </div>
+                );
+              })}
+            </section>
+          </div>
+        )}
+
+        {screen === 'intro' && selectedYear && (
+        <main className="intro-layout">
+          <section className="card-panel" style={{ display: 'flex', gap: '32px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <img src={getDinoForYear(selectedYear.year)} alt="Friendly Dino Mascot" className="mascot-img ambient-bob" />
+            <div style={{ flex: 1, minWidth: '300px' }}>
+              <h2 style={{ fontSize: '2.5rem', color: 'var(--earth-brown)', margin: '0 0 16px 0' }}>Year {selectedYear.year} Exam</h2>
+              <p style={{ fontSize: '1.2rem', marginBottom: '24px', lineHeight: '1.6' }}>Grab your backpack and get ready for an awesome math adventure! Your friendly dinosaur guides are waiting to help you stomp through these questions. Take your time, do your best, and have fun. You've got this—let's go on a jungle safari!</p>
+              
+              {selectedYear.status === 'playable' && exam ? (
+                <>
+                  <label style={{ display: 'block', fontSize: '1.1rem', fontWeight: 800, marginBottom: '24px', cursor: 'pointer' }}>
+                    <input
+                      type="checkbox"
+                      checked={attempt.timerEnabled}
+                      onChange={(event) => setAttempt((current) => ({ ...current, timerEnabled: event.target.checked }))}
+                      style={{ marginRight: '12px', transform: 'scale(1.5)' }}
+                    />
+                    Enable the Speedy Safari Timer
+                  </label>
+                  <div style={{ display: 'flex', gap: '16px' }}>
+                    <button className="primary-button" onClick={startExam}>Launch Safari</button>
+                    <button className="secondary-button" onClick={() => setScreen('home')}>Cancel</button>
+                  </div>
+                </>
+              ) : (
+                <button className="secondary-button" onClick={() => setScreen('home')}>Back to Map</button>
+              )}
+            </div>
+          </section>
+        </main>
+      )}
+
+      {screen === 'test' && exam && currentQuestion && (
+         <div className="test-layout">
+           {unansweredList.length > 0 && (
+             <div className="modal-overlay">
+               <div className="modal-content">
+                 <h2>Incomplete Exam</h2>
+                 <p style={{ fontSize: '1.1rem', marginBottom: '16px' }}>You have not answered the following questions:</p>
+                 <div className="unanswered-grid">
+                   {unansweredList.map((num) => (
+                     <button
+                       key={num}
+                       className="unanswered-badge"
+                       title={`Go to Question ${num}`}
+                       onClick={() => {
+                         const targetIdx = exam.questions.findIndex(q => q.itemNumber === num);
+                         if (targetIdx !== -1) {
+                           setQuestionIndex(targetIdx);
+                           setUnansweredList([]);
+                         }
+                       }}
+                     >
+                       #{num}
+                     </button>
+                   ))}
+                 </div>
+                  <p style={{ marginBottom: '24px', color: '#555' }}>
+                    <strong>Click on a question number to go directly to that question.</strong><br/>
+                    You must revisit and answer all of them before finishing the test.
+                  </p>
+                 <div className="modal-actions">
+                   <button className="primary-button" onClick={() => setUnansweredList([])}>Return to Test</button>
+                 </div>
+               </div>
+             </div>
+           )}
+           <div className="test-top-bar">
+             <div className="progress-pill">
+               Question {questionIndex + 1} of {exam.questions.length}
+             </div>
+             {attempt.timerEnabled && <div className="timer-pill">{formatTime(attempt.elapsedSeconds)}</div>}
+           </div>
+
+           <div className="question-scroll-zone">
+             <div className="card-panel">
+               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                  <div>
+                    {currentQuestion.stem.split('\n').map((paragraph, index) => (
+                      <Fragment key={index}>
+                        {currentQuestion.itemType === 'inline_choice' && currentQuestion.answerRule.kind === 'inline_choice' && paragraph.includes('[BLANK_') ? (
+                          <div className="question-stem">
+                            {paragraph.split(/(\[BLANK_\d+\])/g).map((part, pIdx) => {
+                              const blankMatch = part.match(/\[(BLANK_\d+)\]/);
+                              if (blankMatch) {
+                                const blankId = blankMatch[1];
+                                const blankDef = (currentQuestion.answerRule as any).blanks?.find((b: any) => b.id === blankId);
+                                if (blankDef) {
+                                  const obj = (attempt.answers[currentQuestion.id] as Record<string, string>) || {};
+                                  return (
+                                    <select 
+                                      key={pIdx}
+                                      value={obj[blankId] ?? ''}
+                                      onChange={(e) => updateAnswer(currentQuestion.id, { ...obj, [blankId]: e.target.value })}
+                                      className="blank-select"
+                                      style={{ margin: '0 4px', display: 'inline-block', fontSize: '1rem', padding: '4px 8px', verticalAlign: 'middle' }}
+                                    >
+                                      <option value="">- Select -</option>
+                                      {(blankDef.options || []).map((opt: string) => <option key={opt} value={opt}>{opt}</option>)}
+                                    </select>
+                                  );
+                                }
+                              }
+                              return <span key={pIdx} dangerouslySetInnerHTML={{ __html: part }} />;
+                            })}
+                          </div>
+                        ) : (
+                          <div className="question-stem" dangerouslySetInnerHTML={{ __html: paragraph }} />
+                        )}
+                        {index === 0 && currentQuestion.table && renderQuestionTable(currentQuestion.table)}
+                        {index === 0 && currentQuestion.imageUrl && (
+                          <div style={{ marginBottom: '16px', display: 'flex', justifyContent: 'center' }}>
+                            <img src={currentQuestion.imageUrl} alt="Question Reference" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+                          </div>
+                        )}
+                      </Fragment>
+                    ))}
+                  </div>
+                 <button className={`flag-button ${attempt.flagged[currentQuestion.id] ? 'active' : ''}`} onClick={() => toggleFlag(currentQuestion.id)}>
+                   {attempt.flagged[currentQuestion.id] ? '⭐ Flagged' : '☆ Flag for review'}
+                 </button>
+               </div>
+               
+               {currentQuestion.directions && <p className="directions-text" style={{ marginTop: '-16px' }}>{currentQuestion.directions}</p>}
+
+               {currentQuestion.itemType === 'multiple_choice' && currentQuestion.options && (
+                  <div className={`option-stack ${currentQuestion.optionsLayout === 'grid_2col' ? 'grid-2col' : currentQuestion.optionsLayout === 'grid_2col_vertical' ? 'grid-2col-vert' : ''}`}>
+                    {currentQuestion.options.map((option) => {
+                      const selected = attempt.answers[currentQuestion.id] === option.id;
+                      return (
+                        <button
+                          key={option.id}
+                          className={`option-card ${selected ? 'selected' : ''}`}
+                          onClick={() => updateAnswer(currentQuestion.id, option.id)}
+                        >
+                          <span className="option-chip">{option.id}</span>
+                          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                            {option.text && <span style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: option.text }} />}
+                            {option.table && renderQuestionTable(option.table)}
+                            {option.imageUrl && <img src={option.imageUrl} alt={`Option ${option.id}`} style={{ maxWidth: '100%', maxHeight: '200px', marginTop: option.text ? '8px' : '0', borderRadius: '4px' }} />}
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+               )}
+
+              {currentQuestion.itemType === 'griddable_numeric' && (
+                <div className="numeric-wrap">
+                  <input
+                    id={currentQuestion.id}
+                    className="numeric-input"
+                    inputMode={currentQuestion.metadata?.isVoided ? "text" : "numeric"}
+                    placeholder="Type a number"
+                    disabled={currentQuestion.metadata?.isVoided === true}
+                    value={currentQuestion.metadata?.isVoided ? (currentQuestion.answerRule as any).canonicalValue : ((attempt.answers[currentQuestion.id] as string) ?? '')}
+                    onChange={(event) => {
+                      const val = event.target.value;
+                      if (!/^-?\d*\.?\d*$/.test(val)) {
+                        window.alert("Please enter only numbers.");
+                        return;
+                      }
+                      updateAnswer(currentQuestion.id, val);
+                    }}
+                  />
+                </div>
+              )}
+
+              {currentQuestion.itemType === 'multi_select' && currentQuestion.options && (
+                <div className={`option-stack ${currentQuestion.optionsLayout === 'grid_2col' ? 'grid-2col' : currentQuestion.optionsLayout === 'grid_2col_vertical' ? 'grid-2col-vert' : currentQuestion.optionsLayout === 'grid_6col' ? 'grid-6col' : ''}`}>
+
+                  {currentQuestion.options.map((option) => {
+                    const arr = (attempt.answers[currentQuestion.id] as string[]) || [];
+                    const selected = arr.includes(option.id);
+                    return (
+                      <button
+                        key={option.id}
+                        className={`option-card ${selected ? 'selected' : ''}`}
+                        onClick={() => {
+                          const newArr = selected ? arr.filter(v => v !== option.id) : [...arr, option.id];
+                          updateAnswer(currentQuestion.id, newArr);
+                        }}
+                      >
+                        <span className="option-chip">{selected ? '✓' : option.id}</span>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                          {option.text && <span style={{ whiteSpace: 'pre-wrap' }} dangerouslySetInnerHTML={{ __html: option.text }} />}
+                          {option.table && renderQuestionTable(option.table)}
+                          {option.imageUrl && <img src={option.imageUrl} alt={`Option ${option.id}`} style={{ maxWidth: '100%', maxHeight: '200px', marginTop: option.text ? '8px' : '0', borderRadius: '4px' }} />}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+
+
+
+              {currentQuestion.itemType === 'drag_drop' && currentQuestion.answerRule.kind === 'drag_drop' && (
+                <div className="drag-drop-wrap">
+                  <p className="directions-text">Tap an option, then tap where it belongs:</p>
+                  <div className="drag-options">
+                    {currentQuestion.answerRule.options.map((opt) => (
+                      <button 
+                        key={opt}
+                        className={`drag-chip ${selectedDragOption === opt ? 'active' : ''}`}
+                        onClick={() => setSelectedDragOption(opt)}
+                      >
+                        {opt}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="drop-zones">
+                    {currentQuestion.answerRule.sentenceTemplate ? (
+                      <p className="drag-drop-sentence" style={{ fontSize: '1.25rem', lineHeight: '2.5' }}>
+                        {currentQuestion.answerRule.sentenceTemplate.split(/(\[BLANK_[0-9]+\])/).map((part, i) => {
+                          const match = part.match(/\[(BLANK_[0-9]+)\]/);
+                          if (match) {
+                            const dz = match[1];
+                            const obj = (attempt.answers[currentQuestion.id] as Record<string, string>) || {};
+                            const currentVal = obj[dz];
+                            return (
+                               <button
+                                 key={dz}
+                                 className={`drop-zone inline-drop-zone ${currentVal ? 'filled' : ''} ${selectedDragOption ? 'ready' : ''}`}
+                                 style={{ display: 'inline-flex', alignItems: 'center', margin: '0 8px', padding: '4px 12px', minHeight: '40px', verticalAlign: 'middle' }}
+                                 onClick={() => {
+                                   if (selectedDragOption) {
+                                     updateAnswer(currentQuestion.id, { ...obj, [dz]: selectedDragOption });
+                                     setSelectedDragOption(null);
+                                   } else if (currentVal) {
+                                     const newObj = { ...obj };
+                                     delete newObj[dz];
+                                     updateAnswer(currentQuestion.id, newObj);
+                                   }
+                                 }}
+                               >
+                                 {currentVal ? (
+                                   <>
+                                     <span style={{ marginRight: '8px' }}>{currentVal}</span>
+                                     <span className="clear-icon" style={{ cursor: 'pointer', color: '#ff4d4f', fontWeight: 'bold' }} onClick={(e) => { e.stopPropagation(); const newObj = { ...obj }; delete newObj[dz]; updateAnswer(currentQuestion.id, newObj); }}>✕</span>
+                                   </>
+                                 ) : <span style={{ color: '#aaa' }}>{dz.replace('BLANK_', 'Box ')}</span>}
+                               </button>
+                            );
+                          }
+                          return <span key={i}>{part}</span>;
+                        })}
+                      </p>
+                    ) : (
+                      Object.keys(currentQuestion.answerRule.dropZones).map((dz) => {
+                         const obj = (attempt.answers[currentQuestion.id] as Record<string, string>) || {};
+                         const currentVal = obj[dz];
+                         return (
+                           <button
+                             key={dz}
+                             className={`drop-zone ${currentVal ? 'filled' : ''} ${selectedDragOption ? 'ready' : ''}`}
+                             onClick={() => {
+                               if (selectedDragOption) {
+                                 updateAnswer(currentQuestion.id, { ...obj, [dz]: selectedDragOption });
+                                 setSelectedDragOption(null);
+                               } else if (currentVal) {
+                                 const newObj = { ...obj };
+                                 delete newObj[dz];
+                                 updateAnswer(currentQuestion.id, newObj);
+                               }
+                             }}
+                           >
+                             {currentVal ? (
+                               <>
+                                 <span style={{ marginRight: '8px' }}>{currentVal}</span>
+                                 <span className="clear-icon" style={{ cursor: 'pointer', color: '#ff4d4f', fontWeight: 'bold' }} onClick={(e) => { e.stopPropagation(); const newObj = { ...obj }; delete newObj[dz]; updateAnswer(currentQuestion.id, newObj); }}>✕</span>
+                               </>
+                             ) : `Drop ${dz.replace('BLANK_', 'Box ')} here`}
+                           </button>
+                         );
+                      })
+                    )}
+                  </div>
+                </div>
+              )}
+
+             </div>
+           </div>
+
+           <div className="bottom-action-bar">
+             <div className="action-bar-center">
+               <button className="danger-button" onClick={() => setShowExitModal(true)}>Leave</button>
+               <button className="secondary-button" disabled={questionIndex === 0} onClick={() => setQuestionIndex(c => c - 1)}>Back</button>
+               {questionIndex < exam.questions.length - 1 && (
+                 <button className="primary-button" onClick={() => handleNextOrFinish('next')}>Next</button>
+               )}
+               <button 
+                 className="primary-button" 
+                 style={{ marginLeft: questionIndex < exam.questions.length - 1 ? '48px' : '0' }}
+                 onClick={() => handleNextOrFinish('finish')}
+               >
+                 Finish Test
+               </button>
+             </div>
+           </div>
+         </div>
+      )}
+      </main>
+      )}
+
+      {screen === 'results' && exam && results && (
+        <main className="results-layout" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+          {!showReview ? (
+            <section className="score-hero">
+              <img src="/dinos/dino2.png" alt="Happy Dino" className="mascot-img dino-walk" />
+              <h2 style={{ fontSize: '3rem', margin: '0', color: 'var(--earth-dark)' }}>Exam Complete!</h2>
+              <div className="score-bubble" style={{ background: 'white', padding: '8px 32px', borderRadius: '32px', margin: '8px 0', border: '6px solid var(--sunshine)', fontSize: '4.5rem' }}>{results.percent}%</div>
+              <p style={{ color: 'var(--earth-dark)', fontSize: '1.3rem', fontWeight: 900, margin: '0' }}>You got {results.correct} Correct out of {results.total}</p>
+              
+              <div className="intro-actions" style={{ display: 'flex', gap: '16px', marginTop: '16px' }}>
+                <button className="primary-button" onClick={() => setShowReview(true)}>Review your exam answers</button>
+                <button className="secondary-button" onClick={resetProgress}>Back to Dashboard</button>
+              </div>
+            </section>
+          ) : (
+            <section style={{ width: '100%', maxWidth: '800px', display: 'flex', flexDirection: 'column', gap: '24px', zIndex: 10, paddingBottom: '64px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'white', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
+                <div>
+                  <h2 style={{ margin: 0, color: 'var(--space-dark)', fontSize: '2rem' }}>Exam Review</h2>
+                  <p style={{ margin: '8px 0 0 0', color: '#636e72', fontWeight: 600 }}>Score: {results.percent}% ({results.correct} / {results.total})</p>
+                </div>
+                <button className="secondary-button" onClick={resetProgress}>Back to Dashboard</button>
+              </div>
+
+              {exam.questions.map((question) => {
+              const answer = attempt.answers[question.id];
+              const isCorrect = scoreQuestion(question, answer);
+              const wrongExplanation = typeof answer === 'string' && question.rationale.incorrectOptionExplanations ? question.rationale.incorrectOptionExplanations[answer] : undefined;
+              
+              const correctAnswer = (() => {
+                const r = question.answerRule;
+                if (r.kind === 'single_choice') return r.correct;
+                if (r.kind === 'numeric_equivalent') return r.canonicalValue;
+                if (r.kind === 'multi_select') return r.correct.join(', ');
+                if (r.kind === 'inline_choice') return r.blanks.map(b => `${b.id}=${b.correct}`).join(', ');
+                if (r.kind === 'drag_drop') return Object.entries(r.dropZones).map(([k,v]) => `${k}=${v}`).join(', ');
+                return '';
+              })();
+
+              const displayAnswer = typeof answer === 'object' ? JSON.stringify(answer) : (answer ?? 'No answer');
+
+              return (
+                <article key={question.id} className="card-panel">
+                  <div className="review-top" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '16px' }}>
+                    <h3 style={{ margin: 0, fontSize: '1.5rem', color: 'var(--space-dark)' }}>Question {question.itemNumber}</h3>
+                    <span className={`result-pill ${isCorrect ? 'correct' : 'incorrect'}`} style={{ padding: '8px 16px', borderRadius: '12px', fontWeight: 800 }}>{isCorrect ? 'Score +1' : 'Missed'}</span>
+                  </div>
+                  <div>
+                    <div className="question-stem" style={{ fontSize: '1.25rem', margin: '16px 0', fontWeight: 600 }} dangerouslySetInnerHTML={{ __html: question.stem }} />
+                    {question.table && renderQuestionTable(question.table)}
+                    {question.imageUrl && (
+                      <div style={{ marginTop: '16px', display: 'flex', justifyContent: 'center' }}>
+                        <img src={question.imageUrl} alt="Question Reference" style={{ maxWidth: '100%', borderRadius: '8px' }} />
+                      </div>
+                    )}
+                  </div>
+                  <div style={{ background: '#f8f9fa', padding: '16px', borderRadius: '12px', border: '2px solid #e9ecef' }}>
+                    <p style={{ margin: '0 0 8px 0' }}><strong>Your answer:</strong> {displayAnswer}</p>
+                    <p style={{ margin: 0 }}><strong>Correct answer:</strong> {correctAnswer}</p>
+                  </div>
+                  
+                  <div className="review-reasoning" style={{ background: '#f1f2f6', padding: '16px', borderRadius: '12px', marginTop: '16px' }}>
+                    <p style={{ margin: 0 }} dangerouslySetInnerHTML={{ __html: `<strong>Here's why:</strong> ${question.rationale.correctExplanation}` }} />
+                    {!isCorrect && wrongExplanation && <p style={{ marginTop: '12px', color: '#d63031', marginBottom: 0 }} dangerouslySetInnerHTML={{ __html: `<strong>Why your choice missed:</strong> ${wrongExplanation}` }} />}
+                  </div>
+                  {question.rationale.remediationTip && (
+                    <div className="remediation-box">
+                      <strong style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                        <img src="/dinos/dino5.avif" alt="Dino Tip" style={{ height: '32px', borderRadius: '8px' }} />
+                        Dino Tip:
+                      </strong> 
+                      {question.rationale.remediationTip}
+                    </div>
+                  )}
+                </article>
+              );
+            })}
+          </section>
+          )}
+        </main>
+      )}
+    </div>
+  );
+}
+
+export default App;
+

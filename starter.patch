@@ -1,0 +1,1518 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..58d6bce
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,9 @@
++node_modules/
++dist/
++.DS_Store
++*.log
++client/dist/
++server/dist/
++.vite/
++.env
++
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..e9207cf
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,49 @@
++# Math STAAR Test Prep for Ishaan
++
++Starter full-stack scaffold for a kid-friendly Grade 3 STAAR math practice site.
++
++## What this patch includes
++
++- React + TypeScript client with a playful, third-grader-friendly UI
++- Express API server
++- Year-based manifest endpoint
++- One playable normalized sample bundle: **2018 preview**
++- Large buttons, clear progress, gentle animations, timer toggle, results, and review mode
++- Local storage persistence for in-progress attempts
++
++## What still needs to be added
++
++- Full normalization of all uploaded year bundles into `/data/exams/*.json`
++- Diagram/image extraction for visual questions
++- Renderers for newer tech-enhanced STAAR item types
++
++## Run locally
++
++### 1) Install dependencies
++
++```bash
++npm install
++npm install --workspace client
++npm install --workspace server
++```
++
++### 2) Start the API server
++
++```bash
++npm run dev:server
++```
++
++### 3) Start the client
++
++```bash
++npm run dev:client
++```
++
++Client default URL: `http://localhost:5173`  
++Server default URL: `http://localhost:4000`
++
++## Data layout
++
++- `/data/exams/manifest.json` lists the available years
++- `/data/exams/2018-preview.json` contains the starter normalized sample
++
++## Design notes
++
++- Header text is fixed to **Math STAAR Test Prep for Ishaan**
++- Palette is intentionally bright but calm: sky blue, mint green, sunshine yellow, and coral accents
++- Font stack uses rounded system-friendly faces with clean fallbacks
++- Motion is light and friendly, not distracting
++
++## Next step
++
++Use the companion Antigravity prompt to expand this scaffold into a full 2018–2025 normalized question bank driven by the uploaded PDFs.
++
+diff --git a/package.json b/package.json
+new file mode 100644
+index 0000000..37f2639
+--- /dev/null
++++ b/package.json
+@@ -0,0 +1,17 @@
++{
++  "name": "math-staar-ishaan",
++  "private": true,
++  "workspaces": ["client", "server"],
++  "scripts": {
++    "dev:client": "npm --workspace client run dev",
++    "dev:server": "npm --workspace server run dev",
++    "build": "npm --workspace client run build && npm --workspace server run build"
++  },
++  "engines": {
++    "node": ">=20"
++  }
++}
++
+diff --git a/server/package.json b/server/package.json
+new file mode 100644
+index 0000000..7ea5250
+--- /dev/null
++++ b/server/package.json
+@@ -0,0 +1,18 @@
++{
++  "name": "math-staar-ishaan-server",
++  "private": true,
++  "type": "module",
++  "scripts": {
++    "dev": "node src/index.mjs",
++    "build": "node -e \"console.log('server build step not required for MVP')\""
++  },
++  "dependencies": {
++    "cors": "^2.8.5",
++    "express": "^4.19.2"
++  }
++}
++
+diff --git a/server/src/index.mjs b/server/src/index.mjs
+new file mode 100644
+index 0000000..cf56089
+--- /dev/null
++++ b/server/src/index.mjs
+@@ -0,0 +1,57 @@
++import express from 'express';
++import cors from 'cors';
++import fs from 'node:fs/promises';
++import path from 'node:path';
++import { fileURLToPath } from 'node:url';
++
++const __filename = fileURLToPath(import.meta.url);
++const __dirname = path.dirname(__filename);
++const repoRoot = path.resolve(__dirname, '..', '..');
++const dataDir = path.join(repoRoot, 'data', 'exams');
++
++const app = express();
++const port = process.env.PORT || 4000;
++
++app.use(cors());
++app.use(express.json());
++
++async function loadJson(filename) {
++  const fullPath = path.join(dataDir, filename);
++  const file = await fs.readFile(fullPath, 'utf8');
++  return JSON.parse(file);
++}
++
++app.get('/api/health', (_req, res) => {
++  res.json({ ok: true, service: 'math-staar-ishaan-api' });
++});
++
++app.get('/api/manifest', async (_req, res) => {
++  try {
++    const manifest = await loadJson('manifest.json');
++    res.json(manifest);
++  } catch (error) {
++    res.status(500).json({ error: 'Unable to load exam manifest.' });
++  }
++});
++
++app.get('/api/exams/:slug', async (req, res) => {
++  try {
++    const manifest = await loadJson('manifest.json');
++    const entry = manifest.years.find((year) => year.slug === req.params.slug);
++
++    if (!entry || !entry.dataFile) {
++      return res.status(404).json({ error: 'Exam not found.' });
++    }
++
++    const exam = await loadJson(entry.dataFile);
++    res.json(exam);
++  } catch (error) {
++    res.status(500).json({ error: 'Unable to load exam bundle.' });
++  }
++});
++
++app.listen(port, () => {
++  console.log(`Math STAAR Ishaan API listening on http://localhost:${port}`);
++});
++
+diff --git a/data/exams/manifest.json b/data/exams/manifest.json
+new file mode 100644
+index 0000000..8a470dd
+--- /dev/null
++++ b/data/exams/manifest.json
+@@ -0,0 +1,65 @@
++{
++  "siteTitle": "Math STAAR Test Prep for Ishaan",
++  "years": [
++    {
++      "year": 2018,
++      "slug": "2018-preview",
++      "label": "2018 Preview",
++      "status": "playable",
++      "officialQuestionCount": 32,
++      "playableQuestionCount": 6,
++      "generation": "classic",
++      "description": "Starter slice normalized from the 2018 Math-Test, Math-Key, and Math-Rationale PDFs.",
++      "dataFile": "2018-preview.json"
++    },
++    {
++      "year": 2019,
++      "slug": "2019",
++      "label": "2019",
++      "status": "queued",
++      "officialQuestionCount": 32,
++      "generation": "classic",
++      "description": "Queued for full import from the 2019 trio."
++    },
++    {
++      "year": 2021,
++      "slug": "2021",
++      "label": "2021",
++      "status": "queued",
++      "officialQuestionCount": 32,
++      "generation": "classic",
++      "description": "Queued for full import from the 2021 trio."
++    },
++    {
++      "year": 2022,
++      "slug": "2022",
++      "label": "2022",
++      "status": "queued",
++      "officialQuestionCount": 32,
++      "generation": "classic",
++      "description": "Queued for full import from the 2022 trio."
++    },
++    {
++      "year": 2023,
++      "slug": "2023",
++      "label": "2023",
++      "status": "queued",
++      "officialQuestionCount": 30,
++      "generation": "modern",
++      "description": "Queued for modern tech-enhanced normalization."
++    },
++    {
++      "year": 2024,
++      "slug": "2024",
++      "label": "2024",
++      "status": "queued",
++      "officialQuestionCount": 30,
++      "generation": "modern",
++      "description": "Queued for modern tech-enhanced normalization."
++    },
++    {
++      "year": 2025,
++      "slug": "2025",
++      "label": "2025",
++      "status": "queued",
++      "officialQuestionCount": 30,
++      "generation": "modern",
++      "description": "Queued for modern tech-enhanced normalization."
++    }
++  ]
++}
++
+diff --git a/data/exams/2018-preview.json b/data/exams/2018-preview.json
+new file mode 100644
+index 0000000..8419913
+--- /dev/null
++++ b/data/exams/2018-preview.json
+@@ -0,0 +1,203 @@
++{
++  "id": "staar-g3-math-2018-preview",
++  "siteTitle": "Math STAAR Test Prep for Ishaan",
++  "displayTitle": "2018 Grade 3 Math Preview",
++  "subtitle": "A friendly starter set built from the 2018 STAAR Grade 3 Math release.",
++  "year": 2018,
++  "grade": 3,
++  "subject": "Math",
++  "generation": "classic",
++  "totalQuestions": 6,
++  "sourceFiles": [
++    "2018-staar-3-math-test.pdf",
++    "2018-staar-3-math-paper-key.pdf",
++    "2018-staar-3-math-rationale.pdf"
++  ],
++  "questions": [
++    {
++      "id": "2018-01",
++      "itemNumber": 1,
++      "itemType": "multiple_choice",
++      "stem": "Nina works for a restaurant. The restaurant pays her every week for the work she does. Some weeks she works more hours than other weeks. Which statement is most likely true?",
++      "options": [
++        { "id": "A", "text": "When Nina works fewer hours, she earns more income from the restaurant." },
++        { "id": "B", "text": "When Nina works more hours, she earns more income from the restaurant." },
++        { "id": "C", "text": "When Nina works more hours, the restaurant gets less labor from her." },
++        { "id": "D", "text": "When Nina works fewer hours, the restaurant gets more labor from her." }
++      ],
++      "answerRule": { "kind": "single_choice", "correct": "B" },
++      "metadata": {
++        "reportingCategory": 4,
++        "readinessType": "Supporting",
++        "teks": "3.9(A)",
++        "maxPoints": 1
++      },
++      "rationale": {
++        "correctExplanation": "More hours worked means more income earned because hours worked and income move together in this situation.",
++        "incorrectOptionExplanations": {
++          "A": "This reverses the relationship between hours worked and income.",
++          "C": "This incorrectly says more work leads to less labor completed.",
++          "D": "This incorrectly says fewer hours leads to more labor completed."
++        },
++        "remediationTip": "Focus on the connection between hours worked, labor completed, and income earned."
++      }
++    },
++    {
++      "id": "2018-05",
++      "itemNumber": 5,
++      "itemType": "griddable_numeric",
++      "stem": "Lin has a total of 36 sodas in packs. There are 6 sodas in each pack. How many packs of sodas does Lin have?",
++      "answerRule": {
++        "kind": "numeric_equivalent",
++        "canonicalValue": "6",
++        "acceptedValues": ["6", "6.0", "06"]
++      },
++      "metadata": {
++        "reportingCategory": 2,
++        "readinessType": "Supporting",
++        "teks": "3.4(F)",
++        "maxPoints": 1
++      },
++      "rationale": {
++        "correctExplanation": "This is a division situation because 36 sodas are split into groups of 6. 36 ÷ 6 = 6.",
++        "remediationTip": "Look for words like \"in each\" when deciding whether to divide."
++      }
++    },
++    {
++      "id": "2018-07",
++      "itemNumber": 7,
++      "itemType": "multiple_choice",
++      "stem": "The table shows the relationship between the number of toy airplanes made in a factory and the number of batteries needed for the airplanes. Based on the relationship shown in the table, which statement is true?",
++      "directions": "Toy airplanes: 5, 7, 9, 11, 13, 15. Batteries: 15, 21, 27, 33, 39, 45.",
++      "options": [
++        { "id": "A", "text": "The number of batteries is equal to the number of toy airplanes times 3." },
++        { "id": "B", "text": "The number of batteries is equal to the number of toy airplanes times 2." },
++        { "id": "C", "text": "The number of batteries is equal to the number of toy airplanes times 6." },
++        { "id": "D", "text": "The number of batteries is equal to the number of toy airplanes times 5." }
++      ],
++      "answerRule": { "kind": "single_choice", "correct": "A" },
++      "metadata": {
++        "reportingCategory": 2,
++        "readinessType": "Readiness",
++        "teks": "3.5(E)",
++        "maxPoints": 1
++      },
++      "rationale": {
++        "correctExplanation": "Each airplane count is multiplied by 3 to get the matching battery count.",
++        "incorrectOptionExplanations": {
++          "B": "This uses the step change in the airplane row instead of the relationship between paired numbers.",
++          "C": "This confuses the growth pattern with the multiplication factor.",
++          "D": "This incorrectly uses one of the values in the table as the factor."
++        },
++        "remediationTip": "Compare each pair in the table, not just how the numbers change from left to right."
++      }
++    },
++    {
++      "id": "2018-14",
++      "itemNumber": 14,
++      "itemType": "griddable_numeric",
++      "stem": "There are 297 peach trees on a farm. There are 615 peach trees on a different farm. What is the difference between the numbers of peach trees on these farms?",
++      "answerRule": {
++        "kind": "numeric_equivalent",
++        "canonicalValue": "318",
++        "acceptedValues": ["318", "318.0"]
++      },
++      "metadata": {
++        "reportingCategory": 2,
++        "readinessType": "Readiness",
++        "teks": "3.4(A)",
++        "maxPoints": 1
++      },
++      "rationale": {
++        "correctExplanation": "The word \"difference\" tells us to subtract. 615 − 297 = 318.",
++        "remediationTip": "Look for clue words like \"difference\" to choose subtraction."
++      }
++    },
++    {
++      "id": "2018-18",
++      "itemNumber": 18,
++      "itemType": "multiple_choice",
++      "stem": "A store is having a sale on books. The sale price of each book is $6 less than the regular price. Which table shows prices of different books at this store?",
++      "options": [
++        { "id": "F", "text": "Regular: $12, $19, $26, $33. Sale: $18, $25, $32, $39." },
++        { "id": "G", "text": "Regular: $18, $25, $32, $39. Sale: $12, $19, $26, $33." },
++        { "id": "H", "text": "Regular: $36, $30, $24, $18. Sale: $34, $28, $22, $16." },
++        { "id": "J", "text": "Regular: $36, $30, $24, $18. Sale: $6, $5, $4, $3." }
++      ],
++      "answerRule": { "kind": "single_choice", "correct": "G" },
++      "metadata": {
++        "reportingCategory": 2,
++        "readinessType": "Readiness",
++        "teks": "3.5(E)",
++        "maxPoints": 1
++      },
++      "rationale": {
++        "correctExplanation": "Each sale price should be exactly $6 less than the regular price.",
++        "incorrectOptionExplanations": {
++          "F": "These sale prices are $6 more, not $6 less.",
++          "H": "This subtracts $6 across each row instead of matching each regular price to its sale price.",
++          "J": "This divides by 6 instead of subtracting 6."
++        },
++        "remediationTip": "Match each regular price with its own sale price before comparing rows."
++      }
++    },
++    {
++      "id": "2018-20",
++      "itemNumber": 20,
++      "itemType": "multiple_choice",
++      "stem": "Hakeem received 13 phone calls on Tuesday. This expression can be used to show the number of phone calls he received on Saturday: 13 × 4. Which statement is true?",
++      "options": [
++        { "id": "F", "text": "Hakeem received 4 more phone calls on Saturday than he received on Tuesday." },
++        { "id": "G", "text": "Hakeem received 4 more phone calls on Tuesday than he received on Saturday." },
++        { "id": "H", "text": "Hakeem received 4 times as many phone calls on Saturday as he received on Tuesday." },
++        { "id": "J", "text": "Hakeem received 4 times as many phone calls on Tuesday as he received on Saturday." }
++      ],
++      "answerRule": { "kind": "single_choice", "correct": "H" },
++      "metadata": {
++        "reportingCategory": 2,
++        "readinessType": "Supporting",
++        "teks": "3.5(C)",
++        "maxPoints": 1
++      },
++      "rationale": {
++        "correctExplanation": "13 × 4 means Saturday is 4 times as many as Tuesday.",
++        "incorrectOptionExplanations": {
++          "F": "This treats multiplication as addition.",
++          "G": "This treats multiplication as addition and reverses the comparison.",
++          "J": "This reverses which day has the larger amount."
++        },
++        "remediationTip": "When you see multiplication in a word statement, try the phrase \"times as many.\""
++      }
++    }
++  ]
++}
++
+diff --git a/client/package.json b/client/package.json
+new file mode 100644
+index 0000000..0d505ab
+--- /dev/null
++++ b/client/package.json
+@@ -0,0 +1,21 @@
++{
++  "name": "math-staar-ishaan-client",
++  "private": true,
++  "version": "0.0.1",
++  "type": "module",
++  "scripts": {
++    "dev": "vite",
++    "build": "tsc -b && vite build"
++  },
++  "dependencies": {
++    "react": "^18.3.1",
++    "react-dom": "^18.3.1"
++  },
++  "devDependencies": {
++    "@types/react": "^18.3.3",
++    "@types/react-dom": "^18.3.0",
++    "@vitejs/plugin-react": "^4.3.1",
++    "typescript": "^5.5.4",
++    "vite": "^5.4.2"
++  }
++}
++
+diff --git a/client/index.html b/client/index.html
+new file mode 100644
+index 0000000..dd54bcf
+--- /dev/null
++++ b/client/index.html
+@@ -0,0 +1,12 @@
++<!doctype html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <meta name="theme-color" content="#61b5ff" />
++    <title>Math STAAR Test Prep for Ishaan</title>
++  </head>
++  <body>
++    <div id="root"></div>
++    <script type="module" src="/src/main.tsx"></script>
++  </body>
++</html>
++
+diff --git a/client/tsconfig.json b/client/tsconfig.json
+new file mode 100644
+index 0000000..be6b177
+--- /dev/null
++++ b/client/tsconfig.json
+@@ -0,0 +1,24 @@
++{
++  "compilerOptions": {
++    "target": "ES2020",
++    "useDefineForClassFields": true,
++    "lib": ["ES2020", "DOM", "DOM.Iterable"],
++    "module": "ESNext",
++    "skipLibCheck": true,
++    "moduleResolution": "Bundler",
++    "allowImportingTsExtensions": false,
++    "resolveJsonModule": true,
++    "isolatedModules": true,
++    "noEmit": true,
++    "jsx": "react-jsx",
++    "strict": true
++  },
++  "include": ["src"],
++  "references": []
++}
++
+diff --git a/client/vite.config.ts b/client/vite.config.ts
+new file mode 100644
+index 0000000..feafbea
+--- /dev/null
++++ b/client/vite.config.ts
+@@ -0,0 +1,12 @@
++import { defineConfig } from 'vite';
++import react from '@vitejs/plugin-react';
++
++export default defineConfig({
++  plugins: [react()],
++  server: {
++    port: 5173,
++    proxy: {
++      '/api': 'http://localhost:4000'
++    }
++  }
++});
++
+diff --git a/client/src/main.tsx b/client/src/main.tsx
+new file mode 100644
+index 0000000..a4f4a3b
+--- /dev/null
++++ b/client/src/main.tsx
+@@ -0,0 +1,8 @@
++import React from 'react';
++import ReactDOM from 'react-dom/client';
++import App from './App';
++import './styles.css';
++
++ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
++  <React.StrictMode><App /></React.StrictMode>
++);
++
+diff --git a/client/src/types.ts b/client/src/types.ts
+new file mode 100644
+index 0000000..a34e0a9
+--- /dev/null
++++ b/client/src/types.ts
+@@ -0,0 +1,75 @@
++export type YearStatus = 'playable' | 'queued';
++
++export type ManifestEntry = {
++  year: number;
++  slug: string;
++  label: string;
++  status: YearStatus;
++  officialQuestionCount: number;
++  playableQuestionCount?: number;
++  generation: 'classic' | 'modern';
++  description: string;
++  dataFile?: string;
++};
++
++export type Manifest = {
++  siteTitle: string;
++  years: ManifestEntry[];
++};
++
++export type Option = {
++  id: string;
++  text: string;
++};
++
++export type AnswerRule =
++  | { kind: 'single_choice'; correct: string }
++  | { kind: 'numeric_equivalent'; canonicalValue: string; acceptedValues: string[] };
++
++export type Question = {
++  id: string;
++  itemNumber: number;
++  itemType: 'multiple_choice' | 'griddable_numeric';
++  stem: string;
++  directions?: string;
++  options?: Option[];
++  answerRule: AnswerRule;
++  metadata: {
++    reportingCategory: number;
++    readinessType: string;
++    teks: string;
++    maxPoints: number;
++  };
++  rationale: {
++    correctExplanation: string;
++    incorrectOptionExplanations?: Record<string, string>;
++    remediationTip?: string;
++  };
++};
++
++export type ExamBundle = {
++  id: string;
++  siteTitle: string;
++  displayTitle: string;
++  subtitle: string;
++  year: number;
++  grade: number;
++  subject: string;
++  generation: 'classic' | 'modern';
++  totalQuestions: number;
++  sourceFiles: string[];
++  questions: Question[];
++};
++
++export type AttemptState = {
++  answers: Record<string, string>;
++  flagged: Record<string, boolean>;
++  elapsedSeconds: number;
++  timerEnabled: boolean;
++};
++
++export type ScoreBreakdown = {
++  correct: number;
++  total: number;
++  percent: number;
++};
++
+diff --git a/client/src/App.tsx b/client/src/App.tsx
+new file mode 100644
+index 0000000..1d2ee7e
+--- /dev/null
++++ b/client/src/App.tsx
+@@ -0,0 +1,459 @@
++import { useEffect, useMemo, useState } from 'react';
++import type { AttemptState, ExamBundle, Manifest, ManifestEntry, Question } from './types';
++
++const emptyAttempt: AttemptState = {
++  answers: {},
++  flagged: {},
++  elapsedSeconds: 0,
++  timerEnabled: false
++};
++
++type Screen = 'home' | 'intro' | 'test' | 'results';
++
++function AnimatedMathSky() {
++  const symbols = ['+', '−', '×', '÷', '★', '✓'];
++  return (
++    <div className="math-sky" aria-hidden="true">
++      {symbols.map((symbol, index) => (
++        <span
++          key={`${symbol}-${index}`}
++          className="floaty"
++          style={{
++            left: `${8 + index * 14}%`,
++            animationDelay: `${index * 0.6}s`
++          }}
++        >
++          {symbol}
++        </span>
++      ))}
++    </div>
++  );
++}
++
++function formatTime(seconds: number) {
++  const mins = Math.floor(seconds / 60);
++  const secs = seconds % 60;
++  return `${mins}:${secs.toString().padStart(2, '0')}`;
++}
++
++function normalizeAnswer(value: string) {
++  return value.replace(/,/g, '').trim().toLowerCase();
++}
++
++function scoreQuestion(question: Question, answer: string | undefined) {
++  if (!answer) return false;
++
++  if (question.answerRule.kind === 'single_choice') {
++    return normalizeAnswer(answer) === normalizeAnswer(question.answerRule.correct);
++  }
++
++  return question.answerRule.acceptedValues.some(
++    (accepted) => normalizeAnswer(accepted) === normalizeAnswer(answer)
++  );
++}
++
++function App() {
++  const [screen, setScreen] = useState<Screen>('home');
++  const [manifest, setManifest] = useState<Manifest | null>(null);
++  const [selectedYear, setSelectedYear] = useState<ManifestEntry | null>(null);
++  const [exam, setExam] = useState<ExamBundle | null>(null);
++  const [attempt, setAttempt] = useState<AttemptState>(emptyAttempt);
++  const [questionIndex, setQuestionIndex] = useState(0);
++  const [loading, setLoading] = useState(true);
++  const [error, setError] = useState<string | null>(null);
++
++  useEffect(() => {
++    async function fetchManifest() {
++      try {
++        const response = await fetch('/api/manifest');
++        const json = (await response.json()) as Manifest;
++        setManifest(json);
++      } catch {
++        setError('Could not load the year list.');
++      } finally {
++        setLoading(false);
++      }
++    }
++
++    void fetchManifest();
++  }, []);
++
++  useEffect(() => {
++    if (screen !== 'test' || !attempt.timerEnabled) return;
++
++    const id = window.setInterval(() => {
++      setAttempt((current) => ({ ...current, elapsedSeconds: current.elapsedSeconds + 1 }));
++    }, 1000);
++
++    return () => window.clearInterval(id);
++  }, [screen, attempt.timerEnabled]);
++
++  useEffect(() => {
++    if (!exam) return;
++    localStorage.setItem(`math-staar-ishaan:${exam.id}`, JSON.stringify(attempt));
++  }, [attempt, exam]);
++
++  const currentQuestion = exam?.questions[questionIndex];
++
++  const results = useMemo(() => {
++    if (!exam) return null;
++
++    const correct = exam.questions.filter((question) => scoreQuestion(question, attempt.answers[question.id])).length;
++    const total = exam.questions.length;
++    const percent = Math.round((correct / total) * 100);
++
++    const byCategory = new Map<string, { correct: number; total: number }>();
++    const byReadiness = new Map<string, { correct: number; total: number }>();
++
++    exam.questions.forEach((question) => {
++      const categoryKey = `Category ${question.metadata.reportingCategory}`;
++      const readinessKey = question.metadata.readinessType;
++      const isCorrect = scoreQuestion(question, attempt.answers[question.id]);
++
++      const category = byCategory.get(categoryKey) ?? { correct: 0, total: 0 };
++      category.total += 1;
++      category.correct += isCorrect ? 1 : 0;
++      byCategory.set(categoryKey, category);
++
++      const readiness = byReadiness.get(readinessKey) ?? { correct: 0, total: 0 };
++      readiness.total += 1;
++      readiness.correct += isCorrect ? 1 : 0;
++      byReadiness.set(readinessKey, readiness);
++    });
++
++    return {
++      correct,
++      total,
++      percent,
++      byCategory: Array.from(byCategory.entries()),
++      byReadiness: Array.from(byReadiness.entries())
++    };
++  }, [attempt.answers, exam]);
++
++  async function chooseYear(entry: ManifestEntry) {
++    setSelectedYear(entry);
++    setScreen('intro');
++
++    if (entry.status !== 'playable') return;
++
++    const response = await fetch(`/api/exams/${entry.slug}`);
++    const json = (await response.json()) as ExamBundle;
++    setExam(json);
++
++    const saved = localStorage.getItem(`math-staar-ishaan:${json.id}`);
++    setAttempt(saved ? (JSON.parse(saved) as AttemptState) : emptyAttempt);
++    setQuestionIndex(0);
++  }
++
++  function startExam() {
++    if (!exam) return;
++    setScreen('test');
++  }
++
++  function updateAnswer(questionId: string, value: string) {
++    setAttempt((current) => ({
++      ...current,
++      answers: {
++        ...current.answers,
++        [questionId]: value
++      }
++    }));
++  }
++
++  function toggleFlag(questionId: string) {
++    setAttempt((current) => ({
++      ...current,
++      flagged: {
++        ...current.flagged,
++        [questionId]: !current.flagged[questionId]
++      }
++    }));
++  }
++
++  function submitExam() {
++    if (!exam) return;
++    const unanswered = exam.questions.filter((question) => !attempt.answers[question.id]).length;
++    const ok = unanswered === 0 || window.confirm(`You still have ${unanswered} unanswered question(s). Submit anyway?`);
++    if (ok) setScreen('results');
++  }
++
++  function resetProgress() {
++    if (!exam) return;
++    localStorage.removeItem(`math-staar-ishaan:${exam.id}`);
++    setAttempt(emptyAttempt);
++    setQuestionIndex(0);
++    setScreen('intro');
++  }
++
++  return (
++    <div className="page-shell">
++      <AnimatedMathSky />
++      <header className="site-header">
++        <div className="title-badge">★</div>
++        <div>
++          <p className="eyebrow">Bright practice. Calm confidence.</p>
++          <h1>Math STAAR Test Prep for Ishaan</h1>
++        </div>
++      </header>
++
++      {loading && <main className="card hero-card"><p>Loading the math mission...</p></main>}
++      {error && <main className="card hero-card error-card"><p>{error}</p></main>}
++
++      {!loading && !error && manifest && screen === 'home' && (
++        <main className="home-grid">
++          <section className="card hero-card">
++            <div className="hero-copy">
++              <span className="hero-pill">For a third grader</span>
++              <h2>Pick a year and jump into practice.</h2>
++              <p>
++                Big buttons, friendly colors, gentle motion, and instant explanations make this feel more like a game board than a worksheet.
++              </p>
++              <div className="hero-stats">
++                <div><strong>Focus</strong><span>One question at a time</span></div>
++                <div><strong>Review</strong><span>See why answers are right or wrong</span></div>
++                <div><strong>Confidence</strong><span>Track progress by category</span></div>
++              </div>
++            </div>
++            <div className="hero-graphic" aria-hidden="true">
++              <div className="planet planet-one" />
++              <div className="planet planet-two" />
++              <div className="math-rocket">➕</div>
++            </div>
++          </section>
++
++          <section className="year-grid">
++            {manifest.years.map((entry) => (
++              <button key={entry.slug} className={`card year-card ${entry.status}`} onClick={() => void chooseYear(entry)}>
++                <div className="year-card-top">
++                  <span className="year-label">{entry.label}</span>
++                  <span className={`status-pill ${entry.status}`}>{entry.status === 'playable' ? 'Ready to play' : 'Coming soon'}</span>
++                </div>
++                <p>{entry.description}</p>
++                <div className="year-meta">
++                  <span>{entry.generation === 'classic' ? 'Classic STAAR' : 'Modern STAAR'}</span>
++                  <span>{entry.playableQuestionCount ?? entry.officialQuestionCount} questions</span>
++                </div>
++              </button>
++            ))}
++          </section>
++        </main>
++      )}
++
++      {screen === 'intro' && selectedYear && (
++        <main className="card intro-card">
++          <h2>{selectedYear.label}</h2>
++          <p>{selectedYear.description}</p>
++
++          <div className="intro-facts">
++            <div><strong>Style</strong><span>{selectedYear.generation === 'classic' ? 'Classic STAAR questions' : 'Modern tech-enhanced questions'}</span></div>
++            <div><strong>Official size</strong><span>{selectedYear.officialQuestionCount} questions</span></div>
++            <div><strong>Playable now</strong><span>{selectedYear.playableQuestionCount ?? 0} questions</span></div>
++          </div>
++
++          {selectedYear.status === 'playable' && exam ? (
++            <>
++              <label className="timer-toggle">
++                <input
++                  type="checkbox"
++                  checked={attempt.timerEnabled}
++                  onChange={(event) => setAttempt((current) => ({ ...current, timerEnabled: event.target.checked }))}
++                />
++                Turn on the timer for game mode
++              </label>
++
++              <div className="intro-actions">
++                <button className="primary-button" onClick={startExam}>Start practice</button>
++                <button className="secondary-button" onClick={() => setScreen('home')}>Back to years</button>
++              </div>
++            </>
++          ) : (
++            <div className="intro-actions">
++              <button className="secondary-button" onClick={() => setScreen('home')}>Back to years</button>
++            </div>
++          )}
++        </main>
++      )}
++
++      {screen === 'test' && exam && currentQuestion && (
++        <main className="test-layout">
++          <aside className="card sidebar-card">
++            <div className="timer-bubble">⏱ {formatTime(attempt.elapsedSeconds)}</div>
++            <h3>{exam.displayTitle}</h3>
++            <p>{questionIndex + 1} of {exam.questions.length}</p>
++            <div className="progress-shell"><div className="progress-bar" style={{ width: `${((questionIndex + 1) / exam.questions.length) * 100}%` }} /></div>
++
++            <div className="palette-grid">
++              {exam.questions.map((question, index) => {
++                const answered = Boolean(attempt.answers[question.id]);
++                const flagged = Boolean(attempt.flagged[question.id]);
++                return (
++                  <button
++                    key={question.id}
++                    className={`palette-dot ${index === questionIndex ? 'current' : ''} ${answered ? 'answered' : ''} ${flagged ? 'flagged' : ''}`}
++                    onClick={() => setQuestionIndex(index)}
++                  >
++                    {index + 1}
++                  </button>
++                );
++              })}
++            </div>
++
++            <button className="secondary-button wide-button" onClick={submitExam}>Finish and score</button>
++          </aside>
++
++          <section className="card question-card">
++            <div className="question-top">
++              <div>
++                <span className="hero-pill">Question {currentQuestion.itemNumber}</span>
++                <h2>{currentQuestion.stem}</h2>
++                {currentQuestion.directions && <p className="directions-text">{currentQuestion.directions}</p>}
++              </div>
++              <button className={`flag-button ${attempt.flagged[currentQuestion.id] ? 'active' : ''}`} onClick={() => toggleFlag(currentQuestion.id)}>
++                {attempt.flagged[currentQuestion.id] ? '⭐ Flagged' : '☆ Flag for review'}
++              </button>
++            </div>
++
++            {currentQuestion.itemType === 'multiple_choice' && currentQuestion.options && (
++              <div className="option-stack">
++                {currentQuestion.options.map((option) => {
++                  const selected = attempt.answers[currentQuestion.id] === option.id;
++                  return (
++                    <button
++                      key={option.id}
++                      className={`option-card ${selected ? 'selected' : ''}`}
++                      onClick={() => updateAnswer(currentQuestion.id, option.id)}
++                    >
++                      <span className="option-chip">{option.id}</span>
++                      <span>{option.text}</span>
++                    </button>
++                  );
++                })}
++              </div>
++            )}
++
++            {currentQuestion.itemType === 'griddable_numeric' && (
++              <div className="numeric-wrap">
++                <label htmlFor={currentQuestion.id}>Type your answer</label>
++                <input
++                  id={currentQuestion.id}
++                  className="numeric-input"
++                  inputMode="numeric"
++                  placeholder="Type a number"
++                  value={attempt.answers[currentQuestion.id] ?? ''}
++                  onChange={(event) => updateAnswer(currentQuestion.id, event.target.value)}
++                />
++              </div>
++            )}
++
++            <div className="question-footer">
++              <button className="secondary-button" disabled={questionIndex === 0} onClick={() => setQuestionIndex((current) => current - 1)}>Previous</button>
++              {questionIndex < exam.questions.length - 1 ? (
++                <button className="primary-button" onClick={() => setQuestionIndex((current) => current + 1)}>Next question</button>
++              ) : (
++                <button className="primary-button" onClick={submitExam}>Submit test</button>
++              )}
++            </div>
++          </section>
++        </main>
++      )}
++
++      {screen === 'results' && exam && results && (
++        <main className="results-layout">
++          <section className="card score-card">
++            <div className="confetti-strip" aria-hidden="true">
++              <span>★</span><span>✓</span><span>★</span><span>✓</span><span>★</span>
++            </div>
++            <h2>You did it!</h2>
++            <div className="score-bubble">{results.percent}%</div>
++            <p>{results.correct} correct out of {results.total}</p>
++            <div className="score-grid">
++              {results.byCategory.map(([label, value]) => (
++                <div key={label} className="mini-score-card"><strong>{label}</strong><span>{value.correct}/{value.total}</span></div>
++              ))}
++              {results.byReadiness.map(([label, value]) => (
++                <div key={label} className="mini-score-card"><strong>{label}</strong><span>{value.correct}/{value.total}</span></div>
++              ))}
++            </div>
++            <div className="intro-actions">
++              <button className="primary-button" onClick={() => setScreen('test')}>Back to review board</button>
++              <button className="secondary-button" onClick={resetProgress}>Start over</button>
++            </div>
++          </section>
++
++          <section className="review-stack">
++            {exam.questions.map((question) => {
++              const answer = attempt.answers[question.id];
++              const isCorrect = scoreQuestion(question, answer);
++              const wrongExplanation = answer && question.rationale.incorrectOptionExplanations?.[answer];
++              const correctAnswer = question.answerRule.kind === 'single_choice'
++                ? question.answerRule.correct
++                : question.answerRule.canonicalValue;
++
++              return (
++                <article key={question.id} className={`card review-card ${isCorrect ? 'correct' : 'incorrect'}`}>
++                  <div className="review-top">
++                    <h3>Question {question.itemNumber}</h3>
++                    <span className={`result-pill ${isCorrect ? 'correct' : 'incorrect'}`}>{isCorrect ? 'Correct' : 'Needs another try'}</span>
++                  </div>
++                  <p>{question.stem}</p>
++                  <p><strong>Your answer:</strong> {answer ?? 'No answer'}</p>
++                  <p><strong>Correct answer:</strong> {correctAnswer}</p>
++                  <p><strong>Why it is right:</strong> {question.rationale.correctExplanation}</p>
++                  {!isCorrect && wrongExplanation && <p><strong>Why your choice missed:</strong> {wrongExplanation}</p>}
++                  {question.rationale.remediationTip && <p><strong>Try this next time:</strong> {question.rationale.remediationTip}</p>}
++                </article>
++              );
++            })}
++          </section>
++        </main>
++      )}
++    </div>
++  );
++}
++
++export default App;
++
+diff --git a/client/src/styles.css b/client/src/styles.css
+new file mode 100644
+index 0000000..9723ea4
+--- /dev/null
++++ b/client/src/styles.css
+@@ -0,0 +1,397 @@
++:root {
++  color-scheme: light;
++  --sky: #e8f5ff;
++  --blue: #61b5ff;
++  --deep-blue: #235a93;
++  --mint: #b9f4d2;
++  --mint-deep: #2f8c63;
++  --sun: #ffe67a;
++  --coral: #ff8c7b;
++  --lavender: #d9ccff;
++  --ink: #18314f;
++  --white: #ffffff;
++  --shadow: 0 14px 30px rgba(35, 90, 147, 0.14);
++  font-family: "Avenir Next", "Nunito", "Trebuchet MS", system-ui, sans-serif;
++}
++
++* {
++  box-sizing: border-box;
++}
++
++body {
++  margin: 0;
++  min-width: 320px;
++  background:
++    radial-gradient(circle at top left, rgba(255, 230, 122, 0.45), transparent 32%),
++    radial-gradient(circle at top right, rgba(185, 244, 210, 0.5), transparent 30%),
++    linear-gradient(180deg, #f7fbff 0%, #eef8ff 100%);
++  color: var(--ink);
++}
++
++button,
++input {
++  font: inherit;
++}
++
++.page-shell {
++  position: relative;
++  max-width: 1240px;
++  margin: 0 auto;
++  padding: 24px 18px 40px;
++}
++
++.math-sky {
++  position: absolute;
++  inset: 0;
++  overflow: hidden;
++  pointer-events: none;
++}
++
++.floaty {
++  position: absolute;
++  top: -8px;
++  color: rgba(35, 90, 147, 0.12);
++  font-size: 2rem;
++  animation: drift 10s ease-in-out infinite;
++}
++
++@keyframes drift {
++  0%, 100% { transform: translateY(0) rotate(0deg); }
++  50% { transform: translateY(18px) rotate(6deg); }
++}
++
++.site-header {
++  display: flex;
++  align-items: center;
++  gap: 16px;
++  position: relative;
++  z-index: 1;
++  margin-bottom: 20px;
++}
++
++.title-badge {
++  width: 62px;
++  height: 62px;
++  border-radius: 18px;
++  display: grid;
++  place-items: center;
++  background: linear-gradient(135deg, var(--sun), #ffd149);
++  box-shadow: var(--shadow);
++  font-size: 1.8rem;
++}
++
++.site-header h1 {
++  margin: 4px 0 0;
++  font-size: clamp(1.8rem, 3vw, 2.7rem);
++}
++
++.eyebrow {
++  margin: 0;
++  color: var(--deep-blue);
++  font-weight: 700;
++  letter-spacing: 0.02em;
++}
++
++.card {
++  position: relative;
++  z-index: 1;
++  background: rgba(255, 255, 255, 0.94);
++  border: 3px solid rgba(97, 181, 255, 0.16);
++  border-radius: 28px;
++  box-shadow: var(--shadow);
++}
++
++.hero-card,
++.intro-card,
++.sidebar-card,
++.question-card,
++.score-card,
++.review-card {
++  padding: 24px;
++}
++
++.home-grid,
++.results-layout {
++  display: grid;
++  gap: 20px;
++}
++
++.hero-card {
++  display: grid;
++  grid-template-columns: 1.4fr 0.9fr;
++  gap: 18px;
++}
++
++.hero-pill,
++.status-pill,
++.result-pill {
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  border-radius: 999px;
++  padding: 8px 14px;
++  font-size: 0.9rem;
++  font-weight: 800;
++}
++
++.hero-pill {
++  background: var(--mint);
++  color: var(--mint-deep);
++}
++
++.hero-copy h2,
++.question-top h2,
++.intro-card h2,
++.score-card h2 {
++  margin: 12px 0 8px;
++  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
++}
++
++.hero-stats,
++.score-grid,
++.intro-facts,
++.year-meta {
++  display: grid;
++  gap: 12px;
++}
++
++.hero-stats {
++  grid-template-columns: repeat(3, minmax(0, 1fr));
++  margin-top: 18px;
++}
++
++.hero-stats div,
++.intro-facts div,
++.mini-score-card {
++  padding: 14px;
++  border-radius: 20px;
++  background: #f8fbff;
++  border: 2px dashed rgba(35, 90, 147, 0.15);
++}
++
++.hero-stats strong,
++.mini-score-card strong,
++.intro-facts strong {
++  display: block;
++  margin-bottom: 6px;
++}
++
++.hero-graphic {
++  min-height: 240px;
++  border-radius: 24px;
++  background: linear-gradient(180deg, #dff2ff 0%, #f2fbff 100%);
++  display: grid;
++  place-items: center;
++  overflow: hidden;
++}
++
++.planet {
++  position: absolute;
++  border-radius: 999px;
++  opacity: 0.9;
++}
++
++.planet-one {
++  width: 180px;
++  height: 180px;
++  background: rgba(255, 230, 122, 0.5);
++  top: 18px;
++  right: 30px;
++}
++
++.planet-two {
++  width: 86px;
++  height: 86px;
++  background: rgba(185, 244, 210, 0.8);
++  bottom: 28px;
++  left: 30px;
++}
++
++.math-rocket {
++  position: relative;
++  z-index: 2;
++  font-size: 5rem;
++  animation: bounce 2.2s ease-in-out infinite;
++}
++
++@keyframes bounce {
++  0%, 100% { transform: translateY(0); }
++  50% { transform: translateY(-10px); }
++}
++
++.year-grid,
++.palette-grid,
++.review-stack {
++  display: grid;
++  gap: 16px;
++}
++
++.year-grid {
++  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
++}
++
++.year-card {
++  text-align: left;
++  padding: 18px;
++  cursor: pointer;
++  transition: transform 0.18s ease, box-shadow 0.18s ease;
++}
++
++.year-card:hover,
++.option-card:hover,
++.primary-button:hover,
++.secondary-button:hover,
++.palette-dot:hover {
++  transform: translateY(-2px);
++}
++
++.year-card-top,
++.question-top,
++.review-top,
++.question-footer,
++.intro-actions {
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  gap: 12px;
++}
++
++.year-label {
++  font-size: 1.25rem;
++  font-weight: 800;
++}
++
++.status-pill.playable,
++.result-pill.correct {
++  background: var(--mint);
++  color: var(--mint-deep);
++}
++
++.status-pill.queued,
++.result-pill.incorrect {
++  background: #ffe2df;
++  color: #9d3f36;
++}
++
++.test-layout {
++  display: grid;
++  grid-template-columns: 280px 1fr;
++  gap: 20px;
++}
++
++.timer-bubble,
++.score-bubble {
++  display: inline-grid;
++  place-items: center;
++  border-radius: 999px;
++  background: var(--sun);
++  color: #6b5900;
++  font-weight: 900;
++}
++
++.timer-bubble {
++  width: fit-content;
++  padding: 10px 16px;
++  margin-bottom: 12px;
++}
++
++.score-bubble {
++  width: 130px;
++  height: 130px;
++  margin: 12px auto;
++  font-size: 2rem;
++}
++
++.progress-shell {
++  height: 16px;
++  border-radius: 999px;
++  background: #ddefff;
++  margin: 14px 0 18px;
++}
++
++.progress-bar {
++  height: 100%;
++  border-radius: inherit;
++  background: linear-gradient(90deg, var(--blue), var(--mint-deep));
++}
++
++.palette-grid {
++  grid-template-columns: repeat(4, minmax(0, 1fr));
++  margin: 16px 0;
++}
++
++.palette-dot,
++.flag-button,
++.primary-button,
++.secondary-button,
++.option-card {
++  border: none;
++  cursor: pointer;
++}
++
++.palette-dot {
++  min-height: 48px;
++  border-radius: 16px;
++  background: #eff7ff;
++  color: var(--deep-blue);
++  font-weight: 800;
++}
++
++.palette-dot.current { outline: 3px solid var(--blue); }
++.palette-dot.answered { background: var(--mint); }
++.palette-dot.flagged { box-shadow: inset 0 0 0 3px var(--coral); }
++
++.option-stack { display: grid; gap: 14px; margin-top: 22px; }
++
++.option-card {
++  width: 100%;
++  text-align: left;
++  display: grid;
++  grid-template-columns: auto 1fr;
++  gap: 14px;
++  align-items: center;
++  padding: 18px;
++  border-radius: 22px;
++  background: #f7fbff;
++  border: 2px solid transparent;
++}
++
++.option-card.selected {
++  background: #edf7ff;
++  border-color: var(--blue);
++}
++
++.option-chip {
++  width: 42px;
++  height: 42px;
++  border-radius: 14px;
++  display: grid;
++  place-items: center;
++  background: var(--lavender);
++  font-weight: 900;
++}
++
++.numeric-wrap { margin-top: 24px; display: grid; gap: 10px; }
++
++.numeric-input {
++  max-width: 220px;
++  padding: 14px 16px;
++  border-radius: 18px;
++  border: 3px solid #cfe7ff;
++  font-size: 1.1rem;
++}
++
++.primary-button,
++.secondary-button,
++.flag-button {
++  border-radius: 18px;
++  padding: 13px 18px;
++  font-weight: 800;
++}
++
++.primary-button {
++  background: linear-gradient(135deg, var(--blue), #7cc0ff);
++  color: white;
++}
++
++.secondary-button,
++.flag-button {
++  background: #eef7ff;
++  color: var(--deep-blue);
++}
++
++.flag-button.active {
++  background: #fff1cf;
++  color: #8d5f00;
++}
++
++.wide-button { width: 100%; }
++
++.results-layout { grid-template-columns: 0.9fr 1.1fr; align-items: start; }
++.score-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
++
++.confetti-strip {
++  display: flex;
++  justify-content: center;
++  gap: 12px;
++  font-size: 1.4rem;
++  color: var(--coral);
++}
++
++.review-card.correct { border-color: rgba(47, 140, 99, 0.26); }
++.review-card.incorrect { border-color: rgba(255, 140, 123, 0.26); }
++
++.directions-text { color: #496e96; }
++.error-card { border-color: rgba(255, 140, 123, 0.35); }
++
++@media (max-width: 900px) {
++  .hero-card,
++  .test-layout,
++  .results-layout {
++    grid-template-columns: 1fr;
++  }
++
++  .hero-stats,
++  .score-grid {
++    grid-template-columns: 1fr;
++  }
++
++  .question-top,
++  .question-footer,
++  .review-top,
++  .intro-actions,
++  .year-card-top {
++    flex-direction: column;
++    align-items: flex-start;
++  }
++}
++
++@media (prefers-reduced-motion: reduce) {
++  .floaty,
++  .math-rocket {
++    animation: none;
++  }
++
++  .year-card:hover,
++  .option-card:hover,
++  .primary-button:hover,
++  .secondary-button:hover,
++  .palette-dot:hover {
++    transform: none;
++  }
++}

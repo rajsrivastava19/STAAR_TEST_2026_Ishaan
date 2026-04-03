@@ -1,0 +1,1361 @@
+{
+  "id": "staar-g3-math-2021",
+  "siteTitle": "Math STAAR Test Prep for Ishaan",
+  "displayTitle": "2021 Grade 3 Math",
+  "subtitle": "Queued for full import from the 2021 trio.",
+  "year": 2021,
+  "grade": 3,
+  "subject": "Math",
+  "generation": "classic",
+  "totalQuestions": 32,
+  "sourceFiles": [
+    "2021-staar-3-math-test-2.pdf",
+    "staar-2021-key-g3-math.pdf",
+    "staar-2021-grade-3-math-rationales.pdf"
+  ],
+  "questions": [
+    {
+      "id": "2021-01",
+      "itemNumber": 1,
+      "itemType": "multiple_choice",
+      "stem": "Victor bought 36 eggs at a grocery store. The eggs were in cartons with 12 eggs in each carton.\nWhich model best represents the number of cartons of eggs Victor bought?",
+      "optionsLayout": "grid_2col",
+      "options": [
+        {
+          "id": "A",
+          "text": "",
+          "imageUrl": "/images/2021-01-A.png"
+        },
+        {
+          "id": "B",
+          "text": "",
+          "imageUrl": "/images/2021-01-B.png"
+        },
+        {
+          "id": "C",
+          "text": "",
+          "imageUrl": "/images/2021-01-C.png"
+        },
+        {
+          "id": "D",
+          "text": "",
+          "imageUrl": "/images/2021-01-D.png"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the model that best represents the number of cartons of eggs Victor bought, the student should have identified the model that shows the total number of eggs (36) divided into equal groups with 12 eggs in each group.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely thought the values should be subtracted instead of divided. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "C": "The student likely thought the values should be added instead of divided. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "D": "The student chose a model that shows three groups but likely did not count the total number of eggs or the number of eggs in each group. The student needs to focus on the details of models used to represent real-world problems."
+        },
+        "remediationTip": "Review how to represent division using visual models and ensure correct identification of the total number of items and items per group."
+      }
+    },
+    {
+      "id": "2021-02",
+      "itemNumber": 2,
+      "itemType": "multiple_choice",
+      "stem": "Three friends divided three pizzas into pieces. The shaded parts of the models represent the pieces that the friends ate.\nWhich statement describes the fraction of a pizza that one of the friends ate?",
+      "imageUrl": "/images/2021-02-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "Diego ate <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> of a pizza, because he ate the largest piece of his 2 pieces."
+        },
+        {
+          "id": "G",
+          "text": "Victoria ate <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> of a pizza, because she ate 1 piece and had 3 equal-size pieces left over."
+        },
+        {
+          "id": "H",
+          "text": "Wesley ate <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> of a pizza, because he ate 1 piece of his 2 equal-size pieces."
+        },
+        {
+          "id": "J",
+          "text": "Victoria ate <span class='fraction'><span class='numerator'>3</span><span class='denominator'>1</span></span> of a pizza, because she ate 1 piece and had 3 pieces left over."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.3(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement describes the fraction of a pizza that one of the friends ate, the student should have understood that a fraction is composed of a numerator (top number), which represents the shaded part of the circle, and a denominator (bottom number), which represents the number of equal-size parts in the whole circle. The student should have then identified that the circle for Wesley was divided into 2 equal parts with 1 part shaded and therefore represents <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span>. The student should then have realized that Wesley ate <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> of the pizza because he ate 1 piece of his 2 equal-size pieces.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely did not understand that the pieces in the model have to be equal in size for <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> to be the fraction eaten. So although Diego's model is divided into two parts, the parts are not equal in size and they do not represent halves.",
+          "G": "The student likely did not understand how to write a fraction for the shaded part of a circle fraction model and thought the number of pieces eaten (shaded parts) should be the numerator (1) and the number of pieces not eaten (unshaded parts) should be the denominator (3), choosing <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> as the fraction of the pizza that Victoria ate.",
+          "J": "The student likely did not understand how to write a fraction for the shaded part of a circle fraction model and thought the number of pieces not eaten (unshaded parts) should be the numerator (3) and the number of pieces eaten (shaded parts) should be the denominator (1), choosing <span class='fraction'><span class='numerator'>3</span><span class='denominator'>1</span></span> as the fraction of the pizza that Victoria ate."
+        },
+        "remediationTip": "Remember that fractions represent equal parts of a whole. The numerator is the number of designated parts (shaded), and the denominator is the total number of equal parts."
+      }
+    },
+    {
+      "id": "2021-03",
+      "itemNumber": 3,
+      "itemType": "multiple_choice",
+      "stem": "A theater sold tickets for three movies. The table shows the number of tickets sold for each movie.\nWhat was the total number of tickets the theater sold for these three movies?",
+      "imageUrl": "/images/2021-03-stem.png",
+      "options": [
+        {
+          "id": "A",
+          "text": "476"
+        },
+        {
+          "id": "B",
+          "text": "366"
+        },
+        {
+          "id": "C",
+          "text": "376"
+        },
+        {
+          "id": "D",
+          "text": "473"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of tickets the theater sold for the three movies, the student should have added the number of tickets sold for Movie 1 (143), Movie 2 (158), and Movie 3 (175), resulting in 476 (143 + 158 + 175 = 476).",
+        "incorrectOptionExplanations": {
+          "B": "The student likely added the values but did not regroup to the tens place (second digit from the right) and the hundreds place (leftmost digit).",
+          "C": "The student likely added the values but did not regroup to the hundreds place (leftmost digit).",
+          "D": "The student likely attempted to add the values but made an error when adding the digits 3, 8, and 5 in the ones place (rightmost digit), resulting in 3 + 8 + 5 → 13."
+        },
+        "remediationTip": "Practice multi-digit addition, paying close attention to regrouping (carrying over) values to the next place value."
+      }
+    },
+    {
+      "id": "2021-04",
+      "itemNumber": 4,
+      "itemType": "multiple_choice",
+      "stem": "Owen received the coins and bills shown when he sold lemonade.\nWhat is the value of the coins and bills Owen received?",
+      "imageUrl": "/images/2021-04-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "$8.85"
+        },
+        {
+          "id": "G",
+          "text": "$9.00"
+        },
+        {
+          "id": "H",
+          "text": "$9.10"
+        },
+        {
+          "id": "J",
+          "text": "$8.90"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.4(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the amount of money that Owen received from selling lemonade, the student could have added the values of the 1 five-dollar bill, 2 one-dollar bills, 7 quarters, 3 dimes, and 1 nickel shown using dollar notation ($5.00 + $2.00 + $1.75 + $0.30 + $0.05 = $9.10). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely miscalculated the value of the quarters to be $1.50 instead of $1.75.",
+          "G": "The student likely miscounted the dimes or confused the values of nickels and dimes thinking that there were either one dime and three nickels ($5.00 + $2.00 + $1.75 + $0.10 + $0.15 = $9.00) or there were only two dimes ($5.00 + $2.00 + $1.75 + $0.20 + $0.05 = $9.00).",
+          "J": "The student likely counted one of the quarters as a nickel, confusing those values and thinking that there were six quarters and two nickels ($5.00 + $2.00 + $1.50 + $0.30 + $0.10 = $8.90)."
+        },
+        "remediationTip": "Practice identifying the value of different coins and bills, and carefully add all amounts to find the total sum."
+      }
+    },
+    {
+      "id": "2021-05",
+      "itemNumber": 5,
+      "itemType": "griddable_numeric",
+      "stem": "An expression is shown.\n70 + 2 + 900\nWhat number is equivalent to this expression?\nRecord you answer in the text box provided. Be sure to use the correct place value.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "972",
+        "acceptedValues": [
+          "972"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.2(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right, the place-value order is hundreds place, tens place, and ones place. The student should have used a 9 in the hundreds place for the 900 in the expression, a 7 in the tens place for the 70 in the expression, and a 2 in the ones place for the 2 in the expression (972).",
+        "remediationTip": "Practice writing numbers in expanded form and standard form, understanding the value of each digit based on its place value."
+      }
+    },
+    {
+      "id": "2021-06",
+      "itemNumber": 6,
+      "itemType": "multiple_choice",
+      "stem": "The bar graph shows the number of math problems each of five students completed during math class.\nWhich list matches the data in the bar graph?",
+      "imageUrl": "/images/2021-06-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "Jeff: 6, Amber: 24, Gary: 8, Farrah: 14, Steve: 20"
+        },
+        {
+          "id": "G",
+          "text": "Jeff: 9, Amber: 24, Gary: 6, Farrah: 15, Steve: 21"
+        },
+        {
+          "id": "H",
+          "text": "Jeff: 6, Amber: 24, Gary: 9, Farrah: 15, Steve: 21"
+        },
+        {
+          "id": "J",
+          "text": "Jeff: 6, Amber: 21, Gary: 9, Farrah: 15, Steve: 24"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.8(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the list that matches the data in the bar graph, the student should have determined the value of each bar to determine the number of math problems each of the five students completed. The student should have determined that Jeff completed 6 math problems, Amber completed 24 math problems, Gary completed 9 math problems (since the bar falls halfway between the labeled increments of 6 and 12), Farrah completed 15 math problems (since the bar falls halfway between the labeled increments of 12 and 18), and Steve completed 21 math problems (since the bar falls halfway between the labeled increments of 18 and 24). Then the student should have chosen the list of data matching the bar lengths for each student.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely miscounted the unlabeled grid lines as 2 instead of 3 on the bar graph and chose the list in which Gary completed 8 math problems instead of 9, Farrah completed 14 math problems instead of 15, and Steve completed 20 math problems instead of 21.",
+          "G": "The student likely switched the values for Jeff and Gary and chose the list in which Gary completed 6 instead of 9 math problems and Jeff completed 9 instead of 6 math problems.",
+          "J": "The student likely switched the values of the data for Steve and Amber and chose the list in which Amber completed 21 instead of 24 math problems and Steve completed 24 instead of 21 math problems."
+        },
+        "remediationTip": "Practice reading bar graphs carefully, especially when bars fall between labeled increments, requiring estimation or precise reading of the scale."
+      }
+    },
+    {
+      "id": "2021-07",
+      "itemNumber": 7,
+      "itemType": "multiple_choice",
+      "stem": "Workers at a school are covering a rectangular patio with square tiles. Each square tile has an area of 1 square yard. The figure shows the part of the patio that has already been covered with square tiles.\nWhat is the area of the entire patio in square yards?",
+      "imageUrl": "/images/2021-07-stem.png",
+      "options": [
+        {
+          "id": "A",
+          "text": "105 square yards"
+        },
+        {
+          "id": "B",
+          "text": "90 square yards"
+        },
+        {
+          "id": "C",
+          "text": "98 square yards"
+        },
+        {
+          "id": "D",
+          "text": "84 square yards"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the area of (amount of space covered by) the entire patio in square yards, the student should have determined the number of rows and the number of squares in each row of the figure representing the patio. The figure covers 7 rows, and each row is 15 squares long. The student then could have multiplied 15 by 7 (15 x 7 = 105). Because the figure can be filled with 105 squares, it represents an area of 105 square yards.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely miscounted the number of rows and multiplied 6 x 15 to get 90 square yards.",
+          "C": "The student likely miscounted the number of squares in each row and multiplied 7 x 14 to get 98 square yards.",
+          "D": "The student likely miscounted the number of rows and miscounted the number of squares in each row and multiplied 6 x 14 to get 84 square yards."
+        },
+        "remediationTip": "Carefully count the full dimensions (rows and columns) of a rectangular area model before calculating the area by multiplication."
+      }
+    },
+    {
+      "id": "2021-08",
+      "itemNumber": 8,
+      "itemType": "multiple_choice",
+      "stem": "The table shows the number of snow cones sold at a shop on each of three days.\nWhich answer choice is the best estimate of the total number of snow cones sold on these three days?",
+      "imageUrl": "/images/2021-08-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "600"
+        },
+        {
+          "id": "G",
+          "text": "700"
+        },
+        {
+          "id": "H",
+          "text": "900"
+        },
+        {
+          "id": "J",
+          "text": "800"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the best estimate of the total number of snow cones sold on the three days, the student could have rounded the number of snow cones sold each day to the nearest hundred. When rounded to the nearest hundred, the numbers are as follows: 273 rounds to 300; 123 rounds to 100; and 305 rounds to 300. Then the student should have added the rounded amounts, resulting in 700 (300 + 100 + 300 = 700).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely rounded the number of snow cones sold each day to the nearest hundred but rounded 273 down to 200 instead of up to 300.",
+          "H": "The student likely rounded the number of snow cones sold each day to the nearest hundred but rounded 123 up to 200 instead of down to 100 and 305 up to 400 instead of down to 300.",
+          "J": "The student likely rounded the number of snow cones sold each day to the nearest hundred but rounded 305 up to 400 instead of down to 300."
+        },
+        "remediationTip": "Review rules for rounding numbers to the nearest hundred. Remember to round up if the tens digit is 5 or greater, and round down if it's less than 5."
+      }
+    },
+    {
+      "id": "2021-09",
+      "itemNumber": 9,
+      "itemType": "multiple_choice",
+      "stem": "The side lengths of a rectangular mirror are shown in inches.\nWhat is the perimeter of the mirror in inches?",
+      "imageUrl": "/images/2021-09-stem.png",
+      "options": [
+        {
+          "id": "A",
+          "text": "72 in."
+        },
+        {
+          "id": "B",
+          "text": "46 in."
+        },
+        {
+          "id": "C",
+          "text": "74 in."
+        },
+        {
+          "id": "D",
+          "text": "92 in."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.7(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the perimeter (the distance around the outside) of the rectangular mirror, the student should have first recognized that both sides of the mirror are 28 inches long and both the top and bottom sides are 18 inches wide. Then the student could have added all of the side lengths (18 + 28 + 18 + 28 = 92).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely added the side lengths together (18 + 28) but did not regroup to the tens place (second digit from the right), resulting in 36 instead of 46. Then the student added 36 + 36 to find the perimeter (36 + 36 = 72).",
+          "B": "The student likely added the given side lengths (18 + 28 = 46).",
+          "C": "The student likely added only three of the side lengths instead of all four of the side lengths (18 + 28 + 28 = 74)."
+        },
+        "remediationTip": "Remember that a rectangle has four sides, with opposite sides having equal lengths. The perimeter is the sum of all four side lengths."
+      }
+    },
+    {
+      "id": "2021-10",
+      "itemNumber": 10,
+      "itemType": "multiple_choice",
+      "stem": "Miriam had 63 flowers and 9 vases.\n• She threw away 9 flowers that had broken stems.\n• She put an equal number of all the flowers she had left into each vase.\nWhat is the greatest number of flowers Miriam put into each vase?",
+      "options": [
+        {
+          "id": "F",
+          "text": "2"
+        },
+        {
+          "id": "G",
+          "text": "7"
+        },
+        {
+          "id": "H",
+          "text": "8"
+        },
+        {
+          "id": "J",
+          "text": "6"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(K)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the greatest number of flowers Miriam put into each vase, the student could have subtracted the number of flowers with broken stems from the total number of flowers (63 – 9) to get the total number of flowers Miriam put into vases (54). Then the student could have divided the 54 flowers left by the number of vases, 9, to get the number of flowers in each vase (54 ÷ 9 = 6).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely realized that division and subtraction were needed to solve the problem but divided first and then subtracted (63 ÷ 9 = 7; 9 – 7 = 2).",
+          "G": "The student likely disregarded the fact that Miriam did not use 9 flowers with broken stems and divided all of the flowers (63) by the number of vases (9) (63 ÷ 9 = 7).",
+          "H": "The student likely added 9 to 63 instead of subtracting (63 + 9 = 72). The student then divided 72 by 9 to find the number of flowers in each vase (8)."
+        },
+        "remediationTip": "Carefully read multi-step problems to identify the correct order of operations. Subtract first to find the remaining quantity, then divide to distribute equally."
+      }
+    },
+    {
+      "id": "2021-11",
+      "itemNumber": 11,
+      "itemType": "multiple_choice",
+      "stem": "The bar graph shows the number of each different type of drink that was ordered in a restaurant one day.\nWhat was the total number of drinks ordered?",
+      "imageUrl": "/images/2021-11-stem.png",
+      "options": [
+        {
+          "id": "A",
+          "text": "205"
+        },
+        {
+          "id": "B",
+          "text": "75"
+        },
+        {
+          "id": "C",
+          "text": "215"
+        },
+        {
+          "id": "D",
+          "text": "210"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.8(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of drinks ordered, the student should have determined the value of each bar for each type of drink ordered. The student should have determined that water was ordered 50 times, lemonade was ordered 30 times, tea was ordered 75 times (since the bar falls on the unlabeled increment line above 70), and soda was ordered 60 times. The student then should have added the number of each type of drink ordered to get the total number of drinks ordered (50 + 30 + 75 + 60 = 215).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely made an addition error when adding in the tens place, thinking the sum in the tens place was 20 tens instead of 21 tens.",
+          "B": "The student likely misunderstood the question, identifying the value of the tallest bar (tea) instead of finding the total number of drinks ordered.",
+          "D": "The student likely misread the value of the bar for tea as 70 since it landed on an unlabeled grid line (50 + 30 + 70 + 60 = 210)."
+        },
+        "remediationTip": "Practice extracting data from bar graphs, especially when values fall between labeled increments, and sum all values accurately to find a total."
+      }
+    },
+    {
+      "id": "2021-12",
+      "itemNumber": 12,
+      "itemType": "multiple_choice",
+      "stem": "Each strip of the diagram is shaded to represent a fraction of 1 whole.\nThe fractions represented are —",
+      "imageUrl": "/images/2021-12-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "equivalent, because the shaded area of Strip B is greater than the shaded area of Strip A"
+        },
+        {
+          "id": "G",
+          "text": "not equivalent, because Strip A has 4 parts in all and Strip B has 8 parts in all"
+        },
+        {
+          "id": "H",
+          "text": "equivalent, because the shaded area of Strip A is the same as the shaded area of Strip B"
+        },
+        {
+          "id": "J",
+          "text": "not equivalent, because Strip A has 3 shaded parts and Strip B has 6 shaded parts"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.3(G)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student should have recognized that since the strip diagrams are the same size and the shaded area of Strip A is the same as the shaded area of Strip B, the fractions represented are equivalent.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely recognized that the strips represent equivalent fractions but did not understand that the equivalence is not related to the number of shaded parts.",
+          "G": "The student likely recognized that Strip A represents fourths and Strip B represents eighths and determined that since the strips represent fractions with different denominators (bottom numbers), the shaded part of the strips cannot represent fractions that are equivalent.",
+          "J": "The student likely noticed that Strip A has 3 shaded parts and Strip B has 6 shaded parts and determined that since the number of shaded parts in the two strips is different, the strips cannot represent equivalent fractions."
+        },
+        "remediationTip": "Focus on comparing the *shaded areas* of fraction models to determine equivalence, rather than just the number of parts or shaded parts."
+      }
+    },
+    {
+      "id": "2021-13",
+      "itemNumber": 13,
+      "itemType": "multiple_choice",
+      "stem": "The table shows the numbers of baseball cards in different numbers of packages.\nBased on the relationship shown in the table, which statement is true?",
+      "imageUrl": "/images/2021-13-stem.png",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of packages times 1 equals the number of baseball cards."
+        },
+        {
+          "id": "B",
+          "text": "The number of packages plus 1 equals the number of baseball cards."
+        },
+        {
+          "id": "C",
+          "text": "The number of packages plus 11 equals the number of baseball cards."
+        },
+        {
+          "id": "D",
+          "text": "The number of packages times 11 equals the number of baseball cards."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student should have found the relationship between each number of packages and each corresponding (paired) number of baseball cards in the table. The student should have seen that each number of baseball cards is 11 times the number of packages, so each package must have 11 baseball cards in it (2 × 11 = 22; 3 × 11 = 33; 4 × 11 = 44; 5 × 11 = 55).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely noticed a “plus 1” relationship between consecutive values in the first column (1 + 1 = 2; 2 + 1 = 3; 3 + 1 = 4; 4 + 1 = 5) and did not find a relationship to each corresponding number of baseball cards. The student also likely confused the operation of addition with multiplication, thinking that the \"plus 1\" relationship was the same as a \"times 1\" relationship.",
+          "B": "The student likely noticed a \"plus 1\" relationship between consecutive values in the first column (1 + 1 = 2; 2 + 1 = 3; 3 + 1 = 4; 4 + 1 = 5) and did not find a relationship to each corresponding number of baseball cards.",
+          "C": "The student likely noticed a “plus 11\" relationship between consecutive values in the second column (22 + 11 = 33; 33 + 11 = 44; 44 + 11 = 55) and did not find a relationship to each corresponding number of packages."
+        },
+        "remediationTip": "Look for a consistent pattern (addition, subtraction, multiplication, or division) between paired numbers in a table to determine the relationship."
+      }
+    },
+    {
+      "id": "2021-14",
+      "itemNumber": 14,
+      "itemType": "griddable_numeric",
+      "stem": "There are 4 erasers on each table in a classroom. There are 5 tables in the classroom.\nWhat is the total number of erasers on all of the tables in this classroom?\nRecord you answer in the text box provided. Be sure to use the correct place value.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "20",
+        "acceptedValues": [
+          "20"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(F)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of erasers on all of the tables in the classroom, the student should have recognized that 5 tables with 4 erasers on each table (5 groups of 4) indicates multiplication (4 × 5 = 20).",
+        "remediationTip": "Understand that 'each' and 'groups of' often imply multiplication. Practice solving word problems involving equal groups."
+      }
+    },
+    {
+      "id": "2021-15",
+      "itemNumber": 15,
+      "itemType": "multiple_choice",
+      "stem": "After a soccer game Isaac drank a bottle of water. Which unit of measurement can be used to measure the volume of the water in the bottle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fluid ounces"
+        },
+        {
+          "id": "B",
+          "text": "Grams"
+        },
+        {
+          "id": "C",
+          "text": "Inches"
+        },
+        {
+          "id": "D",
+          "text": "Square centimeters"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.7(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which unit of measurement can be used to measure the volume of the water in the bottle, the student should have recalled the different possibilities for measuring liquid volume (amount of space taken up by a liquid). The student could have referred to the units shown in the Volume and Capacity section of the STAAR Grade 3 Mathematics Reference Materials page within the student's test booklet for help.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely considered a unit used to measure mass to be a unit used to measure liquid volume. The student needs to focus on distinguishing between units used for measuring liquid volume and units used for measuring mass.",
+          "C": "The student likely considered a unit used to measure length to be a unit used to measure liquid volume. The student needs to focus on distinguishing between units used for measuring liquid volume and units used for measuring length.",
+          "D": "The student likely considered a unit used to measure area to be a unit used to measure liquid volume. The student needs to focus on distinguishing between units used for measuring liquid volume and units used for measuring area."
+        },
+        "remediationTip": "Review different units of measurement and what they measure: volume (liquid capacity), mass (weight), length, and area."
+      }
+    },
+    {
+      "id": "2021-16",
+      "itemNumber": 16,
+      "itemType": "multiple_choice",
+      "stem": "The electrical panel shown has 4 outlets.\nHow many outlets do 6 of these electrical panels have?",
+      "imageUrl": "/images/2021-16-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "28"
+        },
+        {
+          "id": "G",
+          "text": "20"
+        },
+        {
+          "id": "H",
+          "text": "24"
+        },
+        {
+          "id": "J",
+          "text": "10"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of outlets 6 electrical panels have, the student could have multiplied the 4 outlets on each panel by 6 panels (4 x 6 = 24).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely made an error when skip counting by 4; the last number after 6 skips was 28 instead of 24 (8, 12, 16, 20, 24, 28).",
+          "G": "The student likely understood that multiplication should be used to solve the problem but confused the product (answer) of 4 x 6 (24) with the product of 4 × 5 (20).",
+          "J": "The student likely added 4 to 6 instead of multiplying 4 by 6."
+        },
+        "remediationTip": "Practice multiplication facts and understanding how to solve problems involving equal groups."
+      }
+    },
+    {
+      "id": "2021-17",
+      "itemNumber": 17,
+      "itemType": "multiple_choice",
+      "stem": "Fraction strips are shown.\nWhich comparison is true?",
+      "imageUrl": "/images/2021-17-stem.png",
+      "options": [
+        {
+          "id": "A",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>6</span></span> < <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>"
+        },
+        {
+          "id": "B",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> < <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "C",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> > <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span>"
+        },
+        {
+          "id": "D",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> = <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.3(H)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which comparison is true, the student could have colored in 1 of the 6 parts of the bottom row of the fraction strip model to represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>6</span></span> and 1 of the 4 parts in the fourth row of the model to represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>. The student also could have recognized that the parts in the bottom row of the model (sixths) are smaller than the parts in the fourth row of the model (fourths), so <span class='fraction'><span class='numerator'>1</span><span class='denominator'>6</span></span> < <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>, because sixths are smaller than fourths.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely compared the 3 and 8 in the denominators (bottom numbers) of the fractions, found that 3 is less than (<) 8, and made the incorrect assumption that thirds are smaller than eighths. The student likely did not use the model to compare thirds to eighths.",
+          "C": "The student likely compared the 4 and 2 in the denominators (bottom numbers) of the fractions, found that 4 is greater than (>) 2, and made the incorrect assumption that fourths are greater than halves. The student likely did not use the model to compare fourths to halves.",
+          "D": "The student likely noticed that the denominators (bottom numbers) of the fractions were the same and assumed that the fractions were equivalent."
+        },
+        "remediationTip": "Use fraction strips or models to visualize and compare fractions with different denominators but the same numerator. Remember that a larger denominator means smaller individual parts."
+      }
+    },
+    {
+      "id": "2021-18",
+      "itemNumber": 18,
+      "itemType": "multiple_choice",
+      "stem": "Heidi is making a rectangular card. The shaded rectangle on the grid represents the card.\nWhat is the area of this card in square centimeters?",
+      "imageUrl": "/images/2021-18-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "18 square centimeters"
+        },
+        {
+          "id": "G",
+          "text": "36 square centimeters"
+        },
+        {
+          "id": "H",
+          "text": "90 square centimeters"
+        },
+        {
+          "id": "J",
+          "text": "81 square centimeters"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the area of (amount of space covered by) the card, the student should have determined the number of rows and the number of squares in each row of the shaded figure representing the card. The shaded figure covers 9 rows, and each row is 9 squares long. The student then could have multiplied 9 by 9 or could have counted the number of squares covered by the shaded figure (81). Because the shaded figure covers 81 squares, it represents an area of 81 square centimeters.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely determined that there are 9 rows with 9 squares in each row in the shaded area but added 9 and 9 instead of multiplying 9 by 9 (9 + 9 = 18).",
+          "G": "The student likely determined that there are 9 squares along each side of the shaded figure but calculated the perimeter (distance around the outside) of the shaded figure instead of the area of the shaded figure (9 + 9 + 9 + 9 = 36).",
+          "H": "The student likely determined the number of squares in each row incorrectly, counting 10 instead of 9, and then multiplied (9 × 10 = 90) for the area of the blanket."
+        },
+        "remediationTip": "Remember that area is calculated by multiplying length by width (number of rows by number of columns) for a rectangle or square."
+      }
+    },
+    {
+      "id": "2021-19",
+      "itemNumber": 19,
+      "itemType": "multiple_choice",
+      "stem": "An ant crawled <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> yard from an ant mound. On which number line does point A represent the ant's position after crawling <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> yard?",
+      "options": [
+        {
+          "id": "A",
+          "imageUrl": "/images/2021-19-a.png"
+        },
+        {
+          "id": "B",
+          "imageUrl": "/images/2021-19-b.png"
+        },
+        {
+          "id": "C",
+          "imageUrl": "/images/2021-19-c.png"
+        },
+        {
+          "id": "D",
+          "imageUrl": "/images/2021-19-d.png"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.7(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number line on which point A represents the ant's position after crawling <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> yard, the student should have found the point that is at the end of the second of 8 same-size sections from 0 to the 1-yard mark, or <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> of the way between 0 and the 1-yard mark.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely realized that point A should be two same-size sections from 0 but disregarded the total number of same-size sections in the number line.",
+          "B": "The student likely realized that point A should be two same-size sections from 0 but counted tick marks by starting with the tick mark at 0.",
+          "C": "The student likely realized that point A would be two same-size sections from 0 but chose a number line with 8 tick marks after point A rather than 8 same-size sections from 0 to 1 yard."
+        },
+        "remediationTip": "When locating a fraction on a number line, ensure the whole (from 0 to 1) is divided into the correct number of equal parts (denominator), and then count the correct number of those parts (numerator)."
+      }
+    },
+    {
+      "id": "2021-20",
+      "itemNumber": 20,
+      "itemType": "multiple_choice",
+      "stem": "There are two lions at a zoo. The weight of the younger lion is 379 pounds. The weight of the older lion is 514 pounds. What is the difference in pounds between these two weights?",
+      "options": [
+        {
+          "id": "F",
+          "text": "235 lb"
+        },
+        {
+          "id": "G",
+          "text": "135 lb"
+        },
+        {
+          "id": "H",
+          "text": "265 lb"
+        },
+        {
+          "id": "J",
+          "text": "145 lb"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the difference between the two weights, the student should have interpreted that the word \"difference\" in the question meant that subtraction was necessary. The student should have subtracted 379 from 514 (514 – 379 = 135).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely subtracted the values but did not regroup in the hundreds place (leftmost digit).",
+          "H": "The student likely found the difference by subtracting the smaller digit from the larger digit in each place value instead of regrouping (514 – 379 → 265).",
+          "J": "The student likely found the difference by subtracting the smaller digit from the larger digit in the ones place (rightmost digit) instead of regrouping (514 – 379 → 145)."
+        },
+        "remediationTip": "Practice multi-digit subtraction, making sure to regroup (borrow) correctly across place values when needed."
+      }
+    },
+    {
+      "id": "2021-21",
+      "itemNumber": 21,
+      "itemType": "multiple_choice",
+      "stem": "Irene has a group of counters, as shown.\nWhich two fractions can represent the black counters in the group?",
+      "imageUrl": "/images/2021-21-stem.png",
+      "options": [
+        {
+          "id": "A",
+          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "B",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span>"
+        },
+        {
+          "id": "C",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "D",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.3(F)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which two fractions can represent the black counters in the group, the student could have counted the total number of counters (8) and the total number of black counters (2), concluding that <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> of the counters were black. Then the student could have counted the number of columns (4) and the number of columns with black counters (1), concluding that <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> of the counters were black.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely determined that <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> represents the black counters in the group but incorrectly thought that equivalent fractions needed to have the same numerator (top number).",
+          "B": "The student likely counted the total number of black counters (2) and the total number of white counters (6) and concluded that <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> of the counters were black and recognized that <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> are equivalent.",
+          "D": "The student likely counted the number of columns (4) and the number of columns with black counters (1) and concluded that <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> of the counters were black. The student then likely determined that equivalent fractions need to have the same denominator (bottom number)."
+        },
+        "remediationTip": "When identifying fractions from a set, remember to consider equivalent fractions. Divide both the numerator and denominator by a common factor to simplify the fraction."
+      }
+    },
+    {
+      "id": "2021-22",
+      "itemNumber": 22,
+      "itemType": "multiple_choice",
+      "stem": "A cafeteria sold a total of 513 drinks on Wednesday. The table shows the number of each type of drink that was sold. The number of bottles of milk is missing from the table.\nWhich set of equations can be used to find the number of bottles of milk sold?",
+      "imageUrl": "/images/2021-22-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "172 + 263 = 435\n513 + 435 = ?"
+        },
+        {
+          "id": "G",
+          "text": "263 - 172 = 91\n513 - 91 = ?"
+        },
+        {
+          "id": "H",
+          "text": "513 - 172 = 341\n341 + 263 = ?"
+        },
+        {
+          "id": "J",
+          "text": "172 + 263 = 435\n513 - 435 = ?"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the set of equations that can be used to find the number of bottles of milk sold, the student should have first identified the set of equations that shows the addition (+) of the number of bottles of apple juice and the number of bottles of water sold (172 + 263 = 435). Then the student should have chosen the set of equations that shows subtracting (-) the sum (total) of the bottles of apple juice and the bottles of water (435) from the total number of drinks sold (513 - 435 = [?]).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely realized that addition was needed to find the number of bottles of apple juice and bottles of water that were sold but then determined that this sum needed to be added to the total drinks sold on Wednesday (513) instead of subtracted from it.",
+          "G": "The student likely realized that subtraction was needed to find the number of bottles of milk that was missing from the table but then determined that the number of bottles of apple juice should be subtracted from the number of bottles of water rather than adding the numbers.",
+          "H": "The student likely realized that the number of bottles of apple juice could be subtracted from the total number of drinks sold to find the missing number of bottles of milk but then added instead of subtracting in the second step."
+        },
+        "remediationTip": "Identify what is known and unknown in a multi-step problem. Use addition to find a partial total, then subtraction to find the missing part of the overall total."
+      }
+    },
+    {
+      "id": "2021-23",
+      "itemNumber": 23,
+      "itemType": "multiple_choice",
+      "optionsLayout": "grid_2col",
+      "stem": "The pictograph shows the number of each type of balloon animal a clown made on Tuesday.\nWhich table correctly represents the data?",
+      "imageUrl": "/images/2021-23-stem.png",
+      "options": [
+        {
+          "id": "A",
+          "imageUrl": "/images/2021-23-a.png"
+        },
+        {
+          "id": "B",
+          "imageUrl": "/images/2021-23-b.png"
+        },
+        {
+          "id": "C",
+          "imageUrl": "/images/2021-23-c.png"
+        },
+        {
+          "id": "D",
+          "imageUrl": "/images/2021-23-d.png"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.8(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which table represents the data in the pictograph (graph that uses picture icons to represent numbers), the student should have multiplied the number of whole icons shown in each row by the number (2) shown in the key (sentence below each pictograph telling the value of each icon). The student should have identified the table that shows 8 dogs (4 x 2), 4 monkeys (2 x 2), 12 rabbits (6 x 2), and 6 bears (3 x 2).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely counted each icon as 1 animal, disregarding the key, and then miscounted the number of icons for rabbits.",
+          "C": "The student likely counted each icon as 1 animal, disregarding the key.",
+          "D": "The student likely used the key to determine the number of each type of balloon animal but miscounted the number of icons for rabbits."
+        },
+        "remediationTip": "Always refer to the key in a pictograph to understand the value of each symbol. Multiply the number of symbols by the key's value to get the correct count."
+      }
+    },
+    {
+      "id": "2021-24",
+      "itemNumber": 24,
+      "itemType": "griddable_numeric",
+      "stem": "The perimeter of the rectangular floor of Mr. Bryan's cabin is 46 feet. The width of the floor is 10 feet, as shown.\nWhat is the length of the floor of Mr. Bryan's cabin in feet?\nRecord you answer in the text box provided. Be sure to use the correct place value.",
+      "imageUrl": "/images/2021-24-stem.png",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "13",
+        "acceptedValues": [
+          "13"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.7(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the length of the rectangular floor, the student should have first recognized that the perimeter (distance around the outside) is 46 feet and the width of the floor is 10 feet and that the perimeter can be found by adding all the side lengths. Then the student could have subtracted the width of two sides of the floor from the perimeter (46 – 10 – 10 = 26). Then the student could have divided 26 feet by 2 since 26 is the length of 2 sides of the floor (26 ÷ 2 = 13) to find the length of one side.",
+        "remediationTip": "Remember that a rectangle has two equal lengths and two equal widths. To find a missing side length given the perimeter and one side, subtract the known sides from the perimeter, then divide the remaining value by two."
+      }
+    },
+    {
+      "id": "2021-25",
+      "itemNumber": 25,
+      "itemType": "multiple_choice",
+      "stem": "A softball team played in 6 tournaments last year. The team paid $95 to play in each tournament. What was the total amount the softball team paid to play in these 6 tournaments?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$570"
+        },
+        {
+          "id": "B",
+          "text": "$540"
+        },
+        {
+          "id": "C",
+          "text": "$101"
+        },
+        {
+          "id": "D",
+          "text": "$480"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(G)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total amount the softball team paid to play in 6 tournaments, the student could have multiplied the $95 by the 6 tournaments (95 × 6 = 570).",
+        "incorrectOptionExplanations": {
+          "B": "The student likely multiplied but did not regroup to the tens place (95 × 6 → 540).",
+          "C": "The student likely added 95 and 6 instead of multiplying (95 + 6 = 101).",
+          "D": "The student likely understood that multiplication should be used to solve the problem but multiplied 90 by 6 instead of 95 by 6. The student then made a fact error resulting in a product of 480 instead of 540."
+        },
+        "remediationTip": "Practice multi-digit multiplication, ensuring proper regrouping, to solve word problems involving repeated addition of amounts."
+      }
+    },
+    {
+      "id": "2021-26",
+      "itemNumber": 26,
+      "itemType": "multiple_choice",
+      "stem": "The models shown are the same size. Each model is divided into equal-size parts and is shaded to represent a fraction.\nWhich statement is true?",
+      "imageUrl": "/images/2021-26-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "<span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span> < <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span>, because sixths are smaller parts than eighths"
+        },
+        {
+          "id": "G",
+          "text": "<span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span> < <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span>, because 6 out of 8 parts is less than 8 out of 8 parts"
+        },
+        {
+          "id": "H",
+          "text": "<span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span> > <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span>, because sixths are larger parts than eighths"
+        },
+        {
+          "id": "J",
+          "text": "<span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span> > <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span>, because 6 out of 8 parts is greater than 8 out of 8 parts"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.3(H)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the true statement, the student should have first written the fraction represented by each model. The top model has 6 shaded parts (numerator, or top number) out of a total of 8 equal-size parts (denominator, or bottom number), representing the fraction <span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span>. The bottom model has 8 shaded parts (numerator) out of a total of 8 equal-size parts (denominator), representing the fraction <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span>. The student should have seen that the shaded part of the top model is smaller than the shaded part of the bottom model and determined that <span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span> < <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span>, or <span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span> is less than <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span>.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely recognized that <span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span> is less than <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span> but compared the shaded parts (numerators) in the explanation instead of comparing the total number of parts (denominators).",
+          "H": "The student likely recognized the explanation to be true but did not pay attention to the comparison and likely did not use the models to compare <span class='fraction'><span class='numerator'>6</span><span class='denominator'>8</span></span> to <span class='fraction'><span class='numerator'>8</span><span class='denominator'>8</span></span>.",
+          "J": "The student likely confused “greater than\" (>) with “less than\" (<)."
+        },
+        "remediationTip": "When comparing fractions with the same denominator, the fraction with the smaller numerator is the smaller fraction. Also, correctly identify the meaning of comparison symbols like < (less than) and > (greater than)."
+      }
+    },
+    {
+      "id": "2021-27",
+      "itemNumber": 27,
+      "itemType": "multiple_choice",
+      "stem": "Each day a bakery makes cookies and muffins. The number of cookies the bakery makes is always 12 more than the number of muffins it makes. Which table shows the relationship between the number of muffins and the number of cookies this bakery makes?",
+      "options": [
+        {
+          "id": "A",
+          "imageUrl": "/images/2021-27-a.png"
+        },
+        {
+          "id": "B",
+          "imageUrl": "/images/2021-27-b.png"
+        },
+        {
+          "id": "C",
+          "imageUrl": "/images/2021-27-c.png"
+        },
+        {
+          "id": "D",
+          "imageUrl": "/images/2021-27-d.png"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the table that shows the relationship between the number of muffins and the number of cookies the bakery makes, the student should have added 12 to each number of muffins and then used the result to confirm each number of cookies listed in the table (12 + 12 = 24; 24 + 12 = 36; 48 + 12 = 60).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely chose the table that shows the number of muffins increasing by 12 and the number of cookies increasing by 12 added to the previous value and did not consider the relationship between each number of muffins and each number of cookies in the table.",
+          "B": "The student likely reversed the relationship, choosing the table that shows that there were 12 more muffins than cookies rather than 12 more cookies than muffins.",
+          "C": "The student likely confused addition with multiplication, thinking that the number of cookies was 12 times the number of muffins instead of 12 more than the number of muffins, and chose the table showing this relationship between the numbers in some of the pairs in the table but did not look at all of the pairs of the numbers in the table."
+        },
+        "remediationTip": "Carefully check the relationship between the two quantities in a table. Ensure the rule (in this case, '12 more than') applies consistently to all pairs of numbers."
+      }
+    },
+    {
+      "id": "2021-28",
+      "itemNumber": 28,
+      "itemType": "multiple_choice",
+      "stem": "On Saturday afternoon Marcus went to a swimming pool. The clock shows the time he arrived at the pool.\nHe left the pool 45 minutes later. At what time did Marcus leave the pool?",
+      "imageUrl": "/images/2021-28-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "text": "2:20 P.M."
+        },
+        {
+          "id": "G",
+          "text": "7:55 P.M."
+        },
+        {
+          "id": "H",
+          "text": "2:15 P.M."
+        },
+        {
+          "id": "J",
+          "text": "3:20 P.M."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.7(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the time Marcus left the pool, the student should have determined that the time Marcus arrived at the pool shown on the clock was 1:35. Then the student could have added 45 minutes to that time by counting in 5-minute intervals. The student should have noticed that 45 minutes after 1:35 would be 20 minutes after 2 and selected 2:20.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely reversed the hour and minute hands, reading the time as 7:10 instead of 1:35.",
+          "H": "The student likely misread the time on the clock as 1:30 instead of 1:35.",
+          "J": "The student likely misread the time on the clock as 2:35 rather than 1:35."
+        },
+        "remediationTip": "Practice telling time on an analog clock and adding time intervals, especially when crossing over the hour mark. Count minutes in increments of 5 or 10."
+      }
+    },
+    {
+      "id": "2021-29",
+      "itemNumber": 29,
+      "itemType": "multiple_choice",
+      "stem": "Cassandra used all the balloons in 11 packages to decorate for a party.\n• There were 6 balloons in each package.\n• Half of the balloons in each package were red.\nWhich equation can be used to find the total number of red balloons Cassandra used?",
+      "options": [
+        {
+          "id": "A",
+          "text": "11 × 6 - 3 = 63"
+        },
+        {
+          "id": "B",
+          "text": "11 × 6 ÷ 2 = 33"
+        },
+        {
+          "id": "C",
+          "text": "11 - 6 + 2 = 7"
+        },
+        {
+          "id": "D",
+          "text": "11 × 6 ÷ 3 = 22"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which equation can be used to find the total number of red balloons Cassandra used (33), the student should have multiplied the number of packages (11) by the number of balloons in each package (6) and then divided that amount in half (by 2).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely realized that it was necessary to multiply the number of packages by the number of balloons in each package to find the total number of balloons. The student also likely realized that each package had 3 non-red balloons. However, the student then only subtracted one set of 3 non-red balloons from the total and did not consider the need to do this for all 11 packages.",
+          "C": "The student likely misread the information in the problem and thought that it was necessary to subtract the number of balloons in each package and then add 2.",
+          "D": "The student likely realized that it was necessary to multiply 11 by 6 to find the total number of balloons in all of the packages and that division was necessary to find the number of red balloons. However, the student divided the number of balloons in each package (6) by 2 to find the number of red balloons in each package and then divided the total number of balloons by that number (3) instead of by 2, choosing 11 × 6 ÷ 3 = 22."
+        },
+        "remediationTip": "Break down multi-step problems into smaller operations. First find the total number of items, then apply the fractional part (half) using division."
+      }
+    },
+    {
+      "id": "2021-30",
+      "itemNumber": 30,
+      "itemType": "multiple_choice",
+      "optionsLayout": "grid_2col",
+      "stem": "The objects shown can be classified into groups based on their shape. Which table best represents the classifications for these objects?",
+      "imageUrl": "/images/2021-30-stem.png",
+      "options": [
+        {
+          "id": "F",
+          "imageUrl": "/images/2021-30-f.png"
+        },
+        {
+          "id": "G",
+          "imageUrl": "/images/2021-30-g.png"
+        },
+        {
+          "id": "H",
+          "imageUrl": "/images/2021-30-h.png"
+        },
+        {
+          "id": "J",
+          "imageUrl": "/images/2021-30-j.png"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the correct way to group the objects, the student should have classified each figure according to its attributes (characteristics). The first and fourth figures are cylinders because they are round and have top and bottom bases in the shape of a circle; the bases are congruent and are parallel to each other. The second and third figures are rectangular prisms because they each have six faces that are rectangles.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely confused cubes (special prisms in which all of the faces are the same-size square) with rectangular prisms, determining that the eraser and the toolbox were cubes.",
+          "H": "The student likely confused spheres (round figures that look like a ball) with cylinders, determining that the can and the drum were spheres.",
+          "J": "The student likely chose the correct group names but associated the objects to the incorrect groups."
+        },
+        "remediationTip": "Review the definitions and characteristics of common 3D shapes like cylinders, rectangular prisms, and cubes to accurately classify objects."
+      }
+    },
+    {
+      "id": "2021-31",
+      "itemNumber": 31,
+      "itemType": "multiple_choice",
+      "stem": "Hector played a game 14 times. Each time he played, he threw 4 red balls and 3 green balls at a target. What was the total number of balls Hector threw at the target?",
+      "options": [
+        {
+          "id": "A",
+          "text": "21"
+        },
+        {
+          "id": "B",
+          "text": "68"
+        },
+        {
+          "id": "C",
+          "text": "98"
+        },
+        {
+          "id": "D",
+          "text": "46"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(K)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of balls Hector threw at the target, the student could have added together the number of red balls (4) and the number of green balls (3) and then multiplied the number of games by the sum (4 + 3 = 7; 14 × 7 = 98).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely added the numbers in the problem (14 + 4 + 3 = 21).",
+          "B": "The student likely added the number of green balls thrown (3) to the number of games (14) to get 17 and then multiplied that sum by 4 (14 + 3 = 17; 17 × 4 = 68).",
+          "D": "The student likely multiplied 14 by 3 and then added the 4 red balls (14 x 3 = 42; 42 + 4 = 46)."
+        },
+        "remediationTip": "Identify the number of items per event first, then use multiplication to find the total across multiple events. Pay attention to all numbers and operations required in multi-step problems."
+      }
+    },
+    {
+      "id": "2021-32",
+      "itemNumber": 32,
+      "itemType": "multiple_choice",
+      "stem": "Which comparison is NOT true?",
+      "options": [
+        {
+          "id": "F",
+          "text": "17,090 > 2,984"
+        },
+        {
+          "id": "G",
+          "text": "34,162 < 3,986"
+        },
+        {
+          "id": "H",
+          "text": "16,538 > 15,981"
+        },
+        {
+          "id": "J",
+          "text": "2,438 < 3,438"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.2(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the comparison that is NOT true (false), the student should have compared the digits in each place value of the two numbers in each comparison, starting with the greatest place value. Since 34,162 has 5 digits and 3,986 only has 4 digits, 34,162 must be greater than 3,986. The symbol < in the given comparison indicates 34,162 is less than 3,986, which makes the comparison not true.",
+        "incorrectOptionExplanations": {
+          "F": "The student chose a comparison that was true instead of a comparison that was not true, as directed. The comparison is true because 17,090 has 5 digits and 2,984 has 4 digits, so 17,090 must be greater than (>) 2,984.",
+          "H": "The student likely compared only the digit in the hundreds place (digit to the right of the comma) and determined that since 5 is less than 9, 16,538 is less than (<) 15,981.",
+          "J": "The student likely disregarded the digits in the thousands place (digit to the left of the comma), and, since 438 = 438, determined that the numbers were equal."
+        },
+        "remediationTip": "When comparing numbers, first look at the number of digits. More digits usually means a larger number. If the number of digits is the same, compare digits from left to right (greatest place value to least)."
+      }
+    }
+  ]
+}
