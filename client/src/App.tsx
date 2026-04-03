@@ -363,7 +363,7 @@ function App() {
               <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '8px' }} />
             </div>
             <div style={{ textAlign: 'left' }}>
-              <p className="eyebrow" style={{ margin: '0 0 4px 0', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '1px', fontWeight: 900, color: '#88bea6' }}>Dino Jungle Safari</p>
+              <p className="eyebrow" style={{ margin: '0 0 4px 0', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '1px', fontWeight: 900, color: '#1b5e20' }}>ISHAAN'S DINO JUNGLE SAFARI</p>
               <h1 style={{ margin: 0 }}>Math STAAR Test Prep</h1>
             </div>
           </div>
@@ -412,7 +412,7 @@ function App() {
 
           {!loading && !error && manifest && screen === 'home' && (
             <div className="home-grid">
-              <section className="hero-box">
+              <section className="hero-box" style={{ paddingBottom: '12px' }}>
                 <div className="hero-text">
                   <h2>Ready for MATH STAAR Jungle Safari!</h2>
                   <p>Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!</p>
@@ -551,7 +551,7 @@ function App() {
                           <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
                         )}
                         {isLocked && (
-                          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '3rem', zIndex: 20, background: 'rgba(255, 220, 50, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '50%', width: '70px', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.4)', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }}>🔒</div>
+                          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '2.2rem', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))' }}>🔒</div>
                         )}
                       </div>
 
