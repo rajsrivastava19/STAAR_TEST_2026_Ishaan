@@ -91,7 +91,7 @@ function getDinoForYear(year: number) {
     2024: 'dino6_trans.png',
     2025: 'dino4_trans.png'
   };
-  return `/dinos/${mapping[year] || 'dino_main_trans.png'}`;
+  return `${import.meta.env.BASE_URL}dinos/${mapping[year] || 'dino_main_trans.png'}`;
 }
 
 function App() {
@@ -293,11 +293,11 @@ function App() {
       {screen !== 'test' && (
         <>
           <div className="pterodactyl-wrapper">
-            <img src="/dinos/pterodactyl.png" className="pterodactyl-sprite" alt="Flying Pterodactyl" aria-hidden="true" />
+            <img src={`${import.meta.env.BASE_URL}dinos/pterodactyl.png`} className="pterodactyl-sprite" alt="Flying Pterodactyl" aria-hidden="true" />
           </div>
           
-          <img src="/dinos/dino3.webp" className="dino-ambient-left ambient-bob" alt="Red T-Rex Ambient" aria-hidden="true" />
-          <img src="/dinos/dino_right_transparent.png" className="dino-ambient-right ambient-bob" alt="New Right Ambient Dino" aria-hidden="true" />
+          <img src={`${import.meta.env.BASE_URL}dinos/dino3.webp`} className="dino-ambient-left ambient-bob" alt="Red T-Rex Ambient" aria-hidden="true" />
+          <img src={`${import.meta.env.BASE_URL}dinos/dino_right_transparent.png`} className="dino-ambient-right ambient-bob" alt="New Right Ambient Dino" aria-hidden="true" />
         </>
       )}
 
@@ -334,7 +334,7 @@ function App() {
       {screen !== 'test' && (
         <header className="site-header">
           <div className="title-badge" style={{ width: '64px', height: '64px', padding: '10px', overflow: 'hidden' }}>
-            <img src="/Ishaan.png" alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
+            <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }} />
           </div>
           <div>
             <p className="eyebrow">Dino Jungle Safari</p>
@@ -455,7 +455,7 @@ function App() {
 
                       {/* Mountain image mapped to dino hue */}
                       <img 
-                        src="/dinos/mountain_vines_clean.png" 
+                        src={`${import.meta.env.BASE_URL}dinos/mountain_vines_clean.png`}
                         alt="Jungle Mountain" 
                         className="mountain-shape" 
                         style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(1.2)` }}
@@ -787,7 +787,7 @@ function App() {
         <main className="results-layout" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
           {!showReview ? (
             <section className="score-hero">
-              <img src="/dinos/dino2.png" alt="Happy Dino" className="mascot-img dino-walk" />
+              <img src={`${import.meta.env.BASE_URL}dinos/dino2.png`} alt="Happy Dino" className="mascot-img dino-walk" />
               <h2 style={{ fontSize: '3rem', margin: '0', color: 'var(--earth-dark)' }}>Exam Complete!</h2>
               <div className="score-bubble" style={{ background: 'white', padding: '8px 32px', borderRadius: '32px', margin: '8px 0', border: '6px solid var(--sunshine)', fontSize: '4.5rem' }}>{results.percent}%</div>
               <p style={{ color: 'var(--earth-dark)', fontSize: '1.3rem', fontWeight: 900, margin: '0' }}>You got {results.correct} Correct out of {results.total}</p>
@@ -851,7 +851,7 @@ function App() {
                   {question.rationale.remediationTip && (
                     <div className="remediation-box">
                       <strong style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                        <img src="/dinos/dino5.avif" alt="Dino Tip" style={{ height: '32px', borderRadius: '8px' }} />
+                        <img src={`${import.meta.env.BASE_URL}dinos/dino5.avif`} alt="Dino Tip" style={{ height: '32px', borderRadius: '8px' }} />
                         Dino Tip:
                       </strong> 
                       {question.rationale.remediationTip}
