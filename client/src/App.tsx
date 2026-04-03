@@ -464,7 +464,7 @@ function App() {
 
                 // Manual dino offsets (X px, Y px) — user-tunable
                 const dinoOffsets = [
-                  { x: 35,  y: 8,   h: 85 }, // L1: straight up
+                  { x: 25,  y: 8,   h: 85 }, // L1: straight up
                   { x: 24,  y: -5,  h: 85 }, // L2: upper-right
                   { x: 40,  y: 10,  h: 85 }, // L3: right
                   { x: 15,  y: -20, h: 115 }, // L4: lower-right (larger)
@@ -559,9 +559,6 @@ function App() {
                       <div className="mountain-info">
                         <span className={`mountain-status ${entry.status}`}>
                           {isLocked ? '🔒 Locked' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
-                        </span>
-                        <span className="mountain-questions" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
-                          {entry.playableQuestionCount ?? entry.officialQuestionCount} Q's
                         </span>
                       </div>
                     </button>
