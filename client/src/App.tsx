@@ -416,7 +416,7 @@ function App() {
                 <div className="hero-text">
                   <h2>Ready for MATH STAAR Jungle Safari!</h2>
                   <p>Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!</p>
-                  <p style={{ marginTop: '12px', padding: '10px 18px', background: 'rgba(255, 240, 180, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '12px', color: '#8a6300', fontWeight: 'bold', display: 'inline-block', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', textShadow: 'none', fontSize: '1.2rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))' }}>
+                  <p style={{ marginTop: '7px', padding: '10px 18px', background: 'rgba(255, 240, 180, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '12px', color: '#8a6300', fontWeight: 'bold', display: 'inline-block', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', textShadow: 'none', fontSize: '1.2rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))' }}>
                     ⭐ Score at least 85% on a level to unlock the next challenge!
                   </p>
                 </div>
