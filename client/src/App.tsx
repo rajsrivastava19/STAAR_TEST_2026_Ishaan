@@ -507,7 +507,7 @@ function App() {
                       margin: 0,
                       width: 'auto',
                       zIndex: top > 60 ? 10 : 1,
-                      filter: isLocked ? 'grayscale(0.8)' : 'none',
+                      filter: 'none',
                       transition: 'all 0.4s ease'
                     }}
                   >
@@ -517,17 +517,51 @@ function App() {
                         if (!isLocked) chooseYear(entry);
                       }}
                     >
-                      <div style={{ position: 'relative' }}>
-                        <img src={`${import.meta.env.BASE_URL}mountain.png`} alt="" style={{ height: '140px', filter: `hue-rotate(${hue}) drop-shadow(0 15px 25px rgba(0,0,0,0.3)) saturate(${isLocked ? 0.3 : 1.2}) opacity(${isLocked ? 0.6 : 1})` }} />
+                        {/* Dino positioned on the outside of the mountain, facing away from center */}
+                        <img
+                          src={getDinoForYear(entry.year)}
+                          alt={`Level ${levelNum} Dino`}
+                          className="mountain-dino dino-bob"
+                          style={{
+                            left: `calc(50% + ${dinoOffsetX}px)`,
+                            top: `calc(-25px + ${dinoOffsetY}px)`,
+                            transform: 'translate(-50%, 0)',
+                            height: dinoHeight ? `${dinoHeight}px` : undefined,
+                            filter: isLocked ? 'opacity(0.6) grayscale(0.8)' : 'none',
+                          }}
+                        />
+
+                        {/* Level flag on peak */}
+                        <div className="mountain-flag" style={{ filter: isLocked ? 'opacity(0.6) grayscale(0.8)' : 'none' }}>
+                          <div className="flag-pole" />
+                          <div className="flag-banner">
+                            Level {levelNum}
+                          </div>
+                        </div>
+
+                        {/* Mountain image mapped to dino hue */}
+                        <img 
+                          src={`${import.meta.env.BASE_URL}dinos/mountain_vines_clean.png`}
+                          alt="Jungle Mountain" 
+                          className="mountain-shape" 
+                          style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(${isLocked ? 0.2 : 1.2}) opacity(${isLocked ? 0.7 : 1}) grayscale(${isLocked ? 0.8 : 0})` }}
+                        />
+
                         {hasStar && (
                           <div className="star-badge" style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', fontSize: '3.5rem', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', animation: 'bounce 2s infinite', zIndex: 20 }}>★</div>
                         )}
                         {isLocked && (
-                          <div style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '4.5rem', zIndex: 20, background: 'rgba(255, 255, 255, 0.4)', borderRadius: '50%', width: '100px', height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 24px rgba(0,0,0,0.6)', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))', backdropFilter: 'blur(3px)' }}>🔒</div>
+                          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '3rem', zIndex: 20, background: 'rgba(255, 220, 50, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '50%', width: '70px', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 12px rgba(0,0,0,0.4)', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))' }}>🔒</div>
                         )}
-                      </div>
-                      <div style={{ fontSize: '1.4rem', marginTop: '12px', background: 'var(--glass-bg)', padding: '8px 24px', borderRadius: '100px', backdropFilter: 'blur(4px)', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
-                        {isLocked ? '🔒 Locked' : (entry.status === 'playable' ? `Level ${levelNum}` : 'Draft')}
+
+                      {/* Info overlay at mountain base */}
+                      <div className="mountain-info">
+                        <span className={`mountain-status ${entry.status}`}>
+                          {isLocked ? '🔒 Locked' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
+                        </span>
+                        <span className="mountain-questions" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>
+                          {entry.playableQuestionCount ?? entry.officialQuestionCount} Q's
+                        </span>
                       </div>
                     </button>
                   </div>
