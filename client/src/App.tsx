@@ -8,7 +8,18 @@ const emptyAttempt: AttemptState = {
   timerEnabled: false
 };
 
-type Screen = 'login' | 'home' | 'intro' | 'test' | 'results';
+type Screen = 'login' | 'home' | 'intro' | 'test' | 'results' | 'progress';
+
+type AttemptRecord = {
+  examId: string;
+  examYear: number;
+  date: string;
+  percent: number;
+  correct: number;
+  total: number;
+  timerEnabled: boolean;
+  elapsedSeconds: number;
+};
 
 function AnimatedMathSky() {
   const symbols = ['+', '−', '×', '÷', '★', '✓'];
@@ -115,6 +126,12 @@ function App() {
   const [error, setError] = useState<string | null>(null);
   const [showReview, setShowReview] = useState(false);
   const [unansweredList, setUnansweredList] = useState<number[]>([]);
+  const [attemptHistory, setAttemptHistory] = useState<AttemptRecord[]>(() => {
+    const user = localStorage.getItem('math-staar-user');
+    if (!user) return [];
+    const saved = localStorage.getItem(`math-staar-history:${user}`);
+    return saved ? JSON.parse(saved) : [];
+  });
 
   useEffect(() => {
     async function fetchManifest() {
@@ -274,6 +291,25 @@ function App() {
         return prev;
       });
 
+      // Log attempt record
+      const record: AttemptRecord = {
+        examId: exam.id,
+        examYear: selectedYear?.year ?? 0,
+        date: new Date().toISOString(),
+        percent: computedPercent,
+        correct,
+        total,
+        timerEnabled: attempt.timerEnabled,
+        elapsedSeconds: attempt.elapsedSeconds,
+      };
+      setAttemptHistory(prev => {
+        const next = [record, ...prev];
+        if (activeUser) {
+          localStorage.setItem(`math-staar-history:${activeUser}`, JSON.stringify(next));
+        }
+        return next;
+      });
+
       setScreen('results');
       window.scrollTo({ top: 0 });
     }
@@ -368,6 +404,7 @@ function App() {
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', justifyContent: 'center' }}>
+            <button className="primary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => setScreen('progress')}>📊 Progress</button>
             <span style={{ color: 'var(--earth-dark)', fontWeight: 800, fontFamily: '"Comic Sans MS", "Comic Sans", cursive', fontSize: '1.2rem', padding: '0 8px' }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
             <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => {
               localStorage.removeItem('math-staar-user');
@@ -394,6 +431,8 @@ function App() {
             setActiveUser(userId);
             const savedScores = localStorage.getItem(`math-staar-scores:${userId}`);
             setExamScores(savedScores ? JSON.parse(savedScores) : {});
+            const savedHistory = localStorage.getItem(`math-staar-history:${userId}`);
+            setAttemptHistory(savedHistory ? JSON.parse(savedHistory) : []);
             setScreen('home');
           }}>
             <h2 style={{ fontSize: '2rem', color: '#2d3748' }}>Welcome Explorer!</h2>
@@ -567,6 +606,96 @@ function App() {
               })}
             </div>
           </div>
+        )}
+
+        {screen === 'progress' && (
+          <main className="main-container" style={{ maxWidth: '900px' }}>
+            <section className="card-panel" style={{ padding: '32px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
+                <h2 style={{ fontSize: '2.2rem', color: 'var(--earth-brown)', margin: 0 }}>📊 Progress Report</h2>
+                <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => setScreen('home')}>← Back to Dashboard</button>
+              </div>
+
+              {attemptHistory.length === 0 ? (
+                <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+                  <p style={{ fontSize: '4rem', margin: '0 0 16px 0' }}>🦕</p>
+                  <p style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--earth-dark)' }}>No exams taken yet!</p>
+                  <p style={{ fontSize: '1.1rem', color: 'var(--text-light)' }}>Complete an exam to see your progress here.</p>
+                </div>
+              ) : (
+                <>
+                  {/* Summary Stats */}
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginBottom: '28px' }}>
+                    <div style={{ background: 'linear-gradient(135deg, #2E7D32, #4CAF50)', padding: '20px', borderRadius: '16px', color: 'white', textAlign: 'center' }}>
+                      <p style={{ margin: 0, fontSize: '2.2rem', fontWeight: 900 }}>{attemptHistory.length}</p>
+                      <p style={{ margin: '4px 0 0', fontSize: '0.9rem', fontWeight: 700, opacity: 0.9 }}>Total Attempts</p>
+                    </div>
+                    <div style={{ background: 'linear-gradient(135deg, #FF8F00, #FFCA28)', padding: '20px', borderRadius: '16px', color: 'var(--earth-dark)', textAlign: 'center' }}>
+                      <p style={{ margin: 0, fontSize: '2.2rem', fontWeight: 900 }}>{new Set(attemptHistory.map(a => a.examId)).size}</p>
+                      <p style={{ margin: '4px 0 0', fontSize: '0.9rem', fontWeight: 700, opacity: 0.9 }}>Exams Attempted</p>
+                    </div>
+                    <div style={{ background: 'linear-gradient(135deg, #1565C0, #42A5F5)', padding: '20px', borderRadius: '16px', color: 'white', textAlign: 'center' }}>
+                      <p style={{ margin: 0, fontSize: '2.2rem', fontWeight: 900 }}>{Math.round(attemptHistory.reduce((sum, a) => sum + a.percent, 0) / attemptHistory.length)}%</p>
+                      <p style={{ margin: '4px 0 0', fontSize: '0.9rem', fontWeight: 700, opacity: 0.9 }}>Average Score</p>
+                    </div>
+                    <div style={{ background: 'linear-gradient(135deg, #6A1B9A, #AB47BC)', padding: '20px', borderRadius: '16px', color: 'white', textAlign: 'center' }}>
+                      <p style={{ margin: 0, fontSize: '2.2rem', fontWeight: 900 }}>{Math.max(...attemptHistory.map(a => a.percent))}%</p>
+                      <p style={{ margin: '4px 0 0', fontSize: '0.9rem', fontWeight: 700, opacity: 0.9 }}>Best Score</p>
+                    </div>
+                  </div>
+
+                  {/* Attempt History Table */}
+                  <div style={{ overflowX: 'auto' }}>
+                    <table style={{ width: '100%', borderCollapse: 'separate', borderSpacing: '0 8px' }}>
+                      <thead>
+                        <tr style={{ textAlign: 'left' }}>
+                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>#</th>
+                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Exam</th>
+                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Date</th>
+                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Score</th>
+                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Result</th>
+                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Timer</th>
+                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Duration</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {attemptHistory.map((record, idx) => {
+                          const d = new Date(record.date);
+                          const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                          const timeStr = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+                          const mins = Math.floor(record.elapsedSeconds / 60);
+                          const secs = record.elapsedSeconds % 60;
+                          const passed = record.percent >= 85;
+                          return (
+                            <tr key={`${record.date}-${idx}`} style={{ background: 'rgba(255,255,255,0.6)', borderRadius: '12px' }}>
+                              <td style={{ padding: '14px 16px', fontWeight: 800, color: 'var(--text-light)', borderRadius: '12px 0 0 12px' }}>{attemptHistory.length - idx}</td>
+                              <td style={{ padding: '14px 16px', fontWeight: 800, color: 'var(--earth-dark)' }}>Year {record.examYear}</td>
+                              <td style={{ padding: '14px 16px', color: 'var(--text-light)', fontSize: '0.95rem' }}>
+                                <div>{dateStr}</div>
+                                <div style={{ fontSize: '0.8rem', opacity: 0.7 }}>{timeStr}</div>
+                              </td>
+                              <td style={{ padding: '14px 16px', fontWeight: 900, fontSize: '1.2rem', color: passed ? 'var(--jungle-green)' : '#e74c3c' }}>{record.percent}%</td>
+                              <td style={{ padding: '14px 16px' }}>
+                                <span style={{ padding: '4px 12px', borderRadius: '8px', fontWeight: 800, fontSize: '0.8rem', background: passed ? 'var(--mint)' : '#ff7675', color: 'white' }}>
+                                  {record.correct}/{record.total}
+                                </span>
+                              </td>
+                              <td style={{ padding: '14px 16px', fontSize: '1.2rem' }}>
+                                {record.timerEnabled ? '⏱️' : '—'}
+                              </td>
+                              <td style={{ padding: '14px 16px', fontWeight: 700, color: 'var(--text-light)', borderRadius: '0 12px 12px 0' }}>
+                                {record.timerEnabled ? `${mins}m ${secs.toString().padStart(2, '0')}s` : '—'}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                </>
+              )}
+            </section>
+          </main>
         )}
 
         {screen === 'intro' && selectedYear && (
