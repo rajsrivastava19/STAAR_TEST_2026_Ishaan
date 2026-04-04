@@ -371,8 +371,8 @@ function App() {
             key={i} 
             className="firefly" 
             style={{ 
-              left: `${Math.random() * 100}vw`, 
-              top: `${Math.random() * 100}vh`, 
+              left: `${Math.random() * 1366}px`, 
+              top: `${Math.random() * 900}px`, 
               animationDelay: `${Math.random() * 5}s`,
               transform: `scale(${0.5 + Math.random() * 1.5})`
             }} 
@@ -423,7 +423,7 @@ function App() {
       )}
 
       {screen === 'login' && (
-        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', height: '100vh', background: 'rgba(0,0,0,0.4)', zIndex: 100 }}>
+        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', height: '900px', background: 'rgba(0,0,0,0.4)', zIndex: 100 }}>
           <form className="card-panel" style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '16px', textAlign: 'center' }} onSubmit={(e) => {
             e.preventDefault();
             const fn = (e.currentTarget.elements.namedItem('firstName') as HTMLInputElement).value;
@@ -473,11 +473,11 @@ function App() {
 
             <div className="perfect-map-overlay" style={{
               position: 'absolute',
-              top: '20vmax',
+              top: '180px',
               left: '50%',
               transform: 'translateX(-50%)',
-              width: 'max(100vw, 100vh)',
-              height: 'max(100vw, 100vh)',
+              width: '1366px',
+              height: '1366px',
               pointerEvents: 'none',
               zIndex: 5
             }}>

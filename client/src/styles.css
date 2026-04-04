@@ -19,6 +19,12 @@
   box-sizing: border-box;
 }
 
+html {
+  width: 1366px;
+  height: 900px;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -30,17 +36,20 @@ body {
   background-image: url('/STAAR_TEST_2026_Ishaan/dinos/jungle_bg.png');
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 1366px 900px;
   background-attachment: fixed;
-  min-height: 100vh;
-  overflow-x: hidden;
+  width: 1366px;
+  height: 900px;
+  overflow: hidden;
 }
 
 .page-shell {
-  min-height: 100vh;
+  width: 1366px;
+  height: 900px;
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* Dynamically remove vertical scrolling exclusively when the virtual map is mounted */
@@ -61,15 +70,15 @@ body:has(.perfect-map-overlay) {
 }
 
 @keyframes fly-ptero {
-  0%   { transform: translate(80vw, 10vh) scaleX(1); }
-  22%  { transform: translate(10vw, 30vh) scaleX(1); }
-  25%  { transform: translate(5vw, 40vh) scaleX(-1); }
-  47%  { transform: translate(80vw, 60vh) scaleX(-1); }
-  50%  { transform: translate(90vw, 70vh) scaleX(1); }
-  72%  { transform: translate(20vw, 80vh) scaleX(1); }
-  75%  { transform: translate(10vw, 70vh) scaleX(-1); }
-  97%  { transform: translate(85vw, 20vh) scaleX(-1); }
-  100% { transform: translate(80vw, 10vh) scaleX(1); }
+  0%   { transform: translate(1093px, 90px) scaleX(1); }
+  22%  { transform: translate(137px, 270px) scaleX(1); }
+  25%  { transform: translate(68px, 360px) scaleX(-1); }
+  47%  { transform: translate(1093px, 540px) scaleX(-1); }
+  50%  { transform: translate(1229px, 630px) scaleX(1); }
+  72%  { transform: translate(273px, 720px) scaleX(1); }
+  75%  { transform: translate(137px, 630px) scaleX(-1); }
+  97%  { transform: translate(1161px, 180px) scaleX(-1); }
+  100% { transform: translate(1093px, 90px) scaleX(1); }
 }
 
 @keyframes firefly-float {
@@ -127,7 +136,7 @@ body:has(.perfect-map-overlay) {
 .dino-ambient-left {
   position: fixed;
   bottom: 0px;
-  left: max(20px, 4vw);
+  left: max(20px, 55px);
   height: 250px;
   width: auto;
   z-index: 5; 
@@ -225,13 +234,15 @@ body:has(.perfect-map-overlay) {
   flex-direction: column;
   gap: 24px;
   z-index: 10;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Action Bars (Top Progress / Bottom Actions) */
 .test-layout {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 84px); /* fill space below header */
+  height: calc(900px - 84px); /* fill space below header — fixed design height */
   position: relative;
 }
 
@@ -957,6 +968,8 @@ button:disabled {
   gap: 24px;
   align-items: center;
   padding: 40px 20px;
+  overflow-y: auto;
+  flex: 1;
 }
 
 .score-hero {
@@ -1034,77 +1047,11 @@ button:disabled {
 }
 
 /* =========================================
-   RESPONSIVE DESIGN (iPad & Mobile)
+   RESPONSIVE DESIGN — DISABLED
+   Viewport-lock scaling handles all screen adaptation.
+   The entire app renders at 1366x900 and is
+   uniformly scaled via transform: scale().
    ========================================= */
-
-@media (max-width: 1024px) {
-  .hero-box {
-    gap: 16px;
-    padding: 16px;
-  }
-  .mascot-img {
-    width: 200px;
-  }
-  .dino-ambient-left, .dino-ambient-right {
-    height: 150px;
-  }
-  .pterodactyl-sprite {
-    width: 150px;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-container {
-    padding: 16px;
-  }
-  .hero-box {
-    flex-direction: column;
-    text-align: center;
-    gap: 12px;
-  }
-  .hero-text h2 {
-    font-size: 2rem;
-  }
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-  .mascot-img {
-    width: 150px;
-  }
-  .mountain-left, .mountain-right {
-    justify-content: center;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .mountain-button {
-    width: 110px;
-    height: 140px;
-  }
-  .mountain-dino {
-    height: 75px;
-    top: -15px;
-  }
-  .flag-banner {
-    font-size: 0.7rem;
-    padding: 2px 8px;
-  }
-  .mountain-shape {
-    height: 110px;
-  }
-  .dino-ambient-left, .dino-ambient-right {
-    height: 60px;
-  }
-  .pterodactyl-sprite {
-    width: 90px;
-  }
-  .option-button {
-    padding: 16px 20px;
-    font-size: 1.1rem;
-  }
-  .score-grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 .option-stack.grid-6col {
   display: grid;
@@ -1127,11 +1074,5 @@ button:disabled {
 
 /* iOS scaling override for results page */
 body:has(.results-layout) {
-  background-size: 100vw 100vh !important;
-}
-
-@media (max-width: 1024px) {
-  body:has(.results-layout) {
-    background-size: 100vw auto !important;
-  }
+  background-size: 1366px 900px !important;
 }

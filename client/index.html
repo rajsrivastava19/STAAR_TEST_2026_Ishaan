@@ -2,12 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=1366, initial-scale=1.0, user-scalable=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#7B2CBF" />
     <title>Math STAAR Test Prep for Ishaan</title>
+    <script>
+      (function () {
+        var DESIGN_W = 1366, DESIGN_H = 900;
+        function fit() {
+          var vw = window.innerWidth, vh = window.innerHeight;
+          var scale = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+          var root = document.documentElement;
+          root.style.width = DESIGN_W + 'px';
+          root.style.height = DESIGN_H + 'px';
+          root.style.transform = 'scale(' + scale + ')';
+          root.style.transformOrigin = 'top left';
+          /* Center horizontally when letterboxed */
+          var scaledW = DESIGN_W * scale;
+          var scaledH = DESIGN_H * scale;
+          root.style.marginLeft = scaledW < vw ? ((vw - scaledW) / 2) + 'px' : '0px';
+          root.style.marginTop = scaledH < vh ? ((vh - scaledH) / 2) + 'px' : '0px';
+        }
+        fit();
+        window.addEventListener('resize', fit);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
