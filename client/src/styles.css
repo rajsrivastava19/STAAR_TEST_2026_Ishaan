@@ -49,7 +49,8 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 /* Dynamically remove vertical scrolling exclusively when the virtual map is mounted */
@@ -173,14 +174,14 @@ body:has(.home-scene-viewport) .page-shell {
 /* Scene-specific mountain sizing (1440×1080 stage)
    Uses doubled selectors to beat html[data-tier] specificity */
 .home-scene-stage .scene-mountain .mountain-button {
-  width: 200px !important;
-  height: 260px !important;
+  width: 170px !important;
+  height: 220px !important;
 }
 .home-scene-stage .scene-mountain .mountain-shape {
-  height: 200px;
+  height: 170px;
 }
 .home-scene-stage .scene-mountain .mountain-dino {
-  height: 140px !important;
+  /* Height is dynamically set inline from homeSceneProfiles */
 }
 .home-scene-stage .scene-mountain .flag-banner {
   font-size: 1.3rem;

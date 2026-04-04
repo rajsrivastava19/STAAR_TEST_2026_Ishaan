@@ -43,27 +43,27 @@ export interface LevelLayout {
  * Mountains sit on the outer rim of the background's natural oval shape.
  */
 export const LEVELS: LevelLayout[] = [
-  // L1 — Top center (on top of oval rim)
-  { x: 690,  y: 380, mountainW: 200, mountainH: 170, dinoOffX: 25,  dinoOffY: -130, dinoH: 110, hue: '-50deg'  },
-  // L2 — Upper right (on oval rim)
-  { x: 1010, y: 460, mountainW: 200, mountainH: 170, dinoOffX: 25,  dinoOffY: -140, dinoH: 120, hue: '60deg'   },
-  // L3 — Right (on far right of oval rim)
-  { x: 1080, y: 660, mountainW: 200, mountainH: 170, dinoOffX: 25,  dinoOffY: -140, dinoH: 120, hue: '230deg'  },
-  // L4 — Lower right (on bottom-right of oval rim)
-  { x: 880,  y: 830, mountainW: 200, mountainH: 170, dinoOffX: -60, dinoOffY: -150, dinoH: 140, hue: '30deg'   },
-  // L5 — Lower left (on bottom-left of oval rim)
-  { x: 530,  y: 830, mountainW: 200, mountainH: 170, dinoOffX: -15, dinoOffY: -150, dinoH: 140, hue: '0deg'    },
-  // L6 — Left (on far left of oval rim)
-  { x: 310,  y: 660, mountainW: 200, mountainH: 170, dinoOffX: 25,  dinoOffY: -150, dinoH: 140, hue: '-70deg'  },
-  // L7 — Upper left (on oval rim)
-  { x: 410,  y: 460, mountainW: 200, mountainH: 170, dinoOffX: 25,  dinoOffY: -140, dinoH: 120, hue: '0deg'    },
+  // L1 — Top center
+  { x: 690,  y: 300, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: -30, dinoH: 250, hue: '-50deg'  },
+  // L2 — Upper right
+  { x: 1010, y: 380, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: -30, dinoH: 250, hue: '60deg'   },
+  // L3 — Right
+  { x: 1070, y: 580, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: -30, dinoH: 250, hue: '230deg'  },
+  // L4 — Lower right
+  { x: 880,  y: 700, mountainW: 200, mountainH: 170, dinoOffX: -60, dinoOffY: -10, dinoH: 250, hue: '30deg'   },
+  // L5 — Lower left
+  { x: 530,  y: 700, mountainW: 200, mountainH: 170, dinoOffX: -15, dinoOffY: -10, dinoH: 250, hue: '0deg'    },
+  // L6 — Left
+  { x: 360,  y: 580, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: 0, dinoH: 250, hue: '-70deg'  },
+  // L7 — Upper left
+  { x: 410,  y: 380, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: 0, dinoH: 250, hue: '0deg'    },
 ];
 
 /* ── Lake ─────────────────────────────────────────────────── */
 
 export const LAKE = {
   cx: 720,
-  cy: 610,
+  cy: 570,
   rx: 280,
   ry: 140,
 };
@@ -71,8 +71,8 @@ export const LAKE = {
 /* ── Hero box ─────────────────────────────────────────────── */
 
 export const HERO_BOX = {
-  x: 100,
-  y: 70,
+  x: 290,
+  y: 75,
   w: 860,
   h: 175,
 };
