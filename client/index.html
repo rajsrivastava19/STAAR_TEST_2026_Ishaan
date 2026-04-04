@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1366, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=1920, initial-scale=1.0, user-scalable=no" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,14 +11,18 @@
     <script>
       (function () {
         var TIERS = [
-          { name: 'small',  w: 1024, h: 768  },
-          { name: 'medium', w: 1366, h: 900  },
-          { name: 'large',  w: 1920, h: 1080 }
+          { name: 'xs',    w: 1024, h: 768  },
+          { name: 's',     w: 1280, h: 800  },
+          { name: 'm',     w: 1366, h: 768  },
+          { name: 'l',     w: 1680, h: 1050 },
+          { name: 'xl',    w: 1920, h: 1080 },
+          { name: 'xxl',   w: 2560, h: 1440 },
+          { name: 'ultra', w: 3840, h: 2160 }
         ];
         function fit() {
           var vw = window.innerWidth, vh = window.innerHeight;
           var vpArea = vw * vh;
-          var best = TIERS[1]; // default medium
+          var best = TIERS[2];
           var bestDiff = Infinity;
           for (var i = 0; i < TIERS.length; i++) {
             var diff = Math.abs(vpArea - TIERS[i].w * TIERS[i].h);
@@ -29,9 +33,9 @@
           root.style.width = best.w + 'px';
           root.style.height = best.h + 'px';
           root.setAttribute('data-tier', best.name);
+          root.setAttribute('data-ratio', (vw / vh).toFixed(3));
           root.style.transform = 'scale(' + scale + ')';
           root.style.transformOrigin = 'top left';
-          /* Center horizontally when letterboxed */
           var scaledW = best.w * scale;
           var scaledH = best.h * scale;
           root.style.marginLeft = scaledW < vw ? ((vw - scaledW) / 2) + 'px' : '0px';
@@ -47,4 +51,3 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

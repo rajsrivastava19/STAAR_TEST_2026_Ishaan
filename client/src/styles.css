@@ -1078,315 +1078,233 @@ body:has(.results-layout) {
 }
 
 /* =========================================
-   TIER: SMALL (1024×768) — Tablets & Small Laptops
+   TIER: XS (1024×768) — Tablets & Small Laptops
    ========================================= */
 
-html[data-tier="small"] {
-  width: 1024px;
-  height: 768px;
-}
-
-html[data-tier="small"] body {
-  width: 1024px;
-  height: 768px;
-  background-size: 1024px 768px;
-}
-
-html[data-tier="small"] .page-shell {
-  width: 1024px;
-  height: 768px;
-}
-
-/* Hero section — compact */
-html[data-tier="small"] .hero-text h2 {
-  font-size: 2rem;
-}
-
-html[data-tier="small"] .hero-text p {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-html[data-tier="small"] .hero-box {
-  padding: 16px;
-  gap: 20px;
-}
-
-/* Header — tighter */
-html[data-tier="small"] .site-header h1 {
-  font-size: 1.2rem;
-}
-
-html[data-tier="small"] .eyebrow {
-  font-size: 0.75rem;
-}
-
-html[data-tier="small"] .title-badge {
-  width: 44px !important;
-  height: 44px !important;
-}
-
-/* Mountain trail overlay — now full viewport, no tier overrides needed */
-
-html[data-tier="small"] .mountain-button {
-  width: 90px;
-  height: 115px;
-}
-
-html[data-tier="small"] .mountain-shape {
-  height: 90px;
-}
-
-html[data-tier="small"] .mountain-dino {
-  height: 65px !important;
-}
-
-html[data-tier="small"] .flag-banner {
-  font-size: 0.75rem;
-  padding: 3px 10px;
-}
-
-html[data-tier="small"] .mountain-status {
-  font-size: 0.7rem;
-  padding: 2px 8px;
-}
-
-/* Ambient elements — smaller */
-html[data-tier="small"] .dino-ambient-left,
-html[data-tier="small"] .dino-ambient-right {
-  height: 180px;
-}
-
-html[data-tier="small"] .pterodactyl-sprite {
-  width: 140px;
-}
-
-/* Test layout — shorter viewport */
-html[data-tier="small"] .test-layout {
-  height: calc(768px - 72px);
-}
-
-/* Login screen */
-html[data-tier="small"] .test-layout[style*="height: 900px"] {
-  height: 768px !important;
-}
-
-/* Buttons — slightly smaller */
-html[data-tier="small"] button {
-  padding: 12px 18px;
-  font-size: 1rem;
-  border-radius: 14px;
-}
-
-/* Cards — tighter */
-html[data-tier="small"] .card-panel {
-  padding: 16px;
-  border-radius: 20px;
-}
-
-html[data-tier="small"] .main-container {
-  padding: 16px;
-  gap: 16px;
-}
-
-/* Question stem — slightly smaller */
-html[data-tier="small"] .question-stem {
-  font-size: 1.15rem;
-}
-
-/* Score display */
-html[data-tier="small"] .score-bubble {
-  font-size: 4.5rem;
-}
-
-/* Mascot image — smaller */
-html[data-tier="small"] .mascot-img {
-  width: 220px;
-}
-
-/* Results layout */
-html[data-tier="small"] .results-layout {
-  padding: 24px 16px;
-}
-
-/* iOS override for small tier */
-html[data-tier="small"] body:has(.results-layout) {
-  background-size: 1024px 768px !important;
-}
-
+html[data-tier="xs"] { width: 1024px; height: 768px; }
+html[data-tier="xs"] body { width: 1024px; height: 768px; background-size: 1024px 768px; }
+html[data-tier="xs"] .page-shell { width: 1024px; height: 768px; }
+html[data-tier="xs"] .hero-text h2 { font-size: 2rem; }
+html[data-tier="xs"] .hero-text p { font-size: 1rem; line-height: 1.4; }
+html[data-tier="xs"] .hero-box { padding: 16px; gap: 20px; }
+html[data-tier="xs"] .site-header h1 { font-size: 1.2rem; }
+html[data-tier="xs"] .eyebrow { font-size: 0.75rem; }
+html[data-tier="xs"] .title-badge { width: 44px !important; height: 44px !important; }
+html[data-tier="xs"] .mountain-button { width: 90px; height: 115px; }
+html[data-tier="xs"] .mountain-shape { height: 90px; }
+html[data-tier="xs"] .mountain-dino { height: 65px !important; }
+html[data-tier="xs"] .flag-banner { font-size: 0.75rem; padding: 3px 10px; }
+html[data-tier="xs"] .mountain-status { font-size: 0.7rem; padding: 2px 8px; }
+html[data-tier="xs"] .dino-ambient-left,
+html[data-tier="xs"] .dino-ambient-right { height: 180px; }
+html[data-tier="xs"] .pterodactyl-sprite { width: 140px; }
+html[data-tier="xs"] .test-layout { height: calc(768px - 72px); }
+html[data-tier="xs"] .test-layout[style*="height: 900px"] { height: 768px !important; }
+html[data-tier="xs"] button { padding: 12px 18px; font-size: 1rem; border-radius: 14px; }
+html[data-tier="xs"] .card-panel { padding: 16px; border-radius: 20px; }
+html[data-tier="xs"] .main-container { padding: 16px; gap: 16px; }
+html[data-tier="xs"] .question-stem { font-size: 1.15rem; }
+html[data-tier="xs"] .score-bubble { font-size: 4.5rem; }
+html[data-tier="xs"] .mascot-img { width: 220px; }
+html[data-tier="xs"] .results-layout { padding: 24px 16px; }
+html[data-tier="xs"] body:has(.results-layout) { background-size: 1024px 768px !important; }
 
 /* =========================================
-   TIER: LARGE (1920×1080) — Desktop Monitors
+   TIER: S (1280×800) — Small Laptops
    ========================================= */
 
-html[data-tier="large"] {
-  width: 1920px;
-  height: 1080px;
-}
+html[data-tier="s"] { width: 1280px; height: 800px; }
+html[data-tier="s"] body { width: 1280px; height: 800px; background-size: 1280px 800px; }
+html[data-tier="s"] .page-shell { width: 1280px; height: 800px; }
+html[data-tier="s"] .hero-text h2 { font-size: 2.4rem; }
+html[data-tier="s"] .hero-text p { font-size: 1.1rem; line-height: 1.5; }
+html[data-tier="s"] .hero-box { padding: 20px; gap: 24px; }
+html[data-tier="s"] .site-header h1 { font-size: 1.35rem; }
+html[data-tier="s"] .eyebrow { font-size: 0.8rem; }
+html[data-tier="s"] .title-badge { width: 50px !important; height: 50px !important; }
+html[data-tier="s"] .mountain-button { width: 100px; height: 130px; }
+html[data-tier="s"] .mountain-shape { height: 100px; }
+html[data-tier="s"] .mountain-dino { height: 72px !important; }
+html[data-tier="s"] .flag-banner { font-size: 0.8rem; padding: 4px 12px; }
+html[data-tier="s"] .mountain-status { font-size: 0.75rem; padding: 3px 10px; }
+html[data-tier="s"] .dino-ambient-left,
+html[data-tier="s"] .dino-ambient-right { height: 210px; }
+html[data-tier="s"] .pterodactyl-sprite { width: 170px; }
+html[data-tier="s"] .test-layout { height: calc(800px - 76px); }
+html[data-tier="s"] .test-layout[style*="height: 900px"] { height: 800px !important; }
+html[data-tier="s"] button { padding: 13px 20px; font-size: 1.05rem; border-radius: 15px; }
+html[data-tier="s"] .card-panel { padding: 18px; border-radius: 22px; }
+html[data-tier="s"] .main-container { padding: 18px; gap: 18px; }
+html[data-tier="s"] .question-stem { font-size: 1.25rem; }
+html[data-tier="s"] .score-bubble { font-size: 5rem; }
+html[data-tier="s"] .mascot-img { width: 250px; }
+html[data-tier="s"] .results-layout { padding: 28px 18px; }
+html[data-tier="s"] body:has(.results-layout) { background-size: 1280px 800px !important; }
 
-html[data-tier="large"] body {
-  width: 1920px;
-  height: 1080px;
-  background-size: 1920px 1080px;
-}
+/* =========================================
+   TIER: M (1366×768) — Standard Laptops (base-like)
+   ========================================= */
 
-html[data-tier="large"] .page-shell {
-  width: 1920px;
-  height: 1080px;
-}
+html[data-tier="m"] { width: 1366px; height: 768px; }
+html[data-tier="m"] body { width: 1366px; height: 768px; background-size: 1366px 768px; }
+html[data-tier="m"] .page-shell { width: 1366px; height: 768px; }
+html[data-tier="m"] .test-layout { height: calc(768px - 80px); }
+html[data-tier="m"] .test-layout[style*="height: 900px"] { height: 768px !important; }
+html[data-tier="m"] body:has(.results-layout) { background-size: 1366px 768px !important; }
 
-/* Hero section — more spacious */
-html[data-tier="large"] .hero-text h2 {
-  font-size: 3.8rem;
-}
+/* =========================================
+   TIER: L (1680×1050) — MacBooks & Mid Displays
+   ========================================= */
 
-html[data-tier="large"] .hero-text p {
-  font-size: 1.5rem;
-  line-height: 1.7;
-}
+html[data-tier="l"] { width: 1680px; height: 1050px; }
+html[data-tier="l"] body { width: 1680px; height: 1050px; background-size: 1680px 1050px; }
+html[data-tier="l"] .page-shell { width: 1680px; height: 1050px; }
+html[data-tier="l"] .hero-text h2 { font-size: 3.2rem; }
+html[data-tier="l"] .hero-text p { font-size: 1.3rem; line-height: 1.6; }
+html[data-tier="l"] .hero-box { padding: 28px; gap: 32px; border-radius: 28px; }
+html[data-tier="l"] .site-header { padding: 18px 28px; }
+html[data-tier="l"] .site-header h1 { font-size: 1.6rem; }
+html[data-tier="l"] .eyebrow { font-size: 0.95rem; }
+html[data-tier="l"] .title-badge { width: 64px !important; height: 64px !important; }
+html[data-tier="l"] .mountain-button { width: 125px; height: 155px; }
+html[data-tier="l"] .mountain-shape { height: 120px; }
+html[data-tier="l"] .mountain-dino { height: 90px !important; }
+html[data-tier="l"] .flag-banner { font-size: 0.9rem; padding: 5px 14px; }
+html[data-tier="l"] .mountain-status { font-size: 0.85rem; padding: 4px 11px; }
+html[data-tier="l"] .dino-ambient-left,
+html[data-tier="l"] .dino-ambient-right { height: 280px; }
+html[data-tier="l"] .pterodactyl-sprite { width: 220px; }
+html[data-tier="l"] .test-layout { height: calc(1050px - 88px); }
+html[data-tier="l"] .test-layout[style*="height: 900px"] { height: 1050px !important; }
+html[data-tier="l"] button { padding: 16px 24px; font-size: 1.15rem; border-radius: 16px; }
+html[data-tier="l"] .card-panel { padding: 24px; border-radius: 26px; }
+html[data-tier="l"] .main-container { padding: 28px; gap: 28px; max-width: 1100px; }
+html[data-tier="l"] .question-stem { font-size: 1.4rem; }
+html[data-tier="l"] .option-card { padding: 13px 18px; font-size: 1.15rem; }
+html[data-tier="l"] .score-bubble { font-size: 6.5rem; }
+html[data-tier="l"] .mascot-img { width: 330px; }
+html[data-tier="l"] .results-layout { padding: 40px 24px; }
+html[data-tier="l"] body:has(.results-layout) { background-size: 1680px 1050px !important; }
 
-html[data-tier="large"] .hero-box {
-  padding: 32px;
-  gap: 40px;
-  border-radius: 32px;
-}
+/* =========================================
+   TIER: XL (1920×1080) — Desktop Monitors
+   ========================================= */
 
-/* Header — more breathing room */
-html[data-tier="large"] .site-header {
-  padding: 20px 32px;
-}
+html[data-tier="xl"] { width: 1920px; height: 1080px; }
+html[data-tier="xl"] body { width: 1920px; height: 1080px; background-size: 1920px 1080px; }
+html[data-tier="xl"] .page-shell { width: 1920px; height: 1080px; }
+html[data-tier="xl"] .hero-text h2 { font-size: 3.8rem; }
+html[data-tier="xl"] .hero-text p { font-size: 1.5rem; line-height: 1.7; }
+html[data-tier="xl"] .hero-box { padding: 32px; gap: 40px; border-radius: 32px; }
+html[data-tier="xl"] .site-header { padding: 20px 32px; }
+html[data-tier="xl"] .site-header h1 { font-size: 1.8rem; }
+html[data-tier="xl"] .eyebrow { font-size: 1rem; }
+html[data-tier="xl"] .title-badge { width: 72px !important; height: 72px !important; }
+html[data-tier="xl"] .mountain-button { width: 140px; height: 175px; }
+html[data-tier="xl"] .mountain-shape { height: 140px; }
+html[data-tier="xl"] .mountain-dino { height: 105px !important; }
+html[data-tier="xl"] .flag-banner { font-size: 1rem; padding: 6px 18px; border-radius: 10px; }
+html[data-tier="xl"] .mountain-status { font-size: 0.9rem; padding: 4px 12px; }
+html[data-tier="xl"] .mountain-questions { font-size: 0.85rem; }
+html[data-tier="xl"] .star-badge { font-size: 4.5rem !important; }
+html[data-tier="xl"] .dino-ambient-left,
+html[data-tier="xl"] .dino-ambient-right { height: 320px; }
+html[data-tier="xl"] .pterodactyl-sprite { width: 260px; }
+html[data-tier="xl"] .test-layout { height: calc(1080px - 92px); }
+html[data-tier="xl"] .test-layout[style*="height: 900px"] { height: 1080px !important; }
+html[data-tier="xl"] button { padding: 18px 28px; font-size: 1.25rem; border-radius: 18px; }
+html[data-tier="xl"] .card-panel { padding: 28px; border-radius: 28px; }
+html[data-tier="xl"] .main-container { padding: 32px; gap: 32px; max-width: 1200px; }
+html[data-tier="xl"] .question-stem { font-size: 1.5rem; }
+html[data-tier="xl"] .option-card { padding: 14px 20px; font-size: 1.25rem; }
+html[data-tier="xl"] .option-chip { width: 42px; height: 42px; font-size: 1.2rem; }
+html[data-tier="xl"] .score-bubble { font-size: 7.5rem; }
+html[data-tier="xl"] .mascot-img { width: 380px; }
+html[data-tier="xl"] .results-layout { padding: 48px 28px; }
+html[data-tier="xl"] .score-grid { gap: 20px; }
+html[data-tier="xl"] body:has(.results-layout) { background-size: 1920px 1080px !important; }
 
-html[data-tier="large"] .site-header h1 {
-  font-size: 1.8rem;
-}
+/* =========================================
+   TIER: XXL (2560×1440) — QHD Monitors
+   ========================================= */
 
-html[data-tier="large"] .eyebrow {
-  font-size: 1rem;
-}
+html[data-tier="xxl"] { width: 2560px; height: 1440px; }
+html[data-tier="xxl"] body { width: 2560px; height: 1440px; background-size: 2560px 1440px; }
+html[data-tier="xxl"] .page-shell { width: 2560px; height: 1440px; }
+html[data-tier="xxl"] .hero-text h2 { font-size: 5rem; }
+html[data-tier="xxl"] .hero-text p { font-size: 2rem; line-height: 1.8; }
+html[data-tier="xxl"] .hero-box { padding: 44px; gap: 52px; border-radius: 40px; }
+html[data-tier="xxl"] .site-header { padding: 26px 44px; }
+html[data-tier="xxl"] .site-header h1 { font-size: 2.4rem; }
+html[data-tier="xxl"] .eyebrow { font-size: 1.3rem; }
+html[data-tier="xxl"] .title-badge { width: 96px !important; height: 96px !important; }
+html[data-tier="xxl"] .mountain-button { width: 185px; height: 230px; }
+html[data-tier="xxl"] .mountain-shape { height: 185px; }
+html[data-tier="xxl"] .mountain-dino { height: 140px !important; }
+html[data-tier="xxl"] .flag-banner { font-size: 1.3rem; padding: 8px 22px; border-radius: 12px; }
+html[data-tier="xxl"] .mountain-status { font-size: 1.15rem; padding: 5px 16px; }
+html[data-tier="xxl"] .mountain-questions { font-size: 1.1rem; }
+html[data-tier="xxl"] .star-badge { font-size: 6rem !important; }
+html[data-tier="xxl"] .dino-ambient-left,
+html[data-tier="xxl"] .dino-ambient-right { height: 420px; }
+html[data-tier="xxl"] .pterodactyl-sprite { width: 340px; }
+html[data-tier="xxl"] .test-layout { height: calc(1440px - 120px); }
+html[data-tier="xxl"] .test-layout[style*="height: 900px"] { height: 1440px !important; }
+html[data-tier="xxl"] button { padding: 24px 36px; font-size: 1.6rem; border-radius: 22px; }
+html[data-tier="xxl"] .card-panel { padding: 36px; border-radius: 36px; }
+html[data-tier="xxl"] .main-container { padding: 44px; gap: 44px; max-width: 1600px; }
+html[data-tier="xxl"] .question-stem { font-size: 2rem; }
+html[data-tier="xxl"] .option-card { padding: 18px 28px; font-size: 1.6rem; }
+html[data-tier="xxl"] .option-chip { width: 56px; height: 56px; font-size: 1.5rem; }
+html[data-tier="xxl"] .score-bubble { font-size: 10rem; }
+html[data-tier="xxl"] .mascot-img { width: 500px; }
+html[data-tier="xxl"] .results-layout { padding: 64px 36px; }
+html[data-tier="xxl"] .score-grid { gap: 28px; }
+html[data-tier="xxl"] body:has(.results-layout) { background-size: 2560px 1440px !important; }
 
-html[data-tier="large"] .title-badge {
-  width: 72px !important;
-  height: 72px !important;
-}
+/* =========================================
+   TIER: ULTRA (3840×2160) — 4K Displays
+   ========================================= */
 
-/* Mountain trail overlay — now full viewport, no tier overrides needed */
+html[data-tier="ultra"] { width: 3840px; height: 2160px; }
+html[data-tier="ultra"] body { width: 3840px; height: 2160px; background-size: 3840px 2160px; }
+html[data-tier="ultra"] .page-shell { width: 3840px; height: 2160px; }
+html[data-tier="ultra"] .hero-text h2 { font-size: 7.5rem; }
+html[data-tier="ultra"] .hero-text p { font-size: 3rem; line-height: 1.8; }
+html[data-tier="ultra"] .hero-box { padding: 64px; gap: 76px; border-radius: 56px; }
+html[data-tier="ultra"] .site-header { padding: 40px 64px; }
+html[data-tier="ultra"] .site-header h1 { font-size: 3.6rem; }
+html[data-tier="ultra"] .eyebrow { font-size: 2rem; }
+html[data-tier="ultra"] .title-badge { width: 144px !important; height: 144px !important; }
+html[data-tier="ultra"] .mountain-button { width: 280px; height: 350px; }
+html[data-tier="ultra"] .mountain-shape { height: 280px; }
+html[data-tier="ultra"] .mountain-dino { height: 210px !important; }
+html[data-tier="ultra"] .flag-banner { font-size: 2rem; padding: 12px 32px; border-radius: 16px; }
+html[data-tier="ultra"] .mountain-status { font-size: 1.8rem; padding: 8px 24px; }
+html[data-tier="ultra"] .mountain-questions { font-size: 1.7rem; }
+html[data-tier="ultra"] .star-badge { font-size: 9rem !important; }
+html[data-tier="ultra"] .dino-ambient-left,
+html[data-tier="ultra"] .dino-ambient-right { height: 640px; }
+html[data-tier="ultra"] .pterodactyl-sprite { width: 520px; }
+html[data-tier="ultra"] .test-layout { height: calc(2160px - 180px); }
+html[data-tier="ultra"] .test-layout[style*="height: 900px"] { height: 2160px !important; }
+html[data-tier="ultra"] button { padding: 36px 54px; font-size: 2.5rem; border-radius: 32px; }
+html[data-tier="ultra"] .card-panel { padding: 56px; border-radius: 52px; }
+html[data-tier="ultra"] .main-container { padding: 64px; gap: 64px; max-width: 2400px; }
+html[data-tier="ultra"] .question-stem { font-size: 3rem; }
+html[data-tier="ultra"] .option-card { padding: 28px 42px; font-size: 2.5rem; }
+html[data-tier="ultra"] .option-chip { width: 84px; height: 84px; font-size: 2.4rem; }
+html[data-tier="ultra"] .score-bubble { font-size: 15rem; }
+html[data-tier="ultra"] .mascot-img { width: 760px; }
+html[data-tier="ultra"] .results-layout { padding: 96px 56px; }
+html[data-tier="ultra"] .score-grid { gap: 42px; }
+html[data-tier="ultra"] body:has(.results-layout) { background-size: 3840px 2160px !important; }
 
-html[data-tier="large"] .mountain-button {
-  width: 140px;
-  height: 175px;
-}
+/* =========================================
+   PTERODACTYL FLIGHT PATHS (per tier)
+   ========================================= */
 
-html[data-tier="large"] .mountain-shape {
-  height: 140px;
-}
-
-html[data-tier="large"] .mountain-dino {
-  height: 105px !important;
-}
-
-html[data-tier="large"] .flag-banner {
-  font-size: 1rem;
-  padding: 6px 18px;
-  border-radius: 10px;
-}
-
-html[data-tier="large"] .mountain-status {
-  font-size: 0.9rem;
-  padding: 4px 12px;
-}
-
-html[data-tier="large"] .mountain-questions {
-  font-size: 0.85rem;
-}
-
-/* Star badge bigger */
-html[data-tier="large"] .star-badge {
-  font-size: 4.5rem !important;
-}
-
-/* Ambient elements — larger */
-html[data-tier="large"] .dino-ambient-left,
-html[data-tier="large"] .dino-ambient-right {
-  height: 320px;
-}
-
-html[data-tier="large"] .pterodactyl-sprite {
-  width: 260px;
-}
-
-/* Test layout — taller viewport */
-html[data-tier="large"] .test-layout {
-  height: calc(1080px - 92px);
-}
-
-/* Login screen */
-html[data-tier="large"] .test-layout[style*="height: 900px"] {
-  height: 1080px !important;
-}
-
-/* Buttons — more generous */
-html[data-tier="large"] button {
-  padding: 18px 28px;
-  font-size: 1.25rem;
-  border-radius: 18px;
-}
-
-/* Cards — more spacious */
-html[data-tier="large"] .card-panel {
-  padding: 28px;
-  border-radius: 28px;
-}
-
-html[data-tier="large"] .main-container {
-  padding: 32px;
-  gap: 32px;
-  max-width: 1200px;
-}
-
-/* Question stem — larger */
-html[data-tier="large"] .question-stem {
-  font-size: 1.5rem;
-}
-
-/* Options — larger */
-html[data-tier="large"] .option-card {
-  padding: 14px 20px;
-  font-size: 1.25rem;
-}
-
-html[data-tier="large"] .option-chip {
-  width: 42px;
-  height: 42px;
-  font-size: 1.2rem;
-}
-
-/* Score display */
-html[data-tier="large"] .score-bubble {
-  font-size: 7.5rem;
-}
-
-/* Mascot image — larger */
-html[data-tier="large"] .mascot-img {
-  width: 380px;
-}
-
-/* Results layout */
-html[data-tier="large"] .results-layout {
-  padding: 48px 28px;
-}
-
-/* Progress / admin tables — more room */
-html[data-tier="large"] .score-grid {
-  gap: 20px;
-}
-
-/* iOS override for large tier */
-html[data-tier="large"] body:has(.results-layout) {
-  background-size: 1920px 1080px !important;
-}
-
-/* Pterodactyl flight path for small tier */
-@keyframes fly-ptero-small {
+@keyframes fly-ptero-xs {
   0%   { transform: translate(819px, 77px) scaleX(1); }
   22%  { transform: translate(102px, 230px) scaleX(1); }
   25%  { transform: translate(51px, 307px) scaleX(-1); }
@@ -1397,13 +1315,35 @@ html[data-tier="large"] body:has(.results-layout) {
   97%  { transform: translate(870px, 154px) scaleX(-1); }
   100% { transform: translate(819px, 77px) scaleX(1); }
 }
+html[data-tier="xs"] .pterodactyl-wrapper { animation: fly-ptero-xs 120s linear infinite; }
 
-html[data-tier="small"] .pterodactyl-wrapper {
-  animation: fly-ptero-small 120s linear infinite;
+@keyframes fly-ptero-s {
+  0%   { transform: translate(1024px, 80px) scaleX(1); }
+  22%  { transform: translate(128px, 240px) scaleX(1); }
+  25%  { transform: translate(64px, 320px) scaleX(-1); }
+  47%  { transform: translate(1024px, 480px) scaleX(-1); }
+  50%  { transform: translate(1152px, 560px) scaleX(1); }
+  72%  { transform: translate(256px, 640px) scaleX(1); }
+  75%  { transform: translate(128px, 560px) scaleX(-1); }
+  97%  { transform: translate(1088px, 160px) scaleX(-1); }
+  100% { transform: translate(1024px, 80px) scaleX(1); }
 }
+html[data-tier="s"] .pterodactyl-wrapper { animation: fly-ptero-s 120s linear infinite; }
 
-/* Pterodactyl flight path for large tier */
-@keyframes fly-ptero-large {
+@keyframes fly-ptero-l {
+  0%   { transform: translate(1344px, 105px) scaleX(1); }
+  22%  { transform: translate(168px, 315px) scaleX(1); }
+  25%  { transform: translate(84px, 420px) scaleX(-1); }
+  47%  { transform: translate(1344px, 630px) scaleX(-1); }
+  50%  { transform: translate(1512px, 735px) scaleX(1); }
+  72%  { transform: translate(336px, 840px) scaleX(1); }
+  75%  { transform: translate(168px, 735px) scaleX(-1); }
+  97%  { transform: translate(1428px, 210px) scaleX(-1); }
+  100% { transform: translate(1344px, 105px) scaleX(1); }
+}
+html[data-tier="l"] .pterodactyl-wrapper { animation: fly-ptero-l 120s linear infinite; }
+
+@keyframes fly-ptero-xl {
   0%   { transform: translate(1536px, 108px) scaleX(1); }
   22%  { transform: translate(192px, 324px) scaleX(1); }
   25%  { transform: translate(96px, 432px) scaleX(-1); }
@@ -1414,8 +1354,30 @@ html[data-tier="small"] .pterodactyl-wrapper {
   97%  { transform: translate(1632px, 216px) scaleX(-1); }
   100% { transform: translate(1536px, 108px) scaleX(1); }
 }
+html[data-tier="xl"] .pterodactyl-wrapper { animation: fly-ptero-xl 120s linear infinite; }
 
-html[data-tier="large"] .pterodactyl-wrapper {
-  animation: fly-ptero-large 120s linear infinite;
+@keyframes fly-ptero-xxl {
+  0%   { transform: translate(2048px, 144px) scaleX(1); }
+  22%  { transform: translate(256px, 432px) scaleX(1); }
+  25%  { transform: translate(128px, 576px) scaleX(-1); }
+  47%  { transform: translate(2048px, 864px) scaleX(-1); }
+  50%  { transform: translate(2304px, 1008px) scaleX(1); }
+  72%  { transform: translate(512px, 1152px) scaleX(1); }
+  75%  { transform: translate(256px, 1008px) scaleX(-1); }
+  97%  { transform: translate(2176px, 288px) scaleX(-1); }
+  100% { transform: translate(2048px, 144px) scaleX(1); }
 }
+html[data-tier="xxl"] .pterodactyl-wrapper { animation: fly-ptero-xxl 120s linear infinite; }
 
+@keyframes fly-ptero-ultra {
+  0%   { transform: translate(3072px, 216px) scaleX(1); }
+  22%  { transform: translate(384px, 648px) scaleX(1); }
+  25%  { transform: translate(192px, 864px) scaleX(-1); }
+  47%  { transform: translate(3072px, 1296px) scaleX(-1); }
+  50%  { transform: translate(3456px, 1512px) scaleX(1); }
+  72%  { transform: translate(768px, 1728px) scaleX(1); }
+  75%  { transform: translate(384px, 1512px) scaleX(-1); }
+  97%  { transform: translate(3264px, 432px) scaleX(-1); }
+  100% { transform: translate(3072px, 216px) scaleX(1); }
+}
+html[data-tier="ultra"] .pterodactyl-wrapper { animation: fly-ptero-ultra 120s linear infinite; }

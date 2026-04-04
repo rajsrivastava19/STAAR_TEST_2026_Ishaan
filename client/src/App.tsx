@@ -2,15 +2,72 @@ import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import type { AttemptState, ExamBundle, Manifest, ManifestEntry, Question } from './types';
 
 const TIER_DIMS: Record<string, { w: number; h: number }> = {
-  small:  { w: 1024, h: 768  },
-  medium: { w: 1366, h: 900  },
-  large:  { w: 1920, h: 1080 },
+  xs:    { w: 1024, h: 768  },
+  s:     { w: 1280, h: 800  },
+  m:     { w: 1366, h: 768  },
+  l:     { w: 1680, h: 1050 },
+  xl:    { w: 1920, h: 1080 },
+  xxl:   { w: 2560, h: 1440 },
+  ultra: { w: 3840, h: 2160 },
 };
+
+// ── Level 2: Aspect-ratio-aware mountain positions ──
+// Three reference position sets for key aspect ratio families.
+// Positions are % of viewport (full canvas).
+const POS_4_3 = [  // ratio 1.333  — taller oval
+  { left: 47.6, top: 36 },   // L1 top
+  { left: 67,   top: 45 },   // L2 upper-right
+  { left: 73,   top: 64 },   // L3 right
+  { left: 58,   top: 79 },   // L4 lower-right
+  { left: 37.5, top: 79 },   // L5 lower-left
+  { left: 23,   top: 64 },   // L6 left
+  { left: 30.5, top: 45 },   // L7 upper-left
+];
+const POS_16_10 = [ // ratio 1.6  — medium oval (golden positions)
+  { left: 47.6, top: 39 },
+  { left: 67,   top: 48 },
+  { left: 73,   top: 66 },
+  { left: 58,   top: 80 },
+  { left: 37.5, top: 80 },
+  { left: 23,   top: 66 },
+  { left: 30.5, top: 48 },
+];
+const POS_16_9 = [  // ratio 1.778  — wider oval
+  { left: 47.6, top: 41 },
+  { left: 67,   top: 50 },
+  { left: 73,   top: 67 },
+  { left: 58,   top: 81 },
+  { left: 37.5, top: 81 },
+  { left: 23,   top: 67 },
+  { left: 30.5, top: 50 },
+];
+
+function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
+
+function getAdaptivePositions(ratio: number) {
+  if (ratio <= 1.333) return POS_4_3;
+  if (ratio >= 1.778) return POS_16_9;
+  if (ratio <= 1.6) {
+    const t = (ratio - 1.333) / (1.6 - 1.333);
+    return POS_4_3.map((p, i) => ({
+      left: lerp(p.left, POS_16_10[i].left, t),
+      top:  lerp(p.top,  POS_16_10[i].top,  t),
+    }));
+  }
+  const t = (ratio - 1.6) / (1.778 - 1.6);
+  return POS_16_10.map((p, i) => ({
+    left: lerp(p.left, POS_16_9[i].left, t),
+    top:  lerp(p.top,  POS_16_9[i].top,  t),
+  }));
+}
 
 function useTier() {
   const read = useCallback(() => {
-    const name = document.documentElement.getAttribute('data-tier') || 'medium';
-    return { name, ...(TIER_DIMS[name] || TIER_DIMS.medium) };
+    const name = document.documentElement.getAttribute('data-tier') || 'm';
+    const ratioStr = document.documentElement.getAttribute('data-ratio') || '1.6';
+    const ratio = parseFloat(ratioStr);
+    const dims = TIER_DIMS[name] || TIER_DIMS.m;
+    return { name, ratio, ...dims };
   }, []);
 
   const [tier, setTier] = useState(read);
@@ -18,7 +75,6 @@ function useTier() {
   useEffect(() => {
     function onResize() { setTier(read()); }
     window.addEventListener('resize', onResize);
-    // Also check on mount in case attribute was set before React hydrated
     setTier(read());
     return () => window.removeEventListener('resize', onResize);
   }, [read]);
@@ -524,17 +580,9 @@ function App() {
 
               {manifest.years.map((entry, index) => {
                 const levelNum = index + 1;
-                // Viewport-relative positions (% of full canvas) — derived from reference image
-                const manualPositions = [
-                  { left: 47.6, top: 39 },   // L1: Top center (12 o'clock)
-                  { left: 67,   top: 48 },   // L2: Upper right (2 o'clock)
-                  { left: 73,   top: 66 },   // L3: Right (4 o'clock)
-                  { left: 58,   top: 80 },   // L4: Lower right (5 o'clock)
-                  { left: 37.5, top: 80 },   // L5: Lower left (7 o'clock)
-                  { left: 23,   top: 66 },   // L6: Left (8 o'clock)
-                  { left: 30.5, top: 48 },   // L7: Upper left (10 o'clock)
-                ];
-                const { left, top } = manualPositions[index];
+                // Level 2 adaptive: positions interpolated by viewport aspect ratio
+                const adaptivePositions = getAdaptivePositions(tier.ratio);
+                const { left, top } = adaptivePositions[index];
 
                 // Manual dino offsets (X px, Y px) — user-tunable
                 const dinoOffsets = [
