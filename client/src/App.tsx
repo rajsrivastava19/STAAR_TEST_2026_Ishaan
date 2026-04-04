@@ -1,6 +1,7 @@
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import type { AttemptState, ExamBundle, Manifest, ManifestEntry, Question } from './types';
 import { loginUser, getUser, saveScore, saveAttempt, getAllUsers, toggleLevel, type AttemptRecord } from './firebase';
+import HomeScene from './components/HomeScene';
 
 const TIER_DIMS: Record<string, { w: number; h: number }> = {
   xs:    { w: 1024, h: 768  },
@@ -12,55 +13,7 @@ const TIER_DIMS: Record<string, { w: number; h: number }> = {
   ultra: { w: 3840, h: 2160 },
 };
 
-// ── Level 2: Aspect-ratio-aware mountain positions ──
-// Three reference position sets for key aspect ratio families.
-// Positions are % of viewport (full canvas).
-const POS_4_3 = [  // ratio 1.333  — taller oval
-  { left: 47.6, top: 36 },   // L1 top
-  { left: 67,   top: 45 },   // L2 upper-right
-  { left: 73,   top: 64 },   // L3 right
-  { left: 58,   top: 79 },   // L4 lower-right
-  { left: 37.5, top: 79 },   // L5 lower-left
-  { left: 23,   top: 64 },   // L6 left
-  { left: 30.5, top: 45 },   // L7 upper-left
-];
-const POS_16_10 = [ // ratio 1.6  — medium oval (golden positions)
-  { left: 47.6, top: 39 },
-  { left: 67,   top: 48 },
-  { left: 73,   top: 66 },
-  { left: 58,   top: 80 },
-  { left: 37.5, top: 80 },
-  { left: 23,   top: 66 },
-  { left: 30.5, top: 48 },
-];
-const POS_16_9 = [  // ratio 1.778  — wider oval
-  { left: 47.6, top: 41 },
-  { left: 67,   top: 50 },
-  { left: 73,   top: 67 },
-  { left: 58,   top: 81 },
-  { left: 37.5, top: 81 },
-  { left: 23,   top: 67 },
-  { left: 30.5, top: 50 },
-];
-
-function lerp(a: number, b: number, t: number) { return a + (b - a) * t; }
-
-function getAdaptivePositions(ratio: number) {
-  if (ratio <= 1.333) return POS_4_3;
-  if (ratio >= 1.778) return POS_16_9;
-  if (ratio <= 1.6) {
-    const t = (ratio - 1.333) / (1.6 - 1.333);
-    return POS_4_3.map((p, i) => ({
-      left: lerp(p.left, POS_16_10[i].left, t),
-      top:  lerp(p.top,  POS_16_10[i].top,  t),
-    }));
-  }
-  const t = (ratio - 1.6) / (1.778 - 1.6);
-  return POS_16_10.map((p, i) => ({
-    left: lerp(p.left, POS_16_9[i].left, t),
-    top:  lerp(p.top,  POS_16_9[i].top,  t),
-  }));
-}
+// Adaptive position system removed — HomeScene uses canonical stage coordinates
 
 function useTier() {
   const read = useCallback(() => {
@@ -167,6 +120,7 @@ function scoreQuestion(question: Question, answer: string | string[] | Record<st
   return false;
 }
 
+// getDinoForYear moved into homeSceneProfiles.ts
 function getDinoForYear(year: number) {
   const mapping: Record<number, string> = {
     2018: 'dino_main_trans.png',
@@ -447,31 +401,7 @@ function App() {
 
   return (
     <div className="page-shell">
-      {screen !== 'test' && (
-        <>
-          <div className="pterodactyl-wrapper">
-            <img src={`${import.meta.env.BASE_URL}dinos/pterodactyl.png`} className="pterodactyl-sprite" alt="Flying Pterodactyl" aria-hidden="true" />
-          </div>
-          
-          <img src={`${import.meta.env.BASE_URL}dinos/dino3.webp`} className="dino-ambient-left ambient-bob" alt="Red T-Rex Ambient" aria-hidden="true" />
-          <img src={`${import.meta.env.BASE_URL}dinos/dino_right_transparent.png`} className="dino-ambient-right ambient-bob" alt="New Right Ambient Dino" aria-hidden="true" />
-        </>
-      )}
-
-      <div className="firefly-layer" aria-hidden="true">
-        {Array.from({ length: 15 }).map((_, i) => (
-          <div 
-            key={i} 
-            className="firefly" 
-            style={{ 
-              left: `${Math.random() * tier.w}px`, 
-              top: `${Math.random() * tier.h}px`, 
-              animationDelay: `${Math.random() * 5}s`,
-              transform: `scale(${0.5 + Math.random() * 1.5})`
-            }} 
-          />
-        ))}
-      </div>
+      {/* Pterodactyl, ambient dinos, and fireflies now rendered inside HomeScene */}
       {showExitModal && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -488,7 +418,7 @@ function App() {
         </div>
       )}
 
-      {screen !== 'test' && screen !== 'login' && (
+      {screen !== 'test' && screen !== 'login' && screen !== 'home' && (
         <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
             <div className="title-badge" style={{ width: '64px', height: '64px', padding: '10px', overflow: 'hidden', background: '#3b8655', borderRadius: '12px', border: '3px solid #6ccb8e' }}>
@@ -516,7 +446,7 @@ function App() {
       )}
 
       {screen === 'login' && (
-        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', height: `${tier.h}px`, background: 'rgba(0,0,0,0.4)', zIndex: 100 }}>
+        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', minHeight: '100dvh', background: 'rgba(0,0,0,0.4)', zIndex: 100 }}>
           <form className="card-panel" style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '16px', textAlign: 'center' }} onSubmit={(e) => {
             e.preventDefault();
             const fn = (e.currentTarget.elements.namedItem('firstName') as HTMLInputElement).value;
@@ -553,157 +483,22 @@ function App() {
           {error && <div className="card-panel error-card"><p>{error}</p></div>}
 
           {!loading && !error && manifest && screen === 'home' && (
-            <div className="home-grid">
-              <section className="hero-box" style={{ paddingBottom: '12px' }}>
-                <div className="hero-text">
-                  <h2>Ready for MATH STAAR Jungle Safari!</h2>
-                  <p>Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!</p>
-                  <p style={{ marginTop: '7px', padding: '10px 18px', background: 'rgba(255, 240, 180, 0.95)', border: '2px solid rgba(255, 180, 0, 0.9)', borderRadius: '12px', color: '#8a6300', fontWeight: 'bold', display: 'inline-block', boxShadow: '0 4px 12px rgba(0,0,0,0.3)', textShadow: 'none', fontSize: '1.2rem', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))' }}>
-                    ⭐ Score at least 85% on a level to unlock the next challenge!
-                  </p>
-                </div>
-            </section>
-
-            <div className="perfect-map-overlay" style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              pointerEvents: 'none',
-              zIndex: 5
-            }}>
-              {/* Dashed ellipse trace matching the background oval */}
-              <svg className="trail-path-svg" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} aria-hidden="true">
-                <ellipse cx="50%" cy="60%" rx="24%" ry="17%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
-              </svg>
-
-              {/* Realistic Animated Water Lake perfectly aligning with background glow */}
-              <svg width="0" height="0" style={{ position: 'absolute' }}>
-                <filter id="water-filter">
-                  <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise">
-                    <animate attributeName="baseFrequency" values="0.015; 0.025; 0.015" dur="10s" repeatCount="indefinite" />
-                  </feTurbulence>
-                  <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="B" />
-                </filter>
-              </svg>
-              <div className="lake-water" style={{ pointerEvents: 'none', top: '60%' }} />
-
-              {manifest.years.map((entry, index) => {
-                const levelNum = index + 1;
-                // Level 2 adaptive: positions interpolated by viewport aspect ratio
-                const adaptivePositions = getAdaptivePositions(tier.ratio);
-                const { left, top } = adaptivePositions[index];
-
-                // Manual dino offsets (X px, Y px) — user-tunable
-                const dinoOffsets = [
-                  { x: 60,  y: 78,  h: 85 }, // L1: straight up
-                  { x: 34,  y: 15,  h: 85 }, // L2: upper-right
-                  { x: 50,  y: 30,  h: 85 }, // L3: right
-                  { x: -105, y: 60,  h: 115 }, // L4: lower-right (larger)
-                  { x: -10, y: 0,   h: 115 }, // L5: lower-left  (larger)
-                  { x: 30,  y: 20,  h: 115 }, // L6: left        (larger)
-                  { x: 20,  y: 0,   h: 85 }, // L7: upper-left
-                ];
-                const dinoOffsetX = dinoOffsets[index].x;
-                const dinoOffsetY = dinoOffsets[index].y;
-                const dinoHeight = dinoOffsets[index].h;
-
-                // Mountain color hues to match dinos:
-                const mountainHues = [
-                  '-50deg',  // L1: Orange
-                  '60deg',   // L2: Teal
-                  '230deg',  // L3: Pink
-                  '30deg',   // L4: Light Green
-                  '0deg',    // L5: Green
-                  '-70deg',  // L6: Orange/Red
-                  '0deg',    // L7: Green
-                ];
-                const hue = mountainHues[index % mountainHues.length];
-
-                // Progression Logic: Unlock if Level 1, or if previous level has score >= 85
-                const toExamId = (e: ManifestEntry) => `staar-g3-math-${(e.dataFile ?? `${e.slug}.json`).replace('.json', '')}`;
-                const prevEntry = index > 0 ? manifest.years[index - 1] : null;
-                const isLocked = index > 0 && (examScores[toExamId(prevEntry!)] || 0) < 85;
-                const currentScore = examScores[toExamId(entry)];
-                const hasStar = currentScore !== undefined && currentScore >= 85;
-
-                return (
-                  <div
-                    key={entry.slug}
-                    className="mountain-row"
-                    style={{
-                      position: 'absolute',
-                      left: `${left}%`,
-                      top: `${top}%`,
-                      transform: 'translate(-50%, -50%)',
-                      margin: 0,
-                      width: 'auto',
-                      zIndex: top > 60 ? 10 : 1,
-                      filter: 'none',
-                      transition: 'all 0.4s ease'
-                    }}
-                  >
-                    <button
-                      className={`mountain-button ${entry.status}`}
-                      onClick={() => {
-                        if (!isLocked) chooseYear(entry);
-                      }}
-                    >
-                      <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-                        {/* Dino positioned on the outside of the mountain, facing away from center */}
-                        <img
-                          src={getDinoForYear(entry.year)}
-                          alt={`Level ${levelNum} Dino`}
-                          className="mountain-dino dino-bob"
-                          style={{
-                            left: `calc(50% + ${dinoOffsetX}px)`,
-                            top: `calc(-25px + ${dinoOffsetY}px)`,
-                            transform: 'translate(-50%, 0)',
-                            height: dinoHeight ? `${dinoHeight}px` : undefined,
-                            filter: 'none',
-                          }}
-                        />
-
-                        {/* Level flag on peak */}
-                        <div className="mountain-flag" style={{ filter: isLocked ? 'opacity(0.6) grayscale(0.8)' : 'none' }}>
-                          <div className="flag-pole" />
-                          <div className="flag-banner">
-                            Level {levelNum}
-                          </div>
-                        </div>
-
-                        {/* Mountain image mapped to dino hue */}
-                        <img 
-                          src={`${import.meta.env.BASE_URL}dinos/mountain_vines_clean.png`}
-                          alt="Jungle Mountain" 
-                          className="mountain-shape" 
-                          style={{ objectFit: 'contain', filter: `hue-rotate(${hue}) saturate(${isLocked ? 0.2 : 1.2}) opacity(${isLocked ? 0.7 : 1}) grayscale(${isLocked ? 0.8 : 0})` }}
-                        />
-
-                        {hasStar && (
-                          <div style={{ position: 'absolute', top: '-15px', left: '50%', transform: 'translateX(-50%)', perspective: '200px', zIndex: 20 }}>
-                            <div className="star-badge" style={{ fontSize: '3.5rem', color: '#FFD700', textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 0 12px rgba(255,215,0,0.8)', animation: 'star-glow-spin 3s ease-in-out infinite', transformStyle: 'preserve-3d' }}>★</div>
-                          </div>
-                        )}
-                        {isLocked && (
-                          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '2.2rem', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))' }}>🔒</div>
-                        )}
-                      </div>
-
-                      {/* Info overlay at mountain base */}
-                      <div className="mountain-info">
-                        <span className={`mountain-status ${entry.status}`}>
-                          {isLocked ? '🔒 Locked' : hasStar ? '✅ Complete' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
-                        </span>
-                      </div>
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
+            <HomeScene
+              manifest={manifest}
+              examScores={examScores}
+              chooseYear={chooseYear}
+              activeUser={activeUser}
+              isAdmin={activeUser === ADMIN_ID}
+              onShowProgress={() => setScreen('progress')}
+              onShowAdmin={() => setScreen('admin')}
+              onLogout={() => {
+                localStorage.removeItem('math-staar-user');
+                setActiveUser(null);
+                setExamScores({});
+                setScreen('login');
+              }}
+            />
+          )}
 
         {screen === 'progress' && (
           <main className="main-container" style={{ maxWidth: '900px' }}>
