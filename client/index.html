@@ -10,18 +10,30 @@
     <title>Math STAAR Test Prep for Ishaan</title>
     <script>
       (function () {
-        var DESIGN_W = 1366, DESIGN_H = 900;
+        var TIERS = [
+          { name: 'small',  w: 1024, h: 768  },
+          { name: 'medium', w: 1366, h: 900  },
+          { name: 'large',  w: 1920, h: 1080 }
+        ];
         function fit() {
           var vw = window.innerWidth, vh = window.innerHeight;
-          var scale = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+          var vpArea = vw * vh;
+          var best = TIERS[1]; // default medium
+          var bestDiff = Infinity;
+          for (var i = 0; i < TIERS.length; i++) {
+            var diff = Math.abs(vpArea - TIERS[i].w * TIERS[i].h);
+            if (diff < bestDiff) { bestDiff = diff; best = TIERS[i]; }
+          }
+          var scale = Math.min(vw / best.w, vh / best.h);
           var root = document.documentElement;
-          root.style.width = DESIGN_W + 'px';
-          root.style.height = DESIGN_H + 'px';
+          root.style.width = best.w + 'px';
+          root.style.height = best.h + 'px';
+          root.setAttribute('data-tier', best.name);
           root.style.transform = 'scale(' + scale + ')';
           root.style.transformOrigin = 'top left';
           /* Center horizontally when letterboxed */
-          var scaledW = DESIGN_W * scale;
-          var scaledH = DESIGN_H * scale;
+          var scaledW = best.w * scale;
+          var scaledH = best.h * scale;
           root.style.marginLeft = scaledW < vw ? ((vw - scaledW) / 2) + 'px' : '0px';
           root.style.marginTop = scaledH < vh ? ((vh - scaledH) / 2) + 'px' : '0px';
         }

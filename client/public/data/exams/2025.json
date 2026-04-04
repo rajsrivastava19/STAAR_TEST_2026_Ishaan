@@ -1,0 +1,1360 @@
+{
+  "id": "staar-g3-math-2025",
+  "siteTitle": "Math STAAR Test Prep for Ishaan",
+  "displayTitle": "2025 Grade 3 Math",
+  "subtitle": "Queued for modern tech-enhanced normalization.",
+  "year": 2025,
+  "grade": 3,
+  "subject": "Math",
+  "generation": "modern",
+  "totalQuestions": 30,
+  "sourceFiles": [
+    null,
+    "2025-staar-math-3-answer-key.pdf",
+    "2025-staar-math-3-rationale.pdf"
+  ],
+  "questions": [
+    {
+      "id": "2025-01",
+      "itemNumber": 1,
+      "itemType": "multi_select",
+      "stem": "Which expressions are equivalent to 15,090?",
+      "directions": "Select TWO correct answers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "1,000 + 5,000 + 900"
+        },
+        {
+          "id": "B",
+          "text": "15,000 + 90"
+        },
+        {
+          "id": "C",
+          "text": "1,000 + 5,000 + 90"
+        },
+        {
+          "id": "D",
+          "text": "15,000 + 900"
+        },
+        {
+          "id": "E",
+          "text": "10,000 + 5,000 + 90"
+        }
+      ],
+      "answerRule": {
+        "kind": "multi_select",
+        "correct": [
+          "B",
+          "E"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.A",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine which expressions are equivalent to 15,090, the student could have broken the number into place values. Since this is a five-digit number, the greatest place value (starting on the left) is ten-thousands. The digit 1 in the ten-thousands place can be represented as 10,000. The digit 5 in the thousands place can be represented as 5,000. The digit 0 in the hundreds place would not be represented in the expression, since there are 0 hundreds. The digit 9 in the tens place can be represented as 90. The digit 0 in the ones place would not be represented in the expression, since there are 0 ones. The student then could have added 10,000 and 5,000, resulting in 15,000. Last, the student could have concluded that the expression 15,000 + 90 is equivalent to 15,090. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly. Also, the expression 10,000 + 5,000 + 90 is equivalent to 15,090.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely misinterpreted the digit in the ten-thousands place as 1 thousand and the digit in the tens place as 9 hundreds, resulting in 1,000 + 5,000 + 900. The student needs to focus on understanding place value to be able to write numbers in expanded notation.",
+          "C": "The student likely misinterpreted the digit in the ten-thousands place as 1 thousand, resulting in 1,000 + 5,000 + 90. The student needs to focus on understanding place value to be able to write numbers in expanded notation.",
+          "D": "The student likely misinterpreted the digit in the tens place as 9 hundreds, resulting in 15,000 + 900. The student needs to focus on understanding place value to be able to write numbers in expanded notation."
+        },
+        "remediationTip": "Review place value and expanded notation for multi-digit numbers to correctly identify equivalent expressions."
+      }
+    },
+    {
+      "id": "2025-02",
+      "itemNumber": 2,
+      "itemType": "multiple_choice",
+      "stem": "A store has 45 toy cars in 5 different colors. There are the same number of cars in each color.<br/><br/>Which equation could be used to find the number of cars in each of the 5 colors?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 \u00d7 9 = 45"
+        },
+        {
+          "id": "B",
+          "text": "5 \u00d7 45 = 225"
+        },
+        {
+          "id": "C",
+          "text": "45 \u2013 5 = 40"
+        },
+        {
+          "id": "D",
+          "text": "45 + 5 = 50"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.J",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which equation can be used to find the number of toy cars in each color, the student should have recognized that 45 represents the total number of toy cars in the store and that 5 represents the number of colors of the cars. The student could have determined that the equation 5 \u00d7 ? = 45 could represent this situation. The student then could have determined that 9 is the number that, when multiplied by 5, equals 45. Therefore, the correct equation is 5 \u00d7 9 = 45. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely determined this to be a multiplication problem instead of a division problem, and multiplied the numbers in the problem, resulting in 5 \u00d7 45 = 225. The student needs to focus on understanding how multiplication can be used to find the quotient (the answer of a division problem) in a division problem or scenario.",
+          "C": "The student likely did not recognize that the number of cars needed to be divided by the number of colors. The student likely determined this to be a subtraction problem, resulting in 45 \u2013 5 = 40. The student needs to focus on understanding what the scenario is asking for and understanding the relationship between multiplication and division.",
+          "D": "The student likely did not recognize that the number of cars needed to be divided by the number of colors. The student likely determined this to be an addition problem, resulting in 45 + 5 = 50. The student needs to focus on understanding what the scenario is asking for and understanding the relationship between multiplication and division."
+        },
+        "remediationTip": "Practice identifying the correct operation (multiplication or division) needed to solve word problems involving equal groups."
+      }
+    },
+    {
+      "id": "2025-03",
+      "itemNumber": 3,
+      "itemType": "multiple_choice",
+      "stem": "A number line is shown.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-03-stem.png\" style=\"max-width:100%; max-height:100px;\" alt=\"Number line with a point plotted\" /></div><br/>Which fraction does the point represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<span class='fraction' style='font-size: 1.5em;'><span class='numerator'>1</span><span class='denominator'>5</span></span>"
+        },
+        {
+          "id": "B",
+          "text": "<span class='fraction' style='font-size: 1.5em;'><span class='numerator'>1</span><span class='denominator'>6</span></span>"
+        },
+        {
+          "id": "C",
+          "text": "<span class='fraction' style='font-size: 1.5em;'><span class='numerator'>5</span><span class='denominator'>5</span></span>"
+        },
+        {
+          "id": "D",
+          "text": "<span class='fraction' style='font-size: 1.5em;'><span class='numerator'>5</span><span class='denominator'>6</span></span>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.3.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which fraction represents the point on the number line, the student should have recognized that the number line goes from 0 to 1 and is divided into six equal parts, or sixths. Since the point is located on the fifth tick mark, the student should have concluded that the point on the number line represents the fraction \u2075\u2044\u2086.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely counted the number of tick marks between 0 and the point on the number line to determine that the denominator (bottom number in a fraction) is 5, resulting in \u00b9\u2044\u2085. The student needs to focus on understanding how to use a number line to determine the value of a fraction.",
+          "B": "The student likely recognized that the number line goes from 0 to 1 and is divided into six equal parts, but did not count the number of tick marks between 0 and the point on the number line to determine the numerator (top number in a fraction), resulting in \u00b9\u2044\u2086. The student needs to focus on understanding how to use a number line to determine the value of a fraction.",
+          "C": "The student likely counted the number of tick marks between 0 and the point on the number line to determine the numerator and denominator of the fraction, resulting in \u2075\u2044\u2085. The student needs to focus on understanding how to use a number line to determine the value of a fraction."
+        },
+        "remediationTip": "Understand how the total number of parts determines the denominator and the position of the point determines the numerator on a number line."
+      }
+    },
+    {
+      "id": "2025-04",
+      "itemNumber": 4,
+      "itemType": "inline_choice",
+      "stem": "Lilah reads 5 books every month. The table shows the total number of books Lilah reads over time.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-04-stem.png\" style=\"max-width:100%;\" alt=\"Lilah's Reading Table\" /></div><br/>Complete the sentence to describe the relationship in the table. Choose the correct answer from each drop-down menu to complete the sentence.<br/><br/>The number of months [BLANK_1] [BLANK_2] is equal to the number of books Lilah reads.",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "times",
+            "options": [
+              "times",
+              "plus",
+              "minus",
+              "divided by"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "5",
+            "options": [
+              "5",
+              "10",
+              "15",
+              "20"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.E",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To complete the sentence that describes the relationship shown in the table, the student should have determined that the relationship between the number of months and the number of books is multiplicative. In 2 months, there were 10 books read, which can be represented by the equation 2 \u00d7 5 = 10. In 4 months, there were 20 books read, which can be represented by the equation 4 \u00d7 5 = 20. In 6 months, there were 30 books read, which can be represented by the equation 6 x 5 = 30. The student then should have concluded that the number of months times 5 is equal to the number of books Lilah reads.",
+        "remediationTip": "Analyze input-output tables to identify the mathematical rule (operation and constant) that relates the numbers."
+      }
+    },
+    {
+      "id": "2025-05",
+      "itemNumber": 5,
+      "itemType": "multiple_choice",
+      "stem": "A student measures the heights of some pea plants in inches. The dot plot shows his data.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-05-stem.png\" style=\"max-width:100%; max-height:140px;\" alt=\"Dot plot of Pea Plants heights\" /></div><br/>Which list represents the heights of the pea plants in inches?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2, 3, 4, 4, 4, 5, 5, 6, 6, 7"
+        },
+        {
+          "id": "B",
+          "text": "2, 3, 4, 4, 4, 5, 5, 6, 7"
+        },
+        {
+          "id": "C",
+          "text": "2, 3, 4, 4, 5, 5, 6, 7"
+        },
+        {
+          "id": "D",
+          "text": "2, 3, 4, 5, 6, 7"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.4.8.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which list represents the data shown in the dot plot (a graphical way of showing the frequency of an event by placing a dot or dots above a value on a number line), the student should have matched the numbers in the list with the dot plot. The number 2 has 1 dot above it, indicating that there should be one 2 in the list. The number 3 has one dot above it, indicating that there should be one 3 in the list. The number 4 has three dots above it, indicating that there should be three 4s in the list. The number 5 has two dots above it, indicating that there should be two 5s in the list. The number 6 has one dot above it, indicating that there should be one 6 in the list. The number 7 has one dot above it, indicating that there should be one 7 in the list.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely miscounted the number of times 6 appears in the list in relation to the number of times it appears in the dot plot. The 6 has 1 dot above it on the dot plot but appears twice in the list. The student needs to focus on accurately reading data from different types of graphs.",
+          "C": "The student likely miscounted the number of times 4 appears in the list in relation to the number of times it appears in the dot plot. The 4 has 3 dots above it on the dot plot but appears only twice in the list. The student needs to focus on accurately reading data from different types of graphs.",
+          "D": "The student likely represented each number on the number line only once in the list and did not consider the number of dots that appear above each number in the dot plot. The student needs to focus on accurately reading data from different types of graphs."
+        },
+        "remediationTip": "Practice counting the frequency of each data point accurately when interpreting dot plots to construct data lists."
+      }
+    },
+    {
+      "id": "2025-06",
+      "itemNumber": 6,
+      "itemType": "multiple_choice",
+      "stem": "Tina hikes in the summer, winter, and fall. She records how many hours she spends hiking in a table, as shown.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-06-stem.png\" style=\"max-width:100%;\" alt=\"Time Spent Hiking\" /></div><br/>How many more hours does Tina hike during summer and winter combined than in the fall?",
+      "options": [
+        {
+          "id": "A",
+          "text": "704 hours"
+        },
+        {
+          "id": "B",
+          "text": "250 hours"
+        },
+        {
+          "id": "C",
+          "text": "94 hours"
+        },
+        {
+          "id": "D",
+          "text": "114 hours"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many more hours Tina hikes during the summer and winter combined than in the fall, the student could have first added the numbers of hours she spends hiking in the summer and winter, resulting in 360 + 344 = 704. The student then could have subtracted the number of hours she spends hiking in the fall from the sum, resulting in 704 \u2013 610 = 94. The student then could have concluded that Tina hiked 94 hours more during summer and winter combined than in the fall. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely understood that the number of hours spent hiking in the summer and the number of hours spent hiking in the winter should be added together, resulting in 360 + 344 = 704, but did not subtract the number of hours spent hiking in the fall. The student needs to focus on which operations to use when solving two-step word problems.",
+          "B": "The student likely understood that the number of hours spent hiking in the fall needed to be subtracted from a number but did not combine the numbers of hours spent hiking in the summer and winter before subtracting. The student then likely subtracted the number of hours spent hiking in the summer from the number of hours spent hiking in the fall, resulting in 610 \u2013 360 = 250. The student needs to focus on which operations to use when solving two-step word problems.",
+          "D": "The student likely understood that 610 should be subtracted from 704 but subtracted the smaller digit from the larger digit in the tens place. The student needs to focus on understanding how to regroup numbers for subtraction when needed."
+        },
+        "remediationTip": "Practice solving two-step word problems, ensuring you correctly identify and perform the sequence of operations (addition and subtraction) including regrouping."
+      }
+    },
+    {
+      "id": "2025-07",
+      "itemNumber": 7,
+      "itemType": "multi_select",
+      "stem": "Which figures are quadrilaterals? Select TWO correct answers.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-07-stem.png\" style=\"max-width:100%;\" alt=\"A group of five distinct figures\" /></div>",
+      "directions": "Select TWO correct answers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Top left triangle"
+        },
+        {
+          "id": "B",
+          "text": "Top right parallelogram"
+        },
+        {
+          "id": "C",
+          "text": "Bottom left square"
+        },
+        {
+          "id": "D",
+          "text": "Bottom middle pentagon"
+        },
+        {
+          "id": "E",
+          "text": "Bottom right triangle"
+        }
+      ],
+      "answerRule": {
+        "kind": "multi_select",
+        "correct": [
+          "B",
+          "C"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.3.6.B",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine which figures are quadrilaterals, the student should have understood that a quadrilateral is a figure with exactly 4 sides. The only figures shown that fit that definition are the square in the bottom left and the parallelogram in the top right.",
+        "remediationTip": "Review the definition of quadrilaterals: closed figures with exactly four straight sides."
+      }
+    },
+    {
+      "id": "2025-08",
+      "itemNumber": 8,
+      "itemType": "multiple_choice",
+      "stem": "There are 12 students in a class.<ul><li style='margin-bottom:8px;'>Half of the students play an instrument.</li><li>There are an equal number of students who play the guitar, piano, and violin.</li></ul>Which set of equations can be used to find how many students play the guitar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<div style='line-height: 1.5;'>12 \u00d7 2 = 24<br/>24 \u00d7 3 = ?</div>"
+        },
+        {
+          "id": "B",
+          "text": "<div style='line-height: 1.5;'>12 \u00d7 2 = 24<br/>24 \u00f7 3 = ?</div>"
+        },
+        {
+          "id": "C",
+          "text": "<div style='line-height: 1.5;'>12 \u00f7 2 = 6<br/>6 \u00d7 3 = ?</div>"
+        },
+        {
+          "id": "D",
+          "text": "<div style='line-height: 1.5;'>12 \u00f7 2 = 6<br/>6 \u00f7 3 = ?</div>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which set of equations can be used to find how many students play the guitar, the student should have recognized that the first bullet relates to finding the number of students who play an instrument. If there are 12 students in the class, and half of them play an instrument, the equation 12 \u00f7 2 = 6 is the first step in finding how many students play the guitar. Then the student should have determined that to find the number of students who play the guitar, the number of students who play an instrument, 6, should be divided by 3 since those students are divided equally among the 3 instruments (guitar, piano, and violin). Therefore, the second equation in the set of equations should be 6 \u00f7 3 = ?.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely multiplied instead of dividing on the first step and multiplied instead of dividing on the second step, resulting in the equations 12 \u00d7 2 = 24 and 24 \u00d7 3 = ?. The student needs to focus on understanding which operations to use in a word problem.",
+          "B": "The student likely multiplied instead of dividing on the first step, resulting in the equation 12 \u00d7 2 = 24, and then correctly divided that incorrect result in the second step, resulting in 24 \u00f7 3 = ?. The student needs to focus on understanding which operations to use in a word problem.",
+          "C": "The student likely did the first step, dividing 12 by 2, correctly, but multiplied instead of dividing for the second step, resulting in the equation 6 x 3 = ?. The student needs to focus on understanding which operations to use in a word problem."
+        },
+        "remediationTip": "Carefully read word problems to determine the correct operations (multiplication or division) for each step of a multi-step problem."
+      }
+    },
+    {
+      "id": "2025-09",
+      "itemNumber": 9,
+      "itemType": "inline_choice",
+      "stem": "The table shows the number of seats in four stadiums.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-09-stem.png\" style=\"max-width:100%;\" alt=\"Number of Seats in Stadium\" /></div><br/>Compare the number of seats in the stadiums. Choose the correct answer from each drop-down menu to complete the sentences.<br/><br/><span style=\"line-height:2.2;\">The stadium with the least number of seats is Stadium [BLANK_1]<br/>The stadium with the greatest number of seats is Stadium [BLANK_2]</span>",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "X",
+            "options": [
+              "W",
+              "X",
+              "Y",
+              "Z"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "Y",
+            "options": [
+              "W",
+              "X",
+              "Y",
+              "Z"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.D",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To compare the numbers of seats in the stadiums, the student should have first compared the digits with the greatest place value (starting on the left), which is the ten-thousands place. Since all the digits in the ten thousands- place are 7, the student should have then compared the digits in the thousands place. Since the number of seats in Stadium X has the least value in the thousands place, 1, the student should have concluded that the stadium with the least number of seats is Stadium X. Since the number of seats in Stadium Y has the greatest value in the thousands place, 6, the student should have concluded that the stadium with the greatest number of seats is Stadium Y. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "Practice comparing multi-digit numbers by starting with the greatest place value and moving to the right until a difference is found."
+      }
+    },
+    {
+      "id": "2025-10",
+      "itemNumber": 10,
+      "itemType": "multiple_choice",
+      "stem": "Amy, Carl, and Liz equally share 60 building blocks. Amy divides her share of building blocks into 4 equal piles.<br/><br/>How many building blocks are in each of Amy's piles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15"
+        },
+        {
+          "id": "B",
+          "text": "16"
+        },
+        {
+          "id": "C",
+          "text": "5"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.K",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many building blocks are in each of Amy's piles, the student should have recognized this as a division problem. Since there are a total of 60 building blocks that are equally shared among 3 people, the student could have divided 60 by 3 to determine how many building blocks each person receives, resulting in 60 \u00f7 3 = 20. Since Amy divides her share of the building blocks into 4 equal piles, the student could have divided 20 by 4 to determine how many building blocks are in each of her piles, resulting in 20 \u00f7 4 = 5. The student then should have concluded that there are 5 building blocks in each of Amy's piles. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely understood that this was a division problem but did not recognize that the building blocks first had to be divided among 3 people. Instead, the student likely divided 60 by 4 to determine how many building blocks are in each of Amy's piles, resulting in 60 \u00f7 4 = 15. The student needs to focus on understanding how to solve two-step problems involving division.",
+          "B": "The student likely recognized that the building blocks first had to be divided among 3 people, resulting in 60 \u00f7 3 = 20, but subtracted 4 from Amy's share instead of dividing by 4 to determine how many building blocks are in each of Amy's piles, resulting in 20 \u2013 4 = 16. The student needs to focus on understanding which operation to use when solving a word problem.",
+          "D": "The student likely confused the number of piles with the number of blocks in each pile, resulting in 4. The student needs to focus on understanding how to solve two-step problems involving division."
+        },
+        "remediationTip": "Break down multi-step word problems into smaller parts and ensure the correct operations (division in this case) are applied in sequence."
+      }
+    },
+    {
+      "id": "2025-11",
+      "itemNumber": 11,
+      "itemType": "multiple_choice",
+      "stem": "Evelyn makes a rectangular birthday card. The card has a length of 9 inches and a width of 6 inches.<br/><br/>What is the perimeter of Evelyn's card in inches?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 inches"
+        },
+        {
+          "id": "B",
+          "text": "30 inches"
+        },
+        {
+          "id": "C",
+          "text": "36 inches"
+        },
+        {
+          "id": "D",
+          "text": "54 inches"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.7.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the perimeter of the rectangular birthday card, the student should have recognized that the perimeter is the distance around a figure, meaning that the measurements of all the sides of the figure should be added together. The student should have recalled that opposite sides of a rectangle have the same measurement, so the student should have found the perimeter by adding two lengths and two widths together, resulting in P = 9 + 9 + 6 + 6 = 30. The student then should have concluded that the birthday card has a perimeter of 30 inches.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not understand the meaning of perimeter and added the two given dimensions, resulting in 9 + 6 = 15. The student needs to focus on understanding how to find the perimeter of a figure.",
+          "C": "The student likely confused a rectangle with a square and added the length four times since all the sides of a square are the same length, resulting in 9 + 9 + 9 + 9 = 36. The student needs to focus on understanding how to find the perimeter of a figure.",
+          "D": "The student likely confused perimeter with area (the amount of space occupied by a two-dimensional figure, measured in square units) and multiplied the given dimensions, resulting in 9 x 6 = 54. The student needs to focus on understanding how to find the perimeter of a figure."
+        },
+        "remediationTip": "Distinguish between perimeter (distance around) and area (space occupied) and remember the formula for calculating a rectangle's perimeter: P = 2(length + width)."
+      }
+    },
+    {
+      "id": "2025-12",
+      "itemNumber": 12,
+      "itemType": "multiple_choice",
+      "stem": "Vienna creates a bar graph and a pictograph to show what types of books she owns. She has 5 comic books, 9 mystery books, and 3 sports books. She makes an error in one of the graphs, as shown.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-12-stem.png\" style=\"max-width:100%;\" alt=\"Vienna's Books Graphs\" /></div><br/>Which graph has the error?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Bar graph, because the bar for mystery books should be at 9"
+        },
+        {
+          "id": "B",
+          "text": "Pictograph, because the row for mystery books should have 4 whole symbols and one half symbol"
+        },
+        {
+          "id": "C",
+          "text": "Bar graph, because the bar for sports books should be at 4"
+        },
+        {
+          "id": "D",
+          "text": "Pictograph, because the row for sports books should have one whole symbol and one half symbol"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.4.8.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine whether the bar graph (a graph that represents data using either vertical or horizontal bars) or the pictograph (a graph that represents data using pictures) contains the error, the student should have compared the data in each graph to the information given in the problem. The student should have recognized that the bar graph and pictograph both correctly represent the given data for the number of comic books, 5, and the number of mystery books, 9. The student then should have recognized that the bar graph correctly shows a vertical bar that is halfway between 2 and 4 to represent the number of sports books, which is 3, and that the pictograph shows 2 whole symbols on the row that represents the number of sports books. Since the key for the pictograph shows that 1 whole symbol represents 2 books and there are 2 whole symbols in the row for sports books, the student could have multiplied 2 x 2 to find that the symbols represent the number of sports books as 4. Since the information given in the problem states that Vienna owns 3 sports books, the student then should have concluded that the pictograph contains the error because the row for sports books should have one whole symbol to show 2 books and one half symbol to show 1 book, which together represent 3 sports books (2 + 1 =3). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not recognize that the values on the vertical axis of the bar graph were in scaled intervals of 2 and that the bars halfway between the values of the vertical axis would represent odd numbers. The student needs to focus on understanding how to interpret a data set presented in graph form.",
+          "B": "The student likely did not understand how to use the key to determine how many books are represented and thought that only 4 <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span>, rather than 9, mystery books were represented in the pictograph. The student needs to focus on understanding how to interpret a data set presented in graph form.",
+          "C": "The student likely compared only the bar graph and pictograph and ignored the given information in the problem. The student then likely determined that, since the pictograph shows Vienna owning 4 sports books, the bar graph should also show 4 sports books. The student needs to focus on understanding how to interpret a data set presented in graph form."
+        },
+        "remediationTip": "Compare given data with graphical representations, paying close attention to scales, keys, and how odd numbers or fractions are depicted."
+      }
+    },
+    {
+      "id": "2025-13",
+      "itemNumber": 13,
+      "itemType": "multi_select",
+      "stem": "A group of figures is shown.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-13-stem.png\" style=\"max-width:100%;\" alt=\"Group of 3D figures\" /></div><br/>Which statements appear to be true about the group of figures?",
+      "directions": "Select TWO correct answers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "All the figures are prisms."
+        },
+        {
+          "id": "B",
+          "text": "All the figures are polygons."
+        },
+        {
+          "id": "C",
+          "text": "All the figures have at least one triangular face."
+        },
+        {
+          "id": "D",
+          "text": "All the figures have zero vertices."
+        },
+        {
+          "id": "E",
+          "text": "All the figures have at least one rectangular face."
+        }
+      ],
+      "answerRule": {
+        "kind": "multi_select",
+        "correct": [
+          "A",
+          "E"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.6.A",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statements are true about the group of figures, the student should have recognized that all the figures are three-dimensional. The student should have also recognized that all the figures have two congruent and parallel faces (the flat surfaces of a three-dimensional figure); the first and third figure have two congruent and parallel rectangular faces, and the second figure has two congruent and parallel triangular faces. Next, the student should have recalled that a prism is a three-dimensional figure containing two congruent and parallel faces that are polygons. The student then should have concluded that all the figures are prisms. Additionally, all the figures have at least one rectangular face.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely confused prisms with polygons. The student needs to focus on accurately identifying the definitions of geometric figures.",
+          "C": "The student likely recognized that one of the figures has a triangular face and concluded that all the figures must have at least one triangular face. The student needs to focus on understanding the characteristics of geometric figures.",
+          "D": "The student likely did not understand that each corner of a three-dimensional figure is known as a vertex and concluded that all the figures have zero vertices. The student needs to focus on understanding the definitions of geometric figures."
+        },
+        "remediationTip": "Review the definitions and properties of 3D figures, specifically prisms, their faces (including types of polygons), and vertices."
+      }
+    },
+    {
+      "id": "2025-14",
+      "itemNumber": 14,
+      "itemType": "multiple_choice",
+      "stem": "A library has 530 books at the start of the day. The number line shown can be used to find the number of books the library has at the end of the day.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-14-stem.png\" style=\"max-width:100%;\" alt=\"Number line showing books borrowed and returned\" /></div><br/>Which statement is best represented by the number line?",
+      "options": [
+        {
+          "id": "A",
+          "text": "250 books are returned and 150 books are borrowed."
+        },
+        {
+          "id": "B",
+          "text": "250 books are borrowed. Another 150 books are borrowed."
+        },
+        {
+          "id": "C",
+          "text": "250 books are returned. Another 150 books are returned."
+        },
+        {
+          "id": "D",
+          "text": "250 books are borrowed and 150 books are returned."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is best represented by the number line, the student should have recognized that the number of books in the library at the start of the day, 530, represents the starting point on the number line. The student then should have recognized that a ray pointing to the left from the starting point represents subtraction. Since the ray pointing to the left stops at 280, the student could have used subtraction to determine the difference between the starting point and the ending point of the ray pointing to the left, resulting in the equation 530 - 280 = 250, which represents the number of books that were borrowed from the library.\" Next, the student should have recognized that the ray starting at 280 and pointing to the right represents addition. Since the ray pointing to the right stops at 430, the student could have used subtraction to determine the difference between the ending point and the starting point of the ray pointing to right, resulting in the equation 430 - 280 = 150, which represents the number of books returned to the library. The student could have concluded that, of the 530 books in the library, 250 books are borrowed and 150 books are returned. The library therefore has 430 books at the end of the day, and the situation is represented by the equation 530 \u2013 250 + 150 = 430. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely reversed the meanings of the rays and concluded that the ray pointing to the left would represent books being returned to the library and that the ray pointing to the right would represent books being borrowed from the library. This would result in the equation 530 + 250 \u2013 150 = 630, which does not represent the number of books the library has at the end of the day, 430. The student needs to focus on understanding how to represent two-step problems involving addition and subtraction on a number line.",
+          "B": "The student likely interpreted both rays as representing books being borrowed from the library. This would result in the equation 530 \u2013 250 \u2013 150 = 130, which does not represent the number of books the library had at the end of the day, 430. The student needs to focus on understanding how to represent two-step problems involving addition and subtraction on a number line.",
+          "C": "The student likely interpreted both rays as representing books being returned to the library. This would result in the equation 530 + 250 + 150 = 930, which does not represent the number of books the library has at the end of the day, 430. The student needs to focus on understanding how to represent two-step problems involving addition and subtraction on a number line."
+        },
+        "remediationTip": "Practice interpreting number lines for multi-step problems, correctly identifying addition (movement right) and subtraction (movement left) and linking them to real-world scenarios."
+      }
+    },
+    {
+      "id": "2025-15",
+      "itemNumber": 15,
+      "itemType": "multiple_choice",
+      "stem": "Kayla and Doug are playing with blocks.<br/><br/><ul style=\"margin-left: 20px;\">\n  <li>Kayla has 6 blocks.</li>\n  <li>Doug has 8 blocks.</li>\n  <li>Kayla and Doug each have 3 yellow blocks.</li>\n</ul><br/>Who has a greater fraction of yellow blocks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kayla, because <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> > <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "B",
+          "text": "Doug, because <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> > <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "C",
+          "text": "Kayla, because <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> < <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "D",
+          "text": "Doug, because <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> < <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.3.H",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which person has the greater fraction of yellow blocks, the student could have first drawn two fraction bars of equivalent length to represent the two sets of blocks. The student should have divided the first fraction bar into 6 equal-sized parts to represent the number of blocks Kayla has and then shaded 3 of those parts to represent the number of yellow blocks she has. From that fraction bar, the student should have determined that <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> of Kayla's blocks are yellow. Next, the student should have divided the second fraction bar into 8 equal-sized parts to represent the number of blocks Doug has and then shaded 3 of those parts to represent the number of yellow blocks he has. From that fraction bar, the student should have determined that <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span> of Doug's blocks are yellow. Since the same number of parts are shaded in each fraction bar, the student should have compared the sizes of the parts. The student should have determined that the parts of Kayla's fraction bar are larger than the parts of Doug's fraction bar since sixths are larger than eighths. The student then should have concluded that Kayla has a greater fraction of yellow blocks than Doug, because <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> > <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span>. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely understood how to compare the fractions but confused the number of blocks Kayla has with the number of blocks Doug has. The student needs to focus on attending to the details of the problem, understanding how to compare two fractions that have the same numerator but different denominators, and justifying the conclusion using symbols.",
+          "C": "The student likely understood that Kayla has the greater fraction of yellow blocks but used the incorrect inequality symbol when comparing the fractions, resulting in <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> < <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span>. The student needs to focus on understanding how to correctly read inequality symbols and use them to compare two fractions that have the same numerator but different denominators.",
+          "D": "The student likely compared only the denominators of the two fractions and concluded that <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> < <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span> since 6 < 8. The student then likely recognized that the fraction <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span> represents the portion of yellow blocks Doug has and concluded that Doug has the greater fraction of yellow blocks. The student needs to focus on understanding how to compare two fractions that have the same numerator but different denominators and how to justify the conclusion using symbols."
+        },
+        "remediationTip": "To compare fractions with the same numerator, remember that the fraction with the smaller denominator represents a larger share."
+      }
+    },
+    {
+      "id": "2025-16",
+      "itemNumber": 16,
+      "itemType": "griddable_numeric",
+      "stem": "Kasey bought two bags of beads.<br/><br/><ul style=\"margin-left: 20px;\">\n  <li>One bag contained 250 beads.</li>\n  <li>The other bag contained 400 beads.</li>\n</ul><br/>Kasey used all but 36 of the total number of beads for an art project.<br/><br/>What was the total number of beads that Kasey used for the art project?<br/><br/>Enter your answer in the box.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "614",
+        "acceptedValues": [
+          "614"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of beads Kasey used in the art project, the student should have recognized that 36 of the beads were not used and should be subtracted from the total number of beads given in the bulleted information. The number of beads in the first bag and the number of beads in the second bag could have been added together to determine the total number of beads Kasey had to start with, resulting in 250 + 400 = 650 beads. Then the student could have subtracted 36 beads from the total, resulting in 650 \u2013 36 = 614 beads. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "Break down multi-step word problems into individual operations: first add to find the total, then subtract to find the amount used."
+      }
+    },
+    {
+      "id": "2025-17",
+      "itemNumber": 17,
+      "itemType": "multiple_choice",
+      "optionsLayout": "grid_2col",
+      "stem": "The number of classes Ms. Elisha teaches is equal to the number of days she teaches times 6.<br/><br/>Which table shows this relationship?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<img src=\"/images/2025-17-A.png\" style=\"max-width:100%;\" alt=\"Table Option A\" />"
+        },
+        {
+          "id": "B",
+          "text": "<img src=\"/images/2025-17-B.png\" style=\"max-width:100%;\" alt=\"Table Option B\" />"
+        },
+        {
+          "id": "C",
+          "text": "<img src=\"/images/2025-17-C.png\" style=\"max-width:100%;\" alt=\"Table Option C\" />"
+        },
+        {
+          "id": "D",
+          "text": "<img src=\"/images/2025-17-D.png\" style=\"max-width:100%;\" alt=\"Table Option D\" />"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.E",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which table shows the relationship between the number of days Ms. Elisha teaches and the number of classes Ms. Elisha teaches, the student should have understood from the given information that the number of classes Ms. Elisha teaches is equal to the number of days she teaches times 6. In this table, all the sets of numbers follow that rule: 1 \u00d7 6 = 6, 3 x 6 = 18, and 5 x 6 = 30.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely reversed the relationship, identifying 6 days taught with 1 class, so that the rule would be that the number of classes Ms. Elisha teaches equals the number of days divided by 6, instead of times 6. The student needs to focus on understanding the details of verbal descriptions of relationships between numbers paired in a table.",
+          "B": "The student likely misunderstood the pattern as being \u201cplus 6\" instead of \"times 6,\u201d resulting in 1 + 6 = 7, 2 + 6 = 8, and 3 + 6 = 9. The student needs to focus on understanding the details of verbal descriptions of relationships between numbers paired in a table.",
+          "D": "The student likely misunderstood the pattern as being \u201cminus 6\u201d instead of \"times 6,\u201d resulting in 6 \u2013 6 = 0, 18 \u2013 6 = 12, and 30 \u2013 6 = 24. The student needs to focus on understanding the details of verbal descriptions of relationships between numbers paired in a table."
+        },
+        "remediationTip": "Carefully read the verbal description to establish the correct mathematical relationship (e.g., multiplication, addition) between the quantities in a table."
+      }
+    },
+    {
+      "id": "2025-18",
+      "itemNumber": 18,
+      "itemType": "multiple_choice",
+      "optionsLayout": "grid_2col",
+      "stem": "Which fraction strip shows a shaded area equivalent to <span class='fraction'><span class='numerator'>4</span><span class='denominator'>6</span></span> ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<img src=\"/images/2025-18-A.png\" style=\"max-width:100%;\" alt=\"Fraction strip A\" />"
+        },
+        {
+          "id": "B",
+          "text": "<img src=\"/images/2025-18-B.png\" style=\"max-width:100%;\" alt=\"Fraction strip B\" />"
+        },
+        {
+          "id": "C",
+          "text": "<img src=\"/images/2025-18-C.png\" style=\"max-width:100%;\" alt=\"Fraction strip C\" />"
+        },
+        {
+          "id": "D",
+          "text": "<img src=\"/images/2025-18-D.png\" style=\"max-width:100%;\" alt=\"Fraction strip D\" />"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.3.F",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which fraction strip shows a shaded area equivalent to <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>, the student could have divided each of the three partitioned sections into halves, which would result in a fraction strip that represents sixths. The student then should have recognized that 2 shaded pieces out of 3 is the same as 4 shaded pieces out of 6. Therefore, <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> is equal to <span class='fraction'><span class='numerator'>4</span><span class='denominator'>6</span></span>. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely recognized that the fraction strip is divided into 6 equal-sized pieces, representing the denominator (bottom number in a fraction) of 6, which matches the given fraction, <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>. However, the student may not have understood that the numerator (top number), 4, of the given fraction determines the number of pieces that should be shaded, and therefore one more piece would need to be shaded to show an equivalent fraction. The student needs to focus on understanding that both the numerator and denominator must be considered when finding equivalent fractions.",
+          "C": "The student likely determined that the fraction strip should have 4 shaded pieces, since the numerator of the given fraction is 4, but did not understand that the denominator, 6, determines the number of equal-sized pieces that the fraction strip should be divided into. The student needs to focus on understanding that both the numerator and denominator must be considered when finding equivalent fractions.",
+          "D": "The student likely determined that the fraction strip should have 4 shaded pieces, since the numerator of the given fraction is 4, but did not understand that the denominator, 6, determines the number of equal-sized pieces that the fraction strip should be divided into. The student needs to focus on understanding that both the numerator and denominator must be considered when finding equivalent fractions."
+        },
+        "remediationTip": "Visualize equivalent fractions by ensuring both the numerator (shaded parts) and denominator (total parts) are proportionally scaled."
+      }
+    },
+    {
+      "id": "2025-19",
+      "itemNumber": 19,
+      "itemType": "multiple_choice",
+      "optionsLayout": "grid_2col",
+      "stem": "A school chooses 4 students to paint an entire wall. The model shown represents the wall divided into equal parts.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-19-stem.png\" style=\"max-width:100%;\" alt=\"Model of wall\" /></div><br/>Each student will paint the same amount of the wall.<br/><br/>What fraction of the wall will each student paint?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "B",
+          "text": "<span class='fraction'><span class='numerator'>4</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "C",
+          "text": "<span class='fraction'><span class='numerator'>12</span><span class='denominator'>8</span></span>"
+        },
+        {
+          "id": "D",
+          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.3.E",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine what fraction of the wall each student will paint, the student should recognize that the wall has been divided into 8 equal-sized parts. The student then could have divided the number of equal-sized parts by the number of students painting the wall, resulting in 8 \u00f7 4 = 2. Since each student will paint 2 of the equal-sized parts, the student should have determined that 2 represents the numerator (top number in a fraction) and that 8 represents the denominator (bottom number in a fraction), resulting in the fraction <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely recognized that the wall was divided into 8 equal-sized parts, which is represented by the denominator, but did not understand that the number of parts needed to be divided among the 4 students doing the painting. Therefore, the student chose the fraction that represents each part of the wall, <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>. The student should focus on understanding how to solve problems involving partitioning.",
+          "B": "The student likely recognized that the wall was divided into 8 equal-sized parts, which is represented by the denominator, but did not understand that the number of parts needed to be divided among the 4 students doing the painting. The student likely used the number of students painting the wall, 4, as the numerator, resulting in the fraction <span class='fraction'><span class='numerator'>4</span><span class='denominator'>8</span></span>. The student needs to focus on understanding how to solve problems involving partitioning.",
+          "C": "The student likely recognized that the wall was divided into 8 equal-sized parts, which is represented by the denominator, but did not understand that the number of equal-sized parts of the wall needed to be divided among the 4 students doing the painting. The student likely added 4 to 8, 4 + 8 = 12, to determine the numerator, resulting in the fraction <span class='fraction'><span class='numerator'>12</span><span class='denominator'>8</span></span>. The student needs to focus on understanding how to solve problems involving partitioning."
+        },
+        "remediationTip": "Understand how to partition a whole into equal parts and correctly represent each part as a fraction, ensuring the numerator reflects the shared portion and the denominator the total parts."
+      }
+    },
+    {
+      "id": "2025-20",
+      "itemNumber": 20,
+      "itemType": "multiple_choice",
+      "stem": "Avalon draws a shaded rectangle on a grid, as shown.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-20-stem.png\" style=\"max-width:100%;\" alt=\"Shaded rectangle on a grid\" /></div><br/>What is the area of Avalon\u2019s shaded rectangle in square centimeters?",
+      "options": [
+        {
+          "id": "A",
+          "text": "50 square centimeters"
+        },
+        {
+          "id": "B",
+          "text": "26 square centimeters"
+        },
+        {
+          "id": "C",
+          "text": "36 square centimeters"
+        },
+        {
+          "id": "D",
+          "text": "30 square centimeters"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.6.C",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the area of the shaded rectangle, the student should have recognized that area is the amount of space occupied by a two-dimensional figure, measured in square units. To determine the area of the rectangle in square centimeters, the student could have first recognized that each unit square in the figure has an area of 1 square centimeter, as shown in the key, and determined that the number of squares along the length of the shaded rectangle is 9 and that the number of squares along the width of the shaded rectangle is 4. The student then could have used the formula for the area of a rectangle, A = length \u00d7 width, resulting in A = 9 x 4 = 36 square centimeters. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely counted the grid lines surrounding the shaded area and used those to calculate area. The student found 10 grid lines on the length and 5 grid lines on the width. Using the formula for the area of a rectangle, the student likely multiplied 10 by 5, resulting in 50 square centimeters. The student needs to focus on understanding how to determine the area of a rectangle.",
+          "B": "The student likely confused area with perimeter (the distance around a figure) and added the two side lengths of 9 and the two side lengths of 4, resulting in 9 + 9 + 4 + 4 = 26. The student needs to focus on understanding how to determine the area of a rectangle.",
+          "D": "The student likely counted all the squares around the shaded part of the rectangle. The student needs to focus on understanding how to determine the area of a rectangle."
+        },
+        "remediationTip": "Differentiate between area (length \u00d7 width, counting all squares within) and perimeter (sum of all sides, counting squares along the boundary)."
+      }
+    },
+    {
+      "id": "2025-21",
+      "itemNumber": 21,
+      "itemType": "griddable_numeric",
+      "stem": "Frank puts 90 pictures in a book. He puts 6 pictures on each page. How many pages does Frank put pictures on?",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "15",
+        "acceptedValues": [
+          "15"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.K",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many pages in the book Frank puts pictures on, the student should have recognized that this is a division problem. The student could have used the algorithm to divide the number of pictures, 90, by the number of pictures on each page, 6, which results in 15 (90 \u00f7 6 = 15). Therefore, Frank puts pictures on 15 pages in the book. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "Practice identifying division problems in word contexts and executing division calculations accurately."
+      }
+    },
+    {
+      "id": "2025-22",
+      "itemNumber": 22,
+      "itemType": "multiple_choice",
+      "stem": "Which statement is an example of using credit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Paying sales tax at a restaurant"
+        },
+        {
+          "id": "B",
+          "text": "Saving part of your income in a bank"
+        },
+        {
+          "id": "C",
+          "text": "Using cash to pay for a book"
+        },
+        {
+          "id": "D",
+          "text": "Getting a loan to pay for a car"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.4.9.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is an example of using credit, the student should have recognized that credit is used when a need exceeds a person's ability to pay for an item. Therefore, the person must borrow money from a lender, as represented by the example of getting a loan to pay for a car.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused using credit with paying sales tax. The student needs to focus on understanding what credit is and why a consumer would use credit.",
+          "B": "The student likely confused using credit with building savings. The student needs to focus on understanding what credit is and why a consumer would use credit.",
+          "C": "The student likely confused using credit with spending responsibly (using cash to pay for a book). The student needs to focus on understanding what credit is and why a consumer would use credit."
+        },
+        "remediationTip": "Understand that credit involves borrowing money from a lender, distinct from using cash, saving, or paying taxes."
+      }
+    },
+    {
+      "id": "2025-23",
+      "itemNumber": 23,
+      "itemType": "multiple_choice",
+      "stem": "A restaurant sells 38 pizzas on Wednesday. The expression 38 \u00d7 2 can be used to find the number of pizzas the restaurant sells on Saturday.<br/><br/>Which statement is true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "There are 38 times as many pizzas sold on Wednesday as on Saturday."
+        },
+        {
+          "id": "B",
+          "text": "There are 2 times as many pizzas sold on Wednesday as on Saturday."
+        },
+        {
+          "id": "C",
+          "text": "There are 2 times as many pizzas sold on Saturday as on Wednesday."
+        },
+        {
+          "id": "D",
+          "text": "There are 38 times as many pizzas sold on Saturday as on Wednesday."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.5.C",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement represents the expression 38 \u00d7 2, the student should have recognized from the first sentence that 38 represents the number of pizzas the restaurant sells on Wednesday. The student then should have recognized that the expression 38 \u00d7 2 means there are 2 times as many pizzas sold on Saturday as on Wednesday.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely identified the number of pizzas sold on Wednesday as 38 and concluded that 38 times as many pizzas are sold on Wednesday as on Saturday. The student needs to focus on understanding how to describe a multiplication expression.",
+          "B": "The student likely understood that the expression 38 \u00d7 2 means there were 2 times as many pizzas sold but switched the comparison of Wednesday and Saturday. The student needs to focus on understanding how to describe a multiplication expression.",
+          "D": "The student likely identified the number of pizzas sold on Wednesday as 38 and concluded that 38 times as many pizzas were sold on Saturday as on Wednesday. The student needs to focus on understanding how to describe a multiplication expression."
+        },
+        "remediationTip": "Focus on correctly interpreting the multiplier in a multiplication expression to describe relationships in word problems."
+      }
+    },
+    {
+      "id": "2025-24",
+      "itemNumber": 24,
+      "itemType": "multiple_choice",
+      "stem": "Evie finds the sum of 70 hundreds, 1 ten, and 15 ones.<br/><br/>What number represents Evie\u2019s sum?",
+      "options": [
+        {
+          "id": "A",
+          "text": "70,025"
+        },
+        {
+          "id": "B",
+          "text": "7,025"
+        },
+        {
+          "id": "C",
+          "text": "70,115"
+        },
+        {
+          "id": "D",
+          "text": "7,015"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine what number represents Evie's sum, the student could have used place value to find the value of each digit in the number. The student should have recognized that \u201chundreds\" means to multiply the given number by 100. Since there are 70 hundreds, the student could have determined 70 \u00d7 100 = 7,000. The student then should have recognized that \"ten\" means to multiply the given number by 10. Since there is 1 ten, the student could have determined 1 \u00d7 10 = 10. The student then should have recognized that \u201cones\" means to multiply the given number by 1. Since there are 15 ones, the student could have obtained 15 \u00d7 1 = 15. Next, the student could have added the three products, resulting in 7,000 + 10 + 15 = 7,025. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused 70 hundreds with 70 thousands and multiplied 70 by 1,000, resulting in 70 \u00d7 1,000 = 70,000. The student then likely determined that 1 ten is represented by 10 and 15 ones are represented by 15. The student then likely added the three products, resulting in 70,000 + 10 + 15 = 70,025. The student needs to focus on understanding how to correctly use place value to determine the standard form of a number.",
+          "C": "The student likely did not consider the place values of the given numbers and placed the digits in the order they were given, resulting in 70,115. The student needs to focus on understanding how to correctly use place value to determine the standard form of a number.",
+          "D": "The student likely understood that \u201c15 ones\" represents the number 15 and determined that the 1 in the number 15 represents the \u201c1 ten\u201d in the problem, resulting in 7,015. The student needs to focus on understanding how to correctly use place value to determine the standard form of a number."
+        },
+        "remediationTip": "Carefully convert each place value description (e.g., '70 hundreds', '15 ones') to its numerical value before adding them to form the standard number."
+      }
+    },
+    {
+      "id": "2025-25",
+      "itemNumber": 25,
+      "itemType": "multi_select",
+      "stem": "Barry has 24 marbles. He separates them into 3 groups of equal size.<br/><br/>Select the number of marbles that are in one group.",
+      "answerRule": {
+        "kind": "multi_select",
+        "correct": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.H",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of marbles that are in one group, the student should have recognized that this is a division problem. The student could have used the algorithm to divide the total number of marbles, 24, by the number of equal-sized groups, 3, which would result in the answer of 8 (24 \u00f7 3 = 8). The student then should have selected any 8 marbles in the diagram. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "Practice visualizing and partitioning groups of objects to represent division problems."
+      },
+      "optionsLayout": "grid_6col",
+      "options": [
+        {
+          "id": "1",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "2",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "3",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "4",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "5",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "6",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "7",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "8",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "9",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "10",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "11",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "12",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "13",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "14",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "15",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "16",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "17",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "18",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "19",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "20",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "21",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "22",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "23",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        },
+        {
+          "id": "24",
+          "text": "<img src=\"/images/2025-25-marble.png\" style=\"width:30px;\" alt=\"Marble\" />"
+        }
+      ]
+    },
+    {
+      "id": "2025-26",
+      "itemNumber": 26,
+      "itemType": "multiple_choice",
+      "stem": "Gemma reads a book for 1 hour and 20 minutes. She finishes reading at 7:13 p.m. as shown on the clock.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-26-stem.png\" style=\"max-width:100%;\" alt=\"Clock showing 7:13\" /></div><br/>What time did Gemma start reading her book?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6:13 p.m."
+        },
+        {
+          "id": "B",
+          "text": "5:53 p.m."
+        },
+        {
+          "id": "C",
+          "text": "8:33 p.m."
+        },
+        {
+          "id": "D",
+          "text": "6:53 p.m."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.3.7.C",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine what time Gemma started reading her book, the student should have recognized this as a time subtraction problem, meaning that the time elapsed, 1 hour and 20 minutes, should be subtracted from the ending time of 7:13 p.m. The student could have first subtracted 1 hour from the ending time, resulting in 6:13 p.m. The student then could have subtracted 20 minutes from 6:13 p.m. The student should have noticed that 20 minutes before 6:13 p.m. would be the same as 7 minutes before 6:00 p.m., resulting in 5:53 p.m. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely subtracted only the 1 hour and not the 20 minutes from the ending time, 7:13 p.m., resulting in 6:13 p.m. The student needs to focus on understanding subtraction of time intervals.",
+          "C": "The student likely added 1 hour and 20 minutes to 7:13 p.m. instead of subtracting, resulting in 8:33 p.m. The student needs to focus on understanding subtraction of time intervals.",
+          "D": "The student likely subtracted the 1 hour and 20 minutes from the ending time, 7:13 p.m., but did not understand that subtracting 20 minutes from 6:13 p.m. would change the hour from 6 to 5, and therefore determined the starting time to be 6:53 p.m. The student needs to focus on understanding subtraction of time intervals."
+        },
+        "remediationTip": "Practice subtracting time by first subtracting hours, then minutes, being careful to regroup hours into minutes when necessary."
+      }
+    },
+    {
+      "id": "2025-27",
+      "itemNumber": 27,
+      "itemType": "inline_choice",
+      "stem": "A number is shown: 858,386.\n\nCompare the value of 8 in each place value. Choose the correct answer from each drop-down menu to complete the sentences.\n\nThe value of the 8 in the hundred thousands place is [BLANK_1] times greater than the value of the 8 in the thousands place.\n\nThe value of the 8 in the hundred thousands place is [BLANK_2] times greater than the value of the 8 in the tens place.",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "100",
+            "options": [
+              "10",
+              "100",
+              "1,000",
+              "10,000"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "10,000",
+            "options": [
+              "10",
+              "100",
+              "1,000",
+              "10,000"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.2.B",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To compare the value of 8 in each place value in the number 858,386, the student should have recognized that this is a six-digit number and that the greatest place value (starting on the left) is hundred thousands. The student should have also recognized that the place value of each digit is 10 times the place value of the digit to its right. Since the 8 in the thousands place is two places to the right of the 8 in the hundred thousands place, the student could have divided the value of the hundred thousands place by 100 since 10 \u00d7 10 = 100. The student then could have concluded that the value of the 8 in the hundred thousands place is 100 times greater than the value of the 8 in the thousands place. Since the 8 in tens place is four digits to the right of the 8 in the hundred thousands place, the student could have divided the value of the hundred thousands place by 10,000 since 10 \u00d7 10 \u00d7 10 \u00d7 10 = 10,000. The student then could have concluded that the value of the 8 in the hundred thousands place is 10,000 times greater than the value of the 8 in the tens place. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "Understand that each place value is 10 times greater than the place value to its right, and count the number of 'hops' to determine the total multiplier."
+      }
+    },
+    {
+      "id": "2025-28",
+      "itemNumber": 28,
+      "itemType": "multiple_choice",
+      "stem": "The owner of a hotel asks guests to rate the hotel on a scale of 1 to 5 stars. The data are shown in the dot plot.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-28-stem.png\" style=\"max-width:100%;\" alt=\"Dot plot of hotel ratings\" /></div><br/>How many guests rated the hotel fewer than 3 stars?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "3"
+        },
+        {
+          "id": "C",
+          "text": "6"
+        },
+        {
+          "id": "D",
+          "text": "4"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.4.8.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many guests rated the hotel fewer than 3 stars, the student should have first recognized that the data were organized in a dot plot (a graphical way of showing the frequency of an event by placing a dot or dots above a value on a number line) and that each dot represents one guest's rating. The student should have recognized that the statement \u201cfewer than 3 stars\u201d means that only guest ratings of 1 and 2 stars should be counted. Since the 1-star rating has 3 dots and the 2-star rating has 1 dot, the student could have added 3 + 1 to get a sum of 4. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely subtracted the number of 2-star ratings from the number of 1-star ratings, resulting in 3 - 1 = 2. The student needs to focus on understanding how to read and interpret data from a dot plot.",
+          "B": "The student likely counted only the dots above the 1, which represent the 1-star ratings. The student needs to focus on understanding how to read and interpret data from a dot plot.",
+          "C": "The student likely included the number of 3-star ratings when adding the numbers of 1-star and 2-star ratings, resulting in 3 + 1 + 2 = 6. The student needs to focus on understanding how to read and interpret data from a dot plot."
+        },
+        "remediationTip": "Carefully read the criteria (e.g., 'fewer than') to select the correct data points from a dot plot and perform the required calculation."
+      }
+    },
+    {
+      "id": "2025-29",
+      "itemNumber": 29,
+      "itemType": "drag_drop",
+      "stem": "Andrea has 67 green marbles and 54 blue marbles. She rounds each number to the nearest ten to estimate how many marbles she has in total.<br/><br/>Complete the sentences to show how Andrea estimates the total.",
+      "directions": "Move the correct answer to each box. Each answer may be used more than once. Not all answers will be used.",
+      "answerRule": {
+        "kind": "drag_drop",
+        "sentenceTemplate": "She rounds 67 green marbles to [BLANK_1]<br/><br/>She rounds 54 blue marbles to [BLANK_2]<br/><br/>Andrea estimates she has [BLANK_3] marbles in total.",
+        "dropZones": {
+          "BLANK_1": "70",
+          "BLANK_2": "50",
+          "BLANK_3": "120"
+        },
+        "options": [
+          "70",
+          "50",
+          "130",
+          "60",
+          "110",
+          "120"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.B",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine how Andrea estimates the total number of marbles she has, the student should have recognized that the given numbers are being rounded to the nearest 10 and will therefore be rounded using the digit in the ones place. Since Andrea has 67 green marbles, the student should have recognized that the digit in the tens place, 6, will increase by 1 because the digit in the ones place, 7, is greater than 5, meaning that 67 would round to 70. Since Andrea has 54 blue marbles, the student should have recognized that the digit in the tens place, 5, will remain the same because the digit in the ones place, 4, is less than 5, meaning that 54 would round to 50. Next, the student should have added the rounded values together to estimate the total number of marbles, resulting in 70 + 50 = 120.",
+        "remediationTip": "Practice rounding numbers to the nearest ten by looking at the ones digit (5 or more, round up; less than 5, round down), then perform estimation calculations."
+      }
+    },
+    {
+      "id": "2025-30",
+      "itemNumber": 30,
+      "itemType": "multiple_choice",
+      "stem": "Emilia compares three numbers. One of the numbers is missing, as shown.<br/><br/><div style=\"display:flex; justify-content:center; align-items:center;\"><img src=\"/images/2025-30-stem.png\" style=\"max-height:60px;\" alt=\"46,523 < [ ] < 46,779\" /></div><br/>Which number can go in the box to make the statement true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "47,623"
+        },
+        {
+          "id": "B",
+          "text": "46,518"
+        },
+        {
+          "id": "C",
+          "text": "46,575"
+        },
+        {
+          "id": "D",
+          "text": "46,500"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which number can make the inequality true, the student should have first recognized that the numbers in the inequality are in order from least to greatest. The student then could have recognized that both numbers in the inequality have 46 as the first two digits, meaning that the missing number must be between 46,500 and 46,700. Next, the student could have used the digits in the tens place to narrow down the missing number even more and determined that the missing number must be between 46,520 and 46,770. The student then should have recognized that 46,575 is the only given number that is greater than 46,523 and less than 46,779. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not consider 46,779 when determining the missing number in the inequality and compared 47,623 only with 46,523, resulting in 46,523 < 47,623. The student needs to focus on understanding comparative statements and using place value to determine greater than or less than.",
+          "B": "The student likely compared only the digits in the ones place, resulting in 3 < 8 < 9. The student needs to focus on understanding comparative statements and using place value to determine greater than or less than.",
+          "D": "The student likely misunderstood the comparison symbols and thought a number that was less than both numbers needed to be found. The student needs to focus on understanding comparative statements and using place value to determine greater than or less than."
+        },
+        "remediationTip": "Practice comparing multi-digit numbers using place value, working from left to right, to find numbers that fit within an inequality range."
+      }
+    }
+  ]
+}

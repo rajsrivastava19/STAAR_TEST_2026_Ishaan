@@ -1076,3 +1076,346 @@ button:disabled {
 body:has(.results-layout) {
   background-size: 1366px 900px !important;
 }
+
+/* =========================================
+   TIER: SMALL (1024×768) — Tablets & Small Laptops
+   ========================================= */
+
+html[data-tier="small"] {
+  width: 1024px;
+  height: 768px;
+}
+
+html[data-tier="small"] body {
+  width: 1024px;
+  height: 768px;
+  background-size: 1024px 768px;
+}
+
+html[data-tier="small"] .page-shell {
+  width: 1024px;
+  height: 768px;
+}
+
+/* Hero section — compact */
+html[data-tier="small"] .hero-text h2 {
+  font-size: 2rem;
+}
+
+html[data-tier="small"] .hero-text p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+html[data-tier="small"] .hero-box {
+  padding: 16px;
+  gap: 20px;
+}
+
+/* Header — tighter */
+html[data-tier="small"] .site-header h1 {
+  font-size: 1.2rem;
+}
+
+html[data-tier="small"] .eyebrow {
+  font-size: 0.75rem;
+}
+
+html[data-tier="small"] .title-badge {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+/* Mountain trail overlay — now full viewport, no tier overrides needed */
+
+html[data-tier="small"] .mountain-button {
+  width: 90px;
+  height: 115px;
+}
+
+html[data-tier="small"] .mountain-shape {
+  height: 90px;
+}
+
+html[data-tier="small"] .mountain-dino {
+  height: 65px !important;
+}
+
+html[data-tier="small"] .flag-banner {
+  font-size: 0.75rem;
+  padding: 3px 10px;
+}
+
+html[data-tier="small"] .mountain-status {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+}
+
+/* Ambient elements — smaller */
+html[data-tier="small"] .dino-ambient-left,
+html[data-tier="small"] .dino-ambient-right {
+  height: 180px;
+}
+
+html[data-tier="small"] .pterodactyl-sprite {
+  width: 140px;
+}
+
+/* Test layout — shorter viewport */
+html[data-tier="small"] .test-layout {
+  height: calc(768px - 72px);
+}
+
+/* Login screen */
+html[data-tier="small"] .test-layout[style*="height: 900px"] {
+  height: 768px !important;
+}
+
+/* Buttons — slightly smaller */
+html[data-tier="small"] button {
+  padding: 12px 18px;
+  font-size: 1rem;
+  border-radius: 14px;
+}
+
+/* Cards — tighter */
+html[data-tier="small"] .card-panel {
+  padding: 16px;
+  border-radius: 20px;
+}
+
+html[data-tier="small"] .main-container {
+  padding: 16px;
+  gap: 16px;
+}
+
+/* Question stem — slightly smaller */
+html[data-tier="small"] .question-stem {
+  font-size: 1.15rem;
+}
+
+/* Score display */
+html[data-tier="small"] .score-bubble {
+  font-size: 4.5rem;
+}
+
+/* Mascot image — smaller */
+html[data-tier="small"] .mascot-img {
+  width: 220px;
+}
+
+/* Results layout */
+html[data-tier="small"] .results-layout {
+  padding: 24px 16px;
+}
+
+/* iOS override for small tier */
+html[data-tier="small"] body:has(.results-layout) {
+  background-size: 1024px 768px !important;
+}
+
+
+/* =========================================
+   TIER: LARGE (1920×1080) — Desktop Monitors
+   ========================================= */
+
+html[data-tier="large"] {
+  width: 1920px;
+  height: 1080px;
+}
+
+html[data-tier="large"] body {
+  width: 1920px;
+  height: 1080px;
+  background-size: 1920px 1080px;
+}
+
+html[data-tier="large"] .page-shell {
+  width: 1920px;
+  height: 1080px;
+}
+
+/* Hero section — more spacious */
+html[data-tier="large"] .hero-text h2 {
+  font-size: 3.8rem;
+}
+
+html[data-tier="large"] .hero-text p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+html[data-tier="large"] .hero-box {
+  padding: 32px;
+  gap: 40px;
+  border-radius: 32px;
+}
+
+/* Header — more breathing room */
+html[data-tier="large"] .site-header {
+  padding: 20px 32px;
+}
+
+html[data-tier="large"] .site-header h1 {
+  font-size: 1.8rem;
+}
+
+html[data-tier="large"] .eyebrow {
+  font-size: 1rem;
+}
+
+html[data-tier="large"] .title-badge {
+  width: 72px !important;
+  height: 72px !important;
+}
+
+/* Mountain trail overlay — now full viewport, no tier overrides needed */
+
+html[data-tier="large"] .mountain-button {
+  width: 140px;
+  height: 175px;
+}
+
+html[data-tier="large"] .mountain-shape {
+  height: 140px;
+}
+
+html[data-tier="large"] .mountain-dino {
+  height: 105px !important;
+}
+
+html[data-tier="large"] .flag-banner {
+  font-size: 1rem;
+  padding: 6px 18px;
+  border-radius: 10px;
+}
+
+html[data-tier="large"] .mountain-status {
+  font-size: 0.9rem;
+  padding: 4px 12px;
+}
+
+html[data-tier="large"] .mountain-questions {
+  font-size: 0.85rem;
+}
+
+/* Star badge bigger */
+html[data-tier="large"] .star-badge {
+  font-size: 4.5rem !important;
+}
+
+/* Ambient elements — larger */
+html[data-tier="large"] .dino-ambient-left,
+html[data-tier="large"] .dino-ambient-right {
+  height: 320px;
+}
+
+html[data-tier="large"] .pterodactyl-sprite {
+  width: 260px;
+}
+
+/* Test layout — taller viewport */
+html[data-tier="large"] .test-layout {
+  height: calc(1080px - 92px);
+}
+
+/* Login screen */
+html[data-tier="large"] .test-layout[style*="height: 900px"] {
+  height: 1080px !important;
+}
+
+/* Buttons — more generous */
+html[data-tier="large"] button {
+  padding: 18px 28px;
+  font-size: 1.25rem;
+  border-radius: 18px;
+}
+
+/* Cards — more spacious */
+html[data-tier="large"] .card-panel {
+  padding: 28px;
+  border-radius: 28px;
+}
+
+html[data-tier="large"] .main-container {
+  padding: 32px;
+  gap: 32px;
+  max-width: 1200px;
+}
+
+/* Question stem — larger */
+html[data-tier="large"] .question-stem {
+  font-size: 1.5rem;
+}
+
+/* Options — larger */
+html[data-tier="large"] .option-card {
+  padding: 14px 20px;
+  font-size: 1.25rem;
+}
+
+html[data-tier="large"] .option-chip {
+  width: 42px;
+  height: 42px;
+  font-size: 1.2rem;
+}
+
+/* Score display */
+html[data-tier="large"] .score-bubble {
+  font-size: 7.5rem;
+}
+
+/* Mascot image — larger */
+html[data-tier="large"] .mascot-img {
+  width: 380px;
+}
+
+/* Results layout */
+html[data-tier="large"] .results-layout {
+  padding: 48px 28px;
+}
+
+/* Progress / admin tables — more room */
+html[data-tier="large"] .score-grid {
+  gap: 20px;
+}
+
+/* iOS override for large tier */
+html[data-tier="large"] body:has(.results-layout) {
+  background-size: 1920px 1080px !important;
+}
+
+/* Pterodactyl flight path for small tier */
+@keyframes fly-ptero-small {
+  0%   { transform: translate(819px, 77px) scaleX(1); }
+  22%  { transform: translate(102px, 230px) scaleX(1); }
+  25%  { transform: translate(51px, 307px) scaleX(-1); }
+  47%  { transform: translate(819px, 461px) scaleX(-1); }
+  50%  { transform: translate(922px, 538px) scaleX(1); }
+  72%  { transform: translate(205px, 614px) scaleX(1); }
+  75%  { transform: translate(102px, 538px) scaleX(-1); }
+  97%  { transform: translate(870px, 154px) scaleX(-1); }
+  100% { transform: translate(819px, 77px) scaleX(1); }
+}
+
+html[data-tier="small"] .pterodactyl-wrapper {
+  animation: fly-ptero-small 120s linear infinite;
+}
+
+/* Pterodactyl flight path for large tier */
+@keyframes fly-ptero-large {
+  0%   { transform: translate(1536px, 108px) scaleX(1); }
+  22%  { transform: translate(192px, 324px) scaleX(1); }
+  25%  { transform: translate(96px, 432px) scaleX(-1); }
+  47%  { transform: translate(1536px, 648px) scaleX(-1); }
+  50%  { transform: translate(1728px, 756px) scaleX(1); }
+  72%  { transform: translate(384px, 864px) scaleX(1); }
+  75%  { transform: translate(192px, 756px) scaleX(-1); }
+  97%  { transform: translate(1632px, 216px) scaleX(-1); }
+  100% { transform: translate(1536px, 108px) scaleX(1); }
+}
+
+html[data-tier="large"] .pterodactyl-wrapper {
+  animation: fly-ptero-large 120s linear infinite;
+}
+

@@ -1,5 +1,30 @@
-import { Fragment, useEffect, useMemo, useState } from 'react';
+import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import type { AttemptState, ExamBundle, Manifest, ManifestEntry, Question } from './types';
+
+const TIER_DIMS: Record<string, { w: number; h: number }> = {
+  small:  { w: 1024, h: 768  },
+  medium: { w: 1366, h: 900  },
+  large:  { w: 1920, h: 1080 },
+};
+
+function useTier() {
+  const read = useCallback(() => {
+    const name = document.documentElement.getAttribute('data-tier') || 'medium';
+    return { name, ...(TIER_DIMS[name] || TIER_DIMS.medium) };
+  }, []);
+
+  const [tier, setTier] = useState(read);
+
+  useEffect(() => {
+    function onResize() { setTier(read()); }
+    window.addEventListener('resize', onResize);
+    // Also check on mount in case attribute was set before React hydrated
+    setTier(read());
+    return () => window.removeEventListener('resize', onResize);
+  }, [read]);
+
+  return tier;
+}
 
 const emptyAttempt: AttemptState = {
   answers: {},
@@ -108,6 +133,7 @@ function getDinoForYear(year: number) {
 }
 
 function App() {
+  const tier = useTier();
   const [activeUser, setActiveUser] = useState<string | null>(() => localStorage.getItem('math-staar-user') || null);
   const [examScores, setExamScores] = useState<Record<string, number>>(() => {
     const user = localStorage.getItem('math-staar-user');
@@ -371,8 +397,8 @@ function App() {
             key={i} 
             className="firefly" 
             style={{ 
-              left: `${Math.random() * 1366}px`, 
-              top: `${Math.random() * 900}px`, 
+              left: `${Math.random() * tier.w}px`, 
+              top: `${Math.random() * tier.h}px`, 
               animationDelay: `${Math.random() * 5}s`,
               transform: `scale(${0.5 + Math.random() * 1.5})`
             }} 
@@ -423,7 +449,7 @@ function App() {
       )}
 
       {screen === 'login' && (
-        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', height: '900px', background: 'rgba(0,0,0,0.4)', zIndex: 100 }}>
+        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', height: `${tier.h}px`, background: 'rgba(0,0,0,0.4)', zIndex: 100 }}>
           <form className="card-panel" style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '16px', textAlign: 'center' }} onSubmit={(e) => {
             e.preventDefault();
             const fn = (e.currentTarget.elements.namedItem('firstName') as HTMLInputElement).value;
@@ -473,17 +499,16 @@ function App() {
 
             <div className="perfect-map-overlay" style={{
               position: 'absolute',
-              top: '180px',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              width: '1366px',
-              height: '1366px',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
               pointerEvents: 'none',
               zIndex: 5
             }}>
               {/* Dashed ellipse trace matching the background oval */}
               <svg className="trail-path-svg" style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0 }} aria-hidden="true">
-                <ellipse cx="50%" cy="29.8%" rx="24.3%" ry="17.3%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
+                <ellipse cx="50%" cy="60%" rx="24%" ry="17%" fill="none" stroke="rgba(255,255,255,0.0)" strokeWidth="2" strokeDasharray="8 8" />
               </svg>
 
               {/* Realistic Animated Water Lake perfectly aligning with background glow */}
@@ -495,19 +520,19 @@ function App() {
                   <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="B" />
                 </filter>
               </svg>
-              <div className="lake-water" style={{ pointerEvents: 'none', top: '29.8%' }} />
+              <div className="lake-water" style={{ pointerEvents: 'none', top: '60%' }} />
 
               {manifest.years.map((entry, index) => {
                 const levelNum = index + 1;
-                // Mapped positions for 100vw/100vh overlay
+                // Viewport-relative positions (% of full canvas) — derived from reference image
                 const manualPositions = [
-                  { left: 50, top: 11.6 },  // L1: Top center
-                  { left: 68.9, top: 16.4 }, // L2: Upper right
-                  { left: 72.5, top: 33.2 }, // L3: Right
-                  { left: 59, top: 41.6 }, // L4: Lower right
-                  { left: 40.1, top: 41.6 }, // L5: Lower left
-                  { left: 26.6, top: 33.2 }, // L6: Left
-                  { left: 32, top: 16.4 }, // L7: Upper left
+                  { left: 47.6, top: 39 },   // L1: Top center (12 o'clock)
+                  { left: 67,   top: 48 },   // L2: Upper right (2 o'clock)
+                  { left: 73,   top: 66 },   // L3: Right (4 o'clock)
+                  { left: 58,   top: 80 },   // L4: Lower right (5 o'clock)
+                  { left: 37.5, top: 80 },   // L5: Lower left (7 o'clock)
+                  { left: 23,   top: 66 },   // L6: Left (8 o'clock)
+                  { left: 30.5, top: 48 },   // L7: Upper left (10 o'clock)
                 ];
                 const { left, top } = manualPositions[index];
 

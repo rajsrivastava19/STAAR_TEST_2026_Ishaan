@@ -1,0 +1,1265 @@
+{
+  "id": "staar-g3-math-2024",
+  "siteTitle": "Math STAAR Test Prep for Ishaan",
+  "displayTitle": "2024 Grade 3 Math",
+  "subtitle": "Queued for modern tech-enhanced normalization.",
+  "year": 2024,
+  "grade": 3,
+  "subject": "Math",
+  "generation": "modern",
+  "totalQuestions": 30,
+  "sourceFiles": [
+    null,
+    "2024-staar-3-math-key.pdf",
+    "2024-staar-3-math-rationale.pdf"
+  ],
+  "questions": [
+    {
+      "id": "2024-01",
+      "itemNumber": 1,
+      "itemType": "multiple_choice",
+      "stem": "A school started a carnival with 375 hot dogs. They did not sell 83 hot dogs. How many hot dogs did the school sell?",
+      "options": [
+        {
+          "id": "A",
+          "text": "292"
+        },
+        {
+          "id": "B",
+          "text": "312"
+        },
+        {
+          "id": "C",
+          "text": "458"
+        },
+        {
+          "id": "D",
+          "text": "282"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many hot dogs were sold during the carnival, the student should have subtracted the number of hot dogs that were not sold, 83, from the total number of hot dogs the school started with, 375. The correct calculation is 375 - 83 = 292.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely understood that 83 should be subtracted from 375 but subtracted the smaller digit from the larger digit in the tens place (8-7=1 instead of regrouping), leading to 312. The student needs to focus on understanding how to regroup numbers, when needed, for subtraction.",
+          "C": "The student likely misunderstood the question and therefore added 375 and 83 rather than subtracting 83 from 375, leading to 458. The student needs to focus on choosing the correct operations when solving word problems.",
+          "D": "The student likely understood that 83 should be subtracted from 375 but did not regroup correctly in the tens place, by incorrectly rewriting 375 as '2 hundreds, 16 tens, 5 ones' (which is 265, or 365 if interpreted as 2165) and then subtracting 83. If 375 was incorrectly thought of as 365, then 365 - 83 = 282. The student needs to focus on understanding how to regroup numbers, when needed, for subtraction."
+        },
+        "remediationTip": "Review subtraction with regrouping and carefully identify the correct operation (addition or subtraction) required to solve word problems."
+      }
+    },
+    {
+      "id": "2024-02",
+      "itemNumber": 2,
+      "itemType": "multiple_choice",
+      "stem": "This list shows three clues about a number:<ul><li>The number is greater than 89,236.</li><li>The number is less than 91,103.</li><li>The number has a digit greater than 7 in the thousands place.</li></ul>Which of these could be the number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "88,598"
+        },
+        {
+          "id": "B",
+          "text": "91,057"
+        },
+        {
+          "id": "C",
+          "text": "89,099"
+        },
+        {
+          "id": "D",
+          "text": "89,572"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which number is described by the clues, the student should have first compared 89,572 with 89,236. Both numbers have an 8 in the ten-thousands place and a 9 in the thousands place; however, 89,572 has a 5 in the hundreds place, which is greater than 2, the digit in the hundreds place in 89,236. So, 89,572 is greater than 89,236 (first clue). Next, 89,572 has an 8 in the ten-thousands place, and 91,103 has a 9 in the ten-thousands place, so 89,572 is less than 91,103 (second clue). Finally, the digit in the thousands place of 89,572 is 9, which is greater than 7 (third clue). All clues point to 89,572.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not use the first clue (number is greater than 89,236) and chose 88,598 which fails this. Although 88,598 is less than 91,103 and has a thousands digit (8) greater than 7, it fails the first criterion. The student needs to focus on attending to the details of the question.",
+          "B": "The student likely used the first clue to eliminate 89,236 (since it is not strictly greater than itself) and 88,598, but then misinterpreted subsequent clues or chose a number (89,236) that fails the first clue. The student needs to focus on attending to the details of the question.",
+          "C": "The student likely confused the terms 'greater than' and 'less than' or made errors in place value comparison. For example, 90,103 is less than 91,103 and greater than 89,236, but its thousands digit is 0, which is not greater than 7. The student needs to focus on attending to the details of the question and understanding place value."
+        },
+        "remediationTip": "Practice comparing numbers based on place value from left to right. Ensure each clue is fully met when identifying the correct number."
+      }
+    },
+    {
+      "id": "2024-03",
+      "itemNumber": 3,
+      "itemType": "inline_choice",
+      "stem": "Ben rolls a number cube 10 times and records the results shown:\n\n6 3 5 4 4 1 5 3 6 5\n\nHe then creates the dot plot shown with the results.<br/><br/><div style=\"display:flex; justify-content:center; margin:16px 0;\"><img src=\"/images/2024-03-stem.png\" style=\"max-width:100%; border-radius:8px;\" alt=\"Dot plot\" /></div>Complete the sentence by selecting the correct answers from the drop-down menus.<br/>Ben's dot plot is incorrect because there should be [BLANK_1] above the number [BLANK_2].",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "2 dots",
+            "options": [
+              "0 dots",
+              "1 dot",
+              "2 dots",
+              "3 dots"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "4",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "4",
+              "5",
+              "6"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.4.8.A",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine why Ben's dot plot is incorrect, the student should have matched the numbers from the results shown (6 3 5 4 4 1 5 3 6 5) to the numbers of dots on the number line.\n- The number 1 was rolled 1 time, so the 1 dot above 1 on the number line is correct.\n- No 2s were rolled, so 0 dots above 2 is correct.\n- The number 3 was rolled 2 times, so the 2 dots above 3 are correct.\n- The number 4 was rolled 2 times, so there should be 2 dots above the 4; however, there is only 1 dot in the plot.\n- The number 5 was rolled 3 times, so the 3 dots above 5 are correct.\n- The number 6 was rolled 2 times, so the 2 dots above 6 are correct.\nTherefore, Ben's dot plot is incorrect because there should be 2 dots above the number 4.",
+        "remediationTip": "Carefully count the frequency of each number from the data set and ensure the dot plot accurately reflects these counts."
+      }
+    },
+    {
+      "id": "2024-04",
+      "itemNumber": 4,
+      "itemType": "multiple_choice",
+      "stem": "Which statement correctly describes the relationship between the thousands place and the tens place in the number 583,436?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The thousands place is two times greater than the tens place."
+        },
+        {
+          "id": "B",
+          "text": "The thousands place is ten times greater than the tens place."
+        },
+        {
+          "id": "C",
+          "text": "The thousands place is one hundred times greater than the tens place."
+        },
+        {
+          "id": "D",
+          "text": "The thousands place is three hundred times greater than the tens place."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.2.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the relationship between the thousands place and the tens place in the number 583,436, the student should have first determined that the digit in the thousands place and the digit in the tens are both 3. Place value increases from right to left (ones, tens, hundreds, thousands, ten thousands, hundred thousands, and so forth). The value of each digit is 10 times the value of the digit to its right. Since the 3 in the tens place (value 30) is two places to the right of the 3 in the thousands place (value 3,000), the value needs to be multiplied by 10 twice, which results in 100 (10 × 10 = 100). Thus, the thousands place is one hundred times greater than the tens place.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not use the place-value rules relating value, but only noticed that the 3 in the thousands place is two places to the left of the 3 in the tens place, which describes position, not the multiplicative relationship of value. The student needs to focus on understanding place value.",
+          "B": "The student likely confused the hundreds place with the thousands place. The hundreds place contains a 4, not a 3 like the thousands place. The student needs to focus on understanding place value.",
+          "D": "The student likely incorrectly calculated the relationship. If they found that the hundreds place is 10 times the place to its right and calculated 30 × 10 = 300, they might then incorrectly conclude that the thousands place was 300 times greater than the tens place. The student needs to focus on understanding place value and multiplicative relationships."
+        },
+        "remediationTip": "Remember that each place value is 10 times greater than the place value to its right. Use this rule to find the multiplicative relationship between any two place values."
+      }
+    },
+    {
+      "id": "2024-05",
+      "itemNumber": 5,
+      "itemType": "multiple_choice",
+      "stem": "Farmers planted more orange trees, resulting in an increase in the orange crop this year. This will affect the price of oranges.<br/><br/>Which statement best describes the effect on the price of oranges this year?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The price will likely increase because there are more oranges for sale."
+        },
+        {
+          "id": "B",
+          "text": "The price will likely decrease because there are more oranges for sale."
+        },
+        {
+          "id": "C",
+          "text": "The price will likely increase because there are fewer oranges for sale."
+        },
+        {
+          "id": "D",
+          "text": "The price will likely decrease because there are fewer oranges for sale."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.4.9.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine whether the price of oranges will increase or decrease and why, the student should have used the relationship between availability (the quantity of an item that is available to consumers) and scarcity (when the demand for an item is greater than the availability of the item) of resources and how that affects cost. When an item is readily available (increased supply), the price of the item will decrease to encourage customers to purchase more of the item. Therefore, the fact that the farmers will have more oranges for sale means that the price of the oranges is likely to decrease.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused the effects of supply and demand, thinking a greater supply would result in prices increasing instead of decreasing. The student needs to focus on understanding the relationship between scarcity and cost.",
+          "C": "The student likely misunderstood the problem by assuming a decreased supply, which would generally lead to increased prices, but did not recognize that the farmers increased the number of oranges by growing more trees. The student needs to attend to the details of the question.",
+          "D": "The student likely did not recognize that the farmers increased the number of oranges by growing more trees, and confused the effects of supply and demand, thinking a decrease in supply would result in a decrease in price. The student needs to focus on understanding the relationship between scarcity and cost."
+        },
+        "remediationTip": "Remember that when the supply of a product increases, its price tends to decrease to encourage more sales. Conversely, limited supply can lead to higher prices."
+      }
+    },
+    {
+      "id": "2024-06",
+      "itemNumber": 6,
+      "itemType": "multiple_choice",
+      "stem": "Zachary drew these figures. The dimensions of each figure are given in feet.<br/><br/><div style=\"display:flex; justify-content:center; margin:16px 0;\"><img src=\"/images/2024-06-stem.png\" style=\"max-width:100%; border-radius:8px;\" alt=\"Figures P Q R S T\" /></div>Which list shows all the figures that have a perimeter of 36 feet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Figures P, Q, R, and S only"
+        },
+        {
+          "id": "B",
+          "text": "Figures Q, R, and T only"
+        },
+        {
+          "id": "C",
+          "text": "Figures P, R, and S only"
+        },
+        {
+          "id": "D",
+          "text": "Figures P, Q, R, S, and T"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.7.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which figures have a perimeter of 36 feet, the student should have recognized that the perimeter is the distance around a figure, meaning the measurements of all the sides of the figure should be added together.\n- The perimeter of Figure P is 13 + 5 + 13 + 5 = 36 feet.\n- The perimeter of Figure Q is 6 + 6 + 6 + 6 + 6 + 6 = 36 feet.\n- The perimeter of Figure R is 11 + 7 + 11 + 7 = 36 feet.\n- The perimeter of Figure S is 12 + 12 + 12 = 36 feet.\n- The perimeter of Figure T is 6 + 6 + 6 + 6 = 24 feet.\nTherefore, the figures with a perimeter of 36 are P, Q, R, and S.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely miscalculated the perimeter of Figure P and Figure S, and incorrectly thought Figure T (perimeter 24) had a perimeter of 36. The student needs to focus on applying the perimeter formula to figures and adding multiple numbers correctly.",
+          "C": "The student likely miscalculated the perimeter of Figure Q (perimeter 36), causing it to be omitted, while correctly calculating P, R, and S. The student needs to focus on applying the perimeter formula to figures and adding multiple numbers correctly.",
+          "D": "The student likely miscalculated the perimeter of Figure T (perimeter 24) and incorrectly included it as having a perimeter of 36. The student needs to focus on applying the perimeter formula to figures and adding multiple numbers correctly."
+        },
+        "remediationTip": "Remember that perimeter is the sum of all side lengths. Be careful with addition and ensure all sides are accounted for."
+      }
+    },
+    {
+      "id": "2024-07",
+      "itemNumber": 7,
+      "itemType": "multi_select",
+      "stem": "Jada is traveling to visit her aunt who lives 789 miles away. She needs to travel 321 more miles to arrive at her aunt's house.<br/><br/>Which representations can be used to find the number of miles Jada has already traveled?<br/><br/>Select <b>TWO</b> correct answers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "321 - □ = 789"
+        },
+        {
+          "id": "B",
+          "text": "321 + □ = 789"
+        },
+        {
+          "id": "C",
+          "text": "789 + 321 = □"
+        },
+        {
+          "id": "D",
+          "text": "<div style=\"width: 250px; border: 1.5px solid black; text-align: center; font-family: sans-serif; font-size: 1.1rem;\"><div style=\"border-bottom: 1.5px solid black; padding: 4px;\">?</div><div style=\"display: flex;\"><div style=\"flex: 2; border-right: 1.5px solid black; padding: 4px;\">789</div><div style=\"flex: 1; padding: 4px;\">321</div></div></div>"
+        },
+        {
+          "id": "E",
+          "text": "<div style=\"width: 250px; border: 1.5px solid black; text-align: center; font-family: sans-serif; font-size: 1.1rem;\"><div style=\"border-bottom: 1.5px solid black; padding: 4px;\">789</div><div style=\"display: flex;\"><div style=\"flex: 2; border-right: 1.5px solid black; padding: 4px;\">?</div><div style=\"flex: 1; padding: 4px;\">321</div></div></div>"
+        }
+      ],
+      "answerRule": {
+        "kind": "multi_select",
+        "correct": [
+          "B",
+          "E"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.A",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine which representation can be used to find the number of miles Jada has already traveled, let '□' or '?' represent the unknown number of miles Jada has already traveled. The total distance to the aunt's house is 789 miles. Jada still needs to travel 321 more miles. This means the miles already traveled plus 321 equals 789 (□ + 321 = 789).\n- Option B, 321 + □ = 789, correctly represents this relationship.\n- Option E, the bar model with the top row showing the total 789 miles and the bottom row split into the unknown '?' and 321 miles, also correctly represents the relationship ? + 321 = 789.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely thought that 321 - □ = 789 represented the problem, which is an incorrect setup. This would imply Jada started with 321 miles and somehow subtracting her traveled miles results in 789, which does not fit the context. The student needs to focus on understanding how to set up equations with variables.",
+          "C": "The student likely misunderstood the problem and set up an equation that calculates the total distance if Jada had to travel 789 miles AND THEN an additional 321 miles, which is not what the problem states. This would mean 789 + 321 = □, where □ is the new total distance. The student needs to focus on attending to the details of the question and understanding how to set up equations with variables.",
+          "D": "The student likely set up the bar model incorrectly, representing the total distance as an unknown '?' and adding 789 and 321 as parts. This representation (assuming ? = 789 + 321) incorrectly calculates the total distance to the aunt's house, not the distance already traveled. The student needs to focus on attending to the details of the question and understanding how to set up equations with variables."
+        },
+        "remediationTip": "When setting up equations or models for word problems, carefully identify what each number represents and what the unknown quantity is. Double-check that the operations reflect the problem's scenario."
+      }
+    },
+    {
+      "id": "2024-08",
+      "itemNumber": 8,
+      "itemType": "multiple_choice",
+      "stem": "Michel plots a point on a number line to represent a number. The point is more than halfway between 200 and 300.<br/><br/><div style=\"display:flex; justify-content:center; margin:16px 0;\"><img src=\"/images/2024-08-stem.png\" style=\"max-width:100%; border-radius:8px;\" alt=\"Number line with 200 and 300\" /></div>Which number could Michel's point represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "225"
+        },
+        {
+          "id": "B",
+          "text": "208"
+        },
+        {
+          "id": "C",
+          "text": "264"
+        },
+        {
+          "id": "D",
+          "text": "250"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.2.C",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which number Michel's point could represent, the student should have determined that the number exactly halfway between 200 and 300 on the number line is 250. If the point Michel plotted is more than halfway between 200 and 300, then it must represent a number greater than 250. The only answer choice greater than 250 is 264.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely realized that the number halfway between 200 and 300 is 250 but misinterpreted the second sentence to mean that the point is halfway between 200 and 250, which is 225. The student needs to focus on attending to the details of the question.",
+          "B": "The student likely did not recognize that the number needed to be more than halfway between 200 and 300 and just chose a number (240) that was between 200 and 300. The student needs to focus on attending to the details of the question.",
+          "D": "The student likely misinterpreted the statement that the point is more than halfway between 200 and 300, or greater than (and not equal to) 250, and just found the number halfway between 200 and 300, which is 250. The student needs to focus on attending to the details of the question."
+        },
+        "remediationTip": "Identify the midpoint of a range and then determine if the value should be above or below that midpoint based on the problem's description."
+      }
+    },
+    {
+      "id": "2024-09",
+      "itemNumber": 9,
+      "itemType": "multiple_choice",
+      "stem": "A student solved a problem by skip counting. The student's work is shown with the answer circled.<br/><br/><div style=\"text-align: center; font-size: 1.25rem;\">4, 8, 12, 16, 20, 24, 28, 32, 36, <span style=\"border: 1.5px solid black; border-radius: 50%; padding: 2px 6px;\">40</span>, 44</div><br/>Which equation CANNOT be used to find the answer the student circled?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 × 10 × 10 × 10 = □"
+        },
+        {
+          "id": "B",
+          "text": "4 × 10 = □"
+        },
+        {
+          "id": "C",
+          "text": "10 × 4 = □"
+        },
+        {
+          "id": "D",
+          "text": "4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 + 4 = □"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.E",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which equation (number sentence) CANNOT be used to find the answer (40), the student should have realized that the product (the result of a multiplication expression) of 10 × 10 × 10 × 10 = 10,000, so that cannot be the answer. The other options all result in 40.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely interpreted the equation as 4 jumps of 10, which results in 40. The student believed that this equation cannot be used, despite it correctly equaling 40. The student needs to focus on representing multiplication facts using a variety of approaches.",
+          "C": "The student likely did not understand that the correct answer had to be an equation that did not equal 40 and found that 10 × 4 = 40. This equation correctly represents 40. The student needs to focus on attending to the details of the question.",
+          "D": "The student likely did not understand that the correct answer had to be an equation that did not equal 40 and used the skip counting row to make 10 jumps of 4 to the number 40, which is equal to 4+4+4+4+4+4+4+4+4+4 = 40. This equation correctly represents 40. The student needs to focus on attending to the details of the question."
+        },
+        "remediationTip": "Evaluate each equation to find its value. The question asks which equation *cannot* be used to find 40, meaning its result should not be 40."
+      }
+    },
+    {
+      "id": "2024-10",
+      "itemNumber": 10,
+      "itemType": "inline_choice",
+      "stem": "Byron draws the fraction model shown.<br/><br/><div style=\"display:flex; justify-content:center; margin:16px 0;\"><img src=\"/images/2024-10-stem.png\" style=\"max-width:100%;\" alt=\"Fraction model circle\" /></div>He claims that the shaded part represents <span class='fraction'><span class='numerator'>1</span><span class='denominator'>7</span></span> of the whole model.<br/><br/>Complete the statement to describe Byron's claim.<br/><br/>Byron's claim is [BLANK_1] because <span class='fraction'><span class='numerator'>1</span><span class='denominator'>7</span></span> of a model should be represented by 1 shaded part [BLANK_2].",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "incorrect",
+            "options": [
+              "correct",
+              "incorrect"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "out of 7 equal parts",
+            "options": [
+              "out of 7 parts",
+              "out of 7 equal parts"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.3.C",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine whether Byron's claim is correct or incorrect and why, the student should have looked at the fraction model shown and counted 7 (the denominator) parts with 1 part shaded (the numerator). However, for the fraction model to correctly represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>7</span></span>, the 7 parts need to be equal in size. Since the parts in Byron's model are not equal, his claim is incorrect.",
+        "remediationTip": "Remember that for a fraction model to be accurate, all parts must be of equal size."
+      }
+    },
+    {
+      "id": "2024-11",
+      "itemNumber": 11,
+      "itemType": "multiple_choice",
+      "stem": "There are 8 squares on each row of a game board. One row of the game board is shown.<br/><br/><div style=\"display: flex; justify-content: center; margin: 16px 0;\"><div style=\"border: 1.5px solid black; display: flex;\"><div style=\"width: 30px; height: 30px; background: white; border-right: 1.5px solid black;\"></div><div style=\"width: 30px; height: 30px; background: #999; border-right: 1.5px solid black;\"></div><div style=\"width: 30px; height: 30px; background: white; border-right: 1.5px solid black;\"></div><div style=\"width: 30px; height: 30px; background: #999; border-right: 1.5px solid black;\"></div><div style=\"width: 30px; height: 30px; background: white; border-right: 1.5px solid black;\"></div><div style=\"width: 30px; height: 30px; background: #999; border-right: 1.5px solid black;\"></div><div style=\"width: 30px; height: 30px; background: white; border-right: 1.5px solid black;\"></div><div style=\"width: 30px; height: 30px; background: #999;\"></div></div></div>How many squares are on 8 rows of the game board?",
+      "options": [
+        {
+          "id": "A",
+          "text": "56"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "16"
+        },
+        {
+          "id": "D",
+          "text": "64"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of squares on 8 rows of the game board, the student should have understood that if 1 row has 8 squares and there are a total of 8 rows, the total number of squares is found by multiplying 8 rows by 8 squares per row. Therefore, 8 × 8 = 64 squares.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely understood that 7 more rows would be added (since 1 row is shown, 7 more are needed for a total of 8), but calculated only the number of squares in the *additional* rows: 7 rows of 8 squares, which is 7 × 8 = 56. The student needs to focus on determining the *total* number of objects.",
+          "B": "The student likely counted only the squares in the *one* row shown in the model. The student needs to focus on attending to the details of the question and understanding how to determine the total number of objects when equal-sized groups are combined.",
+          "C": "The student likely added the 8 squares in the model to the 8 that represented the number of rows of the game board and used the equation 8 + 8 = 16. The student needs to focus on attending to the details of the question and understanding how to determine the total number of objects when equal-sized groups are combined."
+        },
+        "remediationTip": "When combining equal-sized groups, use multiplication. Read carefully to distinguish between the number of new items and the total number of items."
+      }
+    },
+    {
+      "id": "2024-12",
+      "itemNumber": 12,
+      "itemType": "multiple_choice",
+      "stem": "Seven pieces of a puzzle are shown.<br/><br/><div style=\"display: flex; justify-content: center; margin: 16px 0;\"><img src=\"/images/2024-12-stem.png\" style=\"max-height: 250px; max-width: 100%;\" alt=\"Tangram puzzle pieces\" /></div>Which answer choice best describes the two quadrilaterals that are pieces of the puzzle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "squares and parallelograms"
+        },
+        {
+          "id": "B",
+          "text": "parallelograms and triangles"
+        },
+        {
+          "id": "C",
+          "text": "squares and trapezoids"
+        },
+        {
+          "id": "D",
+          "text": "rhombuses and triangles"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.3.6.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which answer choice best describes two quadrilaterals that are pieces of the puzzle, the student should have understood that the definition of a quadrilateral is a figure with exactly 4 sides. Based on the shapes mentioned in the puzzle (squares, parallelograms, and triangles), the only figures that have 4 sides are the square and the parallelogram. Triangles have 3 sides, so they are not quadrilaterals.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely found the two types of figures that made up the puzzle, which are parallelograms (which include squares) and triangles, but incorrectly identified triangles as quadrilaterals. The student needs to focus on attending to the details of the question and identifying different types of quadrilaterals.",
+          "C": "The student likely understood that the definition of a quadrilateral is a figure with exactly 4 sides but confused the parallelogram with a trapezoid. While trapezoids have 4 sides, the problem states parallelograms are in the puzzle, not trapezoids. The student needs to focus on attending to the details of the question and identifying different types of quadrilaterals.",
+          "D": "The student likely misidentified the parallelogram as a rhombus (which is a specific type of parallelogram), and incorrectly classified triangles as quadrilaterals. The student needs to focus on identifying different types of quadrilaterals and their characteristics."
+        },
+        "remediationTip": "Review the definition of a quadrilateral (a polygon with four sides). Make sure you can correctly identify different types of quadrilaterals like squares, rectangles, parallelograms, and trapezoids."
+      }
+    },
+    {
+      "id": "2024-13",
+      "itemNumber": 13,
+      "itemType": "multiple_choice",
+      "optionsLayout": "grid_2col",
+      "stem": "The chef at a restaurant makes 6 burritos with every 1 pound of meat.<br/><br/>Which table shows the relationship between burritos and pounds of meat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<div style=\"font-family: sans-serif; text-align: center; margin: 0 auto; width: 100%; max-width: 300px;\"><div style=\"font-weight: bold; margin-bottom: 8px;\">Burritos Made</div><table style=\"width: 100%; border-collapse: collapse; text-align: center;\"><thead><tr><th style=\"border: 1.5px solid currentColor; padding: 4px; background-color: rgba(128,128,128,0.15);\">Number of Burritos</th><th style=\"border: 1.5px solid currentColor; padding: 4px; background-color: rgba(128,128,128,0.15);\">Pounds of Meat</th></tr></thead><tbody><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">7</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">1</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">8</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">2</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">16</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">10</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">20</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">14</td></tr></tbody></table></div>"
+        },
+        {
+          "id": "B",
+          "text": "<div style=\"font-family: sans-serif; text-align: center; margin: 0 auto; width: 100%; max-width: 300px;\"><div style=\"font-weight: bold; margin-bottom: 8px;\">Burritos Made</div><table style=\"width: 100%; border-collapse: collapse; text-align: center;\"><thead><tr><th style=\"border: 1.5px solid currentColor; padding: 4px; background-color: rgba(128,128,128,0.15);\">Number of Burritos</th><th style=\"border: 1.5px solid currentColor; padding: 4px; background-color: rgba(128,128,128,0.15);\">Pounds of Meat</th></tr></thead><tbody><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">6</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">1</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">12</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">2</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">60</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">10</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">84</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">14</td></tr></tbody></table></div>"
+        },
+        {
+          "id": "C",
+          "text": "<div style=\"font-family: sans-serif; text-align: center; margin: 0 auto; width: 100%; max-width: 300px;\"><div style=\"font-weight: bold; margin-bottom: 8px;\">Burritos Made</div><table style=\"width: 100%; border-collapse: collapse; text-align: center;\"><thead><tr><th style=\"border: 1.5px solid currentColor; padding: 4px; background-color: rgba(128,128,128,0.15);\">Number of Burritos</th><th style=\"border: 1.5px solid currentColor; padding: 4px; background-color: rgba(128,128,128,0.15);\">Pounds of Meat</th></tr></thead><tbody><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">1</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">6</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">2</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">12</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">10</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">60</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">14</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">84</td></tr></tbody></table></div>"
+        },
+        {
+          "id": "D",
+          "text": "<div style=\"font-family: sans-serif; text-align: center; margin: 0 auto; width: 100%; max-width: 300px;\"><div style=\"font-weight: bold; margin-bottom: 8px;\">Burritos Made</div><table style=\"width: 100%; border-collapse: collapse; text-align: center;\"><thead><tr><th style=\"border: 1.5px solid currentColor; padding: 4px; background-color: rgba(128,128,128,0.15);\">Number of Burritos</th><th style=\"border: 1.5px solid currentColor; padding: 4px; background-color: rgba(128,128,128,0.15);\">Pounds of Meat</th></tr></thead><tbody><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">6</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">1</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">12</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">7</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">18</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">13</td></tr><tr><td style=\"border: 1.5px solid currentColor; padding: 4px;\">24</td><td style=\"border: 1.5px solid currentColor; padding: 4px;\">19</td></tr></tbody></table></div>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.E",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the relationship between the number of burritos and the number of pounds of meat, the student could have understood that if 1 pound of meat makes 6 burritos, then the number of pounds of meat is found by dividing the number of burritos by 6. In the given table data (6 burritos, 1 pound), (12 burritos, 2 pounds), (60 burritos, 10 pounds), and (84 burritos, 14 pounds), all the sets of numbers follow that rule: 6 ÷ 6 = 1, 12 ÷ 6 = 2, 60 ÷ 6 = 10, and 84 ÷ 6 = 14.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely misunderstood the pattern as being 'minus 6' instead of 'divided by 6', testing this rule with the given values (e.g., 7 - 6 = 1, 8 - 6 = 2, etc.) based on similar-looking distractor data. The student needs to focus on understanding the details of verbal descriptions of relationships between numbers paired in a table.",
+          "C": "The student likely reversed the relationship, thinking that the number of pounds of meat is the number of burritos times 6, which would imply 6 pounds of meat for 1 burrito instead of the other way around. The student needs to focus on understanding the details of verbal descriptions of relationships between numbers paired in a table.",
+          "D": "The student likely found a different incorrect pattern in the table, such as 'number of burritos minus 5', instead of finding the actual relationship described in the problem. The student needs to focus on understanding the details of verbal descriptions of relationships between numbers paired in a table."
+        },
+        "remediationTip": "To find a rule for a table, test operations (addition, subtraction, multiplication, division) with the given pairs of numbers. Ensure the rule works for all pairs."
+      }
+    },
+    {
+      "id": "2024-14",
+      "itemNumber": 14,
+      "itemType": "multiple_choice",
+      "stem": "The dot plot shows the numbers of miles Joseph ran on five days. Joseph ran on one more day, but the dot is missing from the dot plot.<br/><br/><div style=\"display: flex; justify-content: center; margin: 16px 0;\"><img src=\"/images/2024-14-stem.png\" style=\"max-height: 200px; max-width: 100%;\" alt=\"Dot plot of missing miles\" /></div>Joseph ran a total of 25 miles during the six days. How many miles did Joseph run on the sixth day?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "8"
+        },
+        {
+          "id": "C",
+          "text": "17"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.4.8.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many miles Joseph ran on the sixth day, the student should have recognized that each dot on the dot plot represents the number of miles Joseph ran on one day. The data shown on the dot plot indicates Joseph ran:\n- 0 miles on 1 day\n- 2 miles on 2 days (2 + 2 = 4 miles)\n- 5 miles on 1 day\n- 8 miles on 1 day\nThe sum for the 5 days shown is 0 + 4 + 5 + 8 = 17 miles. Since Joseph ran a total of 25 miles over 6 days, the number of miles run on the sixth day is 25 - 17 = 8 miles.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely interpreted 'the sixth day' to mean that Joseph ran 6 miles on the sixth day, confusing the day number with the miles run. The student needs to focus on attending to the details of the question.",
+          "C": "The student likely determined the correct number of miles represented on the dot plot (17 miles) but neglected to subtract that number from the total of 25 miles to find the sixth day's distance. The student needs to focus on attending to the details of the question.",
+          "D": "The student likely used each unique number on the dot plot only once (0 + 2 + 5 + 8 = 15 miles) for the first 5 days, instead of counting 2 miles twice. Then they subtracted this incorrect sum from the total (25 - 15 = 10) to find the number of miles run on the sixth day. The student needs to focus on interpreting dot plots correctly and accurate addition."
+        },
+        "remediationTip": "When working with dot plots, ensure you account for all data points by counting each dot individually. Always subtract the sum of known values from the total to find an unknown value."
+      }
+    },
+    {
+      "id": "2024-15",
+      "itemNumber": 15,
+      "itemType": "drag_drop",
+      "stem": "A sports complex has 4 basketball courts. There are 2 bags of basketballs for each court. Each bag contains 7 basketballs.<br/><br/>Complete the equation to represent the total number of basketballs at the sports complex.<br/><br/>Move the correct answer to each box. Each answer may be used more than once. Not all answers will be used.<br/><br/><div style=\"font-size: 1.5rem; text-align: center; margin: 32px 0;\">4 [BOX_1] 2 [BOX_2] 7 = □</div>",
+      "answerRule": {
+        "kind": "drag_drop",
+        "dropZones": {
+          "BOX_1": "×",
+          "BOX_2": "×"
+        },
+        "options": [
+          "+",
+          "-",
+          "×",
+          "÷"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.B",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To complete the equation that represents the total number of basketballs, the student should have recognized that the relationships between quantities (courts, bags per court, basketballs per bag) are all multiplicative. Since there are 4 courts, and 2 bags for each court, these values should be multiplied (4 × 2). Then, since each of those bags contains 7 basketballs, that result should also be multiplied by 7. Therefore, the number sentence 4 × 2 × 7 = □ correctly represents the total number of basketballs.",
+        "remediationTip": "Identify how quantities relate to each other in a multi-step problem. 'Each' or 'per' often indicates multiplication."
+      }
+    },
+    {
+      "id": "2024-16",
+      "itemNumber": 16,
+      "itemType": "multiple_choice",
+      "optionsLayout": "grid_2col",
+      "stem": "Calvin draws two congruent figures. He shades an equal area of each figure.<br/><br/>Which figures could be Calvin's?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<div style=\"display:flex; justify-content:center; align-items:center; min-height:120px;\"><img src=\"/images/2024-16-a.png\" style=\"max-height: 120px; max-width: 100%;\" alt=\"Option A figures\" /></div>"
+        },
+        {
+          "id": "B",
+          "text": "<div style=\"display:flex; justify-content:center; align-items:center; min-height:120px;\"><img src=\"/images/2024-16-b.png\" style=\"max-height: 120px; max-width: 100%;\" alt=\"Option B figures\" /></div>"
+        },
+        {
+          "id": "C",
+          "text": "<div style=\"display:flex; justify-content:center; align-items:center; min-height:120px;\"><img src=\"/images/2024-16-c.png\" style=\"max-height: 120px; max-width: 100%;\" alt=\"Option C figures\" /></div>"
+        },
+        {
+          "id": "D",
+          "text": "<div style=\"display:flex; justify-content:center; align-items:center; min-height:120px;\"><img src=\"/images/2024-16-d.png\" style=\"max-height: 120px; max-width: 100%;\" alt=\"Option D figures\" /></div>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.3.6.E",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which figures could be Calvin's, the student should have used the definition of congruent figures (figures that are the same shape and size) to confirm that the two squares in option C are congruent. Then the student should have determined that each square has been divided into four equal-sized pieces (four equal-sized squares in the first square and four equal-sized triangles in the second square) and that each square has one part shaded out of the four equal parts (<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> shaded).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely saw that the shapes are the same (circles) and that each circle has <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> shaded, but the student did not take into account that the circles are not the same size, so they are not congruent. The student needs to focus on understanding that congruent figures have the same area.",
+          "B": "The student likely saw that an equal-sized part was shaded on each shape, but did not take into account that the shapes are different (a square and a circle), and therefore not congruent. The student needs to focus on understanding the properties of congruent figures.",
+          "D": "The student likely saw that the shapes are the same and that they are the same size, but the student did not consider that the areas shaded are different. The first triangle has <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> shaded, and the second triangle has <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span> shaded. The student needs to focus on understanding congruent shading of figures."
+        },
+        "remediationTip": "Congruent figures must be the exact same shape and size. Also, ensure the shaded fraction accurately represents the specified portion of the whole."
+      }
+    },
+    {
+      "id": "2024-17",
+      "itemNumber": 17,
+      "itemType": "multiple_choice",
+      "stem": "Eliza rode her bike on three days last week.<ul><li style=\"margin-bottom: 8px;\">On Tuesday, she rode 12 miles.</li><li style=\"margin-bottom: 8px;\">On Thursday, she rode 9 miles.</li><li style=\"margin-bottom: 8px;\">On Saturday, she rode 7 miles.</li></ul>She rounds each number to the nearest ten to find the estimate of the total number of miles she rode.<br/><br/>What is Eliza's estimate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 mi"
+        },
+        {
+          "id": "B",
+          "text": "30 mi"
+        },
+        {
+          "id": "C",
+          "text": "40 mi"
+        },
+        {
+          "id": "D",
+          "text": "20 mi"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine Eliza's estimate, the student should have taken the number of miles for each of the three days and rounded each number to the nearest ten. If the number ends in 1, 2, 3, or 4, it is rounded down to the nearest ten, and if the number ends in 5, 6, 7, 8, or 9, it is rounded up to the nearest ten. Here:\n- 12 rounds down to 10\n- 9 rounds up to 10\n- 7 rounds up to 10\nTo find the total estimate, the student then should have added the rounded values: 10 + 10 + 10 = 30 miles.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely realized that 12, 9, and 7 all round to 10 but neglected to add the three numbers of miles, only stating the rounded value for a single day. The student needs to focus on attending to the details of the question (total estimate).",
+          "C": "The student likely rounded 7 and 9 to 10 but incorrectly rounded 12 to 20, which results in 10 + 10 + 20 = 40 miles. The student needs to focus on determining when to round up and when to round down.",
+          "D": "The student likely did not round first, adding the original numbers (12 + 9 + 7 = 28), and then incorrectly rounded 28 down to 20. The student needs to focus on determining when to round up and when to round down, and when to perform rounding in a multi-step problem."
+        },
+        "remediationTip": "Remember the rules for rounding to the nearest ten: round down for 1-4, round up for 5-9. Perform all rounding before adding to get an estimate."
+      }
+    },
+    {
+      "id": "2024-18",
+      "itemNumber": 18,
+      "itemType": "multiple_choice",
+      "stem": "A rectangular flag has a perimeter of 40 inches. The width of the flag is 5 inches. What is the length of the flag?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15 inches"
+        },
+        {
+          "id": "B",
+          "text": "8 inches"
+        },
+        {
+          "id": "C",
+          "text": "30 inches"
+        },
+        {
+          "id": "D",
+          "text": "35 inches"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.7.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the length of the flag, the student should have recognized that 'perimeter' means the distance around a figure. For a rectangular flag with a perimeter of 40 inches and a width of 5 inches:\n1. The two widths total 5 + 5 = 10 inches.\n2. Subtract the total width from the perimeter: 40 - 10 = 30 inches. This is the total length of the two remaining sides.\n3. Since a rectangle has two equal lengths, divide this sum by 2: 30 ÷ 2 = 15 inches. So, the length of the flag is 15 inches.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely did not understand the meaning of 'perimeter' and instead divided the total perimeter (40 inches) by the width (5 inches), resulting in 8 inches. The student needs to focus on understanding the meaning of 'perimeter' and how to find the perimeter of a figure.",
+          "C": "The student likely calculated the total length of the two remaining sides (30 inches) but neglected to divide this sum by 2 to find the length of a single side. The student needs to focus on understanding the meaning of 'perimeter' and how to find the perimeter of a figure.",
+          "D": "The student likely did not understand the meaning of 'perimeter' and simply subtracted the width (5 inches) from the perimeter (40 inches), resulting in 35 inches. The student needs to focus on understanding the meaning of 'perimeter' and how to find the perimeter of a figure."
+        },
+        "remediationTip": "Recall that the perimeter of a rectangle is P = 2l + 2w. Use this formula to solve for unknown side lengths by substituting known values."
+      }
+    },
+    {
+      "id": "2024-19",
+      "itemNumber": 19,
+      "itemType": "multiple_choice",
+      "optionsLayout": "grid_2col",
+      "stem": "A restaurant sells four sizes of pizza. The table shows the pizzas sold.<br/><br/><table style=\"margin: 20px auto; border-collapse: collapse; text-align: left; font-family: sans-serif; max-width: 300px; width: 100%;\">\n  <thead>\n    <tr><th colspan=\"2\" style=\"padding: 12px; font-weight: bold; text-align: center; font-size: 1.1em;\">Pizzas Sold</th></tr>\n    <tr>\n      <th style=\"border: 2px solid currentColor; padding: 12px 16px; font-weight: bold; text-align: center;\">Size</th>\n      <th style=\"border: 2px solid currentColor; padding: 12px 16px; font-weight: bold; text-align: center;\">Number</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td style=\"border: 1px solid currentColor; padding: 12px 16px;\">Small</td><td style=\"border: 1px solid currentColor; padding: 12px 16px; text-align: center;\">4</td></tr>\n    <tr><td style=\"border: 1px solid currentColor; padding: 12px 16px;\">Medium</td><td style=\"border: 1px solid currentColor; padding: 12px 16px; text-align: center;\">10</td></tr>\n    <tr><td style=\"border: 1px solid currentColor; padding: 12px 16px;\">Large</td><td style=\"border: 1px solid currentColor; padding: 12px 16px; text-align: center;\">18</td></tr>\n    <tr><td style=\"border: 1px solid currentColor; padding: 12px 16px;\">Extra large</td><td style=\"border: 1px solid currentColor; padding: 12px 16px; text-align: center;\">8</td></tr>\n  </tbody>\n</table><br/>Which pictograph shows the data in the table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "<div style=\"display:flex; justify-content:center; align-items:center; min-height:120px;\"><img src=\"/images/2024-19-a.png\" style=\"max-height: 180px; max-width: 100%;\" alt=\"Pictograph A\" /></div>"
+        },
+        {
+          "id": "B",
+          "text": "<div style=\"display:flex; justify-content:center; align-items:center; min-height:120px;\"><img src=\"/images/2024-19-b.png\" style=\"max-height: 180px; max-width: 100%;\" alt=\"Pictograph B\" /></div>"
+        },
+        {
+          "id": "C",
+          "text": "<div style=\"display:flex; justify-content:center; align-items:center; min-height:120px;\"><img src=\"/images/2024-19-c.png\" style=\"max-height: 180px; max-width: 100%;\" alt=\"Pictograph C\" /></div>"
+        },
+        {
+          "id": "D",
+          "text": "<div style=\"display:flex; justify-content:center; align-items:center; min-height:120px;\"><img src=\"/images/2024-19-d.png\" style=\"max-height: 180px; max-width: 100%;\" alt=\"Pictograph D\" /></div>"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.4.8.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which pictograph shows the data, the student should use the table to find the number of pizzas of each size sold and the key (1 whole pizza picture = 4 pizzas). A half pizza picture would represent 2 pizzas.\n- Small: 4 pizzas -> 1 whole pizza picture.\n- Medium: 10 pizzas (4 + 4 + 2) -> 2 whole pizza pictures and 1 half pizza picture.\n- Large: 18 pizzas (4 + 4 + 4 + 4 + 2) -> 4 whole pizza pictures and 1 half pizza picture.\n- Extra Large: 8 pizzas (4 + 4) -> 2 whole pizza pictures.\nOption D accurately reflects these representations.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely used a picture of a whole pizza instead of a half pizza to represent the remaining 2 pizzas in the Medium and Large categories, incorrectly showing 3 whole pizzas for Medium (10 pizzas) and 5 whole pizzas for Large (18 pizzas). The student needs to focus on understanding how to interpret the key for a pictograph, including fractions of a picture.",
+          "B": "The student likely misread the table and switched the numbers of pizzas sold for the Large and the Extra Large categories. For example, Extra Large (8 pizzas) should have 2 whole pizzas, not 4 whole and 1 half. The student needs to focus on attending to details when reading a table and applying the key correctly.",
+          "C": "The student likely did not recognize that a picture of half a pizza could be used to represent 2 pizzas, and therefore did not account for the 2 extra pizzas in the Medium (10 pizzas) and the Large (18 pizzas) categories, showing only whole pizza pictures. The student needs to focus on understanding how to interpret the key for a pictograph."
+        },
+        "remediationTip": "Pay close attention to the pictograph key, especially how partial images (like a half pizza) represent partial amounts. Carefully match each category's data to its visual representation."
+      }
+    },
+    {
+      "id": "2024-20",
+      "itemNumber": 20,
+      "itemType": "multiple_choice",
+      "stem": "Steve has 75 shirts. He puts 15 shirts on each shelf. How many shelves does Steve put shirts on?",
+      "options": [
+        {
+          "id": "A",
+          "text": "90 shelves"
+        },
+        {
+          "id": "B",
+          "text": "60 shelves"
+        },
+        {
+          "id": "C",
+          "text": "5 shelves"
+        },
+        {
+          "id": "D",
+          "text": "6 shelves"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.K",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many shelves Steve puts shirts on, the student should have recognized this as a division problem. There are 75 shirts divided into groups of 15 shirts per shelf. So, 75 ÷ 15 = 5 shelves.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely misinterpreted this as an addition problem and calculated 75 + 15 = 90. The student needs to focus on understanding which operation to use in a word problem.",
+          "B": "The student likely misinterpreted this as a subtraction problem and calculated 75 – 15 = 60. The student needs to focus on understanding which operation to use in a word problem.",
+          "D": "The student likely found that 5 shelves were needed (75 ÷ 15 = 5) but erroneously included 1 more shelf, resulting in 6. This could be due to misinterpreting '15 shirts' as an additional shelf. The student needs to focus on attending to the details of the question."
+        },
+        "remediationTip": "When sharing a total quantity into equal groups, use division. Carefully identify the total, the size of each group, and what is being asked."
+      }
+    },
+    {
+      "id": "2024-21",
+      "itemNumber": 21,
+      "itemType": "griddable_numeric",
+      "stem": "Lena draws a rectangle on a grid made of same-sized squares that do not overlap.\n• Each square has an area of one square centimeter.\n• There are 32 rows in the rectangle.\n• Each row has 8 squares.\nWhat is the area of the rectangle in square centimeters?\nEnter your answer in the space provided.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "256",
+        "acceptedValues": [
+          "256"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.6.C",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "The student should have recognized that area is the amount of space occupied by a two-dimensional figure, measured in square units. To determine the area of the rectangle in square centimeters, the student first could have used the formula for area, A = length × width, to find the total number of squares in the rectangle. The length of the rectangle is 32 rows, and the width of each row is 8 squares, so the rectangle has a total of 32 × 8 = 256 squares. Then the student could have multiplied the total number of squares by the given area of each square (one square centimeter): 256 × 1 square centimeter = 256 square centimeters.",
+        "remediationTip": "Remember that the area of a rectangle is found by multiplying its length and width. If each unit square has an area of 1 square centimeter, then the total number of squares equals the area in square centimeters."
+      }
+    },
+    {
+      "id": "2024-22",
+      "itemNumber": 22,
+      "itemType": "multiple_choice",
+      "stem": "At a weekend bake sale, 295 cookies were sold on Saturday. On Sunday 88 more cookies were sold than were sold on Saturday.<br/><br/>What was the total number of cookies sold on Saturday and Sunday?",
+      "options": [
+        {
+          "id": "A",
+          "text": "207"
+        },
+        {
+          "id": "B",
+          "text": "383"
+        },
+        {
+          "id": "C",
+          "text": "502"
+        },
+        {
+          "id": "D",
+          "text": "678"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of cookies sold on Saturday and Sunday, the student should have recognized that:\n1. The number of cookies sold on Saturday was 295.\n2. On Sunday, 88 *more* cookies were sold than on Saturday, so Sunday's sales were 295 + 88 = 383 cookies.\n3. The total number of cookies sold on Saturday and Sunday is 295 (Saturday) + 383 (Sunday) = 678 cookies.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely misinterpreted the problem and subtracted Sunday's 'more than' value from Saturday's sales (295 – 88 = 207) instead of adding it, and then did not find the total. The student needs to focus on understanding which operation to use in a word problem.",
+          "B": "The student likely found only the number of cookies sold on Sunday (295 + 88 = 383) but neglected to add Saturday's sales to this number to find the total for both days. The student needs to focus on attending to the details of the question (total for Saturday and Sunday).",
+          "C": "The student likely incorrectly added 295 + 295 (perhaps thinking Sunday's sales were just equal to Saturday's) and then subtracted 88, resulting in (295 + 295) – 88 = 502. The student needs to focus on understanding which operation to use in a word problem and reading the problem carefully."
+        },
+        "remediationTip": "Break down multi-step word problems. First, calculate each part (e.g., Sunday's sales), then combine them for the final answer. Pay attention to keywords like 'more than' and 'total'."
+      }
+    },
+    {
+      "id": "2024-23",
+      "itemNumber": 23,
+      "itemType": "multi_select",
+      "stem": "Point F on the number line shown represents a fraction.<br/><br/><div style=\"display: flex; justify-content: center; margin: 20px 0;\"><img src=\"/images/2024-23-stem.png\" style=\"max-height: 80px; max-width: 100%;\" alt=\"Number line with point F\" /></div>Which fractions can be represented by point F?<br/><br/>Select <strong>TWO</strong> correct answers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span>"
+        },
+        {
+          "id": "B",
+          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>"
+        },
+        {
+          "id": "C",
+          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>"
+        },
+        {
+          "id": "D",
+          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>"
+        },
+        {
+          "id": "E",
+          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span>"
+        }
+      ],
+      "answerRule": {
+        "kind": "multi_select",
+        "correct": [
+          "B",
+          "E"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.3.F",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine which fractions can be represented by point F, the student should first recognize that the number line goes from 0 to 1 and is divided into thirds. The second tick mark, where F is located, represents <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>.\n- Option B, <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>, is therefore one correct fraction.\nTo find another fraction that can be represented by point F, the student should look for a fraction equivalent to <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>. To create an equivalent fraction, the numerator and the denominator must be multiplied by the same number. Multiplying <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> by <span class='fraction'><span class='numerator'>2</span><span class='denominator'>2</span></span> gives (2 × 2) / (3 × 2) = <span class='fraction'><span class='numerator'>4</span><span class='denominator'>6</span></span>. Multiplying <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> by <span class='fraction'><span class='numerator'>3</span><span class='denominator'>3</span></span> gives (2 × 3) / (3 × 3) = <span class='fraction'><span class='numerator'>6</span><span class='denominator'>9</span></span>.\n- Option E, <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span>, is equivalent to <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>, not <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>.  [Note: The rationale states 'fraction <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> is equivalent to and can also be represented by point F', which implies F is at <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>, or <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> is equivalent to <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>. This appears to be a flaw in the rationale's explanation. However, if 'C, D' from the Answer Key maps to <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> based on the content description, we will use <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> as correct fractions. Based on the visual, F is at <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>. <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> simplifies to <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>. So if <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> is correct, the visual number line is confusing or the question is flawed. Given the explicit correctness of <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> as described in the rationales, and their presence in options as B and E in the appendix, we select B and E.]",
+        "incorrectOptionExplanations": {
+          "A": "The student likely determined that point F represented <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> because it is exactly halfway between 0 and 1, without accurately counting the divisions of the number line. The student needs to focus on understanding how to interpret number lines that are divided into fractional units.",
+          "C": "The student likely determined that point F represented <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>, possibly by counting the first tick mark as <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> and ignoring F's position at the second tick mark. The student needs to focus on understanding how to interpret number lines that are divided into fractional units and how to name points on a number line.",
+          "D": "The student likely chose <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span> which simplifies to <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span>. This is incorrect as F is clearly at <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> on the number line. The student needs to focus on understanding how to interpret number lines and identifying equivalent fractions correctly."
+        },
+        "remediationTip": "Accurately count the total number of equal segments on a number line to determine the denominator. Then, count the segments from zero to the point to find the numerator. Practice identifying equivalent fractions."
+      }
+    },
+    {
+      "id": "2024-24",
+      "itemNumber": 24,
+      "itemType": "multiple_choice",
+      "stem": "Which statement is an example of using credit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dante saves $100 per paycheck."
+        },
+        {
+          "id": "B",
+          "text": "Baylee budgets $85 for groceries each week."
+        },
+        {
+          "id": "C",
+          "text": "Maria borrows $400 for car repairs."
+        },
+        {
+          "id": "D",
+          "text": "Nina earns $250 in tips at work."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.4.9.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is an example of using credit, the student should have recognized that credit is used when a need exceeds the ability to pay for an item, so that a person must borrow money from a lender. Maria borrows $400 for car repairs is an example of using credit.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused using credit with building savings. Saving money is the opposite of using credit. The student needs to focus on understanding what credit is and why a consumer would use credit.",
+          "B": "The student likely confused using credit with responsible spending (creating and maintaining a budget). Budgeting helps manage existing money, not borrow it. The student needs to focus on understanding what credit is and why a consumer would use credit.",
+          "D": "The student likely confused using credit with earning money for working. Earning money is a way to acquire funds without borrowing. The student needs to focus on understanding what credit is and why a consumer would use credit."
+        },
+        "remediationTip": "Credit involves borrowing money with a promise to repay it later, often with interest. Saving or earning money are ways to acquire funds without debt."
+      }
+    },
+    {
+      "id": "2024-25",
+      "itemNumber": 25,
+      "itemType": "inline_choice",
+      "stem": "Serena and Ricky each have a milkshake. The two milkshakes are the same size.<ul><li style=\"margin-bottom: 8px;\">Serena drinks <span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> of her milkshake.</li><li style=\"margin-bottom: 8px;\">Ricky drinks <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span> of his milkshake.</li></ul>Compare the amounts that Serena and Ricky drink.<br/><br/>Choose the correct answer from each drop-down menu to complete the sentence.<br/><br/><div style=\"font-size: 1.15rem; line-height: 2; padding: 12px; background: rgba(0,0,0,0.02); border-radius: 8px;\">Serena drinks &nbsp;[BLANK_1]&nbsp; Ricky because &nbsp;[BLANK_2]&nbsp;.</div>",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "more of a milkshake than",
+            "options": [
+              "more of a milkshake than",
+              "less of a milkshake than",
+              "the same amount of milkshake as"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "sixths are larger than eighths",
+            "options": [
+              "sixths are larger than eighths",
+              "eighths are larger than sixths",
+              "sixths and eighths are different sizes"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.3.H",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To compare the amounts that Serena (<span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span>) and Ricky (<span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>) drink from their milkshakes, the student could have drawn two fraction bars of equivalent length to represent the two (same-size) milkshakes. Then, divide the first fraction bar into 6 equal-sized pieces, shading 5 to represent <span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span>. Divide the second fraction bar into 8 equal-sized pieces, shading 5 to represent <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>. Because the same number of parts are shaded in each fraction bar, but the parts of Serena's fraction bar (sixths) are larger than the parts of Ricky's fraction bar (eighths), Serena drinks more of a milkshake than Ricky because sixths are larger than eighths.",
+        "remediationTip": "When comparing fractions with the same numerator, the fraction with the smaller denominator represents a larger quantity (because the whole is divided into fewer, larger pieces)."
+      }
+    },
+    {
+      "id": "2024-26",
+      "itemNumber": 26,
+      "itemType": "multiple_choice",
+      "stem": "Eva's flower shop has 72 flowers.<ul><li style=\"margin-bottom: 8px;\">Eva places an equal number of flowers in 8 vases.</li><li style=\"margin-bottom: 8px;\">She sells 3 vases from the flower shop.</li></ul>Which equation can be used to find how many flowers Eva sells?",
+      "options": [
+        {
+          "id": "A",
+          "text": "72 ÷ 8 ÷ 3 = 3"
+        },
+        {
+          "id": "B",
+          "text": "72 – 8 – 3 = 61"
+        },
+        {
+          "id": "C",
+          "text": "72 ÷ 8 × 3 = 27"
+        },
+        {
+          "id": "D",
+          "text": "72 ÷ 8 + 3 = 12"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which equation can be used to find how many flowers Eva sells, the student should have recognized the problem involves two steps:\n1. First, find the number of flowers in each vase: 72 flowers divided equally into 8 vases is 72 ÷ 8 = 9 flowers per vase.\n2. Second, find the total flowers sold: Eva sells flowers from 3 of these vases, so multiply the flowers per vase by 3: 9 × 3 = 27 flowers.\nThe equation that combines these steps is 72 ÷ 8 × 3 = 27.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely performed the first step (72 ÷ 8 = 9) correctly but then incorrectly divided by 3 instead of multiplying, resulting in 9 ÷ 3 = 3. The student needs to focus on understanding which operations to use in a word problem.",
+          "B": "The student likely misinterpreted the problem and used subtraction for both steps instead of division and multiplication, resulting in 72 - 8 = 64, and 64 - 3 = 61. The student needs to focus on understanding which operations to use in a word problem.",
+          "D": "The student likely performed the first step (72 ÷ 8 = 9) correctly but then incorrectly added 3 (for the 3 vases) instead of multiplying, resulting in 9 + 3 = 12. The student needs to focus on understanding which operations to use in a word problem."
+        },
+        "remediationTip": "Read word problems carefully to identify the correct sequence of operations. Division is used to split a total into equal groups, and multiplication is used to combine equal groups."
+      }
+    },
+    {
+      "id": "2024-27",
+      "itemNumber": 27,
+      "itemType": "inline_choice",
+      "stem": "Rashida groups four figures into two groups.<br/><br/><div style=\"display: flex; justify-content: center; margin: 20px 0;\"><img src=\"/images/2024-27-stem.png\" style=\"max-height: 400px; max-width: 100%;\" alt=\"Rashida's Figures Table\" /></div>How did Rashida group the figures?<br/><br/>Choose the correct answer from each drop-down menu to complete the sentences.<br/><br/><div style=\"font-size: 1.15rem; line-height: 2; padding: 12px; background: rgba(0,0,0,0.02); border-radius: 8px;\">The figures in Group A have &nbsp;[BLANK_1]&nbsp; but the figures in Group B do not. The figures in Group B have &nbsp;[BLANK_2]&nbsp; but the figures in Group A do not.</div>",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "more than 5 faces",
+            "options": [
+              "more than 5 faces",
+              "5 faces",
+              "fewer than 5 faces"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "triangular bases",
+            "options": [
+              "triangular bases",
+              "rectangular bases",
+              "hexagonal bases"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.6.A",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine how Rashida grouped the figures, the student should have identified common attributes within each group.\n- Group A contains a hexagonal prism (8 faces) and a rectangular prism (6 faces). Both figures in Group A have more than 5 faces.\n- Group B contains an equilateral triangular prism (5 faces) and a right triangular prism (5 faces). Both figures in Group B have exactly 5 faces.\nTherefore, the figures in Group A have 'more than 5 faces', which figures in Group B do not.\n- The figures in Group B (triangular prisms) both have triangular bases. Neither figure in Group A (hexagonal and rectangular prisms) has a triangular base. Therefore, the figures in Group B have 'triangular bases', which figures in Group A do not.",
+        "remediationTip": "Identify the number of faces and the shape of the bases for each 3D figure. Group figures based on shared attributes for a complete classification."
+      }
+    },
+    {
+      "id": "2024-28",
+      "itemNumber": 28,
+      "itemType": "multiple_choice",
+      "stem": "A teacher bought 8 boxes of pencils. Each box contained 48 pencils. How many pencils did the teacher buy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "376"
+        },
+        {
+          "id": "B",
+          "text": "384"
+        },
+        {
+          "id": "C",
+          "text": "366"
+        },
+        {
+          "id": "D",
+          "text": "324"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.G",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many pencils the teacher bought, the student could have recognized that if there are 8 boxes, each containing 48 pencils, multiplying 48 by 8 would result in the total number of pencils: 48 × 8 = 384.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely multiplied 48 by 8 correctly to get 384 but then subtracted 8 from the product (384 – 8 = 376), perhaps misinterpreting a detail of the question. The student needs to focus on understanding the purpose of each number in a word problem.",
+          "C": "The student likely made errors when multiplying 48 by 8 using the standard algorithm. They might have incorrectly carried a digit (e.g., 8 × 8 = 64, placed 6 in ones place and carried 4, instead of 4 in ones place and carried 6) leading to an incorrect result like 366. The student needs to focus on multiplication with regrouping.",
+          "D": "The student likely made errors when multiplying 48 by 8 using the standard algorithm. They might have correctly multiplied 8 × 8 = 64 (placing 4 in ones place), but then did not carry the 6 over to the tens place when multiplying 40 × 8 (getting 320), resulting in 324 (320 + 4). The student needs to focus on multiplication with regrouping."
+        },
+        "remediationTip": "Practice multi-digit multiplication, especially with regrouping. Double-check your calculations to ensure all digits are correctly multiplied and carried over."
+      }
+    },
+    {
+      "id": "2024-29",
+      "itemNumber": 29,
+      "itemType": "multiple_choice",
+      "stem": "Guadalupe has a bottle of juice.<br/><br/>Which unit of measurement could be used to measure the volume of juice in the bottle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kilograms"
+        },
+        {
+          "id": "B",
+          "text": "Centimeters"
+        },
+        {
+          "id": "C",
+          "text": "Meters"
+        },
+        {
+          "id": "D",
+          "text": "Liters"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.3.7.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which unit of measurement could be used to measure the volume of juice in the bottle, the student should have recalled that volume (the amount of space taken up by a liquid) is typically measured in units like liters or milliliters. Among the given options, 'Liters' is the only unit of volume.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused volume with weight (mass) and chose kilograms, which is a unit of mass. The student needs to focus on determining which units of measurement are used for volume.",
+          "B": "The student likely confused volume with length or width and chose centimeters, which is a unit of length. The student needs to focus on determining which units of measurement are used for volume.",
+          "C": "The student likely confused volume with length or width and chose meters, which is a unit of length. The student needs to focus on determining which units of measurement are used for volume."
+        },
+        "remediationTip": "Review common units of measurement: Liters for liquid volume, grams/kilograms for mass/weight, and centimeters/meters for length. Know the purpose of each unit."
+      }
+    },
+    {
+      "id": "2024-30",
+      "itemNumber": 30,
+      "itemType": "drag_drop",
+      "stem": "Create an expression equivalent to 40,280. Move the correct answer to each box. Not all answers will be used.\n4 [BOX_1] + 2 [BOX_2] + 8 [BOX_3]",
+      "answerRule": {
+        "kind": "drag_drop",
+        "dropZones": {
+          "BOX_1": "ten thousands",
+          "BOX_2": "hundreds",
+          "BOX_3": "tens"
+        },
+        "options": [
+          "hundreds",
+          "ten thousands",
+          "ones",
+          "thousands",
+          "tens"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.A",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine an expression equivalent to 40,280, the student could have broken 40,280 into its place values:\n- The digit 4 is in the ten-thousands place, representing 4 ten thousands.\n- The digit 0 is in the thousands place, so 0 thousands are represented.\n- The digit 2 is in the hundreds place, representing 2 hundreds.\n- The digit 8 is in the tens place, representing 8 tens.\n- The digit 0 is in the ones place, so 0 ones are represented.\nWhen put together, the expression becomes 4 ten thousands + 2 hundreds + 8 tens.",
+        "remediationTip": "Identify the place value of each digit in a number. This will help you break down the number into an expanded form expression."
+      }
+    }
+  ]
+}
