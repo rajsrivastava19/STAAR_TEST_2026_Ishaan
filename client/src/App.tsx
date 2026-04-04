@@ -519,7 +519,7 @@ function App() {
                   { x: -105, y: 60,  h: 115 }, // L4: lower-right (larger)
                   { x: -10, y: 0,   h: 115 }, // L5: lower-left  (larger)
                   { x: 30,  y: 20,  h: 115 }, // L6: left        (larger)
-                  { x: -10, y: 10,  h: 85 }, // L7: upper-left
+                  { x: 20,  y: 0,   h: 85 }, // L7: upper-left
                 ];
                 const dinoOffsetX = dinoOffsets[index].x;
                 const dinoOffsetY = dinoOffsets[index].y;
