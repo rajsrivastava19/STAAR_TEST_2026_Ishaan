@@ -1,5 +1,6 @@
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import type { AttemptState, ExamBundle, Manifest, ManifestEntry, Question } from './types';
+import { loginUser, getUser, saveScore, saveAttempt, getAllUsers, toggleLevel, type AttemptRecord } from './firebase';
 
 const TIER_DIMS: Record<string, { w: number; h: number }> = {
   xs:    { w: 1024, h: 768  },
@@ -93,16 +94,7 @@ type Screen = 'login' | 'home' | 'intro' | 'test' | 'results' | 'progress' | 'ad
 
 const ADMIN_ID = 'raj_srivastava19';
 
-type AttemptRecord = {
-  examId: string;
-  examYear: number;
-  date: string;
-  percent: number;
-  correct: number;
-  total: number;
-  timerEnabled: boolean;
-  elapsedSeconds: number;
-};
+// AttemptRecord type is now imported from firebase.ts
 
 function AnimatedMathSky() {
   const symbols = ['+', '−', '×', '÷', '★', '✓'];
@@ -191,13 +183,7 @@ function getDinoForYear(year: number) {
 function App() {
   const tier = useTier();
   const [activeUser, setActiveUser] = useState<string | null>(() => localStorage.getItem('math-staar-user') || null);
-  const [examScores, setExamScores] = useState<Record<string, number>>(() => {
-    const user = localStorage.getItem('math-staar-user');
-    if (!user) return {};
-    const saved = localStorage.getItem(`math-staar-scores:${user}`);
-    return saved ? JSON.parse(saved) : {};
-  });
-
+  const [examScores, setExamScores] = useState<Record<string, number>>({});
   const [screen, setScreen] = useState<Screen>(() => localStorage.getItem('math-staar-user') ? 'home' : 'login');
   const [showExitModal, setShowExitModal] = useState<boolean>(false);
   const [manifest, setManifest] = useState<Manifest | null>(null);
@@ -211,12 +197,23 @@ function App() {
   const [showReview, setShowReview] = useState(false);
   const [unansweredList, setUnansweredList] = useState<number[]>([]);
   const [adminSelectedUser, setAdminSelectedUser] = useState<string | null>(null);
-  const [attemptHistory, setAttemptHistory] = useState<AttemptRecord[]>(() => {
-    const user = localStorage.getItem('math-staar-user');
-    if (!user) return [];
-    const saved = localStorage.getItem(`math-staar-history:${user}`);
-    return saved ? JSON.parse(saved) : [];
-  });
+  const [adminUsers, setAdminUsers] = useState<{ id: string; name: string; logins: number; scores: Record<string, number>; history: AttemptRecord[] }[]>([]);
+  const [attemptHistory, setAttemptHistory] = useState<AttemptRecord[]>([]);
+  const [dbLoading, setDbLoading] = useState(false);
+
+  // Load user data from Firestore on mount if session is cached
+  useEffect(() => {
+    const cachedUser = localStorage.getItem('math-staar-user');
+    if (cachedUser) {
+      setDbLoading(true);
+      getUser(cachedUser).then(data => {
+        if (data) {
+          setExamScores(data.scores);
+          setAttemptHistory(data.history);
+        }
+      }).catch(() => {}).finally(() => setDbLoading(false));
+    }
+  }, []);
 
   useEffect(() => {
     async function fetchManifest() {
@@ -233,6 +230,20 @@ function App() {
 
     void fetchManifest();
   }, []);
+
+  // Load admin users from Firestore when admin screen opens
+  useEffect(() => {
+    if (screen !== 'admin' || activeUser !== ADMIN_ID) return;
+    getAllUsers().then(users => {
+      setAdminUsers(users.map(u => ({
+        id: u.id,
+        name: `${u.data.firstName} ${u.data.lastName}`,
+        logins: u.data.loginCount || 0,
+        scores: u.data.scores || {},
+        history: u.data.history || [],
+      })));
+    }).catch(console.error);
+  }, [screen, activeUser]);
 
   useEffect(() => {
     setSelectedDragOption(null);
@@ -369,7 +380,7 @@ function App() {
         if (computedPercent > currentBest) {
           const nextScores = { ...prev, [exam.id]: computedPercent };
           if (activeUser) {
-            localStorage.setItem(`math-staar-scores:${activeUser}`, JSON.stringify(nextScores));
+            saveScore(activeUser, exam.id, computedPercent).catch(console.error);
           }
           return nextScores;
         }
@@ -390,7 +401,7 @@ function App() {
       setAttemptHistory(prev => {
         const next = [record, ...prev];
         if (activeUser) {
-          localStorage.setItem(`math-staar-history:${activeUser}`, JSON.stringify(next));
+          saveAttempt(activeUser, record).catch(console.error);
         }
         return next;
       });
@@ -516,22 +527,22 @@ function App() {
               return;
             }
             localStorage.setItem('math-staar-user', userId);
-            // Track login count
-            const loginKey = `math-staar-logins:${userId}`;
-            const prevLogins = parseInt(localStorage.getItem(loginKey) || '0', 10);
-            localStorage.setItem(loginKey, String(prevLogins + 1));
-            setActiveUser(userId);
-            const savedScores = localStorage.getItem(`math-staar-scores:${userId}`);
-            setExamScores(savedScores ? JSON.parse(savedScores) : {});
-            const savedHistory = localStorage.getItem(`math-staar-history:${userId}`);
-            setAttemptHistory(savedHistory ? JSON.parse(savedHistory) : []);
-            setScreen('home');
+            setDbLoading(true);
+            loginUser(userId, fn.trim(), ln.trim()).then(({ scores, history }) => {
+              setActiveUser(userId);
+              setExamScores(scores);
+              setAttemptHistory(history);
+              setScreen('home');
+            }).catch(err => {
+              console.error('Firebase login failed:', err);
+              alert('Could not connect to database. Please check your internet connection.');
+            }).finally(() => setDbLoading(false));
           }}>
             <h2 style={{ fontSize: '2rem', color: '#2d3748' }}>Welcome Explorer!</h2>
             <p>Enter your name to start tracking your jungle safari progress.</p>
             <input name="firstName" placeholder="First Name" required minLength={2} className="blank-select" style={{ width: '100%' }} />
             <input name="lastName" placeholder="Last Name" required minLength={2} className="blank-select" style={{ width: '100%' }} />
-            <button type="submit" className="primary-button" style={{ marginTop: '12px' }}>Start Safari</button>
+            <button type="submit" className="primary-button" style={{ marginTop: '12px' }} disabled={dbLoading}>{dbLoading ? '🔄 Connecting...' : 'Start Safari'}</button>
           </form>
         </div>
       )}
@@ -785,45 +796,23 @@ function App() {
         )}
 
         {screen === 'admin' && activeUser === ADMIN_ID && manifest && (() => {
-          // Scan localStorage for all users
-          const allUsers: { id: string; name: string; logins: number; scores: Record<string, number>; history: AttemptRecord[] }[] = [];
-          const seen = new Set<string>();
-          for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            if (!key) continue;
-            let uid: string | null = null;
-            if (key.startsWith('math-staar-scores:')) uid = key.replace('math-staar-scores:', '');
-            else if (key.startsWith('math-staar-history:')) uid = key.replace('math-staar-history:', '');
-            else if (key.startsWith('math-staar-logins:')) uid = key.replace('math-staar-logins:', '');
-            if (uid && !seen.has(uid)) {
-              seen.add(uid);
-              const scores = JSON.parse(localStorage.getItem(`math-staar-scores:${uid}`) || '{}');
-              const history: AttemptRecord[] = JSON.parse(localStorage.getItem(`math-staar-history:${uid}`) || '[]');
-              const logins = parseInt(localStorage.getItem(`math-staar-logins:${uid}`) || '0', 10);
-              allUsers.push({ id: uid, name: uid.replace('_', ' '), logins, scores, history });
-            }
-          }
+          const allUsers = adminUsers;
 
           const toExamId = (e: ManifestEntry) => `staar-g3-math-${(e.dataFile ?? `${e.slug}.json`).replace('.json', '')}`;
 
-          const handleLevelToggle = (userId: string, levelIndex: number, currentlyComplete: boolean) => {
-            const scoresKey = `math-staar-scores:${userId}`;
-            const userScores: Record<string, number> = JSON.parse(localStorage.getItem(scoresKey) || '{}');
-            if (currentlyComplete) {
-              for (let i = levelIndex; i < manifest.years.length; i++) {
-                delete userScores[toExamId(manifest.years[i])];
-              }
-            } else {
-              for (let i = 0; i <= levelIndex; i++) {
-                const eid = toExamId(manifest.years[i]);
-                if ((userScores[eid] || 0) < 85) userScores[eid] = 85;
-              }
-            }
-            localStorage.setItem(scoresKey, JSON.stringify(userScores));
-            if (userId === activeUser) setExamScores(userScores);
-            // Force re-render
-            setScreen('home');
-            setTimeout(() => setScreen('admin'), 0);
+          const handleLevelToggle = async (userId: string, levelIndex: number, currentlyComplete: boolean) => {
+            const examIds = manifest.years.map(e => toExamId(e));
+            const newScores = await toggleLevel(userId, levelIndex, examIds, currentlyComplete);
+            if (userId === activeUser) setExamScores(newScores);
+            // Reload admin users
+            const users = await getAllUsers();
+            setAdminUsers(users.map(u => ({
+              id: u.id,
+              name: `${u.data.firstName} ${u.data.lastName}`,
+              logins: u.data.loginCount || 0,
+              scores: u.data.scores || {},
+              history: u.data.history || [],
+            })));
           };
 
           const selected = allUsers.find(u => u.id === adminSelectedUser) || null;
