@@ -44,26 +44,26 @@ export interface LevelLayout {
  */
 export const LEVELS: LevelLayout[] = [
   // L1 — Top center
-  { x: 690,  y: 300, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: -30, dinoH: 250, hue: '-50deg'  },
+  { x: 690,  y: 300, mountainW: 200, mountainH: 170, dinoOffX: 100, dinoOffY: 100, dinoH: 120, hue: '-50deg'  },
   // L2 — Upper right
-  { x: 1010, y: 380, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: -30, dinoH: 250, hue: '60deg'   },
+  { x: 1010, y: 380, mountainW: 200, mountainH: 170, dinoOffX: 0,   dinoOffY: 100, dinoH: 120, hue: '60deg'   },
   // L3 — Right
-  { x: 1070, y: 580, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: -30, dinoH: 250, hue: '230deg'  },
+  { x: 1070, y: 580, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: 100, dinoH: 120, hue: '230deg'  },
   // L4 — Lower right
-  { x: 880,  y: 700, mountainW: 200, mountainH: 170, dinoOffX: -60, dinoOffY: -10, dinoH: 250, hue: '30deg'   },
+  { x: 880,  y: 700, mountainW: 200, mountainH: 170, dinoOffX: -70, dinoOffY: 30, dinoH: 150, hue: '30deg'   },
   // L5 — Lower left
-  { x: 530,  y: 700, mountainW: 200, mountainH: 170, dinoOffX: -15, dinoOffY: -10, dinoH: 250, hue: '0deg'    },
+  { x: 560,  y: 700, mountainW: 200, mountainH: 170, dinoOffX: -15, dinoOffY: 90, dinoH: 150, hue: '0deg'    },
   // L6 — Left
-  { x: 360,  y: 580, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: 0, dinoH: 250, hue: '-70deg'  },
+  { x: 390,  y: 550, mountainW: 200, mountainH: 170, dinoOffX: 70,  dinoOffY: 50, dinoH: 150, hue: '-70deg'  },
   // L7 — Upper left
-  { x: 410,  y: 380, mountainW: 200, mountainH: 170, dinoOffX: 50,  dinoOffY: 0, dinoH: 250, hue: '0deg'    },
+  { x: 410,  y: 380, mountainW: 200, mountainH: 170, dinoOffX: 100, dinoOffY: 50, dinoH: 150, hue: '0deg'    },
 ];
 
 /* ── Lake ─────────────────────────────────────────────────── */
 
 export const LAKE = {
   cx: 720,
-  cy: 570,
+  cy: 550,
   rx: 280,
   ry: 140,
 };
