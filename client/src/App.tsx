@@ -470,7 +470,7 @@ function App() {
       {screen !== 'test' && screen !== 'login' && screen !== 'home' && (
         <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left', minHeight: '110px', padding: '12px 32px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '24px', justifyContent: 'center' }}>
-            <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '120px', height: '120px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }} />
+            <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '115px', height: '115px', objectFit: 'cover', borderRadius: '16px', border: '3px solid #6ccb8e', boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }} />
             <div style={{ textAlign: 'left' }}>
               <h1 style={{ margin: 0, fontSize: '2rem', fontWeight: 900, color: '#10ac84', textTransform: 'uppercase', letterSpacing: '2px' }}>ISHAAN'S DINO JUNGLE SAFARI</h1>
             </div>
