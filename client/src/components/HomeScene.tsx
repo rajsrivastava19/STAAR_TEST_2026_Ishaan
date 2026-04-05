@@ -265,10 +265,12 @@ export default function HomeScene({
                     />
 
                     {/* Flag */}
-                    <div className="mountain-flag" style={{ filter: isLocked ? 'opacity(0.6) grayscale(0.8)' : 'none' }}>
-                      <div className="flag-pole" />
-                      <div className="flag-banner">Level {levelNum}</div>
-                    </div>
+                    {!isLocked && (
+                      <div className="mountain-flag">
+                        <div className="flag-pole" />
+                        <div className="flag-banner">Level {levelNum}</div>
+                      </div>
+                    )}
 
                     {/* Mountain shape */}
                     <img
@@ -290,16 +292,25 @@ export default function HomeScene({
 
                     {/* Lock */}
                     {isLocked && (
-                      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '2.2rem', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.6))' }}>🔒</div>
+                      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.8))' }}>
+                        <svg width="48" height="56" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="3" y="12" width="18" height="14" rx="3" fill="#FFD700" stroke="#D97706" strokeWidth="1.5"/>
+                          <path d="M6 12V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V12" stroke="#E5E7EB" strokeWidth="2.5" strokeLinecap="round"/>
+                          <circle cx="12" cy="18" r="2" fill="#D97706"/>
+                          <path d="M12 20V23" stroke="#D97706" strokeWidth="2" strokeLinecap="round"/>
+                        </svg>
+                      </div>
                     )}
                   </div>
 
                   {/* Status label */}
-                  <div className="mountain-info">
-                    <span className={`mountain-status ${entry.status}`}>
-                      {isLocked ? '🔒 Locked' : hasStar ? '✅ Complete' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
-                    </span>
-                  </div>
+                  {!isLocked && (
+                    <div className="mountain-info">
+                      <span className={`mountain-status ${entry.status}`}>
+                        {hasStar ? '✅ Complete' : (entry.status === 'playable' ? '▶ Play' : 'Draft')}
+                      </span>
+                    </div>
+                  )}
                 </button>
               </div>
             );

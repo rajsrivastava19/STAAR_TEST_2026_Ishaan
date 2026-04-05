@@ -177,29 +177,6 @@ body:has(.home-scene-viewport) .page-shell {
   width: 170px !important;
   height: 220px !important;
 }
-.home-scene-stage .scene-mountain .mountain-shape {
-  height: 170px;
-}
-.home-scene-stage .scene-mountain .mountain-dino {
-  /* Height is dynamically set inline from homeSceneProfiles */
-}
-.home-scene-stage .scene-mountain .flag-banner {
-  font-size: 1.3rem;
-  padding: 6px 20px;
-  font-weight: 900;
-}
-.home-scene-stage .scene-mountain .mountain-status {
-  font-size: 1rem;
-  padding: 6px 16px;
-  font-weight: 800;
-}
-.home-scene-stage .scene-mountain .mountain-flag {
-  top: 40px;
-  z-index: 15;
-}
-.home-scene-stage .scene-mountain .mountain-info {
-  margin-top: 4px;
-}
 
 /* Animations */
 @keyframes bobbing {
