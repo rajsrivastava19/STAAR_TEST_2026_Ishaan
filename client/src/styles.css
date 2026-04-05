@@ -769,7 +769,7 @@ button:disabled {
   color: var(--earth-dark);
   padding: 4px 14px;
   border-radius: 8px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 900;
   white-space: nowrap;
   box-shadow: 0 3px 0 var(--sunshine-dark);
