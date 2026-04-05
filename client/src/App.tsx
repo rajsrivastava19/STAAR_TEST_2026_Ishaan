@@ -45,7 +45,7 @@ const emptyAttempt: AttemptState = {
 
 type Screen = 'login' | 'home' | 'intro' | 'test' | 'results' | 'progress' | 'admin';
 
-const ADMIN_ID = 'raj_srivastava19';
+const ADMIN_ID = 'raj_srivastava1979';
 
 // AttemptRecord type is now imported from firebase.ts
 
