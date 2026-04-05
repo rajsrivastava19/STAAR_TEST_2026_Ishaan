@@ -31,6 +31,7 @@ export const db = getFirestore(app);
 export type UserDoc = {
   firstName: string;
   lastName: string;
+  passcode?: string;
   createdAt: Timestamp | ReturnType<typeof serverTimestamp>;
   lastLogin: Timestamp | ReturnType<typeof serverTimestamp>;
   loginCount: number;
@@ -60,14 +61,25 @@ const usersCol = collection(db, 'users');
 export async function loginUser(
   userId: string,
   firstName: string,
-  lastName: string
+  lastName: string,
+  passcode: string
 ): Promise<{ scores: Record<string, number>; history: AttemptRecord[]; loginCount: number }> {
   const userRef = doc(usersCol, userId);
   const snap = await getDoc(userRef);
 
   if (snap.exists()) {
-    // Existing user — update login info
+    // Existing user
     const data = snap.data() as UserDoc;
+
+    if (data.passcode) {
+      if (data.passcode !== passcode) {
+        throw new Error("Incorrect Passcode. Please try again.");
+      }
+    } else {
+      // Legacy account -> lock in new passcode
+      await updateDoc(userRef, { passcode });
+    }
+
     const newCount = (data.loginCount || 0) + 1;
     await updateDoc(userRef, {
       lastLogin: serverTimestamp(),
@@ -83,6 +95,7 @@ export async function loginUser(
     const newUser: UserDoc = {
       firstName,
       lastName,
+      passcode,
       createdAt: serverTimestamp(),
       lastLogin: serverTimestamp(),
       loginCount: 1,

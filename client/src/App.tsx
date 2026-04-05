@@ -138,7 +138,7 @@ function App() {
   const tier = useTier();
   const [activeUser, setActiveUser] = useState<string | null>(() => sessionStorage.getItem('math-staar-user') || null);
   const [examScores, setExamScores] = useState<Record<string, number>>({});
-  const [screen, setScreen] = useState<Screen>(() => sessionStorage.getItem('math-staar-user') ? 'home' : 'login');
+  const [screen, setScreen] = useState<Screen>('home');
   const [showExitModal, setShowExitModal] = useState<boolean>(false);
   const [manifest, setManifest] = useState<Manifest | null>(null);
   const [selectedYear, setSelectedYear] = useState<ManifestEntry | null>(null);
@@ -148,6 +148,7 @@ function App() {
   const [selectedDragOption, setSelectedDragOption] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [authError, setAuthError] = useState<string | null>(null);
   const [showReview, setShowReview] = useState(false);
   const [unansweredList, setUnansweredList] = useState<number[]>([]);
   const [adminSelectedUser, setAdminSelectedUser] = useState<string | null>(null);
@@ -176,6 +177,38 @@ function App() {
       shells.forEach(s => s.scrollTo({ top: 0, behavior: 'auto' }));
     }, 10);
   }, [screen, questionIndex, showReview]);
+
+  // Global 60-minute inactivity session monitor
+  useEffect(() => {
+    const updateActivity = () => localStorage.setItem('math-staar-activity', Date.now().toString());
+    const handleEvents = () => updateActivity();
+    
+    window.addEventListener('mousedown', handleEvents);
+    window.addEventListener('keydown', handleEvents);
+    window.addEventListener('touchstart', handleEvents);
+
+    if (!localStorage.getItem('math-staar-activity')) updateActivity();
+
+    const interval = setInterval(() => {
+      const lastAct = parseInt(localStorage.getItem('math-staar-activity') || '0', 10);
+      if (Date.now() - lastAct > 60 * 60 * 1000) {
+        if (sessionStorage.getItem('math-staar-user')) {
+          sessionStorage.removeItem('math-staar-user');
+          setActiveUser(null);
+          setExamScores({});
+          setScreen('login');
+          setAuthError('Your session has expired due to inactivity. Please log back in to continue your trail.');
+        }
+      }
+    }, 60000); // Verify state once a minute
+
+    return () => {
+      window.removeEventListener('mousedown', handleEvents);
+      window.removeEventListener('keydown', handleEvents);
+      window.removeEventListener('touchstart', handleEvents);
+      clearInterval(interval);
+    }
+  }, []);
 
 
   useEffect(() => {
@@ -264,8 +297,15 @@ function App() {
     };
   }, [attempt.answers, exam]);
 
-  async function chooseYear(entry: ManifestEntry) {
+  async function chooseYear(entry: ManifestEntry, isPostLoginTrigger: boolean = false) {
     setSelectedYear(entry);
+    
+    // Auth Interception Point
+    if (!activeUser && !isPostLoginTrigger) {
+      setScreen('login');
+      return;
+    }
+
     setScreen('intro');
 
     if (entry.status !== 'playable') return;
@@ -455,33 +495,54 @@ function App() {
       )}
 
       {screen === 'login' && (
-        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', minHeight: '100dvh', background: 'rgba(0,0,0,0.4)', zIndex: 100 }}>
-          <form className="card-panel" style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '16px', textAlign: 'center' }} onSubmit={(e) => {
+        <div className="test-layout" style={{ justifyContent: 'center', alignItems: 'center', minHeight: '100dvh', background: 'rgba(0,0,0,0.6)', zIndex: 100, position: 'fixed', inset: 0 }}>
+          <form className="card-panel" style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column', gap: '16px', textAlign: 'center', margin: 'auto' }} onSubmit={(e) => {
             e.preventDefault();
+            setAuthError(null);
+            
             const fn = (e.currentTarget.elements.namedItem('firstName') as HTMLInputElement).value;
             const ln = (e.currentTarget.elements.namedItem('lastName') as HTMLInputElement).value;
+            const pin = (e.currentTarget.elements.namedItem('passcode') as HTMLInputElement).value;
             const userId = `${fn.trim().toLowerCase()}_${ln.trim().toLowerCase()}`;
+            
             if (!userId.match(/^[a-z0-9]+_[a-z0-9]+$/)) {
-              alert('Please enter a valid First and Last name without spaces.');
+              setAuthError('Please enter a valid First and Last name without spaces.');
               return;
             }
-            sessionStorage.setItem('math-staar-user', userId);
+            
             setDbLoading(true);
-            loginUser(userId, fn.trim(), ln.trim()).then(({ scores, history }) => {
+            loginUser(userId, fn.trim(), ln.trim(), pin).then(({ scores, history }) => {
+              sessionStorage.setItem('math-staar-user', userId);
               setActiveUser(userId);
               setExamScores(scores);
               setAttemptHistory(history);
-              setScreen('home');
+              
+              if (selectedYear) {
+                // Contextually bypass them right into the test intro!
+                chooseYear(selectedYear, true);
+              } else {
+                setScreen('home');
+              }
             }).catch(err => {
-              console.error('Firebase login failed:', err);
-              alert('Could not connect to database. Please check your internet connection.');
+              console.error('Firebase login error:', err);
+              setAuthError(err.message || 'Verification failed. Please check internet access.');
             }).finally(() => setDbLoading(false));
           }}>
-            <h2 style={{ fontSize: '2rem', color: '#2d3748' }}>Welcome Explorer!</h2>
-            <p>Enter your name to start tracking your jungle safari progress.</p>
+            <h2 style={{ fontSize: '2rem', color: '#2d3748', margin: 0 }}>Unlock Trail</h2>
+            <p style={{ marginTop: '0' }}>Enter your profile details to proceed.</p>
+            
+            {authError && <div style={{ color: '#e74c3c', background: '#fad390', padding: '10px', borderRadius: '8px', fontWeight: 800, fontSize: '0.9rem' }}>{authError}</div>}
+            
             <input name="firstName" placeholder="First Name" required minLength={2} className="blank-select" style={{ width: '100%' }} />
             <input name="lastName" placeholder="Last Name" required minLength={2} className="blank-select" style={{ width: '100%' }} />
-            <button type="submit" className="primary-button" style={{ marginTop: '12px' }} disabled={dbLoading}>{dbLoading ? '🔄 Connecting...' : 'Start Safari'}</button>
+            <input name="passcode" type="password" placeholder="---- PIN ----" required pattern="\d{4}" maxLength={4} className="blank-select" style={{ width: '100%', letterSpacing: '8px', textAlign: 'center', fontSize: '1.2rem', fontWeight: 900 }} />
+            
+            <p style={{ fontSize: '0.75rem', color: 'var(--text-light)', margin: 0, fontStyle: 'italic' }}>*First setup? The 4-digit PIN you enter now will permanently lock this profile.</p>
+
+            <div style={{ display: 'flex', gap: '10px', marginTop: '12px' }}>
+              <button type="button" className="secondary-button" style={{ flex: 1, padding: '10px' }} onClick={() => { setScreen('home'); setAuthError(null); }}>Cancel</button>
+              <button type="submit" className="primary-button" style={{ flex: 1, padding: '10px' }} disabled={dbLoading}>{dbLoading ? '🔄 Syncing...' : 'Verify'}</button>
+            </div>
           </form>
         </div>
       )}
