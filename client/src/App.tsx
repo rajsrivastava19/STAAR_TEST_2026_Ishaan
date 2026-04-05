@@ -468,7 +468,7 @@ function App() {
       )}
 
       {screen !== 'test' && screen !== 'login' && screen !== 'home' && (
-        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left', minHeight: '110px', padding: '12px 32px' }}>
+        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left', minHeight: '100px', padding: '8px 32px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '24px', justifyContent: 'center' }}>
             <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }} />
             <div style={{ textAlign: 'left' }}>
@@ -1162,13 +1162,13 @@ function App() {
         <main className="results-layout" style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
           {!showReview ? (
             <section className="score-hero">
-              <img src={`${import.meta.env.BASE_URL}dinos/dino2.png`} alt="Happy Dino" className="mascot-img dino-walk" />
-              <h2 style={{ fontSize: '3rem', margin: '0', color: 'var(--earth-dark)' }}>Exam Complete!</h2>
+              <img src={`${import.meta.env.BASE_URL}dinos/dino2.png`} alt="Happy Dino" className="mascot-img dino-walk" style={{ marginTop: '-60px' }} />
+              <h2 style={{ fontSize: '3rem', margin: '0', color: 'var(--earth-dark)' }}>Tour Complete!</h2>
               <div className="score-bubble" style={{ background: 'white', padding: '8px 32px', borderRadius: '32px', margin: '8px 0', border: '6px solid var(--sunshine)', fontSize: '4.5rem' }}>{results.percent}%</div>
               <p style={{ color: 'var(--earth-dark)', fontSize: '1.3rem', fontWeight: 900, margin: '0' }}>You got {results.correct} Correct out of {results.total}</p>
               
               <div className="intro-actions" style={{ display: 'flex', gap: '16px', marginTop: '16px' }}>
-                <button className="primary-button" onClick={() => setShowReview(true)}>Review your exam answers</button>
+                <button className="primary-button" onClick={() => setShowReview(true)}>Review your tour answers</button>
                 <button className="secondary-button" onClick={resetProgress}>Back to Dashboard</button>
               </div>
             </section>
@@ -1176,7 +1176,7 @@ function App() {
             <section style={{ width: '100%', maxWidth: '800px', display: 'flex', flexDirection: 'column', gap: '24px', zIndex: 10, paddingBottom: '64px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'white', padding: '24px', borderRadius: '16px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}>
                 <div>
-                  <h2 style={{ margin: 0, color: 'var(--space-dark)', fontSize: '2rem' }}>Exam Review</h2>
+                  <h2 style={{ margin: 0, color: 'var(--space-dark)', fontSize: '2rem' }}>Tour Review</h2>
                   <p style={{ margin: '8px 0 0 0', color: '#636e72', fontWeight: 600 }}>Score: {results.percent}% ({results.correct} / {results.total})</p>
                 </div>
                 <button className="secondary-button" onClick={resetProgress}>Back to Dashboard</button>
