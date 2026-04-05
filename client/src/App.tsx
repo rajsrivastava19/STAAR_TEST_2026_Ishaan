@@ -468,11 +468,9 @@ function App() {
       )}
 
       {screen !== 'test' && screen !== 'login' && screen !== 'home' && (
-        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left', height: '110px', maxHeight: '110px', padding: '12px 32px' }}>
+        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left', minHeight: '110px', padding: '12px 32px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '24px', justifyContent: 'center' }}>
-            <div className="title-badge" style={{ width: '160px', height: '160px', padding: '4px', overflow: 'hidden', background: '#3b8655', borderRadius: '50%', border: '8px solid #6ccb8e', boxShadow: '0 8px 16px rgba(0,0,0,0.3)', marginBottom: '-50px' }}>
-              <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
-            </div>
+            <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '120px', height: '120px', objectFit: 'cover', borderRadius: '16px', boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }} />
             <div style={{ textAlign: 'left' }}>
               <h1 style={{ margin: 0, fontSize: '2rem', fontWeight: 900, color: '#10ac84', textTransform: 'uppercase', letterSpacing: '2px' }}>ISHAAN'S DINO JUNGLE SAFARI</h1>
             </div>
