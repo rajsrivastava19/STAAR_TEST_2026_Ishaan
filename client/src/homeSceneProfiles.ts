@@ -54,7 +54,7 @@ export const LEVELS: LevelLayout[] = [
   // L5 — Lower left
   { x: 580,  y: 700, mountainW: 250, mountainH: 220, dinoOffX: -100, dinoOffY: 90, dinoH: 150, hue: '0deg'    },
   // L6 — Left
-  { x: 390,  y: 550, mountainW: 250, mountainH: 220, dinoOffX: 100, dinoOffY: 50, dinoH: 150, hue: '-70deg'  },
+  { x: 360,  y: 590, mountainW: 250, mountainH: 220, dinoOffX: 100, dinoOffY: 50, dinoH: 150, hue: '-70deg'  },
   // L7 — Upper left
   { x: 410,  y: 380, mountainW: 250, mountainH: 220, dinoOffX: 100, dinoOffY: 50, dinoH: 150, hue: '0deg'    },
 ];
