@@ -72,7 +72,7 @@ export const LAKE = {
 
 export const HERO_BOX = {
   x: 242,
-  y: 75,
+  y: 100,
   w: 956,
   h: 175,
 };

@@ -147,8 +147,8 @@ export default function HomeScene({
           <div className="scene-header" style={{ position: 'absolute', top: 0, left: 0, width: SCENE_W, height: 110 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 24, padding: '12px 32px', height: '100%', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
-                <div className="title-badge" style={{ width: 110, height: 110, padding: 2, overflow: 'hidden', background: '#3b8655', borderRadius: '50%', border: '5px solid #6ccb8e', flexShrink: 0, boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }}>
-                  <img src={`${BASE}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%', transform: 'scale(1.3)' }} />
+                <div className="title-badge" style={{ width: 120, height: 120, padding: 2, overflow: 'hidden', background: '#3b8655', borderRadius: '50%', border: '5px solid #6ccb8e', flexShrink: 0, boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }}>
+                  <img src={`${BASE}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
                 </div>
                 <div style={{ textAlign: 'left' }}>
                   <h1 style={{ margin: 0, fontSize: '2rem', fontWeight: 900, color: '#5D4037', textTransform: 'uppercase', letterSpacing: 2 }}>ISHAAN'S DINO JUNGLE SAFARI</h1>
