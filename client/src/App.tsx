@@ -537,7 +537,7 @@ function App() {
             <input name="lastName" placeholder="Last Name" required minLength={2} className="blank-select" style={{ width: '100%' }} />
             <input name="passcode" type="password" placeholder="---- PIN ----" required pattern="\d{4}" maxLength={4} className="blank-select" style={{ width: '100%', letterSpacing: '8px', textAlign: 'center', fontSize: '1.2rem', fontWeight: 900 }} />
             
-            <p style={{ fontSize: '0.75rem', color: 'var(--text-light)', margin: 0, fontStyle: 'italic' }}>*First setup? The 4-digit PIN you enter now will permanently lock this profile.</p>
+            <p style={{ fontSize: '0.75rem', color: 'var(--text-light)', margin: 0, fontStyle: 'italic' }}>*First time login? Select any 4 Digit Pin and that will be your pin going forward.</p>
 
             <div style={{ display: 'flex', gap: '10px', marginTop: '12px' }}>
               <button type="button" className="secondary-button" style={{ flex: 1, padding: '10px' }} onClick={() => { setScreen('home'); setAuthError(null); }}>Cancel</button>
