@@ -1159,7 +1159,7 @@ function App() {
       )}
 
       {screen === 'results' && exam && results && (
-        <main className="results-layout" style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
+        <main className="results-layout" style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '-50px' }}>
           {!showReview ? (
             <section className="score-hero" style={{ position: 'relative' }}>
               <img src={`${import.meta.env.BASE_URL}dinos/dino2_trans.png`} alt="Happy Dino" className="mascot-img dino-walk" style={{ position: 'absolute', left: '-220px', top: '-20px', width: '220px', height: 'auto' }} />
