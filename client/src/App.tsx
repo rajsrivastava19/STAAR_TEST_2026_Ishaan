@@ -173,6 +173,7 @@ function App() {
   // Reset scroll position on navigation
   useEffect(() => {
     setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
       const shells = document.querySelectorAll('.page-shell, .results-layout');
       shells.forEach(s => s.scrollTo({ top: 0, behavior: 'auto' }));
     }, 10);
