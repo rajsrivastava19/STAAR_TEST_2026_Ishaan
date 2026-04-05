@@ -180,7 +180,7 @@ export default function HomeScene({
             <div className="hero-text" style={{ flex: 1 }}>
               <h2 style={{ fontSize: '2.4rem', margin: '0 0 8px 0' }}>Ready for MATH STAAR Jungle Safari!</h2>
               <p style={{ fontSize: '1.15rem', lineHeight: 1.5, margin: 0 }}>
-                Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!
+                Pick a Mountain below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!
               </p>
             </div>
           </div>
