@@ -147,8 +147,8 @@ export default function HomeScene({
           <div className="scene-header" style={{ position: 'absolute', top: 0, left: 0, width: SCENE_W, height: 80 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '8px 24px', height: '100%', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-                <div className="title-badge" style={{ width: 64, height: 64, padding: 10, overflow: 'hidden', background: '#3b8655', borderRadius: 12, border: '3px solid #6ccb8e', flexShrink: 0 }}>
-                  <img src={`${BASE}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: 8 }} />
+                <div className="title-badge" style={{ width: 72, height: 72, padding: 2, overflow: 'hidden', background: '#3b8655', borderRadius: 16, border: '4px solid #6ccb8e', flexShrink: 0 }}>
+                  <img src={`${BASE}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', transform: 'scale(1.25)' }} />
                 </div>
                 <div style={{ textAlign: 'left' }}>
                   <p style={{ margin: '0 0 4px 0', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: 1, fontWeight: 900, color: '#1b5e20' }}>ISHAAN'S DINO JUNGLE SAFARI</p>
