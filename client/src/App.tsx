@@ -468,9 +468,9 @@ function App() {
       )}
 
       {screen !== 'test' && screen !== 'login' && screen !== 'home' && (
-        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left', minHeight: '110px', padding: '12px 32px' }}>
+        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left', minHeight: '180px', padding: '12px 32px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '24px', justifyContent: 'center' }}>
-            <div className="title-badge" style={{ width: '120px', height: '120px', padding: '2px', overflow: 'hidden', background: '#3b8655', borderRadius: '50%', border: '5px solid #6ccb8e', boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }}>
+            <div className="title-badge" style={{ width: '180px', height: '180px', padding: '2px', overflow: 'hidden', background: '#3b8655', borderRadius: '50%', border: '5px solid #6ccb8e', boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }}>
               <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
             </div>
             <div style={{ textAlign: 'left' }}>
