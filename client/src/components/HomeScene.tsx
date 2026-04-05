@@ -250,12 +250,10 @@ export default function HomeScene({
                     />
 
                     {/* Flag */}
-                    {!isLocked && (
-                      <div className="mountain-flag">
-                        <div className="flag-pole" />
-                        <div className="flag-banner">Level {levelNum}</div>
-                      </div>
-                    )}
+                    <div className="mountain-flag" style={{ filter: isLocked ? 'opacity(0.6) grayscale(0.8)' : 'none' }}>
+                      <div className="flag-pole" />
+                      <div className="flag-banner">Level {levelNum}</div>
+                    </div>
 
                     {/* Mountain shape */}
                     <img
