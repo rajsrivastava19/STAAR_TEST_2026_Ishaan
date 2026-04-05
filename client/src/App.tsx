@@ -169,6 +169,15 @@ function App() {
     }
   }, []);
 
+  // Reset scroll position on navigation
+  useEffect(() => {
+    const container = document.querySelector('.page-shell');
+    if (container) {
+      container.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  }, [screen, questionIndex, showReview]);
+
+
   useEffect(() => {
     async function fetchManifest() {
       try {
