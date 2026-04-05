@@ -247,7 +247,11 @@ export default function HomeScene({
                 <button
                   className={`mountain-button ${entry.status}`}
                   onClick={() => { if (!isLocked) chooseYear(entry); }}
-                  style={{ cursor: isLocked ? 'not-allowed' : 'pointer' }}
+                  style={{ 
+                    cursor: isLocked ? 'not-allowed' : 'pointer',
+                    width: `${level.mountainW}px`,
+                    height: `${level.mountainH}px`
+                  }}
                 >
                   <div style={{ position: 'relative', width: '100%', height: '100%' }}>
                     {/* Dino */}
@@ -279,6 +283,8 @@ export default function HomeScene({
                       className="mountain-shape"
                       style={{
                         objectFit: 'contain',
+                        width: '100%',
+                        height: '100%',
                         filter: `hue-rotate(${level.hue}) saturate(${isLocked ? 0.2 : 1.2}) opacity(${isLocked ? 0.7 : 1}) grayscale(${isLocked ? 0.8 : 0})`,
                       }}
                     />
@@ -292,7 +298,7 @@ export default function HomeScene({
 
                     {/* Lock */}
                     {isLocked && (
-                      <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.8))' }}>
+                      <div style={{ position: 'absolute', top: '58%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.8))' }}>
                         <svg width="48" height="56" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect x="3" y="12" width="18" height="14" rx="3" fill="#FFD700" stroke="#D97706" strokeWidth="1.5"/>
                           <path d="M6 12V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V12" stroke="#E5E7EB" strokeWidth="2.5" strokeLinecap="round"/>
