@@ -468,14 +468,13 @@ function App() {
       )}
 
       {screen !== 'test' && screen !== 'login' && screen !== 'home' && (
-        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'center' }}>
-            <div className="title-badge" style={{ width: '72px', height: '72px', padding: '2px', overflow: 'hidden', background: '#3b8655', borderRadius: '16px', border: '4px solid #6ccb8e' }}>
-              <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', transform: 'scale(1.25)' }} />
+        <header className="site-header" style={{ flexWrap: 'wrap', justifyContent: 'space-between', textAlign: 'left', minHeight: '110px', padding: '12px 32px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '24px', justifyContent: 'center' }}>
+            <div className="title-badge" style={{ width: '88px', height: '88px', padding: '2px', overflow: 'hidden', background: '#3b8655', borderRadius: '20px', border: '5px solid #6ccb8e' }}>
+              <img src={`${import.meta.env.BASE_URL}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', transform: 'scale(1.9)' }} />
             </div>
             <div style={{ textAlign: 'left' }}>
-              <p className="eyebrow" style={{ margin: '0 0 4px 0', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '1px', fontWeight: 900, color: '#1b5e20' }}>ISHAAN'S DINO JUNGLE SAFARI</p>
-              <h1 style={{ margin: 0 }}>Math STAAR Test Prep</h1>
+              <h1 style={{ margin: 0, fontSize: '2rem', fontWeight: 900, color: '#10ac84', textTransform: 'uppercase', letterSpacing: '2px' }}>ISHAAN'S DINO JUNGLE SAFARI</h1>
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', justifyContent: 'center' }}>

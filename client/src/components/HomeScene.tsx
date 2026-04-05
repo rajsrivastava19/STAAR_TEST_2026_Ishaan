@@ -144,15 +144,14 @@ export default function HomeScene({
           />
 
           {/* ── Header bar ──────────────────────────────── */}
-          <div className="scene-header" style={{ position: 'absolute', top: 0, left: 0, width: SCENE_W, height: 80 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '8px 24px', height: '100%', justifyContent: 'space-between' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-                <div className="title-badge" style={{ width: 72, height: 72, padding: 2, overflow: 'hidden', background: '#3b8655', borderRadius: 16, border: '4px solid #6ccb8e', flexShrink: 0 }}>
-                  <img src={`${BASE}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', transform: 'scale(1.25)' }} />
+          <div className="scene-header" style={{ position: 'absolute', top: 0, left: 0, width: SCENE_W, height: 110 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 24, padding: '12px 32px', height: '100%', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+                <div className="title-badge" style={{ width: 88, height: 88, padding: 2, overflow: 'hidden', background: '#3b8655', borderRadius: 20, border: '5px solid #6ccb8e', flexShrink: 0 }}>
+                  <img src={`${BASE}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', transform: 'scale(1.9)' }} />
                 </div>
                 <div style={{ textAlign: 'left' }}>
-                  <p style={{ margin: '0 0 4px 0', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: 1, fontWeight: 900, color: '#1b5e20' }}>ISHAAN'S DINO JUNGLE SAFARI</p>
-                  <h1 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 900, color: '#5D4037' }}>Math STAAR Test Prep</h1>
+                  <h1 style={{ margin: 0, fontSize: '2rem', fontWeight: 900, color: '#5D4037', textTransform: 'uppercase', letterSpacing: 2 }}>ISHAAN'S DINO JUNGLE SAFARI</h1>
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
