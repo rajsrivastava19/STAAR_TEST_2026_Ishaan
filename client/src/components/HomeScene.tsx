@@ -307,21 +307,24 @@ export default function HomeScene({
                         </svg>
                       </div>
                     )}
-                  </div>
 
-                  {/* Status label */}
-                  {!isLocked && (
-                    <div className="mountain-info">
-                      {hasStar ? (
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.5))' }}>
+                    {/* Central Checkmark */}
+                    {hasStar && (
+                      <div style={{ position: 'absolute', top: '58%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 20, display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 6px 10px rgba(0,0,0,0.6))' }}>
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="12" cy="12" r="10" fill="#10B981" stroke="#047857" strokeWidth="2"/>
                           <path d="M7 12L10.5 15.5L18 8" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-                      ) : (
-                        <span className={`mountain-status ${entry.status}`}>
-                          {entry.status === 'playable' ? '▶ Play' : 'Draft'}
-                        </span>
-                      )}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Status label (Only show Play/Draft) */}
+                  {!isLocked && !hasStar && (
+                    <div className="mountain-info">
+                      <span className={`mountain-status ${entry.status}`}>
+                        {entry.status === 'playable' ? '▶ Play' : 'Draft'}
+                      </span>
                     </div>
                   )}
                 </button>
