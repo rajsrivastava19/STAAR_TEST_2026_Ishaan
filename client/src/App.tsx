@@ -171,10 +171,10 @@ function App() {
 
   // Reset scroll position on navigation
   useEffect(() => {
-    const container = document.querySelector('.page-shell');
-    if (container) {
-      container.scrollTo({ top: 0, behavior: 'auto' });
-    }
+    setTimeout(() => {
+      const shells = document.querySelectorAll('.page-shell, .results-layout');
+      shells.forEach(s => s.scrollTo({ top: 0, behavior: 'auto' }));
+    }, 10);
   }, [screen, questionIndex, showReview]);
 
 
