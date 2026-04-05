@@ -1162,10 +1162,10 @@ function App() {
         <main className="results-layout" style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
           {!showReview ? (
             <section className="score-hero">
-              <img src={`${import.meta.env.BASE_URL}dinos/dino2.png`} alt="Happy Dino" className="mascot-img dino-walk" style={{ marginTop: '-60px' }} />
+              <img src={`${import.meta.env.BASE_URL}dinos/dino2_trans.png`} alt="Happy Dino" className="mascot-img dino-walk" style={{ marginTop: '-80px' }} />
               <h2 style={{ fontSize: '3rem', margin: '0', color: 'var(--earth-dark)' }}>Tour Complete!</h2>
+              <p style={{ color: 'var(--earth-dark)', fontSize: '1.3rem', fontWeight: 900, margin: '8px 0 0 0' }}>You got {results.correct} Correct out of {results.total}</p>
               <div className="score-bubble" style={{ background: 'white', padding: '8px 32px', borderRadius: '32px', margin: '8px 0', border: '6px solid var(--sunshine)', fontSize: '4.5rem' }}>{results.percent}%</div>
-              <p style={{ color: 'var(--earth-dark)', fontSize: '1.3rem', fontWeight: 900, margin: '0' }}>You got {results.correct} Correct out of {results.total}</p>
               
               <div className="intro-actions" style={{ display: 'flex', gap: '16px', marginTop: '16px' }}>
                 <button className="primary-button" onClick={() => setShowReview(true)}>Review your tour answers</button>
