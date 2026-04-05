@@ -136,9 +136,9 @@ function getDinoForYear(year: number) {
 
 function App() {
   const tier = useTier();
-  const [activeUser, setActiveUser] = useState<string | null>(() => localStorage.getItem('math-staar-user') || null);
+  const [activeUser, setActiveUser] = useState<string | null>(() => sessionStorage.getItem('math-staar-user') || null);
   const [examScores, setExamScores] = useState<Record<string, number>>({});
-  const [screen, setScreen] = useState<Screen>(() => localStorage.getItem('math-staar-user') ? 'home' : 'login');
+  const [screen, setScreen] = useState<Screen>(() => sessionStorage.getItem('math-staar-user') ? 'home' : 'login');
   const [showExitModal, setShowExitModal] = useState<boolean>(false);
   const [manifest, setManifest] = useState<Manifest | null>(null);
   const [selectedYear, setSelectedYear] = useState<ManifestEntry | null>(null);
@@ -157,7 +157,7 @@ function App() {
 
   // Load user data from Firestore on mount if session is cached
   useEffect(() => {
-    const cachedUser = localStorage.getItem('math-staar-user');
+    const cachedUser = sessionStorage.getItem('math-staar-user');
     if (cachedUser) {
       setDbLoading(true);
       getUser(cachedUser).then(data => {
@@ -436,7 +436,7 @@ function App() {
             )}
             <span style={{ color: 'var(--earth-dark)', fontWeight: 800, fontFamily: '"Comic Sans MS", "Comic Sans", cursive', fontSize: '1.2rem', padding: '0 8px' }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
             <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={() => {
-              localStorage.removeItem('math-staar-user');
+              sessionStorage.removeItem('math-staar-user');
               setActiveUser(null);
               setExamScores({});
               setScreen('login');
@@ -456,7 +456,7 @@ function App() {
               alert('Please enter a valid First and Last name without spaces.');
               return;
             }
-            localStorage.setItem('math-staar-user', userId);
+            sessionStorage.setItem('math-staar-user', userId);
             setDbLoading(true);
             loginUser(userId, fn.trim(), ln.trim()).then(({ scores, history }) => {
               setActiveUser(userId);
@@ -492,7 +492,7 @@ function App() {
               onShowProgress={() => setScreen('progress')}
               onShowAdmin={() => setScreen('admin')}
               onLogout={() => {
-                localStorage.removeItem('math-staar-user');
+                sessionStorage.removeItem('math-staar-user');
                 setActiveUser(null);
                 setExamScores({});
                 setScreen('login');
@@ -542,7 +542,7 @@ function App() {
                       <thead>
                         <tr style={{ textAlign: 'left' }}>
                           <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>#</th>
-                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Exam</th>
+                          <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Tour</th>
                           <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Date</th>
                           <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Score</th>
                           <th style={{ padding: '12px 16px', fontSize: '0.85rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '0.5px', color: 'var(--text-light)' }}>Result</th>
@@ -561,7 +561,7 @@ function App() {
                           return (
                             <tr key={`${record.date}-${idx}`} style={{ background: 'rgba(255,255,255,0.6)', borderRadius: '12px' }}>
                               <td style={{ padding: '14px 16px', fontWeight: 800, color: 'var(--text-light)', borderRadius: '12px 0 0 12px' }}>{attemptHistory.length - idx}</td>
-                              <td style={{ padding: '14px 16px', fontWeight: 800, color: 'var(--earth-dark)' }}>Year {record.examYear}</td>
+                              <td style={{ padding: '14px 16px', fontWeight: 800, color: 'var(--earth-dark)' }}>Level {(manifest?.years?.findIndex((e: any) => parseInt(e.year, 10) === record.examYear) ?? 0) + 1}</td>
                               <td style={{ padding: '14px 16px', color: 'var(--text-light)', fontSize: '0.95rem' }}>
                                 <div>{dateStr}</div>
                                 <div style={{ fontSize: '0.8rem', opacity: 0.7 }}>{timeStr}</div>
