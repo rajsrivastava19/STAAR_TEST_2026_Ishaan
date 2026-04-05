@@ -144,10 +144,10 @@ export default function HomeScene({
           />
 
           {/* ── Header bar ──────────────────────────────── */}
-          <div className="scene-header" style={{ position: 'absolute', top: 0, left: 0, width: SCENE_W, height: 180 }}>
+          <div className="scene-header" style={{ position: 'absolute', top: 0, left: 0, width: SCENE_W, height: 110 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 24, padding: '12px 32px', height: '100%', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
-                <div className="title-badge" style={{ width: 180, height: 180, padding: 2, overflow: 'hidden', background: '#3b8655', borderRadius: '50%', border: '5px solid #6ccb8e', flexShrink: 0, boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }}>
+                <div className="title-badge" style={{ width: 160, height: 160, padding: 4, overflow: 'hidden', background: '#3b8655', borderRadius: '50%', border: '8px solid #6ccb8e', flexShrink: 0, boxShadow: '0 8px 16px rgba(0,0,0,0.3)', marginBottom: -50 }}>
                   <img src={`${BASE}Ishaan.png`} alt="Ishaan" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} />
                 </div>
                 <div style={{ textAlign: 'left' }}>
