@@ -183,25 +183,6 @@ export default function HomeScene({
                 Pick a trail below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!
               </p>
             </div>
-            <p style={{
-              position: 'absolute',
-              bottom: 12,
-              right: 20,
-              margin: 0,
-              padding: '8px 16px',
-              background: 'rgba(255, 240, 180, 0.95)',
-              border: '2px solid rgba(255, 180, 0, 0.9)',
-              borderRadius: 12,
-              color: '#8a6300',
-              fontWeight: 'bold',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-              textShadow: 'none',
-              fontSize: '1rem',
-              filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.4))',
-              whiteSpace: 'nowrap',
-            }}>
-              ⭐ Score at least 85% on a level to unlock the next challenge!
-            </p>
           </div>
 
           {/* ── Trail path (subtle dashed oval) ─────────── */}

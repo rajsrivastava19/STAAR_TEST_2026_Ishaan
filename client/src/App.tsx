@@ -792,6 +792,20 @@ function App() {
               <h2 style={{ fontSize: '2.5rem', color: 'var(--earth-brown)', margin: '0 0 16px 0' }}>Year {selectedYear.year} Exam</h2>
               <p style={{ fontSize: '1.2rem', marginBottom: '24px', lineHeight: '1.6' }}>Grab your backpack and get ready for an awesome math adventure! Your friendly dinosaur guides are waiting to help you stomp through these questions. Take your time, do your best, and have fun. You've got this—let's go on a jungle safari!</p>
               
+              <div style={{
+                marginBottom: '24px',
+                padding: '12px 20px',
+                background: 'rgba(255, 240, 180, 0.95)',
+                border: '2px solid rgba(255, 180, 0, 0.9)',
+                borderRadius: '12px',
+                color: '#8a6300',
+                fontWeight: 'bold',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                display: 'inline-block'
+              }}>
+                ⭐ Score at least 85% on a level to unlock the next challenge!
+              </div>
+
               {selectedYear.status === 'playable' && exam ? (
                 <>
                   <div style={{ display: 'flex', gap: '16px' }}>

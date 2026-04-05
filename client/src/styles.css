@@ -171,12 +171,6 @@ body:has(.home-scene-viewport) .page-shell {
   filter: drop-shadow(0 30px 20px rgba(0,0,0,0.6));
 }
 
-/* Scene-specific mountain sizing (1440×1080 stage)
-   Uses doubled selectors to beat html[data-tier] specificity */
-.home-scene-stage .scene-mountain .mountain-button {
-  width: 170px !important;
-  height: 220px !important;
-}
 
 /* Animations */
 @keyframes bobbing {
