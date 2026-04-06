@@ -19,6 +19,7 @@
       "itemNumber": 1,
       "itemType": "multiple_choice",
       "stem": "Which comparison is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -62,6 +63,7 @@
       "itemNumber": 2,
       "itemType": "multiple_choice",
       "stem": "Haruko did 9 sit-ups in P.E. class. The number of sit-ups Tom did can be represented by this expression.\n\n2 x 9\n\nWhich statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
@@ -104,7 +106,8 @@
       "id": "2022-03",
       "itemNumber": 3,
       "itemType": "multiple_choice",
-      "stem": "A student measured the lengths of two worms.\n\n• Worm S was <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> foot long.\n• Worm T was <img src=\"/images/2022-fraction-2-2.png\" style=\"display: inline-block; vertical-align: middle; height: 32px;\" alt=\"<span class='fraction'><span class='numerator'>2</span><span class='denominator'>2</span></span>\" /> foot long.\n\nWhich statement is true?",
+      "stem": "A student measured the lengths of two worms.\n\n• Worm S was ½ foot long.\n• Worm T was 2/2 foot long.\n\nWhich statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -148,6 +151,7 @@
       "itemNumber": 4,
       "itemType": "multiple_choice",
       "stem": "Trey is describing his labor and income. Which statement could be a description of both labor and income for Trey?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
@@ -190,7 +194,8 @@
       "id": "2022-05",
       "itemNumber": 5,
       "itemType": "griddable_numeric",
-      "stem": "The rectangular floor of Ms. Ragan's closet is completely covered with carpet squares. Each carpet square covers 1 square foot of the floor. There are 4 rows, and each row has 16 carpet squares.\n\nWhat is the area of the floor of this closet in square feet?\n\nRecord you answer in the text box provided. Be sure to use the correct place value.",
+      "stem": "The rectangular floor of Ms. Ragan's closet is completely covered with carpet squares. Each carpet square covers 1 square foot of the floor. There are 4 rows, and each row has 16 carpet squares.\n\nWhat is the area of the floor of this closet in square feet?\n\nRecord your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "64",
@@ -213,24 +218,24 @@
       "id": "2022-06",
       "itemNumber": 6,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col",
       "stem": "The numbers listed show the speed in miles per hour Henry pitched a baseball.\n\n30, 32, 38, 30, 33, 34, 32, 35, 38, 36, 35, 32, 30, 32, 35\n\nWhich dot plot represents the speed of Henry's pitches?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
-          "imageUrl": "/images/2022-06-f.png"
+          "text": "Dot plot with 1 dot for 30, 1 for 32, 1 for 33, 1 for 34, 1 for 35, 1 for 36, 1 for 38. (Incorrect frequencies)"
         },
         {
           "id": "G",
-          "imageUrl": "/images/2022-06-g.png"
+          "text": "Dot plot with 3 dots for 30, 4 for 32, 1 for 33, 1 for 34, 3 for 35, 1 for 36, 2 for 38. (Correct frequencies)"
         },
         {
           "id": "H",
-          "imageUrl": "/images/2022-06-h.png"
+          "text": "Dot plot with 2 dots for 30, 3 for 32, 1 for 33, 1 for 34, 2 for 35, 1 for 36, 1 for 38. (Incorrect frequencies)"
         },
         {
           "id": "J",
-          "imageUrl": "/images/2022-06-j.png"
+          "text": "Dot plot with 2 dots for 30, 4 for 32, 1 for 33, 1 for 34, 2 for 35, 1 for 36, 3 for 38. (Incorrect frequencies)"
         }
       ],
       "answerRule": {
@@ -258,23 +263,23 @@
       "itemNumber": 7,
       "itemType": "multiple_choice",
       "stem": "Gia lists some different methods she thinks she can use to solve the multiplication problem shown.\n\n7 x 11 = ?\n\nWhich answer choice is NOT a correct method for Gia to use?",
-      "optionsLayout": "stack",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
-          "imageUrl": "/images/2022-07-a.png"
+          "text": "Image of 7 groups of 11 blocks (7 strips of 10 and 7 individual blocks)."
         },
         {
           "id": "B",
-          "imageUrl": "/images/2022-07-b.png"
+          "text": "Image of a number line with jumps of 11 starting from 0, ending at 77."
         },
         {
           "id": "C",
-          "imageUrl": "/images/2022-07-c.png"
+          "text": "List of numbers: 11, 22, 33, 44, 55, 66, 77. (Skip counting by 11s)"
         },
         {
           "id": "D",
-          "imageUrl": "/images/2022-07-d.png"
+          "text": "List of numbers: 7, 18, 29, 40, 51, 62, 73. (Starting at 7 and adding 11 repeatedly)"
         }
       ],
       "answerRule": {
@@ -301,8 +306,8 @@
       "id": "2022-08",
       "itemNumber": 8,
       "itemType": "multiple_choice",
-      "stem": "A group of figures is shown.\n\nWhich word best describes all the figures in the group?",
-      "imageUrl": "/images/2022-08-stem.png",
+      "stem": "A group of figures is shown.\n\n[Image of three trapezoids]\n\nWhich word best describes all the figures in the group?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
@@ -345,8 +350,8 @@
       "id": "2022-09",
       "itemNumber": 9,
       "itemType": "multiple_choice",
-      "stem": "The table shows the numbers of tomato plants and spinach plants in five different gardens.\n\nBased on the relationship shown in the table, which statement is true?",
-      "imageUrl": "/images/2022-09-stem.png",
+      "stem": "The table shows the numbers of tomato plants and spinach plants in five different gardens.\n\nGarden Plants\nGarden | Number of Tomato Plants | Number of Spinach Plants\nK | 34 | 43\nL | 26 | 35\nM | 38 | 47\nN | 29 | 38\nP | 45 | 54\n\nBased on the relationship shown in the table, which statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -389,24 +394,24 @@
       "id": "2022-10",
       "itemNumber": 10,
       "itemType": "multiple_choice",
-      "stem": "The picture shows 8 seats in a movie theater. Children are sitting in a fraction of the seats.\n\nWhich expression is equivalent to the fraction of the seats that have children sitting in them?",
-      "imageUrl": "/images/2022-10-stem.png",
+      "stem": "The picture shows 8 seats in a movie theater. Children are sitting in a fraction of the seats.\n\n[Image of 8 movie seats, 3 with children, 5 empty]\n\nWhich expression is equivalent to the fraction of the seats that have children sitting in them?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>"
+          "text": "1/8 + 1/8 + 1/8 + 1/8 + 1/8 + 1/8 + 1/8 + 1/8"
         },
         {
           "id": "G",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>"
+          "text": "1/3 + 1/3 + 1/3"
         },
         {
           "id": "H",
-          "text": "<span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span>"
+          "text": "3/8 + 3/8 + 3/8"
         },
         {
           "id": "J",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>"
+          "text": "1/8 + 1/8 + 1/8"
         }
       ],
       "answerRule": {
@@ -420,11 +425,11 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which expression is equivalent to the fraction of the seats that have children sitting in them, the student could have first determined the fraction of the model represented by each seat. Because there are a total of 8 seats, each seat is <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> of the seats in the movie theater. The student then should have counted the number of children sitting in seats and written an expression that represents the fraction of seats that have children sitting in them. Because there are 3 children sitting in seats and each seat is <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> of the seats in the row, the total fraction of seats with children sitting in them can be expressed as <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>.",
+        "correctExplanation": "To determine which expression is equivalent to the fraction of the seats that have children sitting in them, the student could have first determined the fraction of the model represented by each seat. Because there are a total of 8 seats, each seat is 1/8 of the seats in the movie theater. The student then should have counted the number of children sitting in seats and written an expression that represents the fraction of seats that have children sitting in them. Because there are 3 children sitting in seats and each seat is 1/8 of the seats in the row, the total fraction of seats with children sitting in them can be expressed as 1/8 + 1/8 + 1/8.",
         "incorrectOptionExplanations": {
-          "F": "The student likely formed the fraction representing each seat (<span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>) correctly but then incorrectly counted all the seats in the row instead of just the seats with children sitting in them. The student needs to focus on understanding how to determine the denominator (bottom number of a fraction) of the fraction represented by a given model.",
+          "F": "The student likely formed the fraction representing each seat (1/8) correctly but then incorrectly counted all the seats in the row instead of just the seats with children sitting in them. The student needs to focus on understanding how to determine the denominator (bottom number of a fraction) of the fraction represented by a given model.",
           "G": "The student likely formed the fractions by using the total number of children in the row instead of the total number of seats in the row as the denominator (bottom number of a fraction). The student needs to focus on understanding how to determine the numerator (top number of a fraction) and denominator (bottom number of a fraction) of the fraction represented by a given model.",
-          "H": "The student likely recognized that <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span> of the seats in the movie theater had children sitting in them but did not recognize that only one instance of <span class='fraction'><span class='numerator'>3</span><span class='denominator'>8</span></span> was needed in the expression. The student needs to focus on understanding how to determine the numerator (top number of a fraction) and denominator (bottom number of a fraction) of the fraction represented by a given model."
+          "H": "The student likely recognized that 3/8 of the seats in the movie theater had children sitting in them but did not recognize that only one instance of 3/8 was needed in the expression. The student needs to focus on understanding how to determine the numerator (top number of a fraction) and denominator (bottom number of a fraction) of the fraction represented by a given model."
         },
         "remediationTip": "Practice representing fractions using models and writing equivalent addition expressions for unit fractions."
       }
@@ -434,6 +439,7 @@
       "itemNumber": 11,
       "itemType": "multiple_choice",
       "stem": "Which number sentence can be used to find the number that goes in the box?\n\n12 ÷ 2 = ?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -477,23 +483,23 @@
       "itemNumber": 12,
       "itemType": "multiple_choice",
       "stem": "Janet has 2 new games.\n\n• Each game has 3 packs of cards.\n• Each pack has 10 cards.\n\nWhich model can be used to find the total number of cards Janet has for these 2 games?",
-      "optionsLayout": "stack",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
-          "imageUrl": "/images/2022-12-f.png"
+          "text": "Two separate strip diagrams. Each diagram has 3 sections, and each section is labeled \"10\"."
         },
         {
           "id": "G",
-          "imageUrl": "/images/2022-12-g.png"
+          "text": "Two separate strip diagrams. Each diagram has 3 sections, and each section is labeled \"3\"."
         },
         {
           "id": "H",
-          "imageUrl": "/images/2022-12-h.png"
+          "text": "Two separate strip diagrams. Each diagram has 2 sections, labeled \"3\" and \"10\"."
         },
         {
           "id": "J",
-          "imageUrl": "/images/2022-12-j.png"
+          "text": "Two separate strip diagrams. Each diagram has 1 section labeled \"10\"."
         }
       ],
       "answerRule": {
@@ -521,23 +527,23 @@
       "itemNumber": 13,
       "itemType": "multiple_choice",
       "stem": "Leighton made a table that correctly shows the attributes of shapes. She used a check mark to identify the attributes of each shape.\n\nWhich table could be the one Leighton made?",
-      "optionsLayout": "grid_2col",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
-          "imageUrl": "/images/2022-13-a.png"
+          "text": "Table A: Rectangle (Has Vertices: ✓, Quadrilateral: ✓), Triangle (Has Vertices: ✓, Quadrilateral: ✓), Circle (Has Vertices: , Quadrilateral: )"
         },
         {
           "id": "B",
-          "imageUrl": "/images/2022-13-b.png"
+          "text": "Table B: Rectangle (Has Vertices: ✓, Quadrilateral: ), Triangle (Has Vertices: ✓, Quadrilateral: ✓), Circle (Has Vertices: ✓, Quadrilateral: )"
         },
         {
           "id": "C",
-          "imageUrl": "/images/2022-13-c.png"
+          "text": "Table C: Rectangle (Has Vertices: ✓, Quadrilateral: ✓), Triangle (Has Vertices: ✓, Quadrilateral: ), Circle (Has Vertices: , Quadrilateral: )"
         },
         {
           "id": "D",
-          "imageUrl": "/images/2022-13-d.png"
+          "text": "Table D: Rectangle (Has Vertices: , Quadrilateral: ✓), Triangle (Has Vertices: ✓, Quadrilateral: ), Circle (Has Vertices: , Quadrilateral: )"
         }
       ],
       "answerRule": {
@@ -564,7 +570,8 @@
       "id": "2022-14",
       "itemNumber": 14,
       "itemType": "griddable_numeric",
-      "stem": "A group of people bought tickets for a roller-coaster ride.\n\n• The group spent $4 for each ticket.\n• Altogether the group spent $48 on tickets.\n• Each person in the group got 2 tickets.\n\nHow many people were in the group?\n\nRecord your answer in the text box provided. Be sure to use the correct place value.",
+      "stem": "A group of people bought tickets for a roller-coaster ride.\n\n• The group spent $4 for each ticket.\n• Altogether the group spent $48 on tickets.\n• Each person in the group got 2 tickets.\n\nHow many people were in the group?\n\nRecord your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "6",
@@ -587,24 +594,24 @@
       "id": "2022-15",
       "itemNumber": 15,
       "itemType": "multiple_choice",
-      "stem": "Carter and Dane shared a package of 8 baseballs equally.\n\nWhat fraction of the package of baseballs did each person get?",
-      "imageUrl": "/images/2022-15-stem.png",
+      "stem": "Carter and Dane shared a package of 8 baseballs equally.\n\n[Image of 8 baseballs in a row]\n\nWhat fraction of the package of baseballs did each person get?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
-          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>"
+          "text": "2/8"
         },
         {
           "id": "B",
-          "text": "<span class='fraction'><span class='numerator'>4</span><span class='denominator'>4</span></span>"
+          "text": "4/4"
         },
         {
           "id": "C",
-          "text": "<span class='fraction'><span class='numerator'>4</span><span class='denominator'>1</span></span>"
+          "text": "4/1"
         },
         {
           "id": "D",
-          "text": "<span class='fraction'><span class='numerator'>4</span><span class='denominator'>8</span></span>"
+          "text": "4/8"
         }
       ],
       "answerRule": {
@@ -620,8 +627,8 @@
       "rationale": {
         "correctExplanation": "To determine what fraction of the package of baseballs each person received, the student could have calculated the number of baseballs each person received. The 8 baseballs were shared equally by 2 people; therefore, each person received 4 out of the 8 baseballs. The fraction represents 4 out of 8. The numerator (top number of a fraction) represents the number of baseballs each person received, and the denominator (bottom number of a fraction) represents the total number of baseballs. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
         "incorrectOptionExplanations": {
-          "A": "The student likely formed the fraction <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> because 2 people shared the 8 baseballs. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
-          "B": "The student likely formed the fraction <span class='fraction'><span class='numerator'>4</span><span class='denominator'>4</span></span> because each person received 4 baseballs. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
+          "A": "The student likely formed the fraction 2/8 because 2 people shared the 8 baseballs. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
+          "B": "The student likely formed the fraction 4/4 because each person received 4 baseballs. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
           "C": "The student likely determined that each person received 4 baseballs and understood that 4 is the value of the numerator, but the student did not know how to determine the value of the denominator. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts."
         },
         "remediationTip": "Review the concept of fractions, understanding that the numerator is the part and the denominator is the total whole, especially in sharing contexts."
@@ -631,8 +638,8 @@
       "id": "2022-16",
       "itemNumber": 16,
       "itemType": "multiple_choice",
-      "stem": "Each side of this figure is the same length. The perimeter of the figure is 72 inches.\n\nWhat is the length of one side of the figure in inches?",
-      "imageUrl": "/images/2022-16-stem.png",
+      "stem": "Each side of this figure is the same length. The perimeter of the figure is 72 inches.\n\n[Image of an octagon]\n\nWhat is the length of one side of the figure in inches?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
@@ -676,6 +683,7 @@
       "itemNumber": 17,
       "itemType": "multiple_choice",
       "stem": "A movie theater has 710 seats.\n\n• 158 seats are red.\n• 247 seats are black.\n• 119 seats are yellow.\n• The rest of the seats are green.\n\nHow many seats are green?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -718,8 +726,8 @@
       "id": "2022-18",
       "itemNumber": 18,
       "itemType": "multiple_choice",
-      "stem": "Ms. González is putting square stickers on a rectangular poster. Each sticker has an area of 1 square inch. She has already put some stickers on the poster as shown.\n\nWhat is the area of the entire poster in square inches?",
-      "imageUrl": "/images/2022-18-stem.png",
+      "stem": "Ms. González is putting square stickers on a rectangular poster. Each sticker has an area of 1 square inch. She has already put some stickers on the poster as shown.\n\n[Image of a partial rectangular grid of stickers, showing 7 rows and 8 columns of spaces, with the first column and first row of 8 stickers filled.]\n\nWhat is the area of the entire poster in square inches?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
@@ -762,8 +770,8 @@
       "id": "2022-19",
       "itemNumber": 19,
       "itemType": "multiple_choice",
-      "stem": "Four students with number cards want to line up from left to right in order from least to greatest number.\n\nWhich statement is true?",
-      "imageUrl": "/images/2022-19-stem.png",
+      "stem": "Four students with number cards want to line up from left to right in order from least to greatest number.\n\nLeft → Right\nErin: 9,975\nRico: 90,096\nPenelope: 98,300\nOlivia: 98,087\n\nWhich statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -806,8 +814,8 @@
       "id": "2022-20",
       "itemNumber": 20,
       "itemType": "multiple_choice",
-      "stem": "Dahlia sold pineapples at a fruit stand. The table shows the number of pineapples Dahlia had for sale each week and the number of customers she expected to come to her fruit stand.\n\nIn which week did Dahlia most likely sell her pineapples for the highest price?",
-      "imageUrl": "/images/2022-20-stem.png",
+      "stem": "Dahlia sold pineapples at a fruit stand. The table shows the number of pineapples Dahlia had for sale each week and the number of customers she expected to come to her fruit stand.\n\nDahlia's Pineapples\nWeek | Number of Pineapples | Number of Expected Customers\nWeek 1 | 110 | 50\nWeek 2 | 150 | 150\nWeek 3 | 200 | 40\nWeek 4 | 25 | 50\n\nIn which week did Dahlia most likely sell her pineapples for the highest price?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
@@ -851,23 +859,23 @@
       "itemNumber": 21,
       "itemType": "multiple_choice",
       "stem": "The total number of keys on a computer keyboard is 87.\n\n• There are 26 letter keys and 21 special symbol keys on the keyboard.\n• The rest of the keys are function keys.\n\nWhich model represents one way to find the number of function keys on the keyboard?",
-      "optionsLayout": "stack",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
-          "imageUrl": "/images/2022-21-a.png"
+          "text": "A number line from 0 to 90. Sections labeled: Function, Special symbol, Letter."
         },
         {
           "id": "B",
-          "imageUrl": "/images/2022-21-b.png"
+          "text": "A bar representing 87. Subsections labeled: 26, 21, ?."
         },
         {
           "id": "C",
-          "imageUrl": "/images/2022-21-c.png"
+          "text": "A number line from 0 to 90. Sections labeled: Special symbol, Letter, Function."
         },
         {
           "id": "D",
-          "imageUrl": "/images/2022-21-d.png"
+          "text": "A bar with 3 subsections: 26, 21, 87, with '?' representing the total."
         }
       ],
       "answerRule": {
@@ -895,23 +903,23 @@
       "itemNumber": 22,
       "itemType": "multiple_choice",
       "stem": "Chris built a fort using prisms. Which figure is NOT one Chris could have used to build his fort?",
-      "optionsLayout": "grid_2col",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
-          "imageUrl": "/images/2022-22-f.png"
+          "text": "Image of a cube (rectangular prism)"
         },
         {
           "id": "G",
-          "imageUrl": "/images/2022-22-g.png"
+          "text": "Image of a triangular prism"
         },
         {
           "id": "H",
-          "imageUrl": "/images/2022-22-h.png"
+          "text": "Image of a rectangular prism"
         },
         {
           "id": "J",
-          "imageUrl": "/images/2022-22-j.png"
+          "text": "Image of a square pyramid"
         }
       ],
       "answerRule": {
@@ -938,7 +946,8 @@
       "id": "2022-23",
       "itemNumber": 23,
       "itemType": "multiple_choice",
-      "stem": "What number goes in the □ to make the equation true?\n\n□ × 7 = 98",
+      "stem": "What number goes in the [box] to make the equation true?\n\n[box] × 7 = 98",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -981,7 +990,8 @@
       "id": "2022-24",
       "itemNumber": 24,
       "itemType": "griddable_numeric",
-      "stem": "An expression is shown.\n\n5 + 700 + 40\n\nWhat number is equivalent to this expression?\n\nRecord your answer in the text box provided. Be sure to use the correct place value.",
+      "stem": "An expression is shown.\n\n5 + 700 + 40\n\nWhat number is equivalent to this expression?\n\nRecord your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "745",
@@ -1004,8 +1014,8 @@
       "id": "2022-25",
       "itemNumber": 25,
       "itemType": "multiple_choice",
-      "stem": "Greg had a package of 14 stars to put on the 2 posters shown. He put the same number of stars on each poster, and he used all the stars in the package.\n\nHow many stars did Greg put on each poster?",
-      "imageUrl": "/images/2022-25-stem.png",
+      "stem": "Greg had a package of 14 stars to put on the 2 posters shown. He put the same number of stars on each poster, and he used all the stars in the package.\n\n[Image of two blank posters, Poster 1 and Poster 2]\n\nHow many stars did Greg put on each poster?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -1048,24 +1058,24 @@
       "id": "2022-26",
       "itemNumber": 26,
       "itemType": "multiple_choice",
-      "stem": "The fraction strips shown can be used to find equivalent fractions.\n\nWhich fraction is equivalent to <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>?",
-      "imageUrl": "/images/2022-26-stem.png",
+      "stem": "The fraction strips shown can be used to find equivalent fractions.\n\n[Image of fraction strips: a whole, halves, thirds, fourths, sixths, eighths]\n\nWhich fraction is equivalent to 2/4?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span>"
+          "text": "1/2"
         },
         {
           "id": "G",
-          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span>"
+          "text": "2/6"
         },
         {
           "id": "H",
-          "text": "<span class='fraction'><span class='numerator'>3</span><span class='denominator'>4</span></span>"
+          "text": "3/4"
         },
         {
           "id": "J",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>"
+          "text": "1/3"
         }
       ],
       "answerRule": {
@@ -1079,7 +1089,7 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine the fraction equivalent to <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>, the student could have shaded 2 of the 4 parts in the fourth row of the strip diagram to represent <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span> and 1 of the 2 parts in the second row of the strip diagram to represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span>. The student then could have recognized that since the strip diagrams are the same size and the shaded area of the fourth row is the same as the shaded area of the second row, the fractions represented are equivalent.",
+        "correctExplanation": "To determine the fraction equivalent to 2/4, the student could have shaded 2 of the 4 parts in the fourth row of the strip diagram to represent 2/4 and 1 of the 2 parts in the second row of the strip diagram to represent 1/2. The student then could have recognized that since the strip diagrams are the same size and the shaded area of the fourth row is the same as the shaded area of the second row, the fractions represented are equivalent.",
         "incorrectOptionExplanations": {
           "G": "The student likely recognized that the numerators (top numbers of the fractions) are the same and ignored the denominators (bottom numbers of the fractions). The student needs to focus on understanding how to represent equivalent fractions on strip diagrams.",
           "H": "The student likely recognized that the denominators (bottom numbers of the fractions) are the same and ignored the numerators (top numbers of the fractions). The student needs to focus on understanding how to represent equivalent fractions on strip diagrams.",
@@ -1092,8 +1102,8 @@
       "id": "2022-27",
       "itemNumber": 27,
       "itemType": "multiple_choice",
-      "stem": "Shelly needs tickets for rides at an amusement park. The table shows the numbers of tickets needed to ride different numbers of rides.\n\nBased on the relationship shown in the table, which statement is true?",
-      "imageUrl": "/images/2022-27-stem.png",
+      "stem": "Shelly needs tickets for rides at an amusement park. The table shows the numbers of tickets needed to ride different numbers of rides.\n\nAmusement Park Rides\nNumber of Tickets | Number of Rides\n6 | 3\n12 | 6\n18 | 9\n24 | 12\n\nBased on the relationship shown in the table, which statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -1137,6 +1147,7 @@
       "itemNumber": 28,
       "itemType": "multiple_choice",
       "stem": "Which statement about the number 27 is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
@@ -1179,24 +1190,24 @@
       "id": "2022-29",
       "itemNumber": 29,
       "itemType": "multiple_choice",
-      "stem": "Derrick drew two congruent figures and then shaded <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> of each figure.\n\nWhich figures could be the ones Derrick drew and shaded?",
-      "optionsLayout": "grid_2col",
+      "stem": "Derrick drew two congruent figures and then shaded ¼ of each figure.\n\nWhich figures could be the ones Derrick drew and shaded?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
-          "imageUrl": "/images/2022-29-a.png"
+          "text": "Two congruent circles. Left circle divided into 4 equal parts, 1 shaded. Right circle divided into 2 parts, 1 shaded."
         },
         {
           "id": "B",
-          "imageUrl": "/images/2022-29-b.png"
+          "text": "Two rectangles, not congruent. Each divided into 4 equal parts, 1 shaded."
         },
         {
           "id": "C",
-          "imageUrl": "/images/2022-29-c.png"
+          "text": "Two congruent star shapes, each divided into 5 equal parts, 1 shaded."
         },
         {
           "id": "D",
-          "imageUrl": "/images/2022-29-d.png"
+          "text": "Two congruent rectangles. Each divided into 4 equal parts, 1 shaded."
         }
       ],
       "answerRule": {
@@ -1210,7 +1221,7 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which pair of figures could be the ones Derrick drew and shaded, the student could have recognized that the figures must be congruent (same shape and size) and that <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> of each figure must be shaded. This option shows two congruent rectangles that are each divided into 4 equal-sized parts with 1 part shaded, representing the fraction <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>.",
+        "correctExplanation": "To determine which pair of figures could be the ones Derrick drew and shaded, the student could have recognized that the figures must be congruent (same shape and size) and that 1/4 of each figure must be shaded. This option shows two congruent rectangles that are each divided into 4 equal-sized parts with 1 part shaded, representing the fraction 1/4.",
         "incorrectOptionExplanations": {
           "A": "The student likely recognized that the figures are congruent circles and that 1 part of each circle is shaded. However, only one of the figures is divided into 4 equal-sized parts. The student needs to focus on understanding that the parts of a fraction model must be equal in size to represent a fraction of the total number of pieces.",
           "B": "The student likely recognized that the figures are divided into 4 equal-sized parts and that 1 part is shaded. However, the figures are not congruent (same size and same shape). The student needs to focus on understanding that figures are not congruent unless they are the same shape and size.",
@@ -1224,6 +1235,7 @@
       "itemNumber": 30,
       "itemType": "multiple_choice",
       "stem": "Alex bought 4 packages of pink golf balls and 2 packages of orange golf balls. There were 12 golf balls in each package.\n\nHow many golf balls did Alex buy?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",
@@ -1266,25 +1278,24 @@
       "id": "2022-31",
       "itemNumber": 31,
       "itemType": "multiple_choice",
-      "stem": "The pictograph shows the number of games each team in a volleyball league won during one season.\n\nWhich table represents the data in the pictograph?",
-      "imageUrl": "/images/2022-31-stem.png",
-      "optionsLayout": "stack",
+      "stem": "The pictograph shows the number of games each team in a volleyball league won during one season.\n\nVolleyball Games Won\n[Pictograph with volleyball icons]\nSpikes: 4 icons\nAces: 3 icons\nStars: 5 icons\nNets: 2 icons\nDigs: 1 icon\nEach [volleyball icon] means 3 games won.\n\nWhich table represents the data in the pictograph?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
-          "imageUrl": "/images/2022-31-a.png"
+          "text": "Table A: Spikes 12, Aces 15, Stars 9, Nets 6, Digs 3"
         },
         {
           "id": "B",
-          "imageUrl": "/images/2022-31-b.png"
+          "text": "Table B: Spikes 4, Aces 3, Stars 5, Nets 2, Digs 1"
         },
         {
           "id": "C",
-          "imageUrl": "/images/2022-31-c.png"
+          "text": "Table C: Spikes 12, Aces 9, Stars 15, Nets 6, Digs 3"
         },
         {
           "id": "D",
-          "imageUrl": "/images/2022-31-d.png"
+          "text": "Table D: Spikes 4, Aces 5, Stars 3, Nets 2, Digs 1"
         }
       ],
       "answerRule": {
@@ -1312,6 +1323,7 @@
       "itemNumber": 32,
       "itemType": "multiple_choice",
       "stem": "At the beginning of September, Mr. Watkins had 543 erasers.\n\n• During September he gave his students 99 of the erasers.\n• During October he gave his students 212 of the erasers.\n\nHow many erasers did Mr. Watkins have at the end of October?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "F",

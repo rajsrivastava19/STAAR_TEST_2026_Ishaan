@@ -19,7 +19,7 @@
       "itemNumber": 1,
       "itemType": "multiple_choice",
       "stem": "Which list shows the numbers in order from greatest to least value?",
-
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -51,9 +51,9 @@
       "rationale": {
         "correctExplanation": "To determine the list that shows the numbers in order from greatest (largest) to least (smallest), the student should have compared the digits in each place value for each number. Since 58,702 and 50,716 both have five digits and 581 only has three digits, 581 must be the number with the least value, making its correct position in the list last. Next the student should have compared the digits in the ten-thousands place (leftmost digits) in 58,702 and 50,716 and determined that the digits represented the same value. Then the student should have compared the digits in the thousands place (second digits from the left) in 58,702 and 50,716 and determined that, since 8 is greater than 0, the number 58,702 is the greatest number and should come first in the list. The student should have determined that the list in order from greatest to least has 58,702 first, 50,716 second, and 581 last.",
         "incorrectOptionExplanations": {
-          "A": "The student likely understood that because 38,945 has five digits and 9,052 and 9,181 each have only four digits, 38,945 is the greatest number and should come first in the list. The student likely then compared the digits in the ones place (rightmost digits) for 9,052 and 9,181, concluding that 9,052 should come second in the list. The student should have started comparing the digits in the thousands place (leftmost digits) for 9,052 and 9,181 and then used the same method to compare the digits in the hundreds place (second digits from the left).",
-          "B": "The student identified a list of numbers in order from least to greatest instead of from greatest to least as directed.",
-          "D": "The student likely compared the leftmost digits in 6,092 and 60,019, incorrectly thinking that both digits were in the ten-thousands place. Then the student likely compared the values of the last three digits in each number. The student should have understood that the digit 6 in 6,092 is in the thousands place, the digit 6 in 60,019 is in the ten-thousands place, and 6 thousands is less than 6 ten-thousands, making 60,019 the number that should come first in the list."
+          "A": "The student likely understood that because 38,945 has five digits and 9,052 and 9,181 each have only four digits, 38,945 is the greatest number and should come first in the list. The student likely then compared the digits in the ones place (rightmost digits) for 9,052 and 9,181, concluding that 9,052 should come second in the list. The student should have started comparing the digits in the thousands place (leftmost digits) for 9,052 and 9,181 and then used the same method to compare the digits in the hundreds place (second digits from the left).  The student needs to focus onunderstanding how to order whole numbers from greatest to least value.",
+          "B": "The student identified a list of numbers in order from least to greatest instead of from greatest to least as directed.  The student needs to focus on attending to the details of the question in problems that order whole numbers.",
+          "D": "The student likely compared the leftmost digits in 6,092 and 60,019, incorrectly thinking that both digits were in the ten-thousands place. Then the student likely compared the values of the last three digits in each number. The student should have understood that the digit 6 in 6,092 is in the thousands place, the digit 6 in 60,019 is in the ten-thousands place, and 6 thousands is less than 6 ten-thousands, making 60,019 the number that should come first in the list.  The student needs tofocus on understanding how to order whole numbers from greatest to least value."
         },
         "remediationTip": "To correctly order whole numbers from greatest to least, compare digits in each place value from left to right, starting with the largest place value. Pay close attention to the number of digits in each number."
       }
@@ -105,29 +105,23 @@
       "id": "2019-03",
       "itemNumber": 3,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col_vertical",
-      "stem": "Alberto ran for exercise every day for 16 days. The table shows how many days he ran each distance.\nWhich dot plot represents these data?",
-      "imageUrl": "/images/2019-3-stem.png",
+      "stem": "Alberto ran for exercise every day for 16 days. The table shows how many days he ran each distance.\n[Table with columns: Distance (miles) and Number of Days. Rows: 1 mile (2 days), 1 1/2 miles (5 days), 2 miles (3 days), 2 1/2 miles (4 days), 3 miles (2 days).]\nWhich dot plot represents these data?",
       "options": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/images/2019-3-A.png"
+          "text": "Dot plot A shows 2 dots at 1 mile, 5 dots at 1 1/2 miles, 3 dots at 2 miles, 4 dots at 2 1/2 miles, and 2 dots at 3 miles."
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/images/2019-3-B.png"
+          "text": "Dot plot B shows 2 dots at 1 mile, 4 dots at 1 1/2 miles, 3 dots at 2 miles, 5 dots at 2 1/2 miles, and 2 dots at 3 miles."
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": "/images/2019-3-C.png"
+          "text": "Dot plot C shows 2 dots at 1 mile, 5 dots at 1 1/2 miles, 3 dots at 2 miles, 5 dots at 2 1/2 miles, and 2 dots at 3 miles."
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/images/2019-3-D.png"
+          "text": "Dot plot D shows 1 dot for each unique distance value (1, 1 1/2, 2, 2 1/2, 3 miles)."
         }
       ],
       "answerRule": {
@@ -141,10 +135,10 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine the correct dot plot (graph that uses dots to display data), the student should have counted the number of tally marks in the table for each distance. Then the student should have chosen the dot plot that has dots matching the number of tally marks for each distance (two dots for 1 mile, five dots for <span class='fraction'><span class='numerator'>11</span><span class='denominator'>2</span></span> miles, three dots for 2 miles, four dots for <span class='fraction'><span class='numerator'>21</span><span class='denominator'>2</span></span> miles, and two dots for 3 miles).",
+        "correctExplanation": "To determine the correct dot plot (graph that uses dots to display data), the student should have counted the number of tally marks in the table for each distance. Then the student should have chosen the dot plot that has dots matching the number of tally marks for each distance (two dots for 1 mile, five dots for 1½ miles, three dots for 2 miles, four dots for 2½ miles, and two dots for 3 miles).",
         "incorrectOptionExplanations": {
-          "B": "The student likely miscounted the numbers of dots on the dot plot for <span class='fraction'><span class='numerator'>11</span><span class='denominator'>2</span></span> miles and <span class='fraction'><span class='numerator'>21</span><span class='denominator'>2</span></span> miles.",
-          "C": "The student reversed the data for <span class='fraction'><span class='numerator'>11</span><span class='denominator'>2</span></span> miles and <span class='fraction'><span class='numerator'>21</span><span class='denominator'>2</span></span> miles, choosing the dot plot with four instead of five dots for <span class='fraction'><span class='numerator'>11</span><span class='denominator'>2</span></span> miles and five instead of four dots for <span class='fraction'><span class='numerator'>21</span><span class='denominator'>2</span></span> miles.",
+          "B": "The student likely miscounted the numbers of dots on the dot plot for 1½ miles and 2½ miles.",
+          "C": "The student reversed the data for 1½ miles and 2½ miles, choosing the dot plot with four instead of five dots for 1½ miles and five instead of four dots for 2½ miles.",
           "D": "The student chose a dot plot with one dot for each unique value instead of a dot plot with a dot for each occurrence of a value in the table."
         },
         "remediationTip": "When creating or interpreting a dot plot, ensure that each dot accurately represents one occurrence of a value in the data set. Double-check counts for each data point."
@@ -198,7 +192,7 @@
       "itemNumber": 5,
       "itemType": "griddable_numeric",
       "stem": "Serafina put a total of 42 cupcakes into packages. She put 6 cupcakes into each package.\nWhat is the total number of packages Serafina used for these cupcakes?",
-      "directions": "Record you answer in the text box provided. Be sure to use the correct place value.",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "7",
@@ -268,19 +262,19 @@
       "options": [
         {
           "id": "A",
-          "text": "256 - 50 - 87 = ?"
+          "text": "256 - 50 - 87 = [box]"
         },
         {
           "id": "B",
-          "text": "256 + 50 + 87 = ?"
+          "text": "256 + 50 + 87 = [box]"
         },
         {
           "id": "C",
-          "text": "250 - 50 + 87 = ?"
+          "text": "250 - 50 + 87 = [box]"
         },
         {
           "id": "D",
-          "text": "256 + 50 - 87 = ?"
+          "text": "256 + 50 - 87 = [box]"
         }
       ],
       "answerRule": {
@@ -294,7 +288,7 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine the equation that can be used to find the amount of money Freddie had in his bank account after taking out money on Tuesday, the student should have first identified the equations that began with Freddie's starting amount of $256. Then the student should have chosen the equation using addition ( + ) for the $50 Freddie put into his account and subtraction (-) for the $87 Freddie took out of his account (256 + 50 – 87 = ?).",
+        "correctExplanation": "To determine the equation that can be used to find the amount of money Freddie had in his bank account after taking out money on Tuesday, the student should have first identified the equations that began with Freddie's starting amount of $256. Then the student should have chosen the equation using addition ( + ) for the $50 Freddie put into his account and subtraction (-) for the $87 Freddie took out of his account (256 + 50 – 87 = [box]).",
         "incorrectOptionExplanations": {
           "A": "The student likely thought that subtraction should be used instead of addition for the $50 Freddie put into his account. The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
           "B": "The student likely thought that addition should be used instead of subtraction for the $87 Freddie took out of his account. The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
@@ -307,12 +301,11 @@
       "id": "2019-08",
       "itemNumber": 8,
       "itemType": "multiple_choice",
-      "stem": "Brandon drew the two congruent squares shown.\n• He divided one square into 2 congruent triangular parts.\n• He divided the other square into 2 congruent rectangular parts.\nWhich statement is true?",
-      "imageUrl": "/images/2019-8-stem.png",
+      "stem": "Brandon drew the two congruent squares shown.\n[Two congruent squares are shown. The left square is divided into two congruent triangular parts. The right square is divided into two congruent rectangular parts.]\n• He divided one square into 2 congruent triangular parts.\n• He divided the other square into 2 congruent rectangular parts.\nWhich statement is true?",
       "options": [
         {
           "id": "F",
-          "text": "Each triangular part and each rectangular part represents <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> the area of one square."
+          "text": "Each triangular part and each rectangular part represents 1/2 the area of one square."
         },
         {
           "id": "G",
@@ -320,7 +313,7 @@
         },
         {
           "id": "H",
-          "text": "Each triangular part and each rectangular part represents <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> the area of one square."
+          "text": "Each triangular part and each rectangular part represents 1/4 the area of one square."
         },
         {
           "id": "J",
@@ -338,7 +331,7 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which statement is true, the student should have understood that dividing a square into 2 congruent (same size and shape) triangular parts results in parts that are each <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> the area of (amount of space covered by) the whole square. The student should have also understood that dividing a square into 2 congruent rectangular parts also results in parts that are each <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> of the area of the whole square.",
+        "correctExplanation": "To determine which statement is true, the student should have understood that dividing a square into 2 congruent (same size and shape) triangular parts results in parts that are each 1/2 the area of (amount of space covered by) the whole square. The student should have also understood that dividing a square into 2 congruent rectangular parts also results in parts that are each 1/2 of the area of the whole square.",
         "incorrectOptionExplanations": {
           "G": "The student likely thought that the triangular parts looked bigger than the rectangular parts. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction.",
           "H": "The student likely understood that figures can be divided in different ways to represent the same fraction but confused the fraction represented when each square was divided into 2 congruent parts. The student needs to focus on understanding how to express the area of a part of a whole figure as a fraction.",
@@ -351,8 +344,7 @@
       "id": "2019-09",
       "itemNumber": 9,
       "itemType": "multiple_choice",
-      "stem": "Felix swam, rode his bike, and ran in a race.\n• He spent 19 minutes swimming.\n• He spent 21 minutes riding his bike.\n• He spent 30 minutes running.\nWhat was the total amount of time Felix spent swimming, riding his bike, and running in this race?",
-      "imageUrl": "/images/2019-9-stem.png",
+      "stem": "Felix swam, rode his bike, and ran in a race.\n• He spent 19 minutes swimming.\n• He spent 21 minutes riding his bike.\n• He spent 30 minutes running.\n[Image of a clock face with hands at 12, numbers 1-12, and 60 minute marks around the edge.]\nWhat was the total amount of time Felix spent swimming, riding his bike, and running in this race?",
       "options": [
         {
           "id": "A",
@@ -395,28 +387,23 @@
       "id": "2019-10",
       "itemNumber": 10,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col",
       "stem": "There are 8 oranges in each bag for sale at a store. Which table shows the relationship between the number of bags and the number of oranges in the bags?",
       "options": [
         {
           "id": "F",
-          "text": "",
-          "imageUrl": "/images/2019-10-F.png"
-        },
-        {
-          "id": "G",
-          "text": "",
-          "imageUrl": "/images/2019-10-G.png"
+          "text": "Table F shows (2 bags, 8 oranges), (3 bags, 16 oranges), (4 bags, 24 oranges), (5 bags, 32 oranges)."
         },
         {
           "id": "H",
-          "text": "",
-          "imageUrl": "/images/2019-10-H.png"
+          "text": "Table H shows (2 bags, 10 oranges), (3 bags, 11 oranges), (4 bags, 12 oranges), (5 bags, 13 oranges)."
+        },
+        {
+          "id": "G",
+          "text": "Table G shows (2 bags, 16 oranges), (3 bags, 24 oranges), (4 bags, 32 oranges), (5 bags, 40 oranges)."
         },
         {
           "id": "J",
-          "text": "",
-          "imageUrl": "/images/2019-10-J.png"
+          "text": "Table J shows (2 bags, 16 oranges), (3 bags, 32 oranges), (4 bags, 64 oranges), (5 bags, 128 oranges)."
         }
       ],
       "answerRule": {
@@ -443,28 +430,23 @@
       "id": "2019-11",
       "itemNumber": 11,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col",
-      "stem": "Which figure CANNOT be classified as a prism?",
+      "stem": "Which figure CANNOT be classified as a prism?\n[Four 3D figures are shown.]",
       "options": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/images/2019-11-A.png"
+          "text": "Figure A: A cube (rectangular prism)."
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": "/images/2019-11-C.png"
+          "text": "Figure C: A cylinder."
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/images/2019-11-B.png"
+          "text": "Figure B: A triangular prism."
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/images/2019-11-D.png"
+          "text": "Figure D: A rectangular prism."
         }
       ],
       "answerRule": {
@@ -534,24 +516,23 @@
       "id": "2019-13",
       "itemNumber": 13,
       "itemType": "multiple_choice",
-      "stem": "Fraction strips are shown.\nWhich comparison and explanation are true?",
-      "imageUrl": "/images/2019-13-stem.png",
+      "stem": "Fraction strips are shown.\n[Fraction strip model showing a whole, a strip divided into 6 equal parts, and a strip divided into 8 equal parts. 5 parts are shaded in the 'sixths' strip, and 5 parts are shaded in the 'eighths' strip.]\nWhich comparison and explanation are true?",
       "options": [
         {
           "id": "A",
-          "text": "<span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> < <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>, because eighths are larger than sixths"
+          "text": "5/6 < 5/8, because eighths are larger than sixths"
         },
         {
           "id": "B",
-          "text": "<span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> < <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>, because sixths are larger than eighths"
+          "text": "5/6 < 5/8, because sixths are larger than eighths"
         },
         {
           "id": "C",
-          "text": "<span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> > <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>, because eighths are larger than sixths"
+          "text": "5/6 > 5/8, because eighths are larger than sixths"
         },
         {
           "id": "D",
-          "text": "<span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> > <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>, because sixths are larger than eighths"
+          "text": "5/6 > 5/8, because sixths are larger than eighths"
         }
       ],
       "answerRule": {
@@ -565,11 +546,11 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which comparison and explanation are true, the student could have colored in 5 of the 6 parts in the second row of the fraction strip model to represent <span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> and 5 of the 8 parts in the third row of the model to represent <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>. The student should have recognized that <span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> of a row is greater than (>) <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span> of a row. The student also should have recognized that the parts in the second row of the model (sixths) are larger than the parts in the third row of the model (eighths), so <span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> > <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>, because sixths are larger than eighths.",
+        "correctExplanation": "To determine which comparison and explanation are true, the student could have colored in 5 of the 6 parts in the second row of the fraction strip model to represent 5/6 and 5 of the 8 parts in the third row of the model to represent 5/8. The student should have recognized that 5/6 of a row is greater than (>) 5/8 of a row. The student also should have recognized that the parts in the second row of the model (sixths) are larger than the parts in the third row of the model (eighths), so 5/6 > 5/8, because sixths are larger than eighths.",
         "incorrectOptionExplanations": {
-          "A": "The student likely compared the 8 and 6 in the denominators (bottom numbers) of the fractions, found that 6 is less than (<) 8, and made the incorrect assumption that eighths are larger than sixths. The student likely did not use the fraction strip model to compare eighths to sixths.",
-          "B": "The student likely confused the comparison symbol for greater than (>) with the comparison symbol for less than (<) when comparing <span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> and <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span>. The student needs to focus on understanding how to use comparison symbols to compare fractions.",
-          "C": "The student likely used the comparison symbol correctly to compare <span class='fraction'><span class='numerator'>5</span><span class='denominator'>6</span></span> and <span class='fraction'><span class='numerator'>5</span><span class='denominator'>8</span></span> but did not pay attention to the explanation of why the comparison is true. The student needs to focus on using words to describe why comparisons of fractions are true."
+          "A": "The student likely compared the 8 and 6 in the denominators (bottom numbers) of the fractions, found that 6 is less than (<) 8, and made the incorrect assumption that eighths are larger than sixths. The student likely did not use the fraction strip model to compare eighths to sixths. Thestudent needs to focus on understanding how to compare fractions with the same numerator (top number) but different denominators.",
+          "B": "The student likely confused the comparison symbol for greater than (>) with the comparison symbol for less than (<) when comparing 5/6 and 5/8. The student needs to focus on understanding how to use comparison symbols to compare fractions.",
+          "C": "The student likely used the comparison symbol correctly to compare 5/6 and 5/8 but did not pay attention to the explanation of why the comparison is true. The student needs to focus on using words to describe why comparisons of fractions are true."
         },
         "remediationTip": "When comparing fractions with the same numerator, the fraction with the smaller denominator represents larger pieces, and therefore a larger total amount. Use fraction strips or visual models to confirm."
       }
@@ -578,9 +559,8 @@
       "id": "2019-14",
       "itemNumber": 14,
       "itemType": "griddable_numeric",
-      "stem": "Gina's journal has a square cover with the side length shown.\nWhat is the perimeter of the cover of Gina's journal in centimeters?",
-      "imageUrl": "/images/2019-14-stem.png",
-      "directions": "Record you answer in the text box provided. Be sure to use the correct place value.",
+      "stem": "Gina's journal has a square cover with the side length shown.\n[Image of a square with a letter 'G' inside a heart, and one side labeled '24 cm'.]\nWhat is the perimeter of the cover of Gina's journal in centimeters?",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "96",
@@ -646,8 +626,7 @@
       "id": "2019-16",
       "itemNumber": 16,
       "itemType": "multiple_choice",
-      "stem": "The shaded figure on the grid represents Erin's rectangular lawn.\nWhat is the area in square meters of Erin's lawn?",
-      "imageUrl": "/images/2019-16-stem.png",
+      "stem": "The shaded figure on the grid represents Erin's rectangular lawn.\n[Image of a grid with a shaded rectangle. The rectangle is 6 units high and 12 units wide. A key shows ' = 1 square meter'.]\nWhat is the area in square meters of Erin's lawn?",
       "options": [
         {
           "id": "F",
@@ -690,8 +669,7 @@
       "id": "2019-17",
       "itemNumber": 17,
       "itemType": "multiple_choice",
-      "stem": "Models R and T are shown.\nWhich statement is true?",
-      "imageUrl": "/images/2019-17-stem.png",
+      "stem": "Models R and T are shown.\n[Model R is a circle divided into 5 parts, one large part is shaded and the other 4 are smaller and unshaded. Model T is a circle divided into 4 equal parts, one part is shaded.]\nWhich statement is true?",
       "options": [
         {
           "id": "A",
@@ -699,15 +677,15 @@
         },
         {
           "id": "B",
-          "text": "The shaded part of Model R cannot be written as the fraction <span class='fraction'><span class='numerator'>1</span><span class='denominator'>5</span></span>, because the parts are not all equal in size."
+          "text": "The shaded part of Model R cannot be written as the fraction 1/5, because the parts are not all equal in size."
         },
         {
           "id": "C",
-          "text": "The shaded part of Model T is <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>, because the parts are all equal in size."
+          "text": "The shaded part of Model T is 1/4, because the parts are all equal in size."
         },
         {
           "id": "D",
-          "text": "The total number of parts in Model R is 5, so <span class='fraction'><span class='numerator'>1</span><span class='denominator'>5</span></span> of Model R is shaded."
+          "text": "The total number of parts in Model R is 5, so 1/5 of Model R is shaded."
         }
       ],
       "answerRule": {
@@ -721,9 +699,9 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which statement is true, the student should have identified the shaded part of Model R as larger than the other parts. Then the student should have understood that, in order for <span class='fraction'><span class='numerator'>1</span><span class='denominator'>5</span></span> of the model to be shaded, 1 of 5 equal-size parts would have to be shaded.",
+        "correctExplanation": "To determine which statement is true, the student should have identified the shaded part of Model R as larger than the other parts. Then the student should have understood that, in order for 1/5 of the model to be shaded, 1 of 5 equal-size parts would have to be shaded.",
         "incorrectOptionExplanations": {
-          "A": "The student likely did not consider that the shaded parts of Model R and Model T must be the same size to represent the same fraction of the whole (<span class='fraction'><span class='numerator'>1</span><span class='denominator'>5</span></span>). The student needs to focus on understanding that the parts of a fraction model must be equal in size to represent a fraction of the total number of pieces.",
+          "A": "The student likely did not consider that the shaded parts of Model R and Model T must be the same size to represent the same fraction of the whole (1/5). The student needs to focus on understanding that the parts of a fraction model must be equal in size to represent a fraction of the total number of pieces.",
           "C": "The student likely considered the denominator (bottom number) of the fraction represented by Model T to be 4 because there are 4 unshaded parts. The student needs to focus on understanding that a fraction is composed of a numerator (top number) represented by designated parts (shaded parts in this problem) and a denominator that is equal to the total number of parts in a whole.",
           "D": "The student likely did not consider that the shaded part of Model R is not 1 of 5 equal-size parts and composed the fraction represented by Model R as 1 shaded part out of a total of 5 parts. The student needs to focus on understanding that the parts of a fraction model must be equal in size to represent a fraction of the total number of pieces."
         },
@@ -734,8 +712,7 @@
       "id": "2019-18",
       "itemNumber": 18,
       "itemType": "multiple_choice",
-      "stem": "A group of 27 students played a game with the hoops shown. An equal number of the students shared each hoop.\nHow many students shared each hoop?",
-      "imageUrl": "/images/2019-18-stem.png",
+      "stem": "A group of 27 students played a game with the hoops shown. An equal number of the students shared each hoop.\n[Image showing 9 hoops arranged in a 3x3 grid.]\nHow many students shared each hoop?",
       "options": [
         {
           "id": "F",
@@ -778,24 +755,23 @@
       "id": "2019-19",
       "itemNumber": 19,
       "itemType": "multiple_choice",
-      "stem": "Point P on the number line represents two equivalent fractions.\nWhich two equivalent fractions can point P represent?",
-      "imageUrl": "/images/2019-19-stem.png",
+      "stem": "Point P on the number line represents two equivalent fractions.\n[Image of a number line from 0 to 1, divided into 4 equal sections. Point P is at the end of the first section.]\nWhich two equivalent fractions can point P represent?",
       "options": [
         {
           "id": "A",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> and <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>"
+          "text": "1/4 and 1/8"
         },
         {
           "id": "B",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span>"
+          "text": "1/3 and 2/6"
         },
         {
           "id": "C",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> and <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>"
+          "text": "1/4 and 2/8"
         },
         {
           "id": "D",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> and <span class='fraction'><span class='numerator'>3</span><span class='denominator'>4</span></span>"
+          "text": "1/4 and 3/4"
         }
       ],
       "answerRule": {
@@ -809,11 +785,11 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine the equivalent fractions that point P can represent, the student could have first identified that point P was located at the end of the first section of 4 same-size sections between 0 and 1 on the number line, or <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> of the way from 0 to 1. Then the student could have added marks at the midpoints (halfway points) of each section to divide the number line into eighths and recognized that point P can also represent a location that is <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> of the way from 0 to 1.",
+        "correctExplanation": "To determine the equivalent fractions that point P can represent, the student could have first identified that point P was located at the end of the first section of 4 same-size sections between 0 and 1 on the number line, or 1/4 of the way from 0 to 1. Then the student could have added marks at the midpoints (halfway points) of each section to divide the number line into eighths and recognized that point P can also represent a location that is 2/8 of the way from 0 to 1.",
         "incorrectOptionExplanations": {
-          "A": "The student likely identified that point P can represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> but did not know how to find the equivalent fraction with a denominator (bottom number) of 8. The student likely chose <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> and another fraction with the same numerator (top number) of 1. The student needs to focus on understanding how to represent equivalent fractions on number lines.",
-          "B": "The student likely identified that point P is located at the end of the first section from 0 on the number line, identified that there are three sections between point P and 1, and thought the fraction represented was <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> instead of <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>. Then the student likely found the midpoints of the sections on the number line, counted the number of sections between 0 and point P (2), and counted the number of sections between point P and 1 (6) to determine that the fraction <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> is equivalent to <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections.",
-          "D": "The student likely identified that point P can represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> but did not understand how to find an equivalent fraction. The student likely chose <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> and another fraction with the same denominator (bottom number) of 4. The student needs to focus on understanding how to represent equivalent fractions on number lines."
+          "A": "The student likely identified that point P can represent 1/4 but did not know how to find the equivalent fraction with a denominator (bottom number) of 8. The student likely chose 1/4 and another fraction with the same numerator (top number) of 1. The student needs to focus on understanding how to represent equivalent fractions on number lines.",
+          "B": "The student likely identified that point P is located at the end of the first section from 0 on the number line, identified that there are three sections between point P and 1, and thought the fraction represented was 1/3 instead of 1/4. Then the student likely found the midpoints of the sections on the number line, counted the number of sections between 0 and point P (2), and counted the number of sections between point P and 1 (6) to determine that the fraction 2/6 is equivalent to 1/3. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections.",
+          "D": "The student likely identified that point P can represent 1/4 but did not understand how to find an equivalent fraction. The student likely chose 1/4 and another fraction with the same denominator (bottom number) of 4. The student needs to focus on understanding how to represent equivalent fractions on number lines."
         },
         "remediationTip": "To find equivalent fractions on a number line, divide each existing section into smaller equal parts. The new fraction will have a larger denominator but represent the same point if the numerator is also scaled proportionally."
       }
@@ -822,8 +798,7 @@
       "id": "2019-20",
       "itemNumber": 20,
       "itemType": "multiple_choice",
-      "stem": "There are 6 photographs on each page of an album. One page of the album is shown.\nHow many photographs are on 9 pages of the album?",
-      "imageUrl": "/images/2019-20-stem.png",
+      "stem": "There are 6 photographs on each page of an album. One page of the album is shown.\n[Image showing a page of an album with 6 photographs arranged in a 2x3 grid. The photos show various people and a dog.]\nHow many photographs are on 9 pages of the album?",
       "options": [
         {
           "id": "F",
@@ -866,8 +841,7 @@
       "id": "2019-21",
       "itemNumber": 21,
       "itemType": "multiple_choice",
-      "stem": "Four people at a snack bar each bought a drink. The table shows the amount of money each person gave the cashier and the amount of money each person got back in change.\nBased on the relationship shown in the table, which statement is true?",
-      "imageUrl": "/images/2019-21-stem.png",
+      "stem": "Four people at a snack bar each bought a drink. The table shows the amount of money each person gave the cashier and the amount of money each person got back in change.\n[Table with columns: Name, Amount Given to Cashier (cents), Amount of Change (cents). Rows: Caleb (55, 3), Andrew (60, 8), Morgan (75, 23), Trish (100, 48).]\nBased on the relationship shown in the table, which statement is true?",
       "options": [
         {
           "id": "A",
@@ -910,29 +884,23 @@
       "id": "2019-22",
       "itemNumber": 22,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col",
-      "stem": "A school keeps boxes of paper of different colors in a room. The table shows how many boxes of each color are in the room.\nWhich answer choice does NOT represent the information in the table?",
-      "imageUrl": "/images/2019-22-stem.png",
+      "stem": "A school keeps boxes of paper of different colors in a room. The table shows how many boxes of each color are in the room.\n[Table: Boxes of Paper with columns Color (White, Yellow, Blue, Red) and Number (48, 24, 42, 18).]\nWhich answer choice does NOT represent the information in the table?",
       "options": [
         {
           "id": "F",
-          "text": "",
-          "imageUrl": "/images/2019-22-F.png"
+          "text": "Pictograph with tally marks: White (9 bundles of 5, plus 3), Yellow (4 bundles of 5, plus 4), Blue (8 bundles of 5, plus 2), Red (3 bundles of 5, plus 3)."
         },
         {
           "id": "H",
-          "text": "",
-          "imageUrl": "/images/2019-22-H.png"
+          "text": "Bar graph: White (48), Yellow (24), Blue (46), Red (16)."
         },
         {
           "id": "G",
-          "text": "",
-          "imageUrl": "/images/2019-22-G.png"
+          "text": "Pictograph with box icons: White (4 boxes), Yellow (2 boxes), Blue (3 1/2 boxes), Red (1 1/2 boxes). Key: Each box means 12 boxes."
         },
         {
           "id": "J",
-          "text": "",
-          "imageUrl": "/images/2019-22-J.png"
+          "text": "Pictograph with box icons: White (8 boxes), Yellow (4 boxes), Blue (7 boxes), Red (3 boxes). Key: Each box means 6 boxes."
         }
       ],
       "answerRule": {
@@ -1003,7 +971,7 @@
       "itemNumber": 24,
       "itemType": "griddable_numeric",
       "stem": "Samantha, Gordon, and Diego each brought an ice chest to a picnic.\n• The weight of Samantha's ice chest was 83 pounds.\n• The weight of Gordon's ice chest was 28 pounds.\n• The weight of Diego's ice chest was 37 pounds.\nWhat was the difference in pounds between the weight of Samantha's ice chest and the combined weight of Gordon's and Diego's ice chests?",
-      "directions": "Record you answer in the text box provided. Be sure to use the correct place value.",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "18",
@@ -1026,8 +994,7 @@
       "id": "2019-25",
       "itemNumber": 25,
       "itemType": "multiple_choice",
-      "stem": "A model of Mr. Estrada's rectangular calculator is shown. Use the ruler provided to measure the length and width of the calculator to the nearest centimeter.\nWhich measurement is closest to the perimeter of the calculator in centimeters?",
-      "imageUrl": "/images/2019-25-stem.png",
+      "stem": "A model of Mr. Estrada's rectangular calculator is shown. Use the ruler provided to measure the length and width of the calculator to the nearest centimeter.\n[Image of a calculator and a partial ruler for measurement. The calculator measures approximately 10 cm in length and 6 cm in width.]\nWhich measurement is closest to the perimeter of the calculator in centimeters?",
       "options": [
         {
           "id": "A",
@@ -1199,27 +1166,23 @@
       "id": "2019-29",
       "itemNumber": 29,
       "itemType": "multiple_choice",
-      "stem": "Javier rode his bike a distance of <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> mile from his house. On which number line does point J represent Javier's position after riding his bike?",
+      "stem": "Javier rode his bike a distance of 1/2 mile from his house. On which number line does point J represent Javier's position after riding his bike?",
       "options": [
         {
           "id": "A",
-          "text": "",
-          "imageUrl": "/images/2019-29-A.png"
+          "text": "Number line A shows point J at 1/4 between 0 and 1 mile, with 4 equal sections marked."
         },
         {
           "id": "B",
-          "text": "",
-          "imageUrl": "/images/2019-29-B.png"
+          "text": "Number line B shows point J exactly halfway between 0 and 1 mile, with 2 equal sections marked."
         },
         {
           "id": "C",
-          "text": "",
-          "imageUrl": "/images/2019-29-C.png"
+          "text": "Number line C shows point J at 2/3 of the way between 0 and 1 mile, with 3 equal sections marked after J."
         },
         {
           "id": "D",
-          "text": "",
-          "imageUrl": "/images/2019-29-D.png"
+          "text": "Number line D shows point J at 1/2 of the way between 0 and 1 mile, but the numbering starts from the right (1 mile on the left, 0 on the right)."
         }
       ],
       "answerRule": {
@@ -1233,11 +1196,11 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine the number line on which point J represents a position that is <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> mile from 0, or Javier's house, the student should have found the point that is at the end of the first of 2 same-size sections from 0 to the 1-mile mark, or halfway between 0 and the 1-mile mark.",
+        "correctExplanation": "To determine the number line on which point J represents a position that is 1/2 mile from 0, or Javier's house, the student should have found the point that is at the end of the first of 2 same-size sections from 0 to the 1-mile mark, or halfway between 0 and the 1-mile mark.",
         "incorrectOptionExplanations": {
-          "A": "The student likely considered the fraction <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> to be represented on a number line as a point at the end of the first section from 0 with 2 same-size sections between point J and the 1-mile mark. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections.",
+          "A": "The student likely considered the fraction 1/2 to be represented on a number line as a point at the end of the first section from 0 with 2 same-size sections between point J and the 1-mile mark. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections.",
           "C": "The student likely considered only the numerator (top number) of the fraction and found the number line where point J was one section back from the 1-mile mark. The student needs to focus on understanding that a fraction is composed of a numerator and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections. The student also needs to focus on moving from left to right on a number line with representing fractions.",
-          "D": "The student likely moved from right to left on the number line and considered the fraction <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> to be represented on a number line as a point at the end of the first section from 1 with 2 same-size sections between point J and 0. The student needs to focus on moving from left to right on a number line when representing fractions. The student also needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections."
+          "D": "The student likely moved from right to left on the number line and considered the fraction 1/2 to be represented on a number line as a point at the end of the first section from 1 with 2 same-size sections between point J and 0. The student needs to focus on moving from left to right on a number line when representing fractions. The student also needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections."
         },
         "remediationTip": "When representing fractions on a number line from 0 to 1, the denominator indicates the total number of equal parts the line is divided into, and the numerator indicates how many of those parts to count from 0."
       }
@@ -1246,8 +1209,7 @@
       "id": "2019-30",
       "itemNumber": 30,
       "itemType": "multiple_choice",
-      "stem": "The figures shown can be sorted into groups.\nWhich list shows a correct way to group these figures?",
-      "imageUrl": "/images/2019-30-stem.png",
+      "stem": "The figures shown can be sorted into groups.\n[Image showing five geometric figures: a pentagon, a parallelogram, a triangle, a trapezoid, and a rectangle.]\nWhich list shows a correct way to group these figures?",
       "options": [
         {
           "id": "F",
@@ -1290,8 +1252,7 @@
       "id": "2019-31",
       "itemNumber": 31,
       "itemType": "multiple_choice",
-      "stem": "Dana used the money shown to buy a snack.\nWhat amount of money did Dana use to buy the snack?",
-      "imageUrl": "/images/2019-31-stem.png",
+      "stem": "Dana used the money shown to buy a snack.\n[Image of a dollar bill and several coins: one $1 bill, one quarter ($0.25), one nickel ($0.05), and two pennies ($0.01 each).]\nWhat amount of money did Dana use to buy the snack?",
       "options": [
         {
           "id": "A",
@@ -1338,23 +1299,19 @@
       "options": [
         {
           "id": "F",
-          "text": "",
-          "imageUrl": "/images/2019-32-F.png"
+          "text": "Strip diagram F shows 11 equal sections, each labeled '11'. The total is unknown ('?')."
         },
         {
           "id": "G",
-          "text": "",
-          "imageUrl": "/images/2019-32-G.png"
+          "text": "Strip diagram G shows two sections labeled '2' and '2'. The total is unknown ('?')."
         },
         {
           "id": "H",
-          "text": "",
-          "imageUrl": "/images/2019-32-H.png"
+          "text": "Strip diagram H shows two sections labeled '2' and '11'. The total is unknown ('?')."
         },
         {
           "id": "J",
-          "text": "",
-          "imageUrl": "/images/2019-32-J.png"
+          "text": "Strip diagram J shows 11 equal sections, each labeled '2'. The total is unknown ('?')."
         }
       ],
       "answerRule": {

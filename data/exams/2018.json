@@ -19,7 +19,7 @@
       "itemNumber": 1,
       "itemType": "multiple_choice",
       "stem": "Nina works for a restaurant. The restaurant pays her every week for the work she does. Some weeks she works more hours than other weeks.\nWhich statement is most likely true?",
-
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
       "options": [
         {
           "id": "A",
@@ -62,24 +62,23 @@
       "id": "2018-02",
       "itemNumber": 2,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col_vertical",
       "stem": "A band plays 8 songs at every show. Last year the band had 8 shows.\nWhich model can be used to find the number of songs the band played at shows last year?",
       "options": [
         {
           "id": "F",
-          "imageUrl": "/images/2018-2-F.png"
+          "text": "An array of music notes with 2 rows and 8 columns (total 16 music notes)."
         },
         {
           "id": "G",
-          "imageUrl": "/images/2018-2-G.png"
+          "text": "An array of music notes with 8 rows and 6 columns (total 48 music notes)."
         },
         {
           "id": "H",
-          "imageUrl": "/images/2018-2-H.png"
+          "text": "An array of music notes with 8 rows and 2 columns (total 16 music notes)."
         },
         {
           "id": "J",
-          "imageUrl": "/images/2018-2-J.png"
+          "text": "An array of music notes with 8 rows and 8 columns (total 64 music notes)."
         }
       ],
       "answerRule": {
@@ -107,31 +106,6 @@
       "itemNumber": 3,
       "itemType": "multiple_choice",
       "stem": "Gretchen made this table to show the side lengths and perimeters of three figures.\nWhat mistake, if any, did Gretchen make?",
-      "table": {
-        "title": "Gretchen's Figures",
-        "headers": [
-          "Figure",
-          "Side Lengths (yards)",
-          "Perimeter (yards)"
-        ],
-        "rows": [
-          [
-            "Square",
-            "6, 6, 6, 6",
-            24
-          ],
-          [
-            "Triangle",
-            "4, 7, 8",
-            19
-          ],
-          [
-            "Rectangle",
-            "4, 8, 4, 8",
-            32
-          ]
-        ]
-      },
       "options": [
         {
           "id": "A",
@@ -175,7 +149,6 @@
       "itemNumber": 4,
       "itemType": "multiple_choice",
       "stem": "Which of these models represent the same number?",
-      "imageUrl": "/images/2018-04.png",
       "options": [
         {
           "id": "F",
@@ -219,7 +192,7 @@
       "itemNumber": 5,
       "itemType": "griddable_numeric",
       "stem": "Lin has a total of 36 sodas in packs. There are 6 sodas in each pack. How many packs of sodas does Lin have?",
-      "directions": "Record you answer in the text box provided. Be sure to use the correct place value.",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "6",
@@ -243,23 +216,22 @@
       "itemNumber": 6,
       "itemType": "multiple_choice",
       "stem": "The number lines model two different fractions.\nWhich comparison of these fractions is true?",
-      "imageUrl": "/images/2018-06.png",
       "options": [
         {
           "id": "F",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> > <span class='fraction'><span class='numerator'>1</span><span class='denominator'>1</span></span>"
+          "text": "1/2 > 1/1"
         },
         {
           "id": "G",
-          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> > <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>"
+          "text": "2/8 > 1/8"
         },
         {
           "id": "H",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> = <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>"
+          "text": "1/8 = 2/8"
         },
         {
           "id": "J",
-          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> < <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>"
+          "text": "2/8 < 1/8"
         }
       ],
       "answerRule": {
@@ -273,9 +245,9 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which comparison is true, the student should have written a fraction for each model by counting the number of jumps and the total number of intervals (sections) between 0 and 1. The number of jumps is the numerator (top number) of each fraction. The total number of intervals between 0 and 1 is the denominator (bottom number) of each fraction. The first model has 2 jumps out of 8 intervals (<span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span>). The second model has 1 jump out of 8 intervals (<span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>). Since the denominators are equal, the student should have compared the numerators; 2 is greater than 1, therefore <span class='fraction'><span class='numerator'>2</span><span class='denominator'>8</span></span> > <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>.",
+        "correctExplanation": "To determine which comparison is true, the student should have written a fraction for each model by counting the number of jumps and the total number of intervals (sections) between 0 and 1. The number of jumps is the numerator (top number) of each fraction. The total number of intervals between 0 and 1 is the denominator (bottom number) of each fraction. The first model has 2 jumps out of 8 intervals (2/8). The second model has 1 jump out of 8 intervals (1/8). Since the denominators are equal, the student should have compared the numerators; 2 is greater than 1, therefore 2/8 > 1/8.",
         "incorrectOptionExplanations": {
-          "F": "The student likely used the 1 labeled on the number line as the numerator and the number of jumps as the denominator for each fraction (<span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> and <span class='fraction'><span class='numerator'>1</span><span class='denominator'>1</span></span>). The student then likely chose that <span class='fraction'><span class='numerator'>1</span><span class='denominator'>2</span></span> is greater than <span class='fraction'><span class='numerator'>1</span><span class='denominator'>1</span></span> because 2 > 1. The student needs to focus on understanding fractional relationships and how they can be represented by models.",
+          "F": "The student likely used the 1 labeled on the number line as the numerator and the number of jumps as the denominator for each fraction (1/2 and 1/1). The student then likely chose that 1/2 is greater than 1/1 because 2 > 1. The student needs to focus on understanding fractional relationships and how they can be represented by models.",
           "H": "The student correctly wrote the two fractions but then likely only compared the denominators (8) and determined the two fractions are equal. The student needs to focus on understanding numerators, denominators, and how they relate.",
           "J": "The student correctly wrote the two fractions but then likely misinterpreted the < symbol to mean “greater than.” The student needs to focus on understanding how to use greater than and less than symbols to compare numbers."
         },
@@ -287,30 +259,6 @@
       "itemNumber": 7,
       "itemType": "multiple_choice",
       "stem": "The table shows the relationship between the number of toy airplanes made in a factory and the number of batteries needed for the airplanes.\nBased on the relationship shown in the table, which statement is true?",
-      "table": {
-        "title": "Batteries for Toy Airplanes",
-        "orientation": "horizontal",
-        "rows": [
-          [
-            "Number of Toy Airplanes",
-            5,
-            7,
-            9,
-            11,
-            13,
-            15
-          ],
-          [
-            "Number of Batteries",
-            15,
-            21,
-            27,
-            33,
-            39,
-            45
-          ]
-        ]
-      },
       "options": [
         {
           "id": "A",
@@ -354,7 +302,6 @@
       "itemNumber": 8,
       "itemType": "multiple_choice",
       "stem": "Four fraction models are shown.\nWhich two models are shaded to show equivalent fractions?",
-      "imageUrl": "/images/2018-08.png",
       "options": [
         {
           "id": "F",
@@ -384,10 +331,10 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine equivalent fractions from the models, the student should have written a fraction for each model. The number of shaded parts is the numerator (top number) and the total number of parts is the denominator (bottom number) of each fraction. Model 1 shows <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>, Model 2 shows <span class='fraction'><span class='numerator'>4</span><span class='denominator'>6</span></span>, Model 3 shows <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>, and Model 4 shows <span class='fraction'><span class='numerator'>4</span><span class='denominator'>4</span></span>. To determine the fractions that are equivalent, the total shaded area (space covered by the shaded parts) for each model is compared. In Models 1 and 2, the shaded parts cover the same amount of space, therefore <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> = <span class='fraction'><span class='numerator'>4</span><span class='denominator'>6</span></span>.",
+        "correctExplanation": "To determine equivalent fractions from the models, the student should have written a fraction for each model. The number of shaded parts is the numerator (top number) and the total number of parts is the denominator (bottom number) of each fraction. Model 1 shows 2/3, Model 2 shows 4/6, Model 3 shows 1/3, and Model 4 shows 4/4. To determine the fractions that are equivalent, the total shaded area (space covered by the shaded parts) for each model is compared. In Models 1 and 2, the shaded parts cover the same amount of space, therefore 2/3 = 4/6.",
         "incorrectOptionExplanations": {
-          "G": "The student likely determined Models 1 and 3 have a total of three parts and chose them as equivalent. The student likely did not count the shaded parts in each model to write the fractions (<span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> and <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>) and likely did not compare the shaded areas of the models. The student needs to focus on understanding how to compare fractions represented by area models.",
-          "H": "The student likely counted four shaded parts in Model 2 and Model 4 and chose them as equivalent. The student likely did not count the total number of parts to use as the denominators in the fractions represented by the models. The student likely did not understand that 4 out of 6 parts (<span class='fraction'><span class='numerator'>4</span><span class='denominator'>6</span></span>) is less than 4 out of 4 parts (<span class='fraction'><span class='numerator'>4</span><span class='denominator'>4</span></span>). The student needs to focus on understanding how fractions are represented by area models and how numerators relate to denominators in fractions.",
+          "G": "The student likely determined Models 1 and 3 have a total of three parts and chose them as equivalent. The student likely did not count the shaded parts in each model to write the fractions (2/3 and 1/3) and likely did not compare the shaded areas of the models. The student needs to focus on understanding how to compare fractions represented by area models.",
+          "H": "The student likely counted four shaded parts in Model 2 and Model 4 and chose them as equivalent. The student likely did not count the total number of parts to use as the denominators in the fractions represented by the models. The student likely did not understand that 4 out of 6 parts (4/6) is less than 4 out of 4 parts (4/4). The student needs to focus on understanding how fractions are represented by area models and how numerators relate to denominators in fractions.",
           "J": "The student likely compared the unshaded parts in Model 3 to the shaded parts in Model 2, and concluded they covered the same amount of space. The student needs to focus on understanding how to compare fractions represented by area models."
         },
         "remediationTip": "To find equivalent fractions using models, compare the *amount* of shaded space, not just the number of shaded parts or total parts. Remember that different denominators can represent the same value if the relationship between numerator and denominator is proportional."
@@ -398,7 +345,6 @@
       "itemNumber": 9,
       "itemType": "multiple_choice",
       "stem": "The figures shown can be sorted into groups.\nWhich list shows a correct way to group the figures?",
-      "imageUrl": "/images/2018-09.png",
       "options": [
         {
           "id": "A",
@@ -484,24 +430,23 @@
       "id": "2018-11",
       "itemNumber": 11,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col",
       "stem": "The list shows the number of ribbons of each color that a school ordered for a science fair.\n• 12 blue\n• 18 red\n• 36 green\n• 60 purple\nWhich pictograph best represents the information in the list?",
       "options": [
         {
           "id": "A",
-          "imageUrl": "/images/2018-11-A.png"
+          "text": "Pictograph where each ribbon icon means 4 ribbons. Blue: 3 icons, Red: 5 icons, Green: 9 icons, Purple: 15 icons."
         },
         {
           "id": "B",
-          "imageUrl": "/images/2018-11-B.png"
+          "text": "Pictograph where each ribbon icon means 6 ribbons. Blue: 2 icons, Red: 3 icons, Green: 6 icons, Purple: 9 icons."
         },
         {
           "id": "C",
-          "imageUrl": "/images/2018-11-C.png"
+          "text": "Pictograph where each ribbon icon means 12 ribbons. Blue: 1 icon, Red: 1.5 icons, Green: 3 icons, Purple: 5 icons."
         },
         {
           "id": "D",
-          "imageUrl": "/images/2018-11-D.png"
+          "text": "Pictograph where each ribbon icon means 9 ribbons. Blue: ~1.33 icons, Red: 2 icons, Green: 4 icons, Purple: ~6.66 icons."
         }
       ],
       "answerRule": {
@@ -532,19 +477,19 @@
       "options": [
         {
           "id": "F",
-          "text": "572 - ? = 98"
+          "text": "572 - [box] = 98"
         },
         {
           "id": "G",
-          "text": "572 - 98 = ?"
+          "text": "572 - 98 = [box]"
         },
         {
           "id": "H",
-          "text": "98 + ? = 572"
+          "text": "98 + [box] = 572"
         },
         {
           "id": "J",
-          "text": "98 + 572 = ?"
+          "text": "98 + 572 = [box]"
         }
       ],
       "answerRule": {
@@ -558,7 +503,7 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which equation is NOT true (false), the student should have identified the addition or subtraction equation that does not fit the situation. The problem indicates that Tyrese sold some of his cards, so 572 was decreased. The equation 98 + 572 = ? is NOT true because Tyrese started with 572 cards and ended with 98. The equation 98 + 572 = ? indicates that Tyrese increased his number of cards. The other equations all have a solution of 474, the number of cards Tyrese sold.",
+        "correctExplanation": "To determine which equation is NOT true (false), the student should have identified the addition or subtraction equation that does not fit the situation. The problem indicates that Tyrese sold some of his cards, so 572 was decreased. The equation 98 + 572 = [box] is NOT true because Tyrese started with 572 cards and ended with 98. The equation 98 + 572 = [box] indicates that Tyrese increased his number of cards. The other equations all have a solution of 474, the number of cards Tyrese sold.",
         "incorrectOptionExplanations": {
           "F": "The student identified an equation that is true instead of NOT true as directed. This equation is true because the starting value of 572 minus the unknown number sold, represented by the empty box, is equal to the ending value of 98. The student needs to focus on understanding different ways to represent differences in subtraction and addition equations.",
           "G": "The student identified an equation that is true instead of NOT true as directed. This equation is true because the starting value of 572 minus the ending value of 98 is equal to the number of cards sold, represented by the empty box. The student needs to focus on understanding different ways to represent differences in subtraction and addition equations.",
@@ -572,7 +517,6 @@
       "itemNumber": 13,
       "itemType": "multiple_choice",
       "stem": "A rectangular business card is shown. Use the ruler provided to measure the length and width of the business card to the nearest centimeter.\nWhich measurement is closest to the perimeter of the business card in centimeters?",
-      "imageUrl": "/images/2018-13.png",
       "options": [
         {
           "id": "A",
@@ -616,7 +560,7 @@
       "itemNumber": 14,
       "itemType": "griddable_numeric",
       "stem": "There are 297 peach trees on a farm. There are 615 peach trees on a different farm. What is the difference between the numbers of peach trees on these farms?",
-      "directions": "Record you answer in the text box provided. Be sure to use the correct place value.",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "318",
@@ -640,23 +584,22 @@
       "itemNumber": 15,
       "itemType": "multiple_choice",
       "stem": "The picture represents the trophies 3 brothers have on a shelf. Each brother won the same number of trophies.\nWhat fraction of the trophies did each brother win?",
-      "imageUrl": "/images/2018-15.png",
       "options": [
         {
           "id": "A",
-          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>"
+          "text": "2/3"
         },
         {
           "id": "B",
-          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span>"
+          "text": "2/6"
         },
         {
           "id": "C",
-          "text": "<span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span>"
+          "text": "3/6"
         },
         {
           "id": "D",
-          "text": "<span class='fraction'><span class='numerator'>3</span><span class='denominator'>3</span></span>"
+          "text": "3/3"
         }
       ],
       "answerRule": {
@@ -670,11 +613,11 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine the fraction of trophies each brother won, the student should have calculated the number of trophies that belong to each brother. The 6 trophies are shared equally by the 3 brothers; therefore each brother won 2 out of the 6 trophies. The fraction <span class='fraction'><span class='numerator'>2</span><span class='denominator'>6</span></span> represents 2 out of 6. The numerator (top number) represents the number of trophies each boy won, and the denominator (bottom number) represents the total number of trophies.",
+        "correctExplanation": "To determine the fraction of trophies each brother won, the student should have calculated the number of trophies that belong to each brother. The 6 trophies are shared equally by the 3 brothers; therefore each brother won 2 out of the 6 trophies. The fraction 2/6 represents 2 out of 6. The numerator (top number) represents the number of trophies each boy won, and the denominator (bottom number) represents the total number of trophies.",
         "incorrectOptionExplanations": {
-          "A": "The student likely divided the 6 trophies equally among the 3 brothers but formed the fraction as <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> because 2 trophies were won by each of the 3 brothers. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
-          "C": "The student likely formed the fraction as <span class='fraction'><span class='numerator'>3</span><span class='denominator'>6</span></span> because 3 brothers shared the 6 trophies. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
-          "D": "The student likely associated the 3s in <span class='fraction'><span class='numerator'>3</span><span class='denominator'>3</span></span> with the number of brothers but did not understand that <span class='fraction'><span class='numerator'>3</span><span class='denominator'>3</span></span> is unreasonable because it is equal to <span class='fraction'><span class='numerator'>6</span><span class='denominator'>6</span></span> of the trophies. Each brother could not have won all of the trophies. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts."
+          "A": "The student likely divided the 6 trophies equally among the 3 brothers but formed the fraction as 2/3 because 2 trophies were won by each of the 3 brothers. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
+          "C": "The student likely formed the fraction as 3/6 because 3 brothers shared the 6 trophies. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
+          "D": "The student likely associated the 3s in 3/3 with the number of brothers but did not understand that 3/3 is unreasonable because it is equal to 6/6 of the trophies. Each brother could not have won all of the trophies. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts."
         },
         "remediationTip": "Understand that the denominator of a fraction represents the total number of items, and the numerator represents the part being considered."
       }
@@ -769,100 +712,23 @@
       "id": "2018-18",
       "itemNumber": 18,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col",
       "stem": "A store is having a sale on books. The sale price of each book is $6 less than the regular price. Which table shows prices of different books at this store?",
       "options": [
         {
           "id": "F",
-          "table": {
-            "title": "Book Sale",
-            "orientation": "horizontal",
-            "rows": [
-              [
-                "Regular Price",
-                "$12",
-                "$19",
-                "$26",
-                "$33"
-              ],
-              [
-                "Sale Price",
-                "$18",
-                "$25",
-                "$32",
-                "$39"
-              ]
-            ]
-          }
+          "text": "Book Sale table where Sale Price is Regular Price + $6."
         },
         {
           "id": "G",
-          "table": {
-            "title": "Book Sale",
-            "orientation": "horizontal",
-            "rows": [
-              [
-                "Regular Price",
-                "$18",
-                "$25",
-                "$32",
-                "$39"
-              ],
-              [
-                "Sale Price",
-                "$12",
-                "$19",
-                "$26",
-                "$33"
-              ]
-            ]
-          }
+          "text": "Book Sale table where Sale Price is Regular Price - $6."
         },
         {
           "id": "H",
-          "table": {
-            "title": "Book Sale",
-            "orientation": "horizontal",
-            "rows": [
-              [
-                "Regular Price",
-                "$36",
-                "$30",
-                "$24",
-                "$18"
-              ],
-              [
-                "Sale Price",
-                "$34",
-                "$28",
-                "$22",
-                "$16"
-              ]
-            ]
-          }
+          "text": "Book Sale table where Sale Price is Regular Price - $2."
         },
         {
           "id": "J",
-          "table": {
-            "title": "Book Sale",
-            "orientation": "horizontal",
-            "rows": [
-              [
-                "Regular Price",
-                "$36",
-                "$30",
-                "$24",
-                "$18"
-              ],
-              [
-                "Sale Price",
-                "$6",
-                "$5",
-                "$4",
-                "$3"
-              ]
-            ]
-          }
+          "text": "Book Sale table where Sale Price is Regular Price / $6."
         }
       ],
       "answerRule": {
@@ -890,27 +756,6 @@
       "itemNumber": 19,
       "itemType": "multiple_choice",
       "stem": "Dominique put figures into groups based on certain attributes. Sometimes she put figures into more than one group.\nWhich statement is true?",
-      "table": {
-        "title": "Dominique's Figures",
-        "headers": [
-          "Group",
-          "Attribute"
-        ],
-        "rows": [
-          [
-            1,
-            "Has all sides congruent"
-          ],
-          [
-            2,
-            "Has exactly 4 sides"
-          ],
-          [
-            3,
-            "Is a polygon"
-          ]
-        ]
-      },
       "options": [
         {
           "id": "A",
@@ -1040,7 +885,6 @@
       "itemNumber": 22,
       "itemType": "multiple_choice",
       "stem": "Noah has 48 cookies. The model represents what he did with the cookies. Based on the model, which of these could explain what Noah did with the cookies?",
-      "imageUrl": "/images/2018-22.png",
       "options": [
         {
           "id": "F",
@@ -1084,23 +928,22 @@
       "itemNumber": 23,
       "itemType": "multiple_choice",
       "stem": "There are 4 books on a shelf. In the model the shaded books represent nonfiction books. Which expression represents the fraction of the books on the shelf that are nonfiction?",
-      "imageUrl": "/images/2018-23.png",
       "options": [
         {
           "id": "A",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>"
+          "text": "1/4 + 1/4 + 1/4 + 1/4"
         },
         {
           "id": "B",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>"
+          "text": "1/4 + 1/4 + 1/4"
         },
         {
           "id": "C",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span>"
+          "text": "1/3 + 1/3 + 1/3"
         },
         {
           "id": "D",
-          "text": "<span class='fraction'><span class='numerator'>3</span><span class='denominator'>1</span></span> + <span class='fraction'><span class='numerator'>3</span><span class='denominator'>1</span></span> + <span class='fraction'><span class='numerator'>3</span><span class='denominator'>1</span></span>"
+          "text": "3/1 + 3/1 + 3/1"
         }
       ],
       "answerRule": {
@@ -1114,9 +957,9 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which expression represents the fraction of the books on the shelf that are nonfiction (shaded), the student should first determine the fraction of the model represented by each book, and then count the number of shaded books. Lastly, the student should write an expression that represents the fraction of nonfiction books. Because there are a total of 4 books, each book is <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> of the books on the shelf. The student should have represented each of the three shaded books with the fraction <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> and the total fraction of shaded books as <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> + <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>.",
+        "correctExplanation": "To determine which expression represents the fraction of the books on the shelf that are nonfiction (shaded), the student should first determine the fraction of the model represented by each book, and then count the number of shaded books. Lastly, the student should write an expression that represents the fraction of nonfiction books. Because there are a total of 4 books, each book is 1/4 of the books on the shelf. The student should have represented each of the three shaded books with the fraction 1/4 and the total fraction of shaded books as 1/4 + 1/4 + 1/4.",
         "incorrectOptionExplanations": {
-          "A": "The student likely formed the fraction representing each book (<span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>) correctly but then incorrectly counted all of the books on the shelf instead of just the nonfiction books. The student needs to focus on attending to details in questions.",
+          "A": "The student likely formed the fraction representing each book (1/4) correctly but then incorrectly counted all of the books on the shelf instead of just the nonfiction books. The student needs to focus on attending to details in questions.",
           "C": "The student likely formed the fractions by using the total number of nonfiction books instead of the total number of books on the shelf as the denominator (bottom number) of the fraction. The student needs to focus on understanding how to determine the numerator (top number) and denominator of a fraction.",
           "D": "The student likely formed the fractions by using the total number of nonfiction books instead of each individual book as the numerator (top number) of the fraction. The student needs to focus on understanding how to determine the numerator and denominator (bottom number) of a fraction."
         },
@@ -1128,8 +971,7 @@
       "itemNumber": 24,
       "itemType": "griddable_numeric",
       "stem": "The frequency table shows the number of points scored by each player on a basketball team during a game.\nWhat is the combined number of points scored by Stephen, Alfred, Pete, and Wesley?",
-      "imageUrl": "/images/2018-24.png",
-      "directions": "Record you answer in the text box provided. Be sure to use the correct place value.",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
       "answerRule": {
         "kind": "numeric_equivalent",
         "canonicalValue": "32",
@@ -1153,23 +995,22 @@
       "itemNumber": 25,
       "itemType": "multiple_choice",
       "stem": "The model shown can represent two number sentences.\nWhich two number sentences can the model represent?",
-      "imageUrl": "/images/2018-25.png",
       "options": [
         {
           "id": "A",
-          "text": "3x3 = ?; 3+3 = ?"
+          "text": "3x3 = [box]; 3+3 = [box]"
         },
         {
           "id": "B",
-          "text": "3x2 = ?; 3+3 = ?"
+          "text": "3x2 = [box]; 3+3 = [box]"
         },
         {
           "id": "C",
-          "text": "2x3 = ?; 2x2x2 = ?"
+          "text": "2x3 = [box]; 2x2x2 = [box]"
         },
         {
           "id": "D",
-          "text": "3+3+3 = ?; 2+2+2 = ?"
+          "text": "3+3+3 = [box]; 2+2+2 = [box]"
         }
       ],
       "answerRule": {
@@ -1183,11 +1024,11 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which number sentences the model can represent, the student should have recognized the model to be 3 groups of 2 stars or 2 groups of 3 stars. The student should have formed equations using addition or multiplication to reflect the groupings. For addition, 3 groups of 2 is represented by 2 + 2 + 2 = ?, and 2 groups of 3 is represented by 3 + 3 = ?. For multiplication, 3 groups of 2 is represented by 3 × 2 = ?, and 2 groups of 3 is represented by 2 × 3 = ?. This answer choice includes one of these addition equations and one of these multiplication equations.",
+        "correctExplanation": "To determine which number sentences the model can represent, the student should have recognized the model to be 3 groups of 2 stars or 2 groups of 3 stars. The student should have formed equations using addition or multiplication to reflect the groupings. For addition, 3 groups of 2 is represented by 2 + 2 + 2 = [box], and 2 groups of 3 is represented by 3 + 3 = [box]. For multiplication, 3 groups of 2 is represented by 3 × 2 = [box], and 2 groups of 3 is represented by 2 × 3 = [box]. This answer choice includes one of these addition equations and one of these multiplication equations.",
         "incorrectOptionExplanations": {
-          "A": "The student likely recognized 2 groups of 3 stars but multiplied 3 × 3 = ? because it visually matched the 3 + 3 = ?. The student needs to focus on understanding how to write the multiplication equation represented by a model.",
-          "C": "The student likely recognized that repeated addition (2 + 2 + 2 = ?) could be represented by the model, but confused the operation (+,-, ×, ÷ ) needed in the equation. The student needs to focus on understanding how to write the repeated addition equation represented by a model.",
-          "D": "The student likely recognized that multiple addition equations (3 + 3 = ?) and (2 + 2 + 2 = ?) could be represented by the model, but confused the number of times 3 needed to be added in the first equation. The student needs to focus on understanding how to write multiple addition equations represented by a model."
+          "A": "The student likely recognized 2 groups of 3 stars but multiplied 3 × 3 = [box] because it visually matched the 3 + 3 = [box]. The student needs to focus on understanding how to write the multiplication equation represented by a model.",
+          "C": "The student likely recognized that repeated addition (2 + 2 + 2 = [box]) could be represented by the model, but confused the operation (+,-, ×, ÷ ) needed in the equation. The student needs to focus on understanding how to write the repeated addition equation represented by a model.",
+          "D": "The student likely recognized that multiple addition equations (3 + 3 = [box]) and (2 + 2 + 2 = [box]) could be represented by the model, but confused the number of times 3 needed to be added in the first equation. The student needs to focus on understanding how to write multiple addition equations represented by a model."
         },
         "remediationTip": "Understand that array models can represent both repeated addition and multiplication. Practice writing both addition and multiplication sentences for given arrays."
       }
@@ -1196,25 +1037,23 @@
       "id": "2018-26",
       "itemNumber": 26,
       "itemType": "multiple_choice",
-      "optionsLayout": "grid_2col",
       "stem": "Kailani drew four congruent squares. She shaded the same fraction of each square. This is one of Kailani's squares.\nWhich square CANNOT be another one of Kailani's squares?",
-      "imageUrl": "/images/2018-26.png",
       "options": [
         {
           "id": "F",
-          "imageUrl": "/images/2018-26-F.png"
-        },
-        {
-          "id": "G",
-          "imageUrl": "/images/2018-26-H.png"
+          "text": "A square divided into 8 equal small squares with 1 square shaded."
         },
         {
           "id": "H",
-          "imageUrl": "/images/2018-26-G.png"
+          "text": "A square divided into 8 parts of unequal size, with one part shaded."
+        },
+        {
+          "id": "G",
+          "text": "A square divided into 8 equal triangular parts with 1 triangle shaded."
         },
         {
           "id": "J",
-          "imageUrl": "/images/2018-26-J.png"
+          "text": "A square divided into 8 equal vertical rectangular strips with 1 strip shaded."
         }
       ],
       "answerRule": {
@@ -1228,11 +1067,11 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine which square CANNOT be one of Kailani's squares, the student should have written the fraction of the starting square that is shaded and, if possible, a fraction to represent the shaded parts of each of the squares in the answer choices, and then identified the fraction that is different from the others. The starting square is divided into 8 equal-sized parts with 1 part shaded, representing the fraction <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span>. The squares in the first, second, and fourth answer choices are also divided into 8 equal-sized parts with 1 part shaded. The student should have recognized that this square (Option H) is divided into 8 parts, but the parts are not equally sized and therefore CANNOT represent the same fraction.",
+        "correctExplanation": "To determine which square CANNOT be one of Kailani's squares, the student should have written the fraction of the starting square that is shaded and, if possible, a fraction to represent the shaded parts of each of the squares in the answer choices, and then identified the fraction that is different from the others. The starting square is divided into 8 equal-sized parts with 1 part shaded, representing the fraction 1/8. The squares in the first, second, and fourth answer choices are also divided into 8 equal-sized parts with 1 part shaded. The student should have recognized that this square (Option H) is divided into 8 parts, but the parts are not equally sized and therefore CANNOT represent the same fraction.",
         "incorrectOptionExplanations": {
-          "F": "The student identified a square that represents the same fraction as the starting square instead of one that does not, as directed. This square is shaded to represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> because it is divided into 8 equal-sized parts and has 1 part shaded. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction.",
-          "G": "The student identified a square that represents the same fraction as the starting square instead of one that does not, as directed. This square is shaded to represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> because it is divided into 8 equal-sized parts and has 1 part shaded. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction.",
-          "J": "The student identified a square that represents the same fraction as the starting square instead of one that does not, as directed. This square is shaded to represent <span class='fraction'><span class='numerator'>1</span><span class='denominator'>8</span></span> because it is divided into 8 equal-sized parts and has 1 part shaded. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction."
+          "F": "The student identified a square that represents the same fraction as the starting square instead of one that does not, as directed. This square is shaded to represent 1/8 because it is divided into 8 equal-sized parts and has 1 part shaded. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction.",
+          "G": "The student identified a square that represents the same fraction as the starting square instead of one that does not, as directed. This square is shaded to represent 1/8 because it is divided into 8 equal-sized parts and has 1 part shaded. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction.",
+          "J": "The student identified a square that represents the same fraction as the starting square instead of one that does not, as directed. This square is shaded to represent 1/8 because it is divided into 8 equal-sized parts and has 1 part shaded. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction."
         },
         "remediationTip": "Remember that for a fraction to be correctly represented by a shaded model, the whole must be divided into *equal* parts."
       }
@@ -1285,23 +1124,22 @@
       "itemNumber": 28,
       "itemType": "multiple_choice",
       "stem": "The models shown are the same size and are each divided into equal-size parts. The models are shaded to represent two fractions.\nWhich statement is true?",
-      "imageUrl": "/images/2018-28.png",
       "options": [
         {
           "id": "F",
-          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> > <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>, because thirds are larger than fourths."
+          "text": "2/3 > 2/4, because thirds are larger than fourths."
         },
         {
           "id": "G",
-          "text": "<span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> = <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>, because each model has 2 parts shaded."
+          "text": "2/3 = 2/4, because each model has 2 parts shaded."
         },
         {
           "id": "H",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> < <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>, because 3 is less than 4."
+          "text": "1/3 < 1/4, because 3 is less than 4."
         },
         {
           "id": "J",
-          "text": "<span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> = <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>, because each model shows 1 whole."
+          "text": "1/3 = 1/4, because each model shows 1 whole."
         }
       ],
       "answerRule": {
@@ -1315,11 +1153,11 @@
         "maxPoints": 1
       },
       "rationale": {
-        "correctExplanation": "To determine the true statement, the student should have first written the fraction represented by each model. The first circle has 2 shaded parts (numerator, or top number) out of a total of 3 equal-sized parts (denominator, or bottom number), representing the fraction <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span>. The second circle has 2 shaded parts (numerator) out of a total of 4 equal-sized parts (denominator), representing the fraction <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>. The student should have seen that the model shows the parts of the first circle are bigger than the parts of the second circle and determined that <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> > <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>, or <span class='fraction'><span class='numerator'>2</span><span class='denominator'>3</span></span> is greater than <span class='fraction'><span class='numerator'>2</span><span class='denominator'>4</span></span>.",
+        "correctExplanation": "To determine the true statement, the student should have first written the fraction represented by each model. The first circle has 2 shaded parts (numerator, or top number) out of a total of 3 equal-sized parts (denominator, or bottom number), representing the fraction 2/3. The second circle has 2 shaded parts (numerator) out of a total of 4 equal-sized parts (denominator), representing the fraction 2/4. The student should have seen that the model shows the parts of the first circle are bigger than the parts of the second circle and determined that 2/3 > 2/4, or 2/3 is greater than 2/4.",
         "incorrectOptionExplanations": {
           "G": "The student likely formed the fractions from the model correctly, but then compared only the numerators and determined that the two fractions are equal. The student needs to focus on understanding how to compare fractions with the same numerator but different denominators.",
-          "H": "The student likely wrote fractions to represent one part of each model and then compared the denominators (3 is less than 4) to determine that <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> < <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span> or <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> is less than <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>. The student needs to focus on understanding how to compare fractions with the same numerator but different denominators.",
-          "J": "The student likely wrote fractions to represent one part of each model and then compared the size of the full models (1 is equal to 1) to determine that <span class='fraction'><span class='numerator'>1</span><span class='denominator'>3</span></span> = <span class='fraction'><span class='numerator'>1</span><span class='denominator'>4</span></span>. The student needs to focus on understanding how to compare fractions with the same numerator but different denominators."
+          "H": "The student likely wrote fractions to represent one part of each model and then compared the denominators (3 is less than 4) to determine that 1/3 < 1/4 or 1/3 is less than 1/4. The student needs to focus on understanding how to compare fractions with the same numerator but different denominators.",
+          "J": "The student likely wrote fractions to represent one part of each model and then compared the size of the full models (1 is equal to 1) to determine that 1/3 = 1/4. The student needs to focus on understanding how to compare fractions with the same numerator but different denominators."
         },
         "remediationTip": "Understand that when comparing fractions with the same numerator, the fraction with the smaller denominator represents a larger value because the whole is divided into fewer, larger parts."
       }
@@ -1329,23 +1167,22 @@
       "itemNumber": 29,
       "itemType": "multiple_choice",
       "stem": "The picture shows the coins that are in a piggy bank.\nWhich dot plot represents the value in cents of each coin in the piggy bank?",
-      "imageUrl": "/images/2018-29.png",
       "options": [
         {
           "id": "A",
-          "imageUrl": "/images/2018-29-A.png"
+          "text": "A dot plot with 9 dots scattered across values, not matching the given coin counts or values."
         },
         {
           "id": "B",
-          "imageUrl": "/images/2018-29-B.png"
+          "text": "A dot plot with 4 dots at 5 cents, 2 dots at 10 cents, and 3 dots at 30 cents."
         },
         {
           "id": "C",
-          "imageUrl": "/images/2018-29-C.png"
+          "text": "A dot plot with 1 dot at 5 cents, 1 dot at 10 cents, and 1 dot at 25 cents."
         },
         {
           "id": "D",
-          "imageUrl": "/images/2018-29-D.png"
+          "text": "A dot plot with 4 dots at 5 cents, 2 dots at 10 cents, and 3 dots at 25 cents."
         }
       ],
       "answerRule": {
@@ -1376,19 +1213,19 @@
       "options": [
         {
           "id": "F",
-          "imageUrl": "/images/2018-30-F.png"
+          "text": "A bar model with an unknown total bar above three parts labeled 294, 196, and 49."
         },
         {
           "id": "G",
-          "imageUrl": "/images/2018-30-G.png"
+          "text": "A bar model with a total bar labeled 294 above three parts labeled 196, 49, and an unknown."
         },
         {
           "id": "H",
-          "imageUrl": "/images/2018-30-H.png"
+          "text": "A bar model with a total bar labeled 196 above three parts labeled 294, 49, and an unknown."
         },
         {
           "id": "J",
-          "imageUrl": "/images/2018-30-J.png"
+          "text": "A bar model with a total bar labeled 49 above three parts labeled 294, 196, and an unknown."
         }
       ],
       "answerRule": {
@@ -1416,7 +1253,6 @@
       "itemNumber": 31,
       "itemType": "multiple_choice",
       "stem": "The table shows the weights of four elephants.\nWhich comparison of these weights is true?",
-      "imageUrl": "/images/2018-31.png",
       "options": [
         {
           "id": "A",
@@ -1460,7 +1296,6 @@
       "itemNumber": 32,
       "itemType": "multiple_choice",
       "stem": "Maria put cloth squares together to make a blanket. The blanket is modeled by this rectangle.\nWhat is the area of the blanket in square feet?",
-      "imageUrl": "/images/2018-32.png",
       "options": [
         {
           "id": "F",
