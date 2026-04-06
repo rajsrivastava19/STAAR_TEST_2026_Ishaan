@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>SVG Artboard Test — Math STAAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; background: #122a12; font-family: 'Nunito', sans-serif; }
+    .artboard-container { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background: #122a12; }
+    .artboard-container svg { width: 100%; height: 100%; }
+
+    @keyframes dino-bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes firefly-glow {
+      0%, 100% { opacity: 0.15; }
+      50% { opacity: 0.8; }
+    }
+    .bob { animation: dino-bob 4s ease-in-out infinite; }
+    .firefly-dot { animation: firefly-glow 6s ease-in-out infinite; }
+
+    .mtn-click { cursor: pointer; }
+    .mtn-click:hover .mtn-inner { filter: drop-shadow(0 0 16px rgba(255,202,40,0.7)); }
+
+    .back-link {
+      position: fixed; top: 12px; right: 12px; z-index: 100;
+      background: rgba(0,0,0,0.7); color: #4CAF50; padding: 8px 16px;
+      border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 14px; border: 2px solid #4CAF50;
+    }
+    .back-link:hover { background: #4CAF50; color: white; }
+    .strategy-badge {
+      position: fixed; bottom: 12px; left: 12px; z-index: 100;
+      background: rgba(0,0,0,0.8); color: #FFCA28; padding: 8px 16px;
+      border-radius: 12px; font-weight: 800; font-size: 13px; border: 2px solid #FFCA28;
+    }
+  </style>
+</head>
+<body>
+  <a class="back-link" href="/STAAR_TEST_2026_Ishaan/">← Back to DOM Version</a>
+  <div class="strategy-badge">Strategy: SVG Artboard (viewBox 1920×1080)</div>
+
+  <div class="artboard-container">
+    <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <filter id="water-ripple" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise">
+            <animate attributeName="baseFrequency" values="0.015;0.025;0.015" dur="10s" repeatCount="indefinite" />
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="B" />
+        </filter>
+        <radialGradient id="lake-gradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(135,206,250,0.85)" />
+          <stop offset="50%" stop-color="rgba(30,144,255,0.6)" />
+          <stop offset="100%" stop-color="rgba(0,102,204,0)" />
+        </radialGradient>
+        <clipPath id="avatar-clip"><rect x="20" y="10" width="60" height="60" rx="12" /></clipPath>
+      </defs>
+
+      <!-- LAYER 1: Background -->
+      <image href="/STAAR_TEST_2026_Ishaan/dinos/jungle_bg.png" x="0" y="0" width="1920" height="1080" preserveAspectRatio="xMidYMid slice" />
+
+      <!-- LAYER 2: Fireflies -->
+      <circle cx="150" cy="300" r="6" fill="rgba(139,195,74,0.8)" class="firefly-dot" style="animation-delay:0s" />
+      <circle cx="400" cy="150" r="5" fill="rgba(255,255,255,0.9)" class="firefly-dot" style="animation-delay:1.2s" />
+      <circle cx="700" cy="250" r="7" fill="rgba(139,195,74,0.7)" class="firefly-dot" style="animation-delay:2.4s" />
+      <circle cx="1500" cy="300" r="6" fill="rgba(139,195,74,0.6)" class="firefly-dot" style="animation-delay:3.1s" />
+      <circle cx="1750" cy="200" r="4" fill="rgba(255,255,255,0.7)" class="firefly-dot" style="animation-delay:1.5s" />
+      <circle cx="300" cy="600" r="6" fill="rgba(139,195,74,0.8)" class="firefly-dot" style="animation-delay:4.0s" />
+      <circle cx="1600" cy="500" r="5" fill="rgba(255,255,255,0.6)" class="firefly-dot" style="animation-delay:2.0s" />
+
+      <!-- LAYER 3: Lake -->
+      <ellipse cx="960" cy="648" rx="370" ry="170" fill="url(#lake-gradient)" filter="url(#water-ripple)" opacity="0.85" />
+
+      <!-- LAYER 4: Header Bar -->
+      <rect x="0" y="0" width="1920" height="80" fill="rgba(255,255,255,0.88)" />
+      <rect x="0" y="78" width="1920" height="3" fill="rgba(121,85,72,0.25)" />
+      <rect x="18" y="8" width="64" height="64" rx="14" fill="#3b8655" stroke="#6ccb8e" stroke-width="3" />
+      <image href="/STAAR_TEST_2026_Ishaan/Ishaan.png" x="20" y="10" width="60" height="60" clip-path="url(#avatar-clip)" />
+      <text x="100" y="35" font-size="14" font-weight="900" fill="#1b5e20" letter-spacing="1" font-family="Nunito, sans-serif">ISHAAN'S DINO JUNGLE SAFARI</text>
+      <text x="100" y="62" font-size="22" font-weight="900" fill="#5D4037" font-family="Nunito, sans-serif">Math STAAR Test Prep</text>
+
+      <!-- LAYER 5: Hero Box -->
+      <rect x="130" y="95" width="1000" height="240" rx="24" fill="rgba(255,255,255,0.85)" stroke="rgba(121,85,72,0.3)" stroke-width="4" />
+      <text x="170" y="170" font-size="48" font-weight="900" fill="#2E7D32" font-family="Nunito, sans-serif">Ready for MATH STAAR Jungle Safari!</text>
+      <text x="170" y="215" font-size="20" font-weight="700" fill="#3E2723" font-family="Nunito, sans-serif">Pick a trail below and start exploring. Get ready to stomp through your math</text>
+      <text x="170" y="242" font-size="20" font-weight="700" fill="#3E2723" font-family="Nunito, sans-serif">skills with instant feedback and step-by-step review!</text>
+      <rect x="170" y="260" width="620" height="45" rx="12" fill="rgba(255,240,180,0.95)" stroke="rgba(255,180,0,0.9)" stroke-width="2" />
+      <text x="190" y="290" font-size="18" font-weight="700" fill="#8a6300" font-family="Nunito, sans-serif">⭐ Score at least 85% on a level to unlock the next challenge!</text>
+
+      <!--
+        LAYER 6: MOUNTAINS
+        KEY FIX: SVG transform for POSITION, nested <g> with CSS class for ANIMATION.
+        CSS transform overrides SVG transform, so they must be on separate elements.
+      -->
+
+      <!-- LEVEL 1 — Top center -->
+      <g transform="translate(914, 380)" class="mtn-click" data-level="1">
+        <g class="bob mtn-inner" style="animation-delay:0s">
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/dino_main_trans.png" x="-40" y="-100" width="80" height="80" />
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/mountain_vines_clean.png" x="-55" y="-25" width="110" height="90" style="filter: hue-rotate(-50deg) saturate(1.2);" />
+          <rect x="-48" y="50" width="96" height="30" rx="10" fill="#FFCA28" />
+          <rect x="-48" y="74" width="96" height="5" rx="2.5" fill="#FF8F00" />
+          <text x="0" y="71" font-size="14" font-weight="900" fill="#3E2723" text-anchor="middle" font-family="Nunito, sans-serif">LEVEL 1</text>
+          <rect x="-32" y="85" width="64" height="24" rx="8" fill="#06D6A0" />
+          <text x="0" y="102" font-size="12" font-weight="900" fill="white" text-anchor="middle" font-family="Nunito, sans-serif">PLAY</text>
+          <text x="0" y="122" font-size="11" font-weight="800" fill="white" text-anchor="middle" opacity="0.9">32 Q's</text>
+          <rect x="-60" y="-110" width="120" height="240" fill="transparent" />
+        </g>
+      </g>
+
+      <!-- LEVEL 2 — Upper right -->
+      <g transform="translate(1286, 490)" class="mtn-click" data-level="2">
+        <g class="bob mtn-inner" style="animation-delay:0.4s">
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/dino1_trans.png" x="-10" y="-100" width="80" height="80" />
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/mountain_vines_clean.png" x="-55" y="-25" width="110" height="90" style="filter: hue-rotate(60deg) saturate(1.2);" />
+          <rect x="-48" y="50" width="96" height="30" rx="10" fill="#FFCA28" />
+          <rect x="-48" y="74" width="96" height="5" rx="2.5" fill="#FF8F00" />
+          <text x="0" y="71" font-size="14" font-weight="900" fill="#3E2723" text-anchor="middle" font-family="Nunito, sans-serif">LEVEL 2</text>
+          <rect x="-36" y="85" width="72" height="24" rx="8" fill="#dfe4ea" />
+          <text x="0" y="102" font-size="11" font-weight="900" fill="#a4b0be" text-anchor="middle" font-family="Nunito, sans-serif">🔒 LOCKED</text>
+          <text x="0" y="122" font-size="11" font-weight="800" fill="white" text-anchor="middle" opacity="0.9">32 Q's</text>
+          <rect x="-60" y="-110" width="120" height="240" fill="transparent" />
+        </g>
+      </g>
+
+      <!-- LEVEL 3 — Right -->
+      <g transform="translate(1402, 700)" class="mtn-click" data-level="3">
+        <g class="bob mtn-inner" style="animation-delay:0.8s">
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/dino2_trans.png" x="-10" y="-100" width="80" height="80" />
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/mountain_vines_clean.png" x="-55" y="-25" width="110" height="90" style="filter: hue-rotate(230deg) saturate(1.2);" />
+          <rect x="-48" y="50" width="96" height="30" rx="10" fill="#FFCA28" />
+          <rect x="-48" y="74" width="96" height="5" rx="2.5" fill="#FF8F00" />
+          <text x="0" y="71" font-size="14" font-weight="900" fill="#3E2723" text-anchor="middle" font-family="Nunito, sans-serif">LEVEL 3</text>
+          <rect x="-36" y="85" width="72" height="24" rx="8" fill="#dfe4ea" />
+          <text x="0" y="102" font-size="11" font-weight="900" fill="#a4b0be" text-anchor="middle" font-family="Nunito, sans-serif">🔒 LOCKED</text>
+          <text x="0" y="122" font-size="11" font-weight="800" fill="white" text-anchor="middle" opacity="0.9">32 Q's</text>
+          <rect x="-60" y="-110" width="120" height="240" fill="transparent" />
+        </g>
+      </g>
+
+      <!-- LEVEL 4 — Lower right -->
+      <g transform="translate(1114, 860)" class="mtn-click" data-level="4">
+        <g class="bob mtn-inner" style="animation-delay:1.2s">
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/dino7_trans.png" x="-50" y="-110" width="100" height="100" />
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/mountain_vines_clean.png" x="-55" y="-25" width="110" height="90" style="filter: hue-rotate(30deg) saturate(1.2);" />
+          <rect x="-48" y="50" width="96" height="30" rx="10" fill="#FFCA28" />
+          <rect x="-48" y="74" width="96" height="5" rx="2.5" fill="#FF8F00" />
+          <text x="0" y="71" font-size="14" font-weight="900" fill="#3E2723" text-anchor="middle" font-family="Nunito, sans-serif">LEVEL 4</text>
+          <rect x="-36" y="85" width="72" height="24" rx="8" fill="#dfe4ea" />
+          <text x="0" y="102" font-size="11" font-weight="900" fill="#a4b0be" text-anchor="middle" font-family="Nunito, sans-serif">🔒 LOCKED</text>
+          <text x="0" y="122" font-size="11" font-weight="800" fill="white" text-anchor="middle" opacity="0.9">32 Q's</text>
+          <rect x="-60" y="-115" width="120" height="250" fill="transparent" />
+        </g>
+      </g>
+
+      <!-- LEVEL 5 — Lower left -->
+      <g transform="translate(720, 860)" class="mtn-click" data-level="5">
+        <g class="bob mtn-inner" style="animation-delay:1.6s">
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/dino5_trans.png" x="-40" y="-110" width="100" height="100" />
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/mountain_vines_clean.png" x="-55" y="-25" width="110" height="90" style="filter: saturate(1.2);" />
+          <rect x="-48" y="50" width="96" height="30" rx="10" fill="#FFCA28" />
+          <rect x="-48" y="74" width="96" height="5" rx="2.5" fill="#FF8F00" />
+          <text x="0" y="71" font-size="14" font-weight="900" fill="#3E2723" text-anchor="middle" font-family="Nunito, sans-serif">LEVEL 5</text>
+          <rect x="-36" y="85" width="72" height="24" rx="8" fill="#dfe4ea" />
+          <text x="0" y="102" font-size="11" font-weight="900" fill="#a4b0be" text-anchor="middle" font-family="Nunito, sans-serif">🔒 LOCKED</text>
+          <text x="0" y="122" font-size="11" font-weight="800" fill="white" text-anchor="middle" opacity="0.9">30 Q's</text>
+          <rect x="-60" y="-115" width="120" height="250" fill="transparent" />
+        </g>
+      </g>
+
+      <!-- LEVEL 6 — Left -->
+      <g transform="translate(442, 700)" class="mtn-click" data-level="6">
+        <g class="bob mtn-inner" style="animation-delay:2.0s">
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/dino6_trans.png" x="-10" y="-110" width="100" height="100" />
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/mountain_vines_clean.png" x="-55" y="-25" width="110" height="90" style="filter: hue-rotate(-70deg) saturate(1.2);" />
+          <rect x="-48" y="50" width="96" height="30" rx="10" fill="#FFCA28" />
+          <rect x="-48" y="74" width="96" height="5" rx="2.5" fill="#FF8F00" />
+          <text x="0" y="71" font-size="14" font-weight="900" fill="#3E2723" text-anchor="middle" font-family="Nunito, sans-serif">LEVEL 6</text>
+          <rect x="-36" y="85" width="72" height="24" rx="8" fill="#dfe4ea" />
+          <text x="0" y="102" font-size="11" font-weight="900" fill="#a4b0be" text-anchor="middle" font-family="Nunito, sans-serif">🔒 LOCKED</text>
+          <text x="0" y="122" font-size="11" font-weight="800" fill="white" text-anchor="middle" opacity="0.9">30 Q's</text>
+          <rect x="-60" y="-115" width="120" height="250" fill="transparent" />
+        </g>
+      </g>
+
+      <!-- LEVEL 7 — Upper left -->
+      <g transform="translate(586, 490)" class="mtn-click" data-level="7">
+        <g class="bob mtn-inner" style="animation-delay:2.4s">
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/dino4_trans.png" x="-10" y="-100" width="80" height="80" />
+          <image href="/STAAR_TEST_2026_Ishaan/dinos/mountain_vines_clean.png" x="-55" y="-25" width="110" height="90" style="filter: saturate(1.2);" />
+          <rect x="-48" y="50" width="96" height="30" rx="10" fill="#FFCA28" />
+          <rect x="-48" y="74" width="96" height="5" rx="2.5" fill="#FF8F00" />
+          <text x="0" y="71" font-size="14" font-weight="900" fill="#3E2723" text-anchor="middle" font-family="Nunito, sans-serif">LEVEL 7</text>
+          <rect x="-36" y="85" width="72" height="24" rx="8" fill="#dfe4ea" />
+          <text x="0" y="102" font-size="11" font-weight="900" fill="#a4b0be" text-anchor="middle" font-family="Nunito, sans-serif">🔒 LOCKED</text>
+          <text x="0" y="122" font-size="11" font-weight="800" fill="white" text-anchor="middle" opacity="0.9">30 Q's</text>
+          <rect x="-60" y="-110" width="120" height="240" fill="transparent" />
+        </g>
+      </g>
+
+      <!-- LAYER 7: Ambient Dinos -->
+      <g transform="translate(40, 780)"><g class="bob" style="animation-delay:0.5s">
+        <image href="/STAAR_TEST_2026_Ishaan/dinos/dino3.webp" x="0" y="0" width="280" height="280" style="filter: drop-shadow(0 15px 15px rgba(0,0,0,0.5));" />
+      </g></g>
+      <g transform="translate(1620, 790)"><g class="bob" style="animation-delay:1.0s">
+        <image href="/STAAR_TEST_2026_Ishaan/dinos/dino_right_transparent.png" x="0" y="0" width="260" height="260" style="filter: drop-shadow(0 15px 15px rgba(0,0,0,0.5));" />
+      </g></g>
+
+      <!-- Pterodactyl (no CSS animation to avoid transform conflict — static for now) -->
+      <image href="/STAAR_TEST_2026_Ishaan/dinos/pterodactyl.png" x="800" y="200" width="200" height="120" style="filter: drop-shadow(0 20px 15px rgba(0,0,0,0.5));" />
+    </svg>
+  </div>
+
+  <script>
+    document.querySelectorAll('.mtn-click').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var level = el.getAttribute('data-level');
+        if (level === '1') {
+          alert('Level ' + level + ' — Would launch exam! (SVG artboard test)');
+        } else {
+          alert('Level ' + level + ' is locked. Score 85% on the previous level first!');
+        }
+      });
+    });
+    console.log('[SVG Artboard] Viewport:', window.innerWidth + 'x' + window.innerHeight, 'DPR:', window.devicePixelRatio);
+  </script>
+</body>
+</html>

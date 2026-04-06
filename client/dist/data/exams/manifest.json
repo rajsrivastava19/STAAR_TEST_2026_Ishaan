@@ -1,0 +1,82 @@
+{
+  "siteTitle": "Math STAAR Test Prep for Ishaan",
+  "years": [
+    {
+      "year": 2018,
+      "slug": "2018-preview",
+      "label": "2018 Preview",
+      "status": "playable",
+      "officialQuestionCount": 32,
+      "playableQuestionCount": 32,
+      "generation": "classic",
+      "description": "Starter slice normalized from the 2018 Math-Test, Math-Key, and Math-Rationale PDFs.",
+      "dataFile": "2018.json"
+    },
+    {
+      "year": 2019,
+      "slug": "2019",
+      "label": "2019",
+      "status": "playable",
+      "officialQuestionCount": 32,
+      "generation": "classic",
+      "description": "Queued for full import from the 2019 trio.",
+      "playableQuestionCount": 32,
+      "dataFile": "2019.json"
+    },
+    {
+      "year": 2021,
+      "slug": "2021",
+      "label": "2021",
+      "status": "playable",
+      "officialQuestionCount": 32,
+      "generation": "classic",
+      "description": "Queued for full import from the 2021 trio.",
+      "playableQuestionCount": 32,
+      "dataFile": "2021.json"
+    },
+    {
+      "year": 2022,
+      "slug": "2022",
+      "label": "2022",
+      "status": "playable",
+      "officialQuestionCount": 32,
+      "generation": "classic",
+      "description": "Queued for full import from the 2022 trio.",
+      "playableQuestionCount": 32,
+      "dataFile": "2022.json"
+    },
+    {
+      "year": 2023,
+      "slug": "2023",
+      "label": "2023",
+      "status": "playable",
+      "officialQuestionCount": 30,
+      "generation": "modern",
+      "description": "Queued for modern tech-enhanced normalization.",
+      "playableQuestionCount": 30,
+      "dataFile": "2023.json"
+    },
+    {
+      "year": 2024,
+      "slug": "2024",
+      "label": "2024",
+      "status": "playable",
+      "officialQuestionCount": 30,
+      "generation": "modern",
+      "description": "Queued for modern tech-enhanced normalization.",
+      "playableQuestionCount": 30,
+      "dataFile": "2024.json"
+    },
+    {
+      "year": 2025,
+      "slug": "2025",
+      "label": "2025",
+      "status": "playable",
+      "officialQuestionCount": 30,
+      "generation": "modern",
+      "description": "Queued for modern tech-enhanced normalization.",
+      "playableQuestionCount": 30,
+      "dataFile": "2025.json"
+    }
+  ]
+}

@@ -1,0 +1,1366 @@
+{
+  "id": "staar-g3-math-2022",
+  "siteTitle": "Math STAAR Test Prep for Ishaan",
+  "displayTitle": "2022 Grade 3 Math",
+  "subtitle": "Queued for full import from the 2022 trio.",
+  "year": 2022,
+  "grade": 3,
+  "subject": "Math",
+  "generation": "classic",
+  "totalQuestions": 32,
+  "sourceFiles": [
+    "2022-staar-3-math-test-2.pdf",
+    "2022-staar-3-math-key.pdf",
+    "2022-staar-3-math-rationale.pdf"
+  ],
+  "questions": [
+    {
+      "id": "2022-01",
+      "itemNumber": 1,
+      "itemType": "multiple_choice",
+      "stem": "Which comparison is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "68 > 649"
+        },
+        {
+          "id": "B",
+          "text": "571 > 582"
+        },
+        {
+          "id": "C",
+          "text": "730 < 806"
+        },
+        {
+          "id": "D",
+          "text": "709 < 692"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.2(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student could have compared the digits in each place value for each number. Since 730 and 806 both have three digits, the student could have compared the digits in the hundreds place (leftmost digit), 730 and 806, and determined that since 7 is less than 8, the number 730 is less than 806 (730 < 806).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely compared only the digits to the right of the first digit in each number, determining that 8 is greater than 4 (8 > 4). The student needs to focus on understanding how to compare numbers that have different numbers of digits.",
+          "B": "The student likely misinterpreted the \">\" to mean \"less than\" instead of \"greater than.” The two numbers have the same digit, 5, in the hundreds place so the student could have then compared the digits in the tens place. The number 571 has a 7 in the tens place, and the number 582 has an 8 in the tens place. Since 7 < 8 (7 is less than 8), 571 is less than 582 (571 < 582). The student needs to focus on understanding how comparison symbols are used to compare numbers.",
+          "D": "The student likely misinterpreted the “<” to mean “greater than” instead of “less than.” The student could have compared the digits in the hundreds place. The number 709 has a 7 in the hundreds place, and the number 692 has a 6 in the hundreds place. Since 7 > 6 (7 is greater than 6), 709 is greater than 692 (709 > 692). The student needs to focus on understanding how comparison symbols are used to compare numbers."
+        },
+        "remediationTip": "Review place value comparison for multi-digit numbers and the meaning of comparison symbols (<, >)."
+      }
+    },
+    {
+      "id": "2022-02",
+      "itemNumber": 2,
+      "itemType": "multiple_choice",
+      "stem": "Haruko did 9 sit-ups in P.E. class. The number of sit-ups Tom did can be represented by this expression.\n\n2 x 9\n\nWhich statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "Tom did 2 times as many sit-ups as Haruko."
+        },
+        {
+          "id": "G",
+          "text": "Haruko did 2 times as many sit-ups as Tom."
+        },
+        {
+          "id": "H",
+          "text": "Tom did 2 more sit-ups than Haruko."
+        },
+        {
+          "id": "J",
+          "text": "Haruko did 2 more sit-ups than Tom."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.5(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student could have interpreted the multiplication symbol (x) in the expression as \"times as many.\" Haruko did 9 sit-ups, and Tom did 2 × 9 sit-ups, indicating that Tom did \"2 times as many\" sit-ups as Haruko.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely reversed the numbers of sit-ups for Haruko and Tom. The student needs to focus on understanding greater and lesser values when using words to describe multiplication expressions such as \"times as many\" and \"times as much.\"",
+          "H": "The student likely confused the words describing addition (+), “more than,” with the words describing multiplication, “times as many.\" The student needs to focus on understanding how to describe a multiplication expression using words such as \"times as many\" and \"times as much.\"",
+          "J": "The student likely confused the words describing addition (+), “more than,” with the words describing multiplication, “times as many,\" and reversed the numbers of sit-ups for Haruko and Tom. The student needs to focus on understanding how to describe a multiplication expression using words such as \"times as many\" and \"times as much.\" The student also needs to focus on understanding greater and lesser values when using words to describe these expressions."
+        },
+        "remediationTip": "Practice interpreting multiplication expressions as \"times as many\" and \"times as much\" in word problems."
+      }
+    },
+    {
+      "id": "2022-03",
+      "itemNumber": 3,
+      "itemType": "multiple_choice",
+      "stem": "A student measured the lengths of two worms.\n\n• Worm S was ½ foot long.\n• Worm T was 2/2 foot long.\n\nWhich statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The length of Worm S is greater than the length of Worm T."
+        },
+        {
+          "id": "B",
+          "text": "The length of Worm T is greater than the length of Worm S."
+        },
+        {
+          "id": "C",
+          "text": "The length of Worm S is equal to the length of Worm T."
+        },
+        {
+          "id": "D",
+          "text": "There is not enough information to compare the lengths of the worms."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.3(H)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student could have compared the numerators (top numbers of the fractions) since the denominators (bottom numbers of the fractions) are equal (2). The length of Worm S has a 1 in the numerator, and the length of Worm T has a 2 in the numerator. Since 2 is greater than 1 (2 > 1), the length of Worm T is greater than (>) the length of Worm S.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely misinterpreted the words \"greater than\" to mean \"less than.\" The student needs to focus on understanding how to use \"greater than\" and \"less than\" to compare numbers.",
+          "C": "The student likely compared only the denominators (2) and determined that the two fractions are equal. The student needs to focus on understanding numerators and denominators and how they relate.",
+          "D": "The student likely reasoned that there is not enough information to compare the lengths of the worms. The student needs to focus on understanding numerators and denominators and how they relate. The student also needs to focus on understanding how to use \"greater than” and “less than\" to compare numbers."
+        },
+        "remediationTip": "Focus on comparing fractions with common denominators by examining their numerators and understanding comparison symbols."
+      }
+    },
+    {
+      "id": "2022-04",
+      "itemNumber": 4,
+      "itemType": "multiple_choice",
+      "stem": "Trey is describing his labor and income. Which statement could be a description of both labor and income for Trey?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "Trey does volunteer work at a hospital."
+        },
+        {
+          "id": "G",
+          "text": "Trey pays a company to repair his roof."
+        },
+        {
+          "id": "H",
+          "text": "Trey takes $25 out of his bank account and spends the money at a store."
+        },
+        {
+          "id": "J",
+          "text": "Trey takes dogs for a walk after school and earns $25."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.9(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is a description of both labor and income, the student should have understood the direct relationship between income (money earned) and labor (work). Trey taking dogs for a walk after school is an example of labor, and earning $25 for completing the task is an example of income.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely does not recognize the direct relationship between labor and income. Trey working at a hospital is an example of labor, but he did not receive any income from the labor because it was volunteer labor. The student needs to focus on understanding the connection between labor and income.",
+          "G": "The student likely does not recognize the direct relationship between labor and income. Trey paying another company to repair his roof is an example of giving money for goods and services. The student needs to focus on understanding the connection between labor and income.",
+          "H": "The student likely does not recognize the direct relationship between labor and income. Trey taking money out of his bank account and spending it at a store is an example of giving money for goods and services. The student needs to focus on understanding the connection between labor and income."
+        },
+        "remediationTip": "Understand the definitions of labor (work) and income (money earned) and their direct relationship in economic contexts."
+      }
+    },
+    {
+      "id": "2022-05",
+      "itemNumber": 5,
+      "itemType": "griddable_numeric",
+      "stem": "The rectangular floor of Ms. Ragan's closet is completely covered with carpet squares. Each carpet square covers 1 square foot of the floor. There are 4 rows, and each row has 16 carpet squares.\n\nWhat is the area of the floor of this closet in square feet?\n\nRecord your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "64",
+        "acceptedValues": [
+          "64"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the area (amount of space covered) of the floor in square feet, the student could have determined that the number of rows (4) and the number of carpet squares in each row (16) represent the dimensions of the floor. The student then could have multiplied 16 by 4 (16 × 4 = 64). Because the floor can be covered with 64 carpet squares, it represents an area of 64 square feet. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "Review how to calculate the area of a rectangle by multiplying its length and width."
+      }
+    },
+    {
+      "id": "2022-06",
+      "itemNumber": 6,
+      "itemType": "multiple_choice",
+      "stem": "The numbers listed show the speed in miles per hour Henry pitched a baseball.\n\n30, 32, 38, 30, 33, 34, 32, 35, 38, 36, 35, 32, 30, 32, 35\n\nWhich dot plot represents the speed of Henry's pitches?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "Dot plot with 1 dot for 30, 1 for 32, 1 for 33, 1 for 34, 1 for 35, 1 for 36, 1 for 38. (Incorrect frequencies)"
+        },
+        {
+          "id": "G",
+          "text": "Dot plot with 3 dots for 30, 4 for 32, 1 for 33, 1 for 34, 3 for 35, 1 for 36, 2 for 38. (Correct frequencies)"
+        },
+        {
+          "id": "H",
+          "text": "Dot plot with 2 dots for 30, 3 for 32, 1 for 33, 1 for 34, 2 for 35, 1 for 36, 1 for 38. (Incorrect frequencies)"
+        },
+        {
+          "id": "J",
+          "text": "Dot plot with 2 dots for 30, 4 for 32, 1 for 33, 1 for 34, 2 for 35, 1 for 36, 3 for 38. (Incorrect frequencies)"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.8(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the correct dot plot (graph that uses dots to display data), the student could have sorted the speeds of the pitches by value (30, 32, 33, 34, 35, 36, 38). Next, the student could have counted the number of pitches for each value, finding three pitches at 30 mph, four pitches at 32 mph, one pitch at 33 mph, one pitch at 34 mph, three pitches at 35 mph, one pitch at 36 mph, and two pitches at 38 mph. Then the student could have chosen the dot plot that has numbers of dots matching the number of pitches for each speed (three dots for 30 mph, four dots for 32 mph, one dot for 33 mph, one dot for 34 mph, three dots for 35 mph, one dot for 36 mph, and two dots for 38 mph).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely sorted the speeds of the pitches appropriately but chose the dot plot representing each value only one time. The student needs to focus on understanding that each dot on a dot plot represents one piece of information from the data set and that all pieces of information in a data set must be represented on a dot plot.",
+          "H": "The student likely chose a dot plot with at least one dot for each unique value on the number line instead of a dot plot with a dot for each occurrence of a value in the data set. The student needs to focus on understanding that each dot on a dot plot represents one piece of information from the data set and that all pieces of information in a data set must be represented on a dot plot.",
+          "J": "The student likely sorted the speeds of the pitches appropriately but miscounted the numbers of pitches for 30 mph and 38 mph. The student needs to focus on understanding that each dot on a dot plot represents one piece of information from the data set and that all pieces of information in a data set must be represented on a dot plot."
+        },
+        "remediationTip": "Practice creating dot plots by counting the frequency of each data point and representing each count with a dot."
+      }
+    },
+    {
+      "id": "2022-07",
+      "itemNumber": 7,
+      "itemType": "multiple_choice",
+      "stem": "Gia lists some different methods she thinks she can use to solve the multiplication problem shown.\n\n7 x 11 = ?\n\nWhich answer choice is NOT a correct method for Gia to use?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Image of 7 groups of 11 blocks (7 strips of 10 and 7 individual blocks)."
+        },
+        {
+          "id": "B",
+          "text": "Image of a number line with jumps of 11 starting from 0, ending at 77."
+        },
+        {
+          "id": "C",
+          "text": "List of numbers: 11, 22, 33, 44, 55, 66, 77. (Skip counting by 11s)"
+        },
+        {
+          "id": "D",
+          "text": "List of numbers: 7, 18, 29, 40, 51, 62, 73. (Starting at 7 and adding 11 repeatedly)"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which model is NOT a correct method for Gia to use, the student should have recognized that the list of numbers 7, 18, 29, 40, 51, 62, 73 followed a pattern of adding 11 to the previous number, but did not start with the number 11.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not recognize that groups of blocks can be used for multiplication. Each individual block is equal to 1 unit, and each strip of blocks is equal to 10 units. There are 7 individual blocks and 7 strips of blocks, resulting in 7 × 11 = 77. The student needs to focus on understanding and modeling multiplication situations.",
+          "B": "The student likely did not recognize that counting by 11 on a number line can be used for multiplication. The student needs to focus on understanding and modeling multiplication situations.",
+          "C": "The student likely did not recognize that skip counting by 11 can be used for multiplication. The student needs to focus on understanding and modeling multiplication situations."
+        },
+        "remediationTip": "Understand different multiplication models (arrays, number lines, skip counting) and verify that the starting point and increments correctly represent the multiplication problem."
+      }
+    },
+    {
+      "id": "2022-08",
+      "itemNumber": 8,
+      "itemType": "multiple_choice",
+      "stem": "A group of figures is shown.\n\n[Image of three trapezoids]\n\nWhich word best describes all the figures in the group?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "Rectangle"
+        },
+        {
+          "id": "G",
+          "text": "Rhombus"
+        },
+        {
+          "id": "H",
+          "text": "Trapezoid"
+        },
+        {
+          "id": "J",
+          "text": "Parallelogram"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.6(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which word best describes the figures, the student should have recognized that in each figure, exactly two sides are parallel, which is an attribute of a trapezoid.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely confused a rectangle (where all angles are 90° and opposite side lengths are equal) with a trapezoid. The student needs to focus on understanding the attributes of quadrilaterals.",
+          "G": "The student likely confused a rhombus (where all side lengths are equal and opposite sides are parallel) with a trapezoid. The student needs to focus on understanding the attributes of quadrilaterals.",
+          "J": "The student likely confused a parallelogram (where opposite sides are parallel and opposite side lengths are equal) with a trapezoid. The student needs to focus on understanding the attributes of quadrilaterals."
+        },
+        "remediationTip": "Review the attributes of different quadrilaterals, especially the definition of a trapezoid (exactly one pair of parallel sides)."
+      }
+    },
+    {
+      "id": "2022-09",
+      "itemNumber": 9,
+      "itemType": "multiple_choice",
+      "stem": "The table shows the numbers of tomato plants and spinach plants in five different gardens.\n\nGarden Plants\nGarden | Number of Tomato Plants | Number of Spinach Plants\nK | 34 | 43\nL | 26 | 35\nM | 38 | 47\nN | 29 | 38\nP | 45 | 54\n\nBased on the relationship shown in the table, which statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "There are 9 more spinach plants than tomato plants in each garden."
+        },
+        {
+          "id": "B",
+          "text": "There are 9 fewer spinach plants than tomato plants in each garden."
+        },
+        {
+          "id": "C",
+          "text": "There are 8 more spinach plants than tomato plants in each garden."
+        },
+        {
+          "id": "D",
+          "text": "There are 8 fewer spinach plants than tomato plants in each garden."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student should have determined the relationship between each number of tomato plants and each corresponding (paired) number of spinach plants. To determine the relationship, the student should have seen that each number of spinach plants is 9 more than each number of tomato plants (34 + 9 = 43, 26 + 9 = 35, 38 + 9 = 47, 29 + 9 = 38, 45 + 9 = 54).",
+        "incorrectOptionExplanations": {
+          "B": "The student likely determined that the difference between the number of tomato plants and the number of spinach plants is 9 but reversed the relationship shown in the table. The student needs to focus on understanding relationships between number pairs in a table.",
+          "C": "The student likely determined that the difference between the numbers of tomato plants is 8 from the first two rows in the table (34 – 26 = 8) and that the difference between the numbers of spinach plants is 8 from the first two rows in the table (43 – 35 = 8). The student then likely concluded that there were 8 more spinach plants than tomato plants. The student needs to focus on understanding relationships between number pairs in a table.",
+          "D": "The student likely determined that the difference in the number of tomato plants is 8 from the first two rows in the table (34 – 26 = 8) and the difference in the number of spinach plants is 8 from the first two rows in the table (43 – 35 = 8). The student then likely concluded that there were 8 fewer spinach plants than tomato plants. The student needs to focus on understanding relationships between number pairs in a table."
+        },
+        "remediationTip": "Analyze numerical patterns in tables to identify the relationship between paired numbers (e.g., addition, subtraction, multiplication, or division)."
+      }
+    },
+    {
+      "id": "2022-10",
+      "itemNumber": 10,
+      "itemType": "multiple_choice",
+      "stem": "The picture shows 8 seats in a movie theater. Children are sitting in a fraction of the seats.\n\n[Image of 8 movie seats, 3 with children, 5 empty]\n\nWhich expression is equivalent to the fraction of the seats that have children sitting in them?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "1/8 + 1/8 + 1/8 + 1/8 + 1/8 + 1/8 + 1/8 + 1/8"
+        },
+        {
+          "id": "G",
+          "text": "1/3 + 1/3 + 1/3"
+        },
+        {
+          "id": "H",
+          "text": "3/8 + 3/8 + 3/8"
+        },
+        {
+          "id": "J",
+          "text": "1/8 + 1/8 + 1/8"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.3(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which expression is equivalent to the fraction of the seats that have children sitting in them, the student could have first determined the fraction of the model represented by each seat. Because there are a total of 8 seats, each seat is 1/8 of the seats in the movie theater. The student then should have counted the number of children sitting in seats and written an expression that represents the fraction of seats that have children sitting in them. Because there are 3 children sitting in seats and each seat is 1/8 of the seats in the row, the total fraction of seats with children sitting in them can be expressed as 1/8 + 1/8 + 1/8.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely formed the fraction representing each seat (1/8) correctly but then incorrectly counted all the seats in the row instead of just the seats with children sitting in them. The student needs to focus on understanding how to determine the denominator (bottom number of a fraction) of the fraction represented by a given model.",
+          "G": "The student likely formed the fractions by using the total number of children in the row instead of the total number of seats in the row as the denominator (bottom number of a fraction). The student needs to focus on understanding how to determine the numerator (top number of a fraction) and denominator (bottom number of a fraction) of the fraction represented by a given model.",
+          "H": "The student likely recognized that 3/8 of the seats in the movie theater had children sitting in them but did not recognize that only one instance of 3/8 was needed in the expression. The student needs to focus on understanding how to determine the numerator (top number of a fraction) and denominator (bottom number of a fraction) of the fraction represented by a given model."
+        },
+        "remediationTip": "Practice representing fractions using models and writing equivalent addition expressions for unit fractions."
+      }
+    },
+    {
+      "id": "2022-11",
+      "itemNumber": 11,
+      "itemType": "multiple_choice",
+      "stem": "Which number sentence can be used to find the number that goes in the box?\n\n12 ÷ 2 = ?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 + 12 = 14"
+        },
+        {
+          "id": "B",
+          "text": "6 × 2 = 12"
+        },
+        {
+          "id": "C",
+          "text": "12 × 2 = 24"
+        },
+        {
+          "id": "D",
+          "text": "2 + 10 = 12"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(J)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which number sentence can be used to find the number that goes in the box, the student could have used the related multiplication fact (6 × 2 = 12). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely misread the division symbol (÷) as an addition symbol (+) and added 2 and 12. The student needs to focus on understanding that multiplication is the inverse (opposite) operation of division and that multiplication facts can be used to find unknown numbers in division equations.",
+          "C": "The student likely recognized that multiplication is the inverse (opposite) operation of multiplication but did not use the related multiplication fact (6 × 2 = 12). The student needs to focus on understanding that multiplication is the inverse (opposite) operation of division and that multiplication facts can be used to find unknown numbers in division equations.",
+          "D": "The student likely misread the division symbol (÷) as a subtraction symbol (-) and used addition as the inverse (opposite) operation for subtraction. The student needs to focus on understanding that multiplication is the inverse (opposite) operation of division and that multiplication facts can be used to find unknown numbers in division equations."
+        },
+        "remediationTip": "Practice identifying inverse operations, specifically how multiplication can be used to solve division problems."
+      }
+    },
+    {
+      "id": "2022-12",
+      "itemNumber": 12,
+      "itemType": "multiple_choice",
+      "stem": "Janet has 2 new games.\n\n• Each game has 3 packs of cards.\n• Each pack has 10 cards.\n\nWhich model can be used to find the total number of cards Janet has for these 2 games?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "Two separate strip diagrams. Each diagram has 3 sections, and each section is labeled \"10\"."
+        },
+        {
+          "id": "G",
+          "text": "Two separate strip diagrams. Each diagram has 3 sections, and each section is labeled \"3\"."
+        },
+        {
+          "id": "H",
+          "text": "Two separate strip diagrams. Each diagram has 2 sections, labeled \"3\" and \"10\"."
+        },
+        {
+          "id": "J",
+          "text": "Two separate strip diagrams. Each diagram has 1 section labeled \"10\"."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which model can be used to find the total number of cards, the student could have understood that the strip diagram should use equal-sized sections to model the multiplication problem 3 × 10. The strip diagram shows 3 equal-sized sections representing the number of packs in each game, each labeled with a 10 to represent the number of cards in each pack. The student then could have understood that two identical strip diagrams are needed since there are 2 games.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely confused what the numbers used as labels in each section represent and chose a strip diagram that represents 3 × 3 instead of 3 × 10. The student needs to focus on understanding how to use strip diagrams to represent multiplication problems.",
+          "H": "The student likely confused a strip diagram modeling addition (3 + 10) with one modeling multiplication (3 × 10). The student needs to focus on understanding how to use strip diagrams to represent multiplication problems.",
+          "J": "The student likely misunderstood what the number of equal-sized sections represents and chose a strip diagram that represents 1 × 10 instead of 3 × 10. The student needs to focus on understanding how to use strip diagrams to represent multiplication problems."
+        },
+        "remediationTip": "Practice using strip diagrams to model multi-step multiplication problems, ensuring sections and labels represent the quantities correctly."
+      }
+    },
+    {
+      "id": "2022-13",
+      "itemNumber": 13,
+      "itemType": "multiple_choice",
+      "stem": "Leighton made a table that correctly shows the attributes of shapes. She used a check mark to identify the attributes of each shape.\n\nWhich table could be the one Leighton made?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Table A: Rectangle (Has Vertices: ✓, Quadrilateral: ✓), Triangle (Has Vertices: ✓, Quadrilateral: ✓), Circle (Has Vertices: , Quadrilateral: )"
+        },
+        {
+          "id": "B",
+          "text": "Table B: Rectangle (Has Vertices: ✓, Quadrilateral: ), Triangle (Has Vertices: ✓, Quadrilateral: ✓), Circle (Has Vertices: ✓, Quadrilateral: )"
+        },
+        {
+          "id": "C",
+          "text": "Table C: Rectangle (Has Vertices: ✓, Quadrilateral: ✓), Triangle (Has Vertices: ✓, Quadrilateral: ), Circle (Has Vertices: , Quadrilateral: )"
+        },
+        {
+          "id": "D",
+          "text": "Table D: Rectangle (Has Vertices: , Quadrilateral: ✓), Triangle (Has Vertices: ✓, Quadrilateral: ), Circle (Has Vertices: , Quadrilateral: )"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which table correctly shows the attributes of shapes, the student should have recalled the attributes (characteristics) of the different shapes. A rectangle has four vertices (corners) and is a quadrilateral since it has four sides. A triangle has three vertices and is not a quadrilateral since it has only three sides. A circle has no vertices and is not a quadrilateral since a circle has no sides.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused a quadrilateral with a polygon (closed figure with at least three sides) and classified the triangle as a quadrilateral. The student needs to focus on understanding the attributes of two-dimensional (flat) shapes.",
+          "B": "The student likely misunderstood the term “vertices\" (corners) but recognized that polygons and circles are different. The student needs to focus on understanding the attributes of two-dimensional (flat) shapes.",
+          "D": "The student likely did not recognize a rectangle as a quadrilateral. The student needs to focus on understanding the attributes of two-dimensional (flat) shapes."
+        },
+        "remediationTip": "Review the definitions and characteristics of basic 2-D shapes, focusing on properties like the number of vertices and whether they are quadrilaterals."
+      }
+    },
+    {
+      "id": "2022-14",
+      "itemNumber": 14,
+      "itemType": "griddable_numeric",
+      "stem": "A group of people bought tickets for a roller-coaster ride.\n\n• The group spent $4 for each ticket.\n• Altogether the group spent $48 on tickets.\n• Each person in the group got 2 tickets.\n\nHow many people were in the group?\n\nRecord your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "6",
+        "acceptedValues": [
+          "6"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(K)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many people were in the group, the student first could have determined the amount of money spent on tickets for each person. Each person in the group got 2 tickets, the group spent $4 for each ticket, and 2 × 4 = 8. The student then could have determined how many people were in the group by dividing the total amount of money spent on tickets for the entire group by the amount of money spent on tickets for each person, 48 ÷ 8 = 6 people. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "Practice solving multi-step word problems involving multiplication and division by breaking them down into smaller steps."
+      }
+    },
+    {
+      "id": "2022-15",
+      "itemNumber": 15,
+      "itemType": "multiple_choice",
+      "stem": "Carter and Dane shared a package of 8 baseballs equally.\n\n[Image of 8 baseballs in a row]\n\nWhat fraction of the package of baseballs did each person get?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "2/8"
+        },
+        {
+          "id": "B",
+          "text": "4/4"
+        },
+        {
+          "id": "C",
+          "text": "4/1"
+        },
+        {
+          "id": "D",
+          "text": "4/8"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.3(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine what fraction of the package of baseballs each person received, the student could have calculated the number of baseballs each person received. The 8 baseballs were shared equally by 2 people; therefore, each person received 4 out of the 8 baseballs. The fraction represents 4 out of 8. The numerator (top number of a fraction) represents the number of baseballs each person received, and the denominator (bottom number of a fraction) represents the total number of baseballs. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely formed the fraction 2/8 because 2 people shared the 8 baseballs. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
+          "B": "The student likely formed the fraction 4/4 because each person received 4 baseballs. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts.",
+          "C": "The student likely determined that each person received 4 baseballs and understood that 4 is the value of the numerator, but the student did not know how to determine the value of the denominator. The student needs to focus on understanding what the numerator and the denominator of a fraction represent in problem contexts."
+        },
+        "remediationTip": "Review the concept of fractions, understanding that the numerator is the part and the denominator is the total whole, especially in sharing contexts."
+      }
+    },
+    {
+      "id": "2022-16",
+      "itemNumber": 16,
+      "itemType": "multiple_choice",
+      "stem": "Each side of this figure is the same length. The perimeter of the figure is 72 inches.\n\n[Image of an octagon]\n\nWhat is the length of one side of the figure in inches?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "8 in."
+        },
+        {
+          "id": "G",
+          "text": "12 in."
+        },
+        {
+          "id": "H",
+          "text": "9 in."
+        },
+        {
+          "id": "J",
+          "text": "18 in."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.7(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the length of one side of an octagon, the student could have recognized that each side of the figure is the same length, and the perimeter (distance around the outside) is 72 inches. The student then could have divided the perimeter (72 inches) by the number of sides (8); 72 ÷ 8 = 9 inches. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely determined that the figure has 8 sides but did not determine the length of each side by dividing the perimeter by the number of sides. The student needs to focus on understanding perimeter.",
+          "G": "The student likely divided the perimeter by the number of sides of a hexagon, 72 ÷ 6 = 12 inches, and not by the number of sides of an octagon. The student needs to focus on understanding the attributes of two-dimensional (flat) shapes.",
+          "J": "The student likely divided the perimeter by the number of sides of a quadrilateral, 72 ÷ 4 = 18 inches, and not by the number of sides of an octagon. The student needs to focus on understanding the attributes of two-dimensional (flat) shapes."
+        },
+        "remediationTip": "Recall the definition of perimeter for regular polygons and how to find the side length when the perimeter and number of sides are known."
+      }
+    },
+    {
+      "id": "2022-17",
+      "itemNumber": 17,
+      "itemType": "multiple_choice",
+      "stem": "A movie theater has 710 seats.\n\n• 158 seats are red.\n• 247 seats are black.\n• 119 seats are yellow.\n• The rest of the seats are green.\n\nHow many seats are green?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "186"
+        },
+        {
+          "id": "B",
+          "text": "524"
+        },
+        {
+          "id": "C",
+          "text": "214"
+        },
+        {
+          "id": "D",
+          "text": "206"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of seats in the movie theater that are green, the student could have first added the numbers of red seats, black seats, and yellow seats (158 + 247 + 119 = 524). The student could have then subtracted the sum of the red seats, black seats, and yellow seats from the total number of seats in the movie theater (710 – 524 = 186). There are 186 green seats in the movie theater. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely added the numbers of red seats, black seats, and yellow seats (158 + 247 + 119 = 524) but did not subtract the sum from the total number of seats in the movie theater. The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
+          "C": "The student likely added the numbers of red seats, black seats, and yellow seats (158 + 247 + 119 = 524) but subtracted the smaller digit from the larger digit in each place value instead of regrouping (710 – 524 → 214). The student needs to focus on understanding how to regroup when subtracting.",
+          "D": "The student likely recognized that addition was needed to find the number of red seats, black seats, and yellow seats in the movie theater but did not regroup when adding (158 + 247 + 119 → 504). The student then likely recognized that subtraction was needed to find the number of green seats in the movie theater (710 – 504 = 206). The student needs to focus on understanding how to regroup when adding."
+        },
+        "remediationTip": "Practice multi-step addition and subtraction problems, focusing on regrouping accurately."
+      }
+    },
+    {
+      "id": "2022-18",
+      "itemNumber": 18,
+      "itemType": "multiple_choice",
+      "stem": "Ms. González is putting square stickers on a rectangular poster. Each sticker has an area of 1 square inch. She has already put some stickers on the poster as shown.\n\n[Image of a partial rectangular grid of stickers, showing 7 rows and 8 columns of spaces, with the first column and first row of 8 stickers filled.]\n\nWhat is the area of the entire poster in square inches?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "56"
+        },
+        {
+          "id": "G",
+          "text": "42"
+        },
+        {
+          "id": "H",
+          "text": "48"
+        },
+        {
+          "id": "J",
+          "text": "15"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the area of (amount of space covered by) the entire poster in square inches, the student could have determined the number of rows and the number of stickers in each row of the figure representing the poster. The figure covers 7 rows, and each row is 8 stickers long. The student then could have multiplied 7 by 8 (7 × 8 = 56). Because the figure can be filled with 56 stickers and each sticker has an area of 1 square inch, the figure represents an area of 56 square inches. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely miscounted the number of squares in each row and multiplied 7 × 6 to get 42 square inches. The student needs to focus on understanding how to interpret area models accurately.",
+          "H": "The student likely miscounted the number of rows and multiplied 6 × 8 to get 48 square inches. The student needs to focus on understanding how to interpret area models accurately.",
+          "J": "The student likely added 7 and 8 (7 + 8 = 15) instead of multiplying 7 by 8. The student needs to focus on understanding how to interpret area models accurately."
+        },
+        "remediationTip": "Practice finding the area of rectangles by counting rows and columns and using multiplication."
+      }
+    },
+    {
+      "id": "2022-19",
+      "itemNumber": 19,
+      "itemType": "multiple_choice",
+      "stem": "Four students with number cards want to line up from left to right in order from least to greatest number.\n\nLeft → Right\nErin: 9,975\nRico: 90,096\nPenelope: 98,300\nOlivia: 98,087\n\nWhich statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Olivia should be between Erin and Rico."
+        },
+        {
+          "id": "B",
+          "text": "Erin should be on the right end after Olivia."
+        },
+        {
+          "id": "C",
+          "text": "Penelope should be on the right end after Olivia."
+        },
+        {
+          "id": "D",
+          "text": "All the students are in the correct order."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.2(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine that the statement is true about arranging the number cards in order from least to greatest, the student could have compared the digits of the values assigned to the children in the graphic. Since Rico, Penelope, and Olivia all have five-digit numbers and Erin has a number with only four digits, Erin has the number card with the least value, making her the first child in order from left to right. Next, the student could have compared the digits in the ten-thousands place (second digit to the left of the comma) on the number cards for Rico (90,096), Penelope (98,300), and Olivia (98,087) and determined that the digits represented the same value. The student then could have compared the digits in the thousands place (first digit to the left of the comma) on the number cards for Rico (90,096), Penelope (98,300), and Olivia (98,087) and determined that, since 0 is less than 8, Rico should be the second child in order from left to right. The student then could have compared the digits in the hundreds place (first digit to the right of the comma) on the number cards for Penelope (98,300) and Olivia (98,087) and determined that, since 3 is greater than 0, Penelope has the number card with the greatest value and should be the last child in order from left to right.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely compared the digits in the tens and ones places (two rightmost digits) in the numbers for Erin (9,975), Rico (90,096), and Olivia (98,087) and concluded that Olivia should be the second child in the line since 87 is between 75 and 96. The student needs to focus on understanding how to order whole numbers from least to greatest.",
+          "B": "The student likely noticed that the first digit on each number card was the same (9) and so compared the second digits on the number cards (Erin [9,975], Rico [90,096], Penelope [98,300], and Olivia [98,087]). The student then likely concluded that Erin should be the fourth child in the line after Olivia since 9 is greater than 8. The student needs to focus on understanding how to order whole numbers from least to greatest.",
+          "D": "The student likely compared the digits in the ten-thousands and thousands place (two leftmost digits) for each child (Erin [9,975], Rico [90,096], Penelope [98,300], and Olivia [98,087]) and concluded that the children were already in the correct order, since 9 is less than 90 and 90 is less than 98. The student needs to focus on understanding how to order whole numbers from least to greatest."
+        },
+        "remediationTip": "Practice comparing and ordering multi-digit whole numbers by comparing digits from left to right, starting with the highest place value."
+      }
+    },
+    {
+      "id": "2022-20",
+      "itemNumber": 20,
+      "itemType": "multiple_choice",
+      "stem": "Dahlia sold pineapples at a fruit stand. The table shows the number of pineapples Dahlia had for sale each week and the number of customers she expected to come to her fruit stand.\n\nDahlia's Pineapples\nWeek | Number of Pineapples | Number of Expected Customers\nWeek 1 | 110 | 50\nWeek 2 | 150 | 150\nWeek 3 | 200 | 40\nWeek 4 | 25 | 50\n\nIn which week did Dahlia most likely sell her pineapples for the highest price?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "Week 1, because the number of pineapples was greater than the expected number of customers"
+        },
+        {
+          "id": "G",
+          "text": "Week 2, because the number of pineapples was the same as the expected number of customers"
+        },
+        {
+          "id": "H",
+          "text": "Week 3, because fewer customers were expected to come to the fruit stand this week than any other week"
+        },
+        {
+          "id": "J",
+          "text": "Week 4, because the number of pineapples was less than the expected number of customers"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.9(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which week pineapples were sold for the highest price, the student should have recognized that the number of expected customers and the number of items available are directly related to the cost of the item. The student should have concluded that Week 4 was when pineapples were at the highest price since the number of available pineapples was less than the expected number of customers.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely reversed the relationship between the number of items available and the cost of the item. The student likely reasoned that since the number of available pineapples was greater than the number of expected customers, Week 1 was when the pineapples were sold for the highest price. The student needs to focus on understanding how the availability of resources impacts cost.",
+          "G": "The student likely reasoned that since the number of available pineapples was the same as the number of expected customers, Week 2 was when the pineapples were sold for the highest price. The student needs to focus on understanding how the availability of resources impacts cost.",
+          "H": "The student likely reasoned that Week 3 was when the pineapples were sold for the highest price since that week had the least number of expected customers. The student did not consider the number of available pineapples. The student needs to focus on understanding how the availability of resources affects cost."
+        },
+        "remediationTip": "Understand the basic economic principle of supply and demand: when supply is low and demand is high (or expected to be high), prices tend to be highest."
+      }
+    },
+    {
+      "id": "2022-21",
+      "itemNumber": 21,
+      "itemType": "multiple_choice",
+      "stem": "The total number of keys on a computer keyboard is 87.\n\n• There are 26 letter keys and 21 special symbol keys on the keyboard.\n• The rest of the keys are function keys.\n\nWhich model represents one way to find the number of function keys on the keyboard?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A number line from 0 to 90. Sections labeled: Function, Special symbol, Letter."
+        },
+        {
+          "id": "B",
+          "text": "A bar representing 87. Subsections labeled: 26, 21, ?."
+        },
+        {
+          "id": "C",
+          "text": "A number line from 0 to 90. Sections labeled: Special symbol, Letter, Function."
+        },
+        {
+          "id": "D",
+          "text": "A bar with 3 subsections: 26, 21, 87, with '?' representing the total."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which model can be used to find the number of function keys on the computer keyboard, the student should have recognized that, when the number of letter keys (26), the number of special symbol keys (21), and the number of function keys (unknown, ?), are added, the sum should be 87. This model shows that the entire length of the rectangle, 87 (total number of keys on the computer keyboard), is equal to the combined length of the smaller rectangles: 26 (letter keys), 21 (special symbol keys), and ? (function keys).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely recognized that, when the number of letter keys, the number of special symbol keys, and the number of function keys are added, the sum should be 87. However, the student likely reversed the sections for special symbol keys and function keys when setting up the model. The student needs to focus on understanding how pictorial models are used to represent addition and subtraction problems.",
+          "C": "The student likely recognized that, when the number of letter keys, the number of special symbol keys, and the number of function keys are added, the sum should be 87. However, the student likely overlapped the sections for special symbol keys and letter keys when setting up the model. The student needs to focus on understanding how pictorial models are used to represent addition and subtraction problems.",
+          "D": "The student likely recognized all the numbers given in the problem and incorrectly placed them in the same row of the model. This model indicates that 26 + 21 + 87 equals an unknown number of function keys, which conflicts with the first sentence of the problem (The total number of keys on a computer keyboard is 87). The student needs to focus on understanding how pictorial models are used to represent addition and subtraction problems."
+        },
+        "remediationTip": "Practice using bar models (tape diagrams) to represent part-whole relationships in addition and subtraction problems."
+      }
+    },
+    {
+      "id": "2022-22",
+      "itemNumber": 22,
+      "itemType": "multiple_choice",
+      "stem": "Chris built a fort using prisms. Which figure is NOT one Chris could have used to build his fort?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "Image of a cube (rectangular prism)"
+        },
+        {
+          "id": "G",
+          "text": "Image of a triangular prism"
+        },
+        {
+          "id": "H",
+          "text": "Image of a rectangular prism"
+        },
+        {
+          "id": "J",
+          "text": "Image of a square pyramid"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the figure that is NOT a prism, the student could have identified the attributes (characteristics) of a prism: (1) bases (sides) that are polygons (closed shapes with at least three sides), (2) bases that are the same size and shape, (3) bases that are parallel to each other (never touch), and (4) bases that are connected by rectangles. The first figure is a prism because it has square bases that are parallel to each other, are the same size, and are connected by rectangles. The second figure is a prism because it has triangular bases that are parallel to each other, are the same size and shape, and are connected by rectangles. The third figure is a prism because it has rectangular bases that are parallel to each other, are the same size and shape, and are connected by rectangles. The student should have recognized that the fourth figure is a pyramid and cannot be classified as a prism because the base is connected to triangles that meet at a point.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely did not recognize that a cube is a special prism in which all the faces are squares of the same size. The student needs to focus on understanding the attributes of prisms.",
+          "G": "The student likely did not recognize that a prism can have triangular bases. The student needs to focus on understanding the attributes of prisms.",
+          "H": "The student likely did not recognize that a prism can have rectangular bases. The student needs to focus on understanding the attributes of prisms."
+        },
+        "remediationTip": "Review the definitions and distinguishing attributes of prisms (two parallel, congruent polygonal bases connected by rectangular faces) versus pyramids (one polygonal base connected by triangular faces meeting at a point)."
+      }
+    },
+    {
+      "id": "2022-23",
+      "itemNumber": 23,
+      "itemType": "multiple_choice",
+      "stem": "What number goes in the [box] to make the equation true?\n\n[box] × 7 = 98",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "14"
+        },
+        {
+          "id": "B",
+          "text": "91"
+        },
+        {
+          "id": "C",
+          "text": "105"
+        },
+        {
+          "id": "D",
+          "text": "13"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.5(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the unknown number (the empty square), the student could have recognized that division is the inverse (opposite) operation of multiplication and divided 98 by 7 (98 ÷ 7 = 14). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely subtracted 7 from 98 instead of dividing. The student needs to focus on understanding that division is the inverse (opposite) operation of multiplication.",
+          "C": "The student likely added 98 and 7 instead of dividing. The student needs to focus on understanding that division is the inverse (opposite) operation of multiplication.",
+          "D": "The student likely recognized that division is the inverse (opposite) operation of multiplication but made an error when dividing 98 by 7. The student needs to focus on using division with accuracy to find unknown numbers in multiplication equations."
+        },
+        "remediationTip": "Practice solving for unknown factors in multiplication equations by using the inverse operation of division."
+      }
+    },
+    {
+      "id": "2022-24",
+      "itemNumber": 24,
+      "itemType": "griddable_numeric",
+      "stem": "An expression is shown.\n\n5 + 700 + 40\n\nWhat number is equivalent to this expression?\n\nRecord your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "745",
+        "acceptedValues": [
+          "745"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.2(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine a number that is equivalent to the expression, the student should have put the digits from the expression in place-value order. From left to right, the place-value order is hundreds place, tens place, and ones place. The student should have used the 7 in the hundreds place for the 700 in the expression, a 4 in the tens place for the 40 in the expression, and a 5 in the ones place for the 5 in the expression (745). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "Practice writing numbers in standard form from their expanded form, focusing on place value for hundreds, tens, and ones."
+      }
+    },
+    {
+      "id": "2022-25",
+      "itemNumber": 25,
+      "itemType": "multiple_choice",
+      "stem": "Greg had a package of 14 stars to put on the 2 posters shown. He put the same number of stars on each poster, and he used all the stars in the package.\n\n[Image of two blank posters, Poster 1 and Poster 2]\n\nHow many stars did Greg put on each poster?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "28"
+        },
+        {
+          "id": "B",
+          "text": "16"
+        },
+        {
+          "id": "C",
+          "text": "12"
+        },
+        {
+          "id": "D",
+          "text": "7"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(H)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of stars put on each poster, the student could have recognized that each poster has the same number of stars and then divided the number of stars by the number of posters (14 ÷ 2 = 7). Each poster will have 7 stars.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely multiplied 14 and 2 instead of dividing 14 by 2. The student needs to focus on understanding the mathematics operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "B": "The student likely added 14 and 2 instead of dividing 14 by 2. The student needs to focus on understanding the mathematics operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "C": "The student likely subtracted 2 from 14 instead of dividing 14 by 2. The student needs to focus on understanding the mathematics operations (+, -, ×, ÷) needed to solve real-world problems."
+        },
+        "remediationTip": "Practice solving division word problems involving equal sharing or grouping, identifying the correct operation."
+      }
+    },
+    {
+      "id": "2022-26",
+      "itemNumber": 26,
+      "itemType": "multiple_choice",
+      "stem": "The fraction strips shown can be used to find equivalent fractions.\n\n[Image of fraction strips: a whole, halves, thirds, fourths, sixths, eighths]\n\nWhich fraction is equivalent to 2/4?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "1/2"
+        },
+        {
+          "id": "G",
+          "text": "2/6"
+        },
+        {
+          "id": "H",
+          "text": "3/4"
+        },
+        {
+          "id": "J",
+          "text": "1/3"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.3(F)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the fraction equivalent to 2/4, the student could have shaded 2 of the 4 parts in the fourth row of the strip diagram to represent 2/4 and 1 of the 2 parts in the second row of the strip diagram to represent 1/2. The student then could have recognized that since the strip diagrams are the same size and the shaded area of the fourth row is the same as the shaded area of the second row, the fractions represented are equivalent.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely recognized that the numerators (top numbers of the fractions) are the same and ignored the denominators (bottom numbers of the fractions). The student needs to focus on understanding how to represent equivalent fractions on strip diagrams.",
+          "H": "The student likely recognized that the denominators (bottom numbers of the fractions) are the same and ignored the numerators (top numbers of the fractions). The student needs to focus on understanding how to represent equivalent fractions on strip diagrams.",
+          "J": "The student likely shaded 2 of the 6 parts in the fifth row instead of shading 2 of the 4 parts in the fourth row. The student needs to focus on understanding how to represent equivalent fractions on strip diagrams."
+        },
+        "remediationTip": "Practice identifying equivalent fractions using visual models like fraction strips, understanding that equivalent fractions represent the same amount."
+      }
+    },
+    {
+      "id": "2022-27",
+      "itemNumber": 27,
+      "itemType": "multiple_choice",
+      "stem": "Shelly needs tickets for rides at an amusement park. The table shows the numbers of tickets needed to ride different numbers of rides.\n\nAmusement Park Rides\nNumber of Tickets | Number of Rides\n6 | 3\n12 | 6\n18 | 9\n24 | 12\n\nBased on the relationship shown in the table, which statement is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Shelly needs 3 tickets for each ride, because the number of tickets minus 3 equals the number of rides."
+        },
+        {
+          "id": "B",
+          "text": "Shelly needs 3 tickets for each ride, because the number of tickets plus 3 equals the number of rides."
+        },
+        {
+          "id": "C",
+          "text": "Shelly needs 2 tickets for each ride, because the number of tickets divided by 2 equals the number of rides."
+        },
+        {
+          "id": "D",
+          "text": "Shelly needs 2 tickets for each ride, because the number of tickets times 2 equals the number of rides."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student could have determined the relationship between each number of tickets and its corresponding (paired) number of rides in the table. To determine the relationship, the student could have noticed that each number of tickets is divided by 2 to get the number of rides (6 ÷ 2 = 3, 12 ÷ 2 = 6, 18 ÷ 2 = 9, and 24 ÷ 2 = 12). The student could have then concluded that Shelly needs 2 tickets for each ride because the number of tickets divided by 2 equals the number of rides.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely used the first row of numbers and determined that the difference between the number of tickets and the number of rides is 3 (6 – 3 = 3). The student needs to focus on understanding relationships between number pairs in a table.",
+          "B": "The student likely used the first row of numbers and determined that the difference between the number of tickets and the number of rides is 3 (6 – 3 = 3) but reversed the relationship from subtraction to addition. The student needs to focus on understanding relationships between number pairs in a table.",
+          "D": "The student likely determined that each number of tickets is divided by 2 to get the number of rides but reversed the relationship from division to multiplication. The student needs to focus on understanding relationships between number pairs in a table."
+        },
+        "remediationTip": "Analyze input-output tables to identify the rule (operation) that relates the numbers in each pair."
+      }
+    },
+    {
+      "id": "2022-28",
+      "itemNumber": 28,
+      "itemType": "multiple_choice",
+      "stem": "Which statement about the number 27 is true?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "It is even because the digit in the tens place is even."
+        },
+        {
+          "id": "G",
+          "text": "It is odd because the digit in the ones place is odd."
+        },
+        {
+          "id": "H",
+          "text": "It is even because it can be divided by 9 evenly."
+        },
+        {
+          "id": "J",
+          "text": "It is odd because it can be divided by 2 evenly."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.4(I)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement about the number 27 is true, the student could have looked at the digit in the ones place (rightmost digit). The digit 7 is odd, so the number 27 is also odd. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely looked at the digit 2 in the tens place (leftmost digit) instead of the digit 7 in the ones place. The student needs to focus on understanding how to determine whether a number is even or odd using divisibility rules.",
+          "H": "The student likely recognized that 27 is divisible by 9 but misunderstood the word “evenly\" when dividing. The student needs to focus on understanding how to determine whether a number is even or odd using divisibility rules.",
+          "J": "The student likely recognized that 27 is not divisible by 2 and ignored the \"can be divided by 2 evenly.\" The student needs to focus on understanding how to determine whether a number is even or odd using divisibility rules."
+        },
+        "remediationTip": "Review the rule for determining if a number is odd or even (based on the digit in the ones place) and the definition of divisibility."
+      }
+    },
+    {
+      "id": "2022-29",
+      "itemNumber": 29,
+      "itemType": "multiple_choice",
+      "stem": "Derrick drew two congruent figures and then shaded ¼ of each figure.\n\nWhich figures could be the ones Derrick drew and shaded?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Two congruent circles. Left circle divided into 4 equal parts, 1 shaded. Right circle divided into 2 parts, 1 shaded."
+        },
+        {
+          "id": "B",
+          "text": "Two rectangles, not congruent. Each divided into 4 equal parts, 1 shaded."
+        },
+        {
+          "id": "C",
+          "text": "Two congruent star shapes, each divided into 5 equal parts, 1 shaded."
+        },
+        {
+          "id": "D",
+          "text": "Two congruent rectangles. Each divided into 4 equal parts, 1 shaded."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.6(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which pair of figures could be the ones Derrick drew and shaded, the student could have recognized that the figures must be congruent (same shape and size) and that 1/4 of each figure must be shaded. This option shows two congruent rectangles that are each divided into 4 equal-sized parts with 1 part shaded, representing the fraction 1/4.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely recognized that the figures are congruent circles and that 1 part of each circle is shaded. However, only one of the figures is divided into 4 equal-sized parts. The student needs to focus on understanding that the parts of a fraction model must be equal in size to represent a fraction of the total number of pieces.",
+          "B": "The student likely recognized that the figures are divided into 4 equal-sized parts and that 1 part is shaded. However, the figures are not congruent (same size and same shape). The student needs to focus on understanding that figures are not congruent unless they are the same shape and size.",
+          "C": "The student likely recognized that the figures are congruent and that 1 part of each is shaded. However, the figures are divided into 5, not 4, equal-sized parts. The student needs to focus on understanding that a fraction is composed of a numerator (top number in a fraction) represented by designated parts (shaded parts in the figure) and a denominator (bottom number in a fraction) that is equal to the total number of parts in a whole."
+        },
+        "remediationTip": "Review the definitions of congruent figures (same shape and size) and how fractions represent parts of a whole where all parts must be equal."
+      }
+    },
+    {
+      "id": "2022-30",
+      "itemNumber": 30,
+      "itemType": "multiple_choice",
+      "stem": "Alex bought 4 packages of pink golf balls and 2 packages of orange golf balls. There were 12 golf balls in each package.\n\nHow many golf balls did Alex buy?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "72"
+        },
+        {
+          "id": "G",
+          "text": "50"
+        },
+        {
+          "id": "H",
+          "text": "96"
+        },
+        {
+          "id": "J",
+          "text": "18"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(K)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of golf balls bought, the student could have added the number of packages containing pink golf balls (4) and the number of packages containing orange golf balls (2) and then multiplied the sum by the number of golf balls in each package (12) (4 + 2 = 6; 12 × 6 = 72). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely multiplied 12 by 4 and then added 2 (12 × 4 = 48; 48 + 2 = 50). The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve multistep, real-world problems.",
+          "H": "The student likely multiplied the numbers in the problem (4 × 2 = 8; 8 × 12 = 96). The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve multistep, real-world problems.",
+          "J": "The student likely added the numbers in the problem (4 + 2 + 12 = 18). The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve multistep, real-world problems."
+        },
+        "remediationTip": "Practice solving multi-step word problems, first identifying all the steps and the correct operations for each."
+      }
+    },
+    {
+      "id": "2022-31",
+      "itemNumber": 31,
+      "itemType": "multiple_choice",
+      "stem": "The pictograph shows the number of games each team in a volleyball league won during one season.\n\nVolleyball Games Won\n[Pictograph with volleyball icons]\nSpikes: 4 icons\nAces: 3 icons\nStars: 5 icons\nNets: 2 icons\nDigs: 1 icon\nEach [volleyball icon] means 3 games won.\n\nWhich table represents the data in the pictograph?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Table A: Spikes 12, Aces 15, Stars 9, Nets 6, Digs 3"
+        },
+        {
+          "id": "B",
+          "text": "Table B: Spikes 4, Aces 3, Stars 5, Nets 2, Digs 1"
+        },
+        {
+          "id": "C",
+          "text": "Table C: Spikes 12, Aces 9, Stars 15, Nets 6, Digs 3"
+        },
+        {
+          "id": "D",
+          "text": "Table D: Spikes 4, Aces 5, Stars 3, Nets 2, Digs 1"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.8(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which table represents the data in the pictograph (graph that uses picture icons to represent numbers), the student could have multiplied the number of whole volleyball icons shown in each column by 3, the number shown in the key (sentence below the pictograph telling the value of each icon). The student should have identified the table showing that the Spikes won 12 games (4 × 3 = 12), the Aces won 9 games (3 × 3 = 9), the Stars won 15 games (5 × 3 = 15), the Nets won 6 games (2 × 3 = 6), and the Digs won 3 games (1 × 3 = 3).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely used the key to determine the number of wins for each team but switched the number of wins for the Stars with the number of wins for the Aces. The student needs to focus on understanding how to accurately interpret data shown in a pictograph.",
+          "B": "The student likely counted each volleyball icon as 1 game, disregarding the key. The student needs to focus on understanding how to use a key in a pictograph to accurately interpret data.",
+          "D": "The student likely counted each volleyball icon as 1 win, disregarding the key, and then switched the number of wins for the Stars with the number of wins for the Aces. The student needs to focus on understanding how to use a key in a pictograph to accurately interpret data and how to accurately interpret data shown in a pictograph."
+        },
+        "remediationTip": "Practice interpreting pictographs by correctly using the key to calculate the total value represented by the icons for each category."
+      }
+    },
+    {
+      "id": "2022-32",
+      "itemNumber": 32,
+      "itemType": "multiple_choice",
+      "stem": "At the beginning of September, Mr. Watkins had 543 erasers.\n\n• During September he gave his students 99 of the erasers.\n• During October he gave his students 212 of the erasers.\n\nHow many erasers did Mr. Watkins have at the end of October?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "F",
+          "text": "854"
+        },
+        {
+          "id": "G",
+          "text": "232"
+        },
+        {
+          "id": "H",
+          "text": "430"
+        },
+        {
+          "id": "J",
+          "text": "344"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of erasers Mr. Watkins had at the end of October, the student could have subtracted 99 from 543 (543 – 99 = 444) and then subtracted 212 from the difference (444 – 212 = 232). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely added all the numbers (543 + 99 + 212 = 854). The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
+          "H": "The student likely added 543 and 99 (543 + 99 = 642) and then subtracted 212 from the sum (642 - 212 = 430). The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
+          "J": "The student likely recognized that the number of erasers given away each month needed to be subtracted. However, instead of regrouping, the student likely subtracted the smaller digit from the larger digit for each place value (543 – 99 → 556 and 556 – 212 → 344). The student needs to focus on understanding how to regroup when subtracting."
+        },
+        "remediationTip": "Practice solving multi-step subtraction word problems involving multiple subtractions, focusing on accurate regrouping."
+      }
+    }
+  ]
+}
