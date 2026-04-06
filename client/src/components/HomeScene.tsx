@@ -144,21 +144,26 @@ export default function HomeScene({
           />
 
           {/* ── Header bar ──────────────────────────────── */}
-          <div className="scene-header" style={{ position: 'absolute', top: 0, left: 0, width: SCENE_W, height: 110 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 24, padding: '12px 32px', height: '100%', justifyContent: 'space-between' }}>
+          <div className="scene-header" style={{ position: 'absolute', top: 0, left: 0, width: SCENE_W, height: 120, boxSizing: 'border-box', overflow: 'hidden' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 24, padding: '10px 32px', height: '100%', boxSizing: 'border-box', justifyContent: 'space-between', whiteSpace: 'nowrap' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
                 <img src={`${BASE}Ishaan.png`} alt="Ishaan" style={{ width: 100, height: 100, objectFit: 'cover', borderRadius: 16, flexShrink: 0, boxShadow: '0 8px 16px rgba(0,0,0,0.3)' }} />
                 <div style={{ textAlign: 'left' }}>
                   <h1 style={{ margin: 0, fontSize: '2rem', fontWeight: 900, color: '#5D4037', textTransform: 'uppercase', letterSpacing: 2 }}>ISHAAN'S DINO JUNGLE SAFARI</h1>
                 </div>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <button className="primary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={onShowProgress}>📊 Progress</button>
-                {isAdmin && (
-                  <button className="primary-button" style={{ padding: '8px 16px', fontSize: '0.9rem', background: 'linear-gradient(135deg, #d32f2f, #f44336)' }} onClick={onShowAdmin}>🔧 Admin</button>
-                )}
-                <span style={{ color: '#3E2723', fontWeight: 800, fontFamily: '"Comic Sans MS", "Comic Sans", cursive', fontSize: '1.2rem', padding: '0 8px' }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
-                <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={onLogout}>Log Out</button>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <button className="primary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={onShowProgress}>📊 Progress</button>
+                  {isAdmin && (
+                    <button className="primary-button" style={{ padding: '8px 16px', fontSize: '0.9rem', background: 'linear-gradient(135deg, #d32f2f, #f44336)' }} onClick={onShowAdmin}>🔧 Admin</button>
+                  )}
+                  <span style={{ color: '#3E2723', fontWeight: 800, fontFamily: '"Comic Sans MS", "Comic Sans", cursive', fontSize: '1.2rem', padding: '0 8px' }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
+                  <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={onLogout}>Log Out</button>
+                </div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#3E2723', paddingRight: '4px' }}>
+                  Need help with the application? Email: <a href="mailto:raj.srivastava@gmail.com" style={{ color: '#0369a1', textDecoration: 'underline' }}>raj.srivastava@gmail.com</a>
+                </div>
               </div>
             </div>
           </div>
@@ -178,9 +183,6 @@ export default function HomeScene({
               <h2 style={{ fontSize: '2.4rem', margin: '0 0 8px 0' }}>Ready for MATH STAAR Jungle Safari!</h2>
               <p style={{ fontSize: '1.15rem', lineHeight: 1.5, margin: 0 }}>
                 Pick a Mountain below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!
-              </p>
-              <p style={{ fontSize: '1.05rem', lineHeight: 1.5, margin: '12px 0 0 0', fontWeight: 600 }}>
-                Need help with the application? Email: <a href="mailto:raj.srivastava@gmail.com" style={{ color: '#0369a1', textDecoration: 'underline' }}>raj.srivastava@gmail.com</a>
               </p>
             </div>
           </div>
