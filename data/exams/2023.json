@@ -1,0 +1,1301 @@
+{
+  "id": "staar-g3-math-2023",
+  "siteTitle": "Math STAAR Test Prep for Ishaan",
+  "displayTitle": "2023 Grade 3 Math",
+  "subtitle": "Queued for modern tech-enhanced normalization.",
+  "year": 2023,
+  "grade": 3,
+  "subject": "Math",
+  "generation": "modern",
+  "totalQuestions": 30,
+  "sourceFiles": [
+    null,
+    "2023-staar-3-math-key.pdf",
+    "2023-staar-3-math-rationale.pdf"
+  ],
+  "questions": [
+    {
+      "id": "2023-01",
+      "itemNumber": 1,
+      "itemType": "multiple_choice",
+      "stem": "Which of these statements is true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2/4 > 2/6"
+        },
+        {
+          "id": "B",
+          "text": "2/4 = 2/6"
+        },
+        {
+          "id": "C",
+          "text": "2/6 > 2/4"
+        },
+        {
+          "id": "D",
+          "text": "2/4 < 2/6"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.3.H",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which inequality (a number sentence in which an inequality symbol such as > [greater than] or < [less than] indicates that two quantities are not equal) or equation (a number sentence in which an equal sign [=], indicates that the two sides have an equal value) is true, the student could have recognized that the numerator (number above the fraction bar) of the two fractions was the same number, 2, so what needed to be compared were the denominators (numbers below the fraction bars). The denominator indicates the total number of equal-sized parts in the whole, so 2/4 has four equal-sized parts and 2/6 has six equal-sized parts. A fraction that represents 2 out of 4 equal-sized parts of a whole is greater than a fraction that represents 2 out of 6 equal-sized parts of a whole; therefore, 2/4 is greater than 2/6. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely looked only at the numerators of the two fractions, which are both equal to 2, recognized that they were the same, and so considered the fractions to be equal without determining whether the denominators were the same. The student needs to focus on comparing the denominators of fractions to determine whether the fractions are equal when the numerators are the same.",
+          "C": "The student likely looked only at the numerators of the two fractions, which are both equal to 2, recognized that they were the same, and then recognized that the denominators were different and therefore needed to be compared. The student may not have considered that the denominator indicates the number of equal-sized parts in the whole, may have recognized that 6 is greater than 4, and so may have determined that 2/6is greater than 2/4. The student needs to focus on comparing the denominators of fractions to determine whether the fractions are equal when the numerators are the same.",
+          "D": "The student likely looked only at the numerators of the two fractions, which are both equal to 2, recognized that they were the same, and then recognized that the denominators were different and therefore needed to be compared. The student may not have considered that the denominator indicates the number of equal-sized parts in the whole, may have recognized that 3 is less than 8, and so may have determined that 2/3 is less than 2/8. The student needs to focus on comparing the denominators of fractions to determine whether the fractions are equal when the numerators are the same."
+        },
+        "remediationTip": "Focus on understanding that when numerators are the same, the fraction with the smaller denominator represents a larger value because the whole is divided into fewer, larger parts."
+      }
+    },
+    {
+      "id": "2023-02",
+      "itemNumber": 2,
+      "itemType": "multiple_choice",
+      "stem": "Lupita has 26 pieces of candy. She wants to put 2 pieces of candy into each bag. How many bags does Lupita need?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2"
+        },
+        {
+          "id": "B",
+          "text": "24"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "13"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.H",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of bags Lupita needs, the student should have realized that the candy needed to be divided equally into bags. The student could have calculated that Lupita has to put 2 pieces of the 26 pieces of candy into each of 13 bags in order to use all the candy, because 26 ÷ 2 = 13. The student could have also crossed off 2 pieces of candy in the picture until there were no pieces of candy remaining and counted the number of times that had to be done, 13.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not recognize that the 26 pieces of candy needed to be divided equally into bags and chose the number of pieces of candy, 2, that were to go in each bag.",
+          "B": "The student likely did not understand which operation needed to be used to solve the problem and chose subtraction, therefore calculating 26 − 2 = 24.",
+          "C": "The student likely did not recognize that the 26 pieces of candy needed to be divided by 2, counted the 3 rows of candy in the picture (without recognizing that the third row did not have the same number of pieces of candy as the first two rows), and determined that each row of candy would be put into its own bag, resulting in a total of 3 bags of candy."
+        },
+        "remediationTip": "Focus on determining the correct operation (division) and calculations to solve word problems involving equal distribution."
+      }
+    },
+    {
+      "id": "2023-03",
+      "itemNumber": 3,
+      "itemType": "multiple_choice",
+      "stem": "A figure made of unit squares is shown. Each square has an area of 1 square foot. What is the area of the figure in square feet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "12 square feet"
+        },
+        {
+          "id": "B",
+          "text": "10 square feet"
+        },
+        {
+          "id": "C",
+          "text": "20 square feet"
+        },
+        {
+          "id": "D",
+          "text": "16 square feet"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.3.6.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the area (the number of unit squares that cover a two-dimensional figure), the student could have used the Key (square = 1 square foot) to find the unit of measure and then counted 16 shaded squares on the grid. The student also could have split the figure into two rectangles and counted 12 + 4 = 16 or 6 + 10 = 16.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely split the figure into two rectangles (a 3-by-4 and a 2-by-2), counted 12 squares in the 3 × 4 rectangle, and neglected to add the squares in the second rectangle.",
+          "B": "The student likely split the figure into two rectangles (a 2-by-5 and a 2-by-3), counted 10 squares in the 2 × 5 rectangle, and neglected to add the squares in the second rectangle.",
+          "C": "The student likely included the 4 squares in the top right corner of the figure to create a 4-by-5 rectangle, resulting in 20 square feet."
+        },
+        "remediationTip": "Focus on understanding how to determine the area of a two-dimensional figure by counting all unit squares in the figure and correctly adding areas of composite shapes."
+      }
+    },
+    {
+      "id": "2023-04",
+      "itemNumber": 4,
+      "itemType": "multiple_choice",
+      "stem": "A store has 32 magnets. An equal number of magnets are attached to each of 8 cabinets. Which model can be used to find the number of magnets attached to each cabinet?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A strip diagram representing 32 × 8."
+        },
+        {
+          "id": "B",
+          "text": "A strip diagram representing 32 ÷ 8 with 8 equal-sized sections."
+        },
+        {
+          "id": "C",
+          "text": "A strip diagram representing 8 + 32."
+        },
+        {
+          "id": "D",
+          "text": "A strip diagram representing 32 – 8."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the model that can be used to find the number of magnets attached to each cabinet, the student should have recognized that the number within the brackets below the model, 32, represents the whole. The student should have understood that an equal number of those 32 magnets were attached to 8 cabinets and found the model with 8 equal-sized sections, representing 32 ÷ 8.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not recognize this as an equal-parts situation and chose a model that represents 32 × 8. The student needs to focus on determining the whole and then understanding that the whole is divided into equal sections that represent parts of the whole.",
+          "C": "The student likely did not recognize equal parts as division and chose a model that represents 8 + 32. The student needs to focus on associating equal groups with division and determining the whole in a model.",
+          "D": "The student likely did not recognize equal parts as division and chose a model that represents 32 – 8. The student needs to focus on associating equal groups with division."
+        },
+        "remediationTip": "Focus on associating equal groups with division and accurately representing the whole and parts in a strip diagram."
+      }
+    },
+    {
+      "id": "2023-05",
+      "itemNumber": 5,
+      "itemType": "multi_select",
+      "stem": "What are some benefits of saving money?",
+      "directions": "Select TWO correct answers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "To increase debt"
+        },
+        {
+          "id": "B",
+          "text": "To increase interest on monthly bills"
+        },
+        {
+          "id": "C",
+          "text": "To prepare to pay for college"
+        },
+        {
+          "id": "D",
+          "text": "To help spend money faster"
+        },
+        {
+          "id": "E",
+          "text": "To help pay for unplanned needs"
+        }
+      ],
+      "answerRule": {
+        "kind": "multi_select",
+        "correct": [
+          "C",
+          "E"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.4.9.E",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine the benefits of saving money (planning ahead for future costs), the student could have recognized that debt refers to loss of money and that interest refers to the percentage of money added to a purchase. The student also could have recognized the difference between spending money and saving money. The student should have recognized that preparing to pay for college is a situation in which money is set aside for a particular purpose.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not recognize that debt is money owed to someone else by the consumer, making it a loss of money for the consumer. The student needs to focus on understanding which situations add money to an account and which situations subtract money from an account.",
+          "B": "The student likely misunderstood the meaning of interest in this situation and considered that earning interest on a bank account adds money to an account; therefore, the student likely concluded that increasing interest on a bill must add money to an account as well. The student needs to focus on understanding the difference between earning interest and paying interest.",
+          "D": "The student likely did not recognize that saving money implies spending less money. The student needs to focus on understanding which situations refer to spending money and which refer to saving money."
+        },
+        "remediationTip": "Focus on understanding the true purpose and benefits of saving money for future costs and unexpected needs, distinguishing it from debt or spending."
+      }
+    },
+    {
+      "id": "2023-06",
+      "itemNumber": 6,
+      "itemType": "multiple_choice",
+      "stem": "Which measurement is closest to the amount of juice in a full juice box?",
+      "options": [
+        {
+          "id": "A",
+          "text": "2 milliliters"
+        },
+        {
+          "id": "B",
+          "text": "200 milliliters"
+        },
+        {
+          "id": "C",
+          "text": "2 liters"
+        },
+        {
+          "id": "D",
+          "text": "200 liters"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.3.7.E",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the measurement closest to the amount of juice in a full juice box, the student could have compared the size of the juice box to the tray and to the other items on the tray. The student could have thought about the relative amount for each option, recognizing that 2 milliliters would only be a tiny drop of the juice, 2 liters would be as much as a large bottle of soda, and 200 liters would be as much as a large fish tank; therefore, 200 milliliters is the most reasonable estimate. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely chose 2 milliliters because milliliters are small units of liquid but did not consider the size of the juice box compared to the other items in the picture. The student needs to focus on determining the relative volume of objects.",
+          "C": "The student likely chose 2 liters, focusing only on the 2 instead of recognizing the size of the units. The student may have realized that 2 milliliters was too small a volume, making 2 liters seem like the most reasonable estimate. The student needs to focus on determining the relative volume of objects.",
+          "D": "The student likely confused liters with milliliters and overestimated the volume, as 200 liters would fill a large fish tank, not a juice box."
+        },
+        "remediationTip": "Focus on understanding the relative scale of metric units for volume (milliliters vs. liters) and applying them to real-world object sizes."
+      }
+    },
+    {
+      "id": "2023-07",
+      "itemNumber": 7,
+      "itemType": "multiple_choice",
+      "stem": "A cafeteria had 280 ice-cream bars. After lunch, 130 ice-cream bars were left. Which equation can be used to find the number of ice-cream bars sold during lunch?",
+      "options": [
+        {
+          "id": "A",
+          "text": "□ - 280 = 130"
+        },
+        {
+          "id": "B",
+          "text": "□ = 280 + 130"
+        },
+        {
+          "id": "C",
+          "text": "280 + □ = 130"
+        },
+        {
+          "id": "D",
+          "text": "280 - □ = 130"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which answer choice represents a way to find the number of ice-cream bars sold during lunch, the student should have recognized 280 as the total number of ice-cream bars the cafeteria had, so if 130 were left over, the number sold had to be less than 280. The student should have found the model that represented 280 as the total number of ice-cream bars and showed the number of ice-cream bars sold at lunch being subtracted from 280, resulting in 130 bars left over.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused the total number of ice-cream bars with the number of ice-cream bars sold during lunch, therefore reversing the left side of a correct equation (280 – [box] = 130) to get the equation “[box] – 280 = 130.” The student needs to focus on determining the whole in a word problem.",
+          "B": "The student likely determined that this was an addition problem and figured that the unknown number (box) had to be the whole and 280 and 130 should be added to find the unknown number. The student needs to focus on determining the whole in a word problem.",
+          "C": "The student likely recognized that the whole was 280 but added the unknown number instead of subtracting. The student needs to focus on determining the correct operation to use in a word problem."
+        },
+        "remediationTip": "Focus on identifying the 'whole' and 'parts' in a word problem to determine the correct operation and structure of an equation."
+      }
+    },
+    {
+      "id": "2023-08",
+      "itemNumber": 8,
+      "itemType": "multiple_choice",
+      "stem": "A group of geometric figures is shown. Which statement about the figures is true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The first figure is a parallelogram."
+        },
+        {
+          "id": "B",
+          "text": "None of the figures are prisms."
+        },
+        {
+          "id": "C",
+          "text": "The second and fourth figures have equal side lengths."
+        },
+        {
+          "id": "D",
+          "text": "All the figures shown are prisms."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.6.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student should have understood that polygons are two-dimensional, closed figures in which all sides are line segments. The student likely understood that only the first figure has four sides with two sets of parallel sides and is therefore a parallelogram, that only the second and fourth figures have equal side lengths, and that none of the figures are prisms (which are three-dimensional).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely considered only the first figure in the group, a rectangle, which is a parallelogram since it has four sides with two sets of parallel lines. The student needs to focus on examining each figure in a set.",
+          "C": "The student likely considered only the second and fourth figures in the group (the hexagon and the triangle, which both have sides of equal length). The student needs to focus on examining each figure in a set.",
+          "D": "The student likely confused prisms with polygons. Prisms are three-dimensional figures, while the figures shown are implied to be two-dimensional."
+        },
+        "remediationTip": "Focus on understanding the definitions and properties of two-dimensional shapes (polygons, parallelograms, equal side lengths) and distinguishing them from three-dimensional shapes (prisms)."
+      }
+    },
+    {
+      "id": "2023-09",
+      "itemNumber": 9,
+      "itemType": "multiple_choice",
+      "stem": "Ms. Green used 69 yards of fabric for one play, 48 yards for another play, and 53 yards for a third play. She had 27 yards of fabric left over. How many yards of fabric did Ms. Green start with?",
+      "options": [
+        {
+          "id": "A",
+          "text": "170 yards"
+        },
+        {
+          "id": "B",
+          "text": "197 yards"
+        },
+        {
+          "id": "C",
+          "text": "143 yards"
+        },
+        {
+          "id": "D",
+          "text": "177 yards"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many yards of fabric Ms. Green started with, the student could have recognized that the total number of yards of fabric she started with would be equal to the sum of the yards of fabric used in the three plays plus the yards of fabric she had left over, which is represented by the equation (69 + 48 + 53) + 27 = 197.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely found the sum of only the numbers of yards of fabric used in the three plays, neglecting to include the 27 yards of fabric that was left over, calculating 69 + 48 + 53 = 170.",
+          "C": "The student likely found the sum of the numbers of yards of fabric used in the three plays but subtracted the 27 yards of fabric left over instead of adding, resulting in (69 + 48 + 53) – 27 = 143.",
+          "D": "The student likely recognized that the total number of yards of fabric would be the sum of all parts, but made an error when regrouping to the tens place during the addition, resulting in a total of 177."
+        },
+        "remediationTip": "Focus on identifying all parts that contribute to the total and performing addition accurately, especially with regrouping."
+      }
+    },
+    {
+      "id": "2023-10",
+      "itemNumber": 10,
+      "itemType": "multiple_choice",
+      "stem": "Which statement about the number 510 is true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The sum of its digits (5+1+0) is an odd number."
+        },
+        {
+          "id": "B",
+          "text": "The number 510 is an odd number because its first digit is odd."
+        },
+        {
+          "id": "C",
+          "text": "The number 510 is an even number because it ends in 0."
+        },
+        {
+          "id": "D",
+          "text": "The number 510 is an even number because the digit in the tens place is 1."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.4.I",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true about the number 510, the student should have recognized that the number ends in a zero. Numbers that end with 0, 2, 4, 6, or 8 are even numbers because those digits can be divided by 2 evenly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely recognized that when the digits in the number 510 are added (5 + 1 + 0 = 6), the result is an even number, but incorrectly concluded the number itself is odd based on a misunderstanding of divisibility rules.",
+          "B": "The student likely identified the first digit (5) as an odd number and incorrectly considered the entire number (510) to be odd based on only the first digit.",
+          "D": "The student recognized 510 as an even number because it can be divided by 2 evenly, but incorrectly attributed its evenness to the digit in the tens place (1) rather than the digit in the ones place."
+        },
+        "remediationTip": "Focus on understanding that a number's even or odd property is determined by its digit in the ones place (whether it is 0, 2, 4, 6, or 8 for even; or 1, 3, 5, 7, or 9 for odd)."
+      }
+    },
+    {
+      "id": "2023-11",
+      "itemNumber": 11,
+      "itemType": "multiple_choice",
+      "stem": "Miyoung created a dot plot to show her results after generating numbers on a number line. The number line goes from 0 to 10. The dot plot shows dots above certain numbers. Which list of numbers represents Miyoung's results?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1, 2, 4, 5, 7, 8, 9"
+        },
+        {
+          "id": "B",
+          "text": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+        },
+        {
+          "id": "C",
+          "text": "1, 2, 4, 4, 5, 5, 7, 7, 8, 9, 10"
+        },
+        {
+          "id": "D",
+          "text": "1, 2, 4, 4, 5, 5, 7, 7, 8, 9"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.4.8.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which list of numbers represents Miyoung's results, the student should have interpreted the dot plot as showing the generated numbers on the number line and the dots as representing the number of times each number was generated. Counting the number of dots above each number shows: 1 (1 time), 2 (1 time), 3 (0 times), 4 (2 times), 5 (2 times), 6 (0 times), 7 (2 times), 8 (1 time), 9 (1 time), and 10 (0 times). Therefore, the list of numbers that represents Miyoung's results is 1, 2, 4, 4, 5, 5, 7, 7, 8, 9.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not interpret the key correctly and listed each number that was generated only once. The student needs to focus on interpreting the key for a dot plot.",
+          "B": "The student likely misunderstood the meaning of the numbers and the dots and chose a list that contains every number on the number line. The student needs to focus on understanding how to interpret a dot plot.",
+          "C": "The student likely did not interpret the key correctly and listed each number that was generated at least once but also included the 10, since it is the greatest number on the dot plot. The student needs to focus on interpreting the key for a dot plot and interpreting a dot plot."
+        },
+        "remediationTip": "Focus on accurately interpreting a dot plot by understanding that each dot represents one occurrence of a value on the number line."
+      }
+    },
+    {
+      "id": "2023-12",
+      "itemNumber": 12,
+      "itemType": "inline_choice",
+      "stem": "Isabel sells clothing online. She sends a free gift with each order. The table shows the number of items ordered and the number of items sent for three orders, X, Y, and Z. Complete the sentence to describe the relationship in the table.\n\nIsabel's Clothing Orders\n| Order | Items Ordered | Items Sent |\n|-------|---------------|------------|\n| X     | 5             | 6          |\n| Y     | 3             | 4          |\n| Z     | 6             | 7          |\n\nThe number of items ordered [BLANK_1] the number [BLANK_2] equals the number of items sent.",
+      "directions": "Select the correct answer for each blank from the drop-down menus.",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "plus",
+            "options": [
+              "plus",
+              "minus",
+              "times",
+              "divided by"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "1",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.E",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine the correct choices from the drop-down menus, the student should have used the table to determine the relationship between the numbers in the 'Items Ordered' column and the numbers in the 'Items Sent' column. The pairs are (5, 6), (3, 4), and (6, 7). The student should have determined that the number in the 'Items Sent' column is always 1 more than the number in the 'Items Ordered' column, because 5 + 1 = 6, 3 + 1 = 4, and 6 + 1 = 7, making the relationship 'plus 1'; 'plus' for the first drop-down menu and '1' for the second drop-down menu."
+      }
+    },
+    {
+      "id": "2023-13",
+      "itemNumber": 13,
+      "itemType": "multiple_choice",
+      "stem": "The areas of four states are given: Connecticut (4,845 sq miles), Hawaii (6,423 sq miles), New Hampshire (9,350 sq miles), Vermont (9,624 sq miles). Which list contains only numbers between 5,090 and 6,300?",
+      "options": [
+        {
+          "id": "A",
+          "text": "15,746; 6,099; 6,211"
+        },
+        {
+          "id": "B",
+          "text": "5,894; 6,132; 5,009"
+        },
+        {
+          "id": "C",
+          "text": "5,450; 6,215; 6,381"
+        },
+        {
+          "id": "D",
+          "text": "5,746; 6,099; 6,211"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which list contains only numbers between 5,090 and 6,300, the student should have determined that 5,746 is between 5,090 and 6,300 because the digit in the hundreds place, 7, is greater than the 0 in the hundreds place in 5,090, and 5,746 is less than 6,300 because the digit in the thousands place, 5, is less than 6. Then the student should have determined that 6,099 is greater than 5,090 because the digit in the thousands place, 6, is greater than the 5 in 5,090, and that 6,099 is less than 6,300 because the digit in the hundreds place, 0, is less than 3. Finally, the student should have determined that 6,211 is greater than 5,090 because the digit in the thousands place, 6, is greater than 5, and 6,211 is less than 6,300 because the digit in the hundreds place, 2, is less than 3.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused numbers in the ten-thousands with numbers in the thousands. The student needs to focus on place value.",
+          "B": "The student likely determined that 5,894 is greater than 5,090 because the digit in the hundreds place in 5,894, 8, is greater than the 0 in the hundreds place in 5,090, and that 6,132 is less than 6,300 because the digit in the hundreds place, 1, is less than 3. Then the student likely determined that both 5,090 and 5,009 have a 0 in the hundreds place and have the digit 9 in the number and assumed that they were the same number. The student needs to focus on determining which place value needs to be compared according to the given numbers.",
+          "C": "The student likely determined that 5,450 was greater than 5,090 because the digit in the hundreds place, 4, is greater than the 0 in the hundreds place in 5,090, and that 6,215 is less than 6,300 because the digit in the hundreds place, 2, is less than 3. Then the student likely determined that 6,381 was less than 6,300 because both numbers have a 3 in the hundreds place, but the student did not consider the digit 8 in the tens place or the digit 1 in the ones place. The student needs to focus on determining which place value needs to be compared according to the given numbers."
+        },
+        "remediationTip": "Focus on using place value to compare multi-digit numbers to determine if they fall within a given range, paying close attention to each digit from left to right."
+      }
+    },
+    {
+      "id": "2023-14",
+      "itemNumber": 14,
+      "itemType": "multi_select",
+      "stem": "The rectangles shown will be covered with squares. Each square has an area of 1 square inch. Some of the squares have already been placed as shown. Which rectangles have an area of 24 square inches?",
+      "directions": "Select TWO correct answers.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A rectangle with 6 units wide and 4 units high (partially filled with squares)."
+        },
+        {
+          "id": "B",
+          "text": "A rectangle with 5 units wide and 5 units high (partially filled with squares)."
+        },
+        {
+          "id": "C",
+          "text": "A rectangle with 8 units wide and 3 units high (partially filled with squares)."
+        },
+        {
+          "id": "D",
+          "text": "A rectangle with 7 units wide and 4 units high (partially filled with squares)."
+        },
+        {
+          "id": "E",
+          "text": "A rectangle with 5 units wide and 4 units high (partially filled with squares)."
+        }
+      ],
+      "answerRule": {
+        "kind": "multi_select",
+        "correct": [
+          "A",
+          "C"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.6.C",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine which rectangles have an area of 24 square inches, the student should have recognized that each unit square has an area of 1 square inch. For Option A (a 6x4 rectangle), the area is 6 × 4 = 24 square inches. For Option C (an 8x3 rectangle), the area is 8 × 3 = 24 square inches.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely calculated the area as 5x5 = 25 sq in, which is not 24 sq in, or confused area with perimeter and selected this option based on a miscalculation.",
+          "D": "The student likely calculated the area as 7x4 = 28 sq in, which is not 24 sq in, or confused area with perimeter and selected this option based on a miscalculation.",
+          "E": "The student likely calculated the area as 5x4 = 20 sq in, which is not 24 sq in, or confused area with perimeter and selected this option based on a miscalculation."
+        },
+        "remediationTip": "Focus on understanding the concept of area as the total number of unit squares covering a figure, and calculating it by multiplying length and width, rather than confusing it with perimeter."
+      }
+    },
+    {
+      "id": "2023-15",
+      "itemNumber": 15,
+      "itemType": "multiple_choice",
+      "stem": "Martin has 11 bird cages. Each cage can hold 7 birds. He already has 21 birds in cages. What is the greatest number of birds Martin can add to his cages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "98"
+        },
+        {
+          "id": "B",
+          "text": "56"
+        },
+        {
+          "id": "C",
+          "text": "17"
+        },
+        {
+          "id": "D",
+          "text": "39"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.K",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the greatest number of birds Martin can add to his cages, the student could have recognized that the greatest number of birds could be determined by multiplying the number of cages, 11, by the number of birds each cage can hold, 7, and then subtracting 21 from the product (the result of multiplying numbers), creating the equation (11 × 7) – 21 = 77 – 21 = 56. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely recognized the total capacity (11 × 7 = 77) but added the 21 birds already present instead of subtracting them, resulting in 77 + 21 = 98.",
+          "C": "The student likely subtracted the number of birds per cage from the number of cages (11 - 7 = 4) before subtracting from 21 or misapplied operations, resulting in 21 - 4 = 17.",
+          "D": "The student likely added the number of cages to the number of birds each cage can hold (11 + 7 = 18) and then added the 21 birds already present to this sum, resulting in 21 + 18 = 39."
+        },
+        "remediationTip": "Focus on identifying the correct operations (multiplication for total capacity, then subtraction for remaining capacity) and performing multi-step calculations accurately."
+      }
+    },
+    {
+      "id": "2023-16",
+      "itemNumber": 16,
+      "itemType": "griddable_numeric",
+      "stem": "Jesse draws 11 shapes, as shown below. How many of the shapes are polygons with more than three sides? Enter your answer in the space provided.\n\n(A collection of 11 shapes, including a square, parallelogram, rectangle, hexagon, pentagon, trapezoid, and non-polygons like circles, blobs, and half-circles.)",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "7",
+        "acceptedValues": [
+          "7"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.6.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many of the shapes are polygons with more than three sides, the student should have remembered that a polygon is defined as a two-dimensional, closed figure in which all sides are line segments. The student could eliminate figures that are not made of all line segments (e.g., circles, irregular blobs). Then, among the remaining polygons, they should count those with more than 3 sides. This would include 7 polygons: the third (square/parallelogram) and fourth (rectangle) polygons in the top row, the second (hexagon) and third (pentagon) polygons in the middle row, and all three (trapezoid, pentagon) polygons in the bottom row.",
+        "remediationTip": "Focus on the definition of a polygon (closed figure with straight sides) and how to count the number of sides for different polygons."
+      }
+    },
+    {
+      "id": "2023-17",
+      "itemNumber": 17,
+      "itemType": "multiple_choice",
+      "stem": "A store sold 107 T-shirts and 88 sweatshirts. How many more T-shirts were sold than sweatshirts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "19"
+        },
+        {
+          "id": "B",
+          "text": "29"
+        },
+        {
+          "id": "C",
+          "text": "185"
+        },
+        {
+          "id": "D",
+          "text": "195"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.4.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine how many more T-shirts were sold than sweatshirts, the student could have subtracted the number of sweatshirts sold, 88, from the number of T-shirts sold, 107, resulting in the equation 107 – 88 = 19.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely subtracted 107 – 88 but made an error when regrouping in the tens place (e.g., subtracting 8 from 10 instead of 17), resulting in 29.",
+          "C": "The student likely added the number of sweatshirts sold, 88, to the number of T-shirts sold, 107, and did not regroup to the tens place after adding 8 + 7 in the ones place, resulting in 185.",
+          "D": "The student likely added the number of sweatshirts sold, 88, to the number of T-shirts sold, 107, resulting in the equation 107 + 88 = 195."
+        },
+        "remediationTip": "Focus on understanding that 'how many more' indicates a subtraction problem and performing two-digit subtraction with regrouping accurately."
+      }
+    },
+    {
+      "id": "2023-18",
+      "itemNumber": 18,
+      "itemType": "inline_choice",
+      "stem": "Point U on the number line represents equivalent fractions. What is true about point U?\n\n(A number line from 0 to 1, divided into 6 equal parts. Point U is marked at the 3rd tick mark from 0.)\n\nPoint U can represent [BLANK_1] or [BLANK_2]. The two fractions are equal because they both [BLANK_3].",
+      "directions": "Complete the sentences by selecting the correct answers from the drop-down menus.",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "3/6",
+            "options": [
+              "1/6",
+              "2/6",
+              "3/6",
+              "4/6",
+              "5/6"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "1/2",
+            "options": [
+              "1/2",
+              "1/3",
+              "2/3",
+              "1/4"
+            ]
+          },
+          {
+            "id": "BLANK_3",
+            "correct": "are exactly halfway between zero and 1",
+            "options": [
+              "are exactly halfway between zero and 1",
+              "have the same numerator",
+              "have the same denominator",
+              "represent different parts of the whole"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.3.G",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine what is true about point U, the student should have recognized that the intervals on the number line represent sixths because there are 6 tick marks after the zero, making sixths the denominator (bottom number of a fraction) or the number of parts in the whole. Then the student should have counted to find that point U is plotted 3 tick marks from zero, making the numerator (top number of a fraction) 3. Therefore, point U represents 3/6, the correct answer to the first drop-down menu (answer choices). Next, the student should have simplified 3/6 (divided the numerator and the denominator by the same number) to determine that point U also represents the fraction 1/2, the correct answer to the second drop-down menu. Finally, the student should have determined why 3/6 and 1/2 are equal, which is the answer to the third drop-down menu. The two fractions are equal because they both “are exactly halfway between zero and 1.",
+        "remediationTip": "Focus on interpreting number lines to identify fractions, simplifying fractions, and understanding the concept of equivalent fractions and their positions on a number line."
+      }
+    },
+    {
+      "id": "2023-19",
+      "itemNumber": 19,
+      "itemType": "inline_choice",
+      "stem": "A pet store has several aquariums. The table shows the relationship between the number of aquariums and the total number of fish at the pet store. Complete the sentence to describe the relationship in the table.\n\nPet Store Fish\n| Number of Aquariums | 3  | 5  | 9  | 12 |\n|---------------------|----|----|----|----|\n| Number of Fish      | 18 | 30 | 54 | 72 |\n\nTo find the number of fish, [BLANK_1] the number of aquariums by [BLANK_2].",
+      "directions": "Select the correct answer for each blank from the drop-down menus.",
+      "answerRule": {
+        "kind": "inline_choice",
+        "blanks": [
+          {
+            "id": "BLANK_1",
+            "correct": "multiply",
+            "options": [
+              "add",
+              "subtract",
+              "multiply",
+              "divide"
+            ]
+          },
+          {
+            "id": "BLANK_2",
+            "correct": "6",
+            "options": [
+              "3",
+              "5",
+              "6",
+              "9",
+              "12"
+            ]
+          }
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.E",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine the correct choices from the drop-down menus, the student should have used the table to determine the relationship between the numbers in the 'Number of Aquariums' row and the numbers in the 'Number of Fish' row. The pairs are (3, 18), (5, 30), (9, 54), and (12, 72). The student should have determined the relationship to be that the number of fish is 6 times the number of aquariums, because 3 × 6 = 18, 5 × 6 = 30, 9 × 6 = 54, and 12 × 6 = 72. Therefore, the answers to the drop-down menus would be, first, 'multiply,' and second, '6.'",
+        "remediationTip": "Focus on analyzing data in a table to identify patterns and determine the correct arithmetic operation and constant to describe the relationship."
+      }
+    },
+    {
+      "id": "2023-20",
+      "itemNumber": 20,
+      "itemType": "multiple_choice",
+      "stem": "Three students, Anna, Kareena, and Zane, used base ten blocks to represent numbers. A large square (flat) represents 100, a column of squares (rod) represents 10, and a small square (unit) represents 1. Which two students' models represent the same number?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Anna (1 flat, 1 rod, 10 units) and Kareena (1 flat, 2 units)"
+        },
+        {
+          "id": "B",
+          "text": "Kareena (1 flat, 2 units) and Zane (12 rods)"
+        },
+        {
+          "id": "C",
+          "text": "Anna (1 flat, 1 rod, 10 units) and Zane (12 rods)"
+        },
+        {
+          "id": "D",
+          "text": "All three students' models represent the same number."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.1.2.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which models represent the same number, the student should have used base ten blocks to find that: Anna has 1 flat, 1 rod, and 10 units, which represents 100 + 10 + 10 = 120. Kareena has 1 flat and 2 units, which represents 100 + 2 = 102. Zane has 12 rods, which represent 12 × 10 = 120. Therefore, Anna's model and Zane's model both represent the number 120.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused the numbers 120 and 102 by counting Kareena’s 2 units (2) as 2 rods (20). The student needs to focus on understanding the value of base ten blocks.",
+          "B": "The student likely confused the numbers 102 and 120 by counting Kareena’s 2 units (2) as 2 rods (20). The student needs to focus on understanding the value of base ten blocks.",
+          "D": "The student likely did not understand how to use base ten blocks to represent numbers. The student needs to focus on understanding the value of flats, rods, and units when using base ten blocks."
+        },
+        "remediationTip": "Focus on understanding the value of flats, rods, and units when using base ten blocks, and accurately calculating the total value represented by each model."
+      }
+    },
+    {
+      "id": "2023-21",
+      "itemNumber": 21,
+      "itemType": "multiple_choice",
+      "stem": "A rectangular garden has a perimeter of 26 feet. The length of the garden is 8 feet. What is the width of the garden?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5 feet"
+        },
+        {
+          "id": "B",
+          "text": "10 feet"
+        },
+        {
+          "id": "C",
+          "text": "8 feet"
+        },
+        {
+          "id": "D",
+          "text": "16 feet"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.3.7.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the width of the garden, the student should have recognized that the perimeter of the rectangular garden, 26 feet, is the distance around the garden. The student then could have recognized that a rectangle has two pairs of parallel lines (lines that are an equal distance apart and never meet), so one pair of opposite sides of the rectangle represent the length of the garden, 8 feet the other pair of opposite sides represent the width of the garden. Then the student could have added 8 + 8 = 16 to get the total length of the two given sides and subtracted that sum from the perimeter: 26 – 16 = 10. Since the measurement for the width of the garden will be the same on opposite sides, the student could have divided 10 (the number of feet left) by 2 to get 5 feet. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely determined the number of feet, 10, that are still needed to make the total perimeter of 26 feet but did not divide that number by 2 for the pair of equal, opposite sides. The student needs to focus on understanding the attributes of a rectangle and how to use those to determine a missing side length of the rectangle.",
+          "C": "The student likely understood that the length of the rectangle, 8 feet, would be the same for one pair of opposite sides and so found the opposite side to also be 8 feet. The student needs to focus on understanding how to determine a missing side length of a rectangle.",
+          "D": "The student likely understood that the length of the rectangle, 8 feet, would be the same for one pair of opposite sides and so found the opposite side to also be 8 feet. The student likely then found the sum of the two sides, 16 feet, but neglected to find the length of the other two sides of the rectangle. The student needs to focus on understanding how to determine a missing side length of a rectangle."
+        },
+        "remediationTip": "Focus on understanding the properties of a rectangle (two pairs of equal, opposite sides) and using the perimeter formula (P = 2l + 2w) to find a missing side length."
+      }
+    },
+    {
+      "id": "2023-22",
+      "itemNumber": 22,
+      "itemType": "griddable_numeric",
+      "stem": "The table shows the number of each type of science report that third-grade students completed. Complete the bar graph to show the data in the table. Select the correct height for each bar in the graph.\n\nStudents' Science Reports\n| Type of Report | Number of Reports |\n|----------------|-------------------|\n| Rocks          | 6                 |\n| Animals        | 12                |\n| Oceans         | 9                 |\n\n(An image of an empty bar graph is provided with 'Type of Report' (Rocks, Animals, Oceans) on the x-axis and 'Number of Reports' (0 to 14, labeled in increments of 2, with lines for odd numbers) on the y-axis. The student must set the heights of the bars.)",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "Rocks: 6, Animals: 12, Oceans: 9",
+        "acceptedValues": [
+          "Rocks: 6, Animals: 12, Oceans: 9"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.4.8.A",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine the height of the bar for each type of science report, the student should have used the numbers in the table to find that Rocks = 6, Animals = 12, and Oceans = 9. Next, the student should have examined the empty bar graph and found that “Type of Report” was along the x-axis, or the line going from left to right, and the “Number of Reports” was along the y-axis, or the line going from 0 to 14. The student then should have determined the scale (how the horizontal lines were numbered) on the graph and found that the scale counted by twos from 0 to 14, but there was a line for each odd number as well. Finally, the student should have selected the line for 6 as the top of the bar for Rocks, the line for 12 as the top of the bar for Animals, and the line for 9 (between the lines marked 8 and 10) as the top of the bar for Oceans.",
+        "remediationTip": "Focus on accurately reading data from a table and representing it correctly on a bar graph, paying close attention to the scales on both axes."
+      }
+    },
+    {
+      "id": "2023-23",
+      "itemNumber": 23,
+      "itemType": "multiple_choice",
+      "stem": "Hector wants to divide and shade a circle to represent a fraction less than 4/6. Which of these is NOT a way Hector could do that?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A circle divided into 6 equal parts with 1 part shaded (1/6)."
+        },
+        {
+          "id": "B",
+          "text": "A circle divided into 8 equal parts with 4 parts shaded (4/8)."
+        },
+        {
+          "id": "C",
+          "text": "A circle divided into 4 equal parts with 4 parts shaded (4/4)."
+        },
+        {
+          "id": "D",
+          "text": "A circle divided into 6 equal parts with 3 parts shaded (3/6)."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.3.H",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which answer choice is NOT a way Hector could divide and shade a circle to represent a fraction less than 4/6, the student should have recognized that in the fraction 4/6, the denominator, 6, is the number of equal-sized parts of the circle and the numerator, 4, is the number of shaded parts. Then the student should have recognized that creating 4 equal parts of a circle and shading 4 parts would be 4/4, which is the entire circle and therefore is not less than 4/6.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not understand that 1/6 is less than 4/6 because 1 shaded part of 6 is less than 4 shaded parts of 6 or misinterpreted the question and found a way to make a fraction that was greater than 4/6. The student needs to focus on comparing fractions with the same denominator.",
+          "B": "The student likely did not understand that 4/8 is less than 4/6 because the size of the parts would be greater for 4/6, or the student misinterpreted the question and found a way to make a fraction that was greater than 4/6. The student needs to focus on comparing fractions with the same numerator.",
+          "D": "The student likely did not understand that 3/6 is less than 4/6 because 3 shaded parts of 6 is less than 4 shaded parts of 6, or the student misinterpreted the question and found a way to make a fraction that was greater than 4/6. The student needs to focus on comparing fractions with the same denominator."
+        },
+        "remediationTip": "Focus on comparing fractions by understanding what the numerator and denominator represent, and recognizing that a whole (like 4/4) is not less than a proper fraction like 4/6."
+      }
+    },
+    {
+      "id": "2023-24",
+      "itemNumber": 24,
+      "itemType": "multiple_choice",
+      "stem": "Two friends play a game. The first friend scored 339 points. The second friend scored 339 points plus an extra 75 points. Which strip diagram shows the total points scored by both friends?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A strip diagram representing 339 + 75 = ?"
+        },
+        {
+          "id": "B",
+          "text": "A strip diagram representing 339 + 339 = ? with 75 outside the total."
+        },
+        {
+          "id": "C",
+          "text": "A strip diagram representing 339 + 75 = ? with the total unknown (339 represents one friend's score, not total)."
+        },
+        {
+          "id": "D",
+          "text": "A strip diagram representing 339 + 339 + 75 = ? with the total unknown."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which strip diagram can be used to find the total number of points both friends scored, the student should have recognized that the total number of points is represented by the “?” Therefore, the model should show the “?” in its own row, and the other row should show the numbers being added to equal that total. Then the student should have recognized that the first number to be added is the first friend’s 339 points, the second number to be added is the second friend’s 339 points, and the third number to be added is the extra 75 points the second friend scored.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused the total number of points scored with only one instance of 339 points, and then added the extra 75 points the second friend scored to the “?” instead of the total number of points scored. The student needs to focus on understanding the word problem and how to represent it in a model.",
+          "B": "The student likely included the extra 75 points with the unknown value instead of with both scores of 339. The student needs to focus on using models to represent addition problems.",
+          "C": "The student likely concluded that both friends scored a total of 339 points, and then added the extra 75 points the second friend scored to 339. The student needs to focus on understanding the word problem and how to represent it in a model."
+        },
+        "remediationTip": "Focus on understanding how to represent multi-step addition problems using strip diagrams, ensuring all relevant quantities are correctly placed and summed to find the total."
+      }
+    },
+    {
+      "id": "2023-25",
+      "itemNumber": 25,
+      "itemType": "multiple_choice",
+      "stem": "The areas of four states are given: Connecticut (4,845 sq miles), Hawaii (6,423 sq miles), New Hampshire (9,350 sq miles), Vermont (9,624 sq miles). Which list shows the states' areas in order from least to greatest?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vermont (9,624); New Hampshire (9,350); Hawaii (6,423); Connecticut (4,845)"
+        },
+        {
+          "id": "B",
+          "text": "Connecticut (4,845); Hawaii (6,423); New Hampshire (9,350); Vermont (9,624)"
+        },
+        {
+          "id": "C",
+          "text": "Connecticut (4,845); Hawaii (6,423); Vermont (9,624); New Hampshire (9,350)"
+        },
+        {
+          "id": "D",
+          "text": "New Hampshire (9,350); Hawaii (6,423); Vermont (9,624); Connecticut (4,845)"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.D",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which list represents the areas of the states ordered from least to greatest, the student should have used the rules of place value to determine that the least area would be the number with the digit with the least value in the thousands place, 4, (since all four numbers are in the thousands) and the second-least would be the number with the digit 6 in the thousands place. Since 9,624 and 9,350 each have the same digit in the thousands place, the student should have looked at the digit in the hundreds place of each number to determine which number is less. The student then should have recognized that the 3 in 9,350 is less than the 6 in 9,624, making 9,350 the second-greatest number and 9,624 the greatest number. Therefore, the states ordered from least to greatest area are Connecticut (4,845); Hawaii (6,423); New Hampshire (9,350); Vermont (9,624).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely listed the states in order from greatest to least area. The student needs to focus on understanding the question that is being asked.",
+          "C": "The student likely interpreted the number 9,624 (Vermont) as being less than 9,350 (New Hampshire). The student needs to focus on understanding place value.",
+          "D": "The student likely ordered the states from least to greatest area based on the digit in the ones place of each number. The number with the digit with the least value in the ones place is 9,350 (New Hampshire), followed by 6,423 (Hawaii), then 9,624 (Vermont), and finally 4,845 (Connecticut). The student needs to focus on understanding which digits to compare to determine the value of numbers."
+        },
+        "remediationTip": "Focus on using place value to compare multi-digit numbers, starting from the leftmost digit (thousands, then hundreds, tens, and ones) to correctly order them from least to greatest."
+      }
+    },
+    {
+      "id": "2023-26",
+      "itemNumber": 26,
+      "itemType": "drag_drop",
+      "stem": "Alex scored 8 points in a basketball game. The expression shows the number of points that Sara scored: 8 × 3. Complete the statement to compare the numbers of points scored by Alex and Sara.",
+      "directions": "Move the correct answer to each box. Not all answers will be used.\n\n[BLANK_1] scored [BLANK_2] [BLANK_3] [BLANK_4] did.",
+      "options": [
+        {
+          "id": "Opt1",
+          "text": "Sara"
+        },
+        {
+          "id": "Opt2",
+          "text": "Alex"
+        },
+        {
+          "id": "Opt3",
+          "text": "8"
+        },
+        {
+          "id": "Opt4",
+          "text": "3"
+        },
+        {
+          "id": "Opt5",
+          "text": "more points than"
+        },
+        {
+          "id": "Opt6",
+          "text": "times as many points as"
+        }
+      ],
+      "answerRule": {
+        "kind": "drag_drop",
+        "dropZones": {
+          "BLANK_1": "Opt1",
+          "BLANK_2": "Opt4",
+          "BLANK_3": "Opt6",
+          "BLANK_4": "Opt2"
+        }
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.5.C",
+        "maxPoints": 2
+      },
+      "rationale": {
+        "correctExplanation": "To determine how the number of points scored by Alex compared to the number of points scored by Sara, the student should have recognized from the first sentence that Alex scored 8 points and then determined that if 8 × 3 represents the number of points Sara scored, then Sara scored 3 times as many points as Alex. Therefore, the correct statement is, “Sara (first box) scored 3 (second box) times as many points as (third box) Alex (fourth box) did.”",
+        "remediationTip": "Focus on interpreting multiplication expressions in word problems to understand multiplicative comparisons (e.g., 'times as many as')."
+      }
+    },
+    {
+      "id": "2023-27",
+      "itemNumber": 27,
+      "itemType": "multiple_choice",
+      "stem": "Ms. Morales started with 28 fluid ounces of sugar water. She put 7 fluid ounces into each hummingbird feeder. Which equation can be used to find the total number of feeders she filled?",
+      "options": [
+        {
+          "id": "A",
+          "text": "28 - 7 = ?"
+        },
+        {
+          "id": "B",
+          "text": "7 × ? = 28"
+        },
+        {
+          "id": "C",
+          "text": "28 + 4 = ?"
+        },
+        {
+          "id": "D",
+          "text": "28 × 7 = ?"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.2.4.J",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which equation can be used to find the total number of feeders Ms. Morales filled with sugar water, the student should have recognized that 28 is the total amount she started with and she put 7 fluid ounces into each feeder. Therefore, the equation 7 × ? = 28 (or 28 ÷ 7 = ?) would represent the situation, as 4 feeders would be filled (7 × 4 = 28).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely determined this to be a subtraction problem, thinking that Ms. Morales started with 28 fluid ounces of sugar water and put 7 fluid ounces into only one hummingbird feeder. The student needs to focus on reading the entire question carefully and understanding the correct steps to take to solve a word problem.",
+          "C": "The student likely found the number of hummingbird feeders, 4, correctly but added that number to 28 (the starting number of fluid ounces). The student needs to focus on reading the entire question carefully and understanding the correct steps to take to solve a word problem.",
+          "D": "The student likely confused dividing 28 by 7 with multiplying 28 by 7. The student needs to focus on understanding the difference between division and multiplication scenarios."
+        },
+        "remediationTip": "Focus on understanding word problems involving equal groups and identifying whether the situation requires multiplication (finding total) or division (finding number of groups or size of each group)."
+      }
+    },
+    {
+      "id": "2023-28",
+      "itemNumber": 28,
+      "itemType": "multiple_choice",
+      "stem": "Which answer choice describes the number 9,140?",
+      "options": [
+        {
+          "id": "A",
+          "text": "9 thousands, 14 ones"
+        },
+        {
+          "id": "B",
+          "text": "9 thousands, 1 hundred, 40 ones"
+        },
+        {
+          "id": "C",
+          "text": "9 thousands, 1 hundred, 4 tens, 0 ones"
+        },
+        {
+          "id": "D",
+          "text": "9 thousands, 1 hundred, 4 ones"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.2.A",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which answer choice describes the number 9,140, the student should have used place value to find the value of each digit in the number, recognizing that the digit 9 = 9 thousands, the digit 1 = 1 hundred, the digit 4 = 4 tens, and the digit 0 = 0 ones.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely considered the digits 1 and 4 to be equivalent to 14 ones instead of using place value to determine the value of each digit. The student needs to focus on understanding place value to put numbers into word form correctly.",
+          "B": "The student likely confused the value of 40 tens, which is 400, with the value of 40 ones, which is 40. The student needs to focus on understanding place value to put numbers into word form correctly.",
+          "D": "The student likely confused the tens place with the ones place, resulting in 4 ones instead of 4 tens. The student needs to focus on understanding place value to put numbers into word form correctly."
+        },
+        "remediationTip": "Focus on understanding place value for four-digit numbers, correctly identifying the value of each digit in the thousands, hundreds, tens, and ones places."
+      }
+    },
+    {
+      "id": "2023-29",
+      "itemNumber": 29,
+      "itemType": "multiple_choice",
+      "stem": "An artist painted 20 skateboards. Each skateboard has 4 flowers. Which equation can be used to find the total number of flowers the artist painted?",
+      "options": [
+        {
+          "id": "A",
+          "text": "20 × 4 = ?"
+        },
+        {
+          "id": "B",
+          "text": "20 ÷ 4 = ?"
+        },
+        {
+          "id": "C",
+          "text": "20 + 4 = ?"
+        },
+        {
+          "id": "D",
+          "text": "20 - 4 = ?"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.2.5.B",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which equation can be used to find the total number of flowers the artist painted on these skateboards, the student should have recognized that the total number of skateboards is 20 and that each skateboard contains 4 flowers. The student should have determined that the two values would be multiplied to find the total number of flowers, which is represented by the equation 20 × 4 = 80.",
+        "incorrectOptionExplanations": {
+          "B": "The student likely determined this to be a division problem, dividing the number of skateboards, 20, by the number of flowers painted on each skateboard, 4. The student needs to focus on determining the correct steps to take and the correct operation to use when creating an equation.",
+          "C": "The student likely determined this to be an addition problem, adding the number of skateboards, 20, to the number of flowers painted on each skateboard, 4. The student needs to focus on determining the correct steps to take and the correct operation to use when creating an equation.",
+          "D": "The student likely determined this to be a subtraction problem, subtracting the number of flowers painted on each skateboard, 4, from the number of skateboards, 20. The student needs to focus on determining the correct steps to take and the correct operation to use when creating an equation."
+        },
+        "remediationTip": "Focus on understanding word problems involving equal groups and identifying whether the situation requires multiplication (finding a total) or another operation."
+      }
+    },
+    {
+      "id": "2023-30",
+      "itemNumber": 30,
+      "itemType": "multiple_choice",
+      "stem": "Four models (W, X, Y, Z) are shown, each representing a shaded fraction of a whole. Which two models are shaded to show equivalent fractions?\n\n(Assume Model W shows 2/3 shaded, Model X shows 2/4 shaded, Model Y shows 1/4 shaded, and Model Z shows 4/8 shaded.)",
+      "options": [
+        {
+          "id": "A",
+          "text": "Models W (2/3) and X (2/4) are equivalent."
+        },
+        {
+          "id": "B",
+          "text": "Models X (2/4) and Z (4/8) are equivalent."
+        },
+        {
+          "id": "C",
+          "text": "Models W (2/3) and Z (4/8) are equivalent."
+        },
+        {
+          "id": "D",
+          "text": "Models X (2/4) and Y (1/4) are equivalent."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.1.3.F",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which two models are shaded to show equivalent fractions, the student should have recognized that the models have the same-sized whole divided into different numbers of parts, and then looked at each model to find the two that have the same amount of the model shaded. Finally, the student could have confirmed that the fractions shaded are equivalent by recognizing that Model X has 2 parts out of 4 shaded, or 2/4, and Model Z has 4 parts out of 8 shaded, or 4/8, and that when those fractions are simplified, they both have a value of 1/2. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely determined that Model W and Model X are equivalent because they both have 2 parts out of the whole shaded. The student needs to focus on understanding that both the numerator (number of parts shaded) and the denominator (number of parts in the whole) must be considered when finding equivalent fractions.",
+          "C": "The student likely determined that Model W and Model Z are equivalent because they both have 8 equal-sized parts. The student needs to focus on understanding that both the numerator and the denominator must be considered when finding equivalent fractions.",
+          "D": "The student likely determined that Model X and Model Y are equivalent because they both have 4 equal-sized parts. The student needs to focus on understanding that both the numerator and the denominator must be considered when finding equivalent fractions."
+        },
+        "remediationTip": "Focus on understanding equivalent fractions, recognizing that models with different numbers of parts can represent the same fractional value if the proportion of the whole that is shaded is equal."
+      }
+    }
+  ]
+}

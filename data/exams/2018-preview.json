@@ -1,0 +1,240 @@
+{
+  "id": "staar-g3-math-2018-preview",
+  "siteTitle": "Math STAAR Test Prep for Ishaan",
+  "displayTitle": "2018 Grade 3 Math Preview",
+  "subtitle": "A friendly starter set built from the 2018 STAAR Grade 3 Math release.",
+  "year": 2018,
+  "grade": 3,
+  "subject": "Math",
+  "generation": "classic",
+  "totalQuestions": 6,
+  "sourceFiles": [
+    "2018-staar-3-math-test.pdf",
+    "2018-staar-3-math-paper-key.pdf",
+    "2018-staar-3-math-rationale.pdf"
+  ],
+  "questions": [
+    {
+      "id": "2018-01",
+      "itemNumber": 1,
+      "itemType": "multiple_choice",
+      "stem": "Nina works for a restaurant. The restaurant pays her every week for the work she does. Some weeks she works more hours than other weeks. Which statement is most likely true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "When Nina works fewer hours, she earns more income from the restaurant."
+        },
+        {
+          "id": "B",
+          "text": "When Nina works more hours, she earns more income from the restaurant."
+        },
+        {
+          "id": "C",
+          "text": "When Nina works more hours, the restaurant gets less labor from her."
+        },
+        {
+          "id": "D",
+          "text": "When Nina works fewer hours, the restaurant gets more labor from her."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.9(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "More hours worked means more income earned because hours worked and income move together in this situation.",
+        "incorrectOptionExplanations": {
+          "A": "This reverses the relationship between hours worked and income.",
+          "C": "This incorrectly says more work leads to less labor completed.",
+          "D": "This incorrectly says fewer hours leads to more labor completed."
+        },
+        "remediationTip": "Focus on the connection between hours worked, labor completed, and income earned."
+      }
+    },
+    {
+      "id": "2018-05",
+      "itemNumber": 5,
+      "itemType": "griddable_numeric",
+      "stem": "Lin has a total of 36 sodas in packs. There are 6 sodas in each pack. How many packs of sodas does Lin have?",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "6",
+        "acceptedValues": [
+          "6",
+          "6.0",
+          "06"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(F)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "This is a division situation because 36 sodas are split into groups of 6. 36 ÷ 6 = 6.",
+        "remediationTip": "Look for words like \"in each\" when deciding whether to divide."
+      }
+    },
+    {
+      "id": "2018-07",
+      "itemNumber": 7,
+      "itemType": "multiple_choice",
+      "stem": "The table shows the relationship between the number of toy airplanes made in a factory and the number of batteries needed for the airplanes. Based on the relationship shown in the table, which statement is true?",
+      "directions": "Toy airplanes: 5, 7, 9, 11, 13, 15. Batteries: 15, 21, 27, 33, 39, 45.",
+      "options": [
+        {
+          "id": "A",
+          "text": "The number of batteries is equal to the number of toy airplanes times 3."
+        },
+        {
+          "id": "B",
+          "text": "The number of batteries is equal to the number of toy airplanes times 2."
+        },
+        {
+          "id": "C",
+          "text": "The number of batteries is equal to the number of toy airplanes times 6."
+        },
+        {
+          "id": "D",
+          "text": "The number of batteries is equal to the number of toy airplanes times 5."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "Each airplane count is multiplied by 3 to get the matching battery count.",
+        "incorrectOptionExplanations": {
+          "B": "This uses the step change in the airplane row instead of the relationship between paired numbers.",
+          "C": "This confuses the growth pattern with the multiplication factor.",
+          "D": "This incorrectly uses one of the values in the table as the factor."
+        },
+        "remediationTip": "Compare each pair in the table, not just how the numbers change from left to right."
+      }
+    },
+    {
+      "id": "2018-14",
+      "itemNumber": 14,
+      "itemType": "griddable_numeric",
+      "stem": "There are 297 peach trees on a farm. There are 615 peach trees on a different farm. What is the difference between the numbers of peach trees on these farms?",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "318",
+        "acceptedValues": [
+          "318",
+          "318.0"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "The word \"difference\" tells us to subtract. 615 − 297 = 318.",
+        "remediationTip": "Look for clue words like \"difference\" to choose subtraction."
+      }
+    },
+    {
+      "id": "2018-18",
+      "itemNumber": 18,
+      "itemType": "multiple_choice",
+      "stem": "A store is having a sale on books. The sale price of each book is $6 less than the regular price. Which table shows prices of different books at this store?",
+      "options": [
+        {
+          "id": "F",
+          "text": "Regular: $12, $19, $26, $33. Sale: $18, $25, $32, $39."
+        },
+        {
+          "id": "G",
+          "text": "Regular: $18, $25, $32, $39. Sale: $12, $19, $26, $33."
+        },
+        {
+          "id": "H",
+          "text": "Regular: $36, $30, $24, $18. Sale: $34, $28, $22, $16."
+        },
+        {
+          "id": "J",
+          "text": "Regular: $36, $30, $24, $18. Sale: $6, $5, $4, $3."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "Each sale price should be exactly $6 less than the regular price.",
+        "incorrectOptionExplanations": {
+          "F": "These sale prices are $6 more, not $6 less.",
+          "H": "This subtracts $6 across each row instead of matching each regular price to its sale price.",
+          "J": "This divides by 6 instead of subtracting 6."
+        },
+        "remediationTip": "Match each regular price with its own sale price before comparing rows."
+      }
+    },
+    {
+      "id": "2018-20",
+      "itemNumber": 20,
+      "itemType": "multiple_choice",
+      "stem": "Hakeem received 13 phone calls on Tuesday. This expression can be used to show the number of phone calls he received on Saturday: 13 × 4. Which statement is true?",
+      "options": [
+        {
+          "id": "F",
+          "text": "Hakeem received 4 more phone calls on Saturday than he received on Tuesday."
+        },
+        {
+          "id": "G",
+          "text": "Hakeem received 4 more phone calls on Tuesday than he received on Saturday."
+        },
+        {
+          "id": "H",
+          "text": "Hakeem received 4 times as many phone calls on Saturday as he received on Tuesday."
+        },
+        {
+          "id": "J",
+          "text": "Hakeem received 4 times as many phone calls on Tuesday as he received on Saturday."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.5(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "13 × 4 means Saturday is 4 times as many as Tuesday.",
+        "incorrectOptionExplanations": {
+          "F": "This treats multiplication as addition.",
+          "G": "This treats multiplication as addition and reverses the comparison.",
+          "J": "This reverses which day has the larger amount."
+        },
+        "remediationTip": "When you see multiplication in a word statement, try the phrase \"times as many.\""
+      }
+    }
+  ]
+}

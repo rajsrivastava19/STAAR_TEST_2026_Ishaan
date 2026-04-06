@@ -1,0 +1,1338 @@
+{
+  "id": "staar-g3-math-2019",
+  "siteTitle": "Math STAAR Test Prep for Ishaan",
+  "displayTitle": "2019 Grade 3 Math",
+  "subtitle": "Queued for full import from the 2019 trio.",
+  "year": 2019,
+  "grade": 3,
+  "subject": "Math",
+  "generation": "classic",
+  "totalQuestions": 32,
+  "sourceFiles": [
+    "2019-staar-3-math-test.pdf",
+    "2019-staar-3-math-key.pdf",
+    "2019-staar-3-math-rationales.pdf"
+  ],
+  "questions": [
+    {
+      "id": "2019-01",
+      "itemNumber": 1,
+      "itemType": "multiple_choice",
+      "stem": "Which list shows the numbers in order from greatest to least value?",
+      "directions": "Read each question carefully. For a multiple-choice question, determine the best answer to the question from the four answer choices provided. For a griddable question, determine the best answer to the question. Then fill in the answer on your answer document.",
+      "options": [
+        {
+          "id": "A",
+          "text": "38,945 9,052 9,181"
+        },
+        {
+          "id": "B",
+          "text": "6,912 29,013 34,987"
+        },
+        {
+          "id": "C",
+          "text": "58,702 50,716 581"
+        },
+        {
+          "id": "D",
+          "text": "6,092 60,019 5,005"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.2(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the list that shows the numbers in order from greatest (largest) to least (smallest), the student should have compared the digits in each place value for each number. Since 58,702 and 50,716 both have five digits and 581 only has three digits, 581 must be the number with the least value, making its correct position in the list last. Next the student should have compared the digits in the ten-thousands place (leftmost digits) in 58,702 and 50,716 and determined that the digits represented the same value. Then the student should have compared the digits in the thousands place (second digits from the left) in 58,702 and 50,716 and determined that, since 8 is greater than 0, the number 58,702 is the greatest number and should come first in the list. The student should have determined that the list in order from greatest to least has 58,702 first, 50,716 second, and 581 last.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely understood that because 38,945 has five digits and 9,052 and 9,181 each have only four digits, 38,945 is the greatest number and should come first in the list. The student likely then compared the digits in the ones place (rightmost digits) for 9,052 and 9,181, concluding that 9,052 should come second in the list. The student should have started comparing the digits in the thousands place (leftmost digits) for 9,052 and 9,181 and then used the same method to compare the digits in the hundreds place (second digits from the left).  The student needs to focus onunderstanding how to order whole numbers from greatest to least value.",
+          "B": "The student identified a list of numbers in order from least to greatest instead of from greatest to least as directed.  The student needs to focus on attending to the details of the question in problems that order whole numbers.",
+          "D": "The student likely compared the leftmost digits in 6,092 and 60,019, incorrectly thinking that both digits were in the ten-thousands place. Then the student likely compared the values of the last three digits in each number. The student should have understood that the digit 6 in 6,092 is in the thousands place, the digit 6 in 60,019 is in the ten-thousands place, and 6 thousands is less than 6 ten-thousands, making 60,019 the number that should come first in the list.  The student needs tofocus on understanding how to order whole numbers from greatest to least value."
+        },
+        "remediationTip": "To correctly order whole numbers from greatest to least, compare digits in each place value from left to right, starting with the largest place value. Pay close attention to the number of digits in each number."
+      }
+    },
+    {
+      "id": "2019-02",
+      "itemNumber": 2,
+      "itemType": "multiple_choice",
+      "stem": "Gerardo bought 3 packages of mint gum and 2 packages of bubble gum. Each package had 8 pieces of gum.\nHow many pieces of gum did Gerardo buy?",
+      "options": [
+        {
+          "id": "F",
+          "text": "26"
+        },
+        {
+          "id": "G",
+          "text": "40"
+        },
+        {
+          "id": "H",
+          "text": "12"
+        },
+        {
+          "id": "J",
+          "text": "48"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(K)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of pieces of gum Gerardo bought (40), the student could have added the number of packages of mint gum (3) and the number of packages of bubble gum (2) and then multiplied that total (5) by the 8 pieces of gum in each package (3 + 2 = 5; 5 × 8 = 40). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely determined the number of pieces of mint gum correctly by multiplying 3 times 8 (3 × 8 = 24). Then the student likely added the 2 packages of mint gum to 24, resulting in 26. The student needs to focus on understanding the steps needed to find the answer to a two-step problem.",
+          "H": "The student likely multiplied 3 times 8 and then divided the answer by 2 (3 × 8 = 24; 24 ÷ 2 = 12). The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
+          "J": "The student likely multiplied 3 times 2 and then multiplied the answer by 8 (3 × 2 = 6; 6 × 8 = 48). The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them."
+        },
+        "remediationTip": "For two-step problems, ensure all parts of the problem are correctly identified and the correct mathematical operations are applied in the right order."
+      }
+    },
+    {
+      "id": "2019-03",
+      "itemNumber": 3,
+      "itemType": "multiple_choice",
+      "stem": "Alberto ran for exercise every day for 16 days. The table shows how many days he ran each distance.\n[Table with columns: Distance (miles) and Number of Days. Rows: 1 mile (2 days), 1 1/2 miles (5 days), 2 miles (3 days), 2 1/2 miles (4 days), 3 miles (2 days).]\nWhich dot plot represents these data?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dot plot A shows 2 dots at 1 mile, 5 dots at 1 1/2 miles, 3 dots at 2 miles, 4 dots at 2 1/2 miles, and 2 dots at 3 miles."
+        },
+        {
+          "id": "B",
+          "text": "Dot plot B shows 2 dots at 1 mile, 4 dots at 1 1/2 miles, 3 dots at 2 miles, 5 dots at 2 1/2 miles, and 2 dots at 3 miles."
+        },
+        {
+          "id": "C",
+          "text": "Dot plot C shows 2 dots at 1 mile, 5 dots at 1 1/2 miles, 3 dots at 2 miles, 5 dots at 2 1/2 miles, and 2 dots at 3 miles."
+        },
+        {
+          "id": "D",
+          "text": "Dot plot D shows 1 dot for each unique distance value (1, 1 1/2, 2, 2 1/2, 3 miles)."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.8(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the correct dot plot (graph that uses dots to display data), the student should have counted the number of tally marks in the table for each distance. Then the student should have chosen the dot plot that has dots matching the number of tally marks for each distance (two dots for 1 mile, five dots for 1½ miles, three dots for 2 miles, four dots for 2½ miles, and two dots for 3 miles).",
+        "incorrectOptionExplanations": {
+          "B": "The student likely miscounted the numbers of dots on the dot plot for 1½ miles and 2½ miles.",
+          "C": "The student reversed the data for 1½ miles and 2½ miles, choosing the dot plot with four instead of five dots for 1½ miles and five instead of four dots for 2½ miles.",
+          "D": "The student chose a dot plot with one dot for each unique value instead of a dot plot with a dot for each occurrence of a value in the table."
+        },
+        "remediationTip": "When creating or interpreting a dot plot, ensure that each dot accurately represents one occurrence of a value in the data set. Double-check counts for each data point."
+      }
+    },
+    {
+      "id": "2019-04",
+      "itemNumber": 4,
+      "itemType": "multiple_choice",
+      "stem": "The expanded form of a number is shown.\n90,000 + 200 + 40 + 1\nWhat is the standard form of this number?",
+      "options": [
+        {
+          "id": "F",
+          "text": "9,241"
+        },
+        {
+          "id": "G",
+          "text": "92,041"
+        },
+        {
+          "id": "H",
+          "text": "90,241"
+        },
+        {
+          "id": "J",
+          "text": "90,421"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.2(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the standard form of the number (90,241), the student should have put the digits from the expanded form in place-value order. From left to right, the place-value order is ten-thousands place, thousands place, hundreds place, tens place, and ones place. The student should have used a 9 in the ten-thousands place for the 90,000 in the expanded form, a 0 in the thousands place because the expanded form has no indication of value for the thousands place, a 2 in the hundreds place for the 200 in the expanded form, a 4 in the tens place for the 40 in the expanded form, and a 1 in the ones place for the 1 in the expanded form.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely confused 90,000 with 9,000 and placed the digit 9 in the thousands place instead of the ten-thousands place. The student needs to focus on understanding how to write numbers presented in expanded form as numerals.",
+          "G": "The student likely confused 200 with 2,000 and placed the digit 2 in the thousands place instead of the hundreds place. The student needs to focus on understanding how to write numbers presented in expanded form as numerals.",
+          "J": "The student reversed the digits in the hundreds place (2) and the tens place (4). The student needs to focus on understanding how to write numbers presented in expanded form as numerals."
+        },
+        "remediationTip": "To convert from expanded form to standard form, ensure each digit is placed in its correct place value position, remembering to include zeros for any missing place values."
+      }
+    },
+    {
+      "id": "2019-05",
+      "itemNumber": 5,
+      "itemType": "griddable_numeric",
+      "stem": "Serafina put a total of 42 cupcakes into packages. She put 6 cupcakes into each package.\nWhat is the total number of packages Serafina used for these cupcakes?",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "7",
+        "acceptedValues": [
+          "7"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(F)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total number of packages Serafina used, the student should have recognized that a total of 42 cupcakes with 6 cupcakes in \"each package\" indicates division (42 ÷ 6 = 7).",
+        "remediationTip": "Remember that problems asking to group items into equal amounts typically require division. Read keywords like 'each' to identify the operation needed."
+      }
+    },
+    {
+      "id": "2019-06",
+      "itemNumber": 6,
+      "itemType": "multiple_choice",
+      "stem": "Which number is odd?",
+      "options": [
+        {
+          "id": "F",
+          "text": "205"
+        },
+        {
+          "id": "G",
+          "text": "350"
+        },
+        {
+          "id": "H",
+          "text": "168"
+        },
+        {
+          "id": "J",
+          "text": "514"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.4(I)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which number is odd (cannot be divided evenly by 2), the student should have looked at the digit in the ones place (rightmost digit). The digit 5 is odd, so the number 205 is also odd.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely considered a number with a 0 in the ones place to be odd. The student needs to focus on understanding that numbers that have zeros in the ones place are even (can be evenly divided by 2).",
+          "H": "The student likely looked at the digit 1 in the hundreds place (leftmost digit) instead of the digit 8 in the ones place. The student needs to focus on understanding how to determine whether a number is even or odd using divisibility rules.",
+          "J": "The student likely looked at the digit 5 in the hundreds place (leftmost digit) and the digit 1 in the tens place (second digit to the left) instead of the digit 4 in the ones place. The student needs to focus on understanding how to determine whether a number is even or odd using divisibility rules."
+        },
+        "remediationTip": "To determine if a number is odd or even, always look at the digit in the ones place. If the ones digit is 1, 3, 5, 7, or 9, the number is odd."
+      }
+    },
+    {
+      "id": "2019-07",
+      "itemNumber": 7,
+      "itemType": "multiple_choice",
+      "stem": "Freddie had $256 in his bank account.\n• On Monday he put $50 more into his account.\n• On Tuesday he took out $87 to buy a bicycle.\nWhich equation can be used to find the amount of money Freddie had in his bank account after he took out money on Tuesday?",
+      "options": [
+        {
+          "id": "A",
+          "text": "256 - 50 - 87 = [box]"
+        },
+        {
+          "id": "B",
+          "text": "256 + 50 + 87 = [box]"
+        },
+        {
+          "id": "C",
+          "text": "250 - 50 + 87 = [box]"
+        },
+        {
+          "id": "D",
+          "text": "256 + 50 - 87 = [box]"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the equation that can be used to find the amount of money Freddie had in his bank account after taking out money on Tuesday, the student should have first identified the equations that began with Freddie's starting amount of $256. Then the student should have chosen the equation using addition ( + ) for the $50 Freddie put into his account and subtraction (-) for the $87 Freddie took out of his account (256 + 50 – 87 = [box]).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely thought that subtraction should be used instead of addition for the $50 Freddie put into his account. The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
+          "B": "The student likely thought that addition should be used instead of subtraction for the $87 Freddie took out of his account. The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
+          "C": "The student chose an equation that incorrectly has $250 as Freddie's starting amount. The student then likely thought that subtraction should be used instead of addition for the $50 Freddie put into his account and that addition should be used instead of subtraction for the $87 Freddie took out of the account. The student needs to focus on attending to details and understanding the mathematical operations (+, -, ×, ÷) needed to solve problem situations."
+        },
+        "remediationTip": "Carefully read word problems to identify the correct mathematical operation: 'put in' means addition, 'took out' means subtraction. Ensure you use the correct starting amount."
+      }
+    },
+    {
+      "id": "2019-08",
+      "itemNumber": 8,
+      "itemType": "multiple_choice",
+      "stem": "Brandon drew the two congruent squares shown.\n[Two congruent squares are shown. The left square is divided into two congruent triangular parts. The right square is divided into two congruent rectangular parts.]\n• He divided one square into 2 congruent triangular parts.\n• He divided the other square into 2 congruent rectangular parts.\nWhich statement is true?",
+      "options": [
+        {
+          "id": "F",
+          "text": "Each triangular part and each rectangular part represents 1/2 the area of one square."
+        },
+        {
+          "id": "G",
+          "text": "Each triangular part has an area that is greater than the area of each rectangular part."
+        },
+        {
+          "id": "H",
+          "text": "Each triangular part and each rectangular part represents 1/4 the area of one square."
+        },
+        {
+          "id": "J",
+          "text": "Each rectangular part has an area that is greater than the area of each triangular part."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.6(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student should have understood that dividing a square into 2 congruent (same size and shape) triangular parts results in parts that are each 1/2 the area of (amount of space covered by) the whole square. The student should have also understood that dividing a square into 2 congruent rectangular parts also results in parts that are each 1/2 of the area of the whole square.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely thought that the triangular parts looked bigger than the rectangular parts. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction.",
+          "H": "The student likely understood that figures can be divided in different ways to represent the same fraction but confused the fraction represented when each square was divided into 2 congruent parts. The student needs to focus on understanding how to express the area of a part of a whole figure as a fraction.",
+          "J": "The student likely thought that the rectangular parts looked bigger than the triangular parts. The student needs to focus on understanding that figures can be divided in different ways to represent the same fraction."
+        },
+        "remediationTip": "Remember that if a shape is divided into *n* congruent parts, each part represents 1/*n* of the whole, regardless of the shape of the parts."
+      }
+    },
+    {
+      "id": "2019-09",
+      "itemNumber": 9,
+      "itemType": "multiple_choice",
+      "stem": "Felix swam, rode his bike, and ran in a race.\n• He spent 19 minutes swimming.\n• He spent 21 minutes riding his bike.\n• He spent 30 minutes running.\n[Image of a clock face with hands at 12, numbers 1-12, and 60 minute marks around the edge.]\nWhat was the total amount of time Felix spent swimming, riding his bike, and running in this race?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1 hour 20 minutes"
+        },
+        {
+          "id": "B",
+          "text": "40 minutes"
+        },
+        {
+          "id": "C",
+          "text": "1 hour 10 minutes"
+        },
+        {
+          "id": "D",
+          "text": "1 hour"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Supporting",
+        "teks": "3.7(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the total amount of time Felix spent swimming, riding his bike, and running in the race, the student should have added 19 minutes, 21 minutes, and 30 minutes, resulting in 70 minutes. Then the student should have understood that since 60 minutes is equal to 1 hour, 70 minutes is equal to 1 hour 10 minutes. The student could have also used the clock face provided to determine the total amount of time by counting the spaces between the 60 marks that go around the clock face (19 spaces + 21 spaces + 30 spaces = 70 spaces). Using this method, the student should have understood that once all 60 spaces on the clock face had been counted, an hour had been represented. The student should also have understood that the extra 10 spaces counted represent 10 minutes in a new hour.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely added correctly to get a total of 70 minutes but then made an error when finding the same amount of time represented in hours and minutes. The student needs to focus on understanding how to determine solutions to problems involving addition of time intervals when the solutions are greater (more) than 1 hour.",
+          "B": "The student likely only added 19 minutes and 21 minutes and did not pay attention to the 30 minutes Felix spent running. The student needs to focus on attending to details in questions.",
+          "D": "The student likely attempted to add 19 minutes, 21 minutes, and 30 minutes but did not regroup to the tens place when doing so (19 + 21 + 30 → 60) and converted (changed) 60 minutes to 1 hour. The student needs to focus on understanding how to regroup when adding."
+        },
+        "remediationTip": "When adding time, sum all minutes first. If the total is 60 minutes or more, convert 60 minutes to 1 hour and keep the remaining minutes."
+      }
+    },
+    {
+      "id": "2019-10",
+      "itemNumber": 10,
+      "itemType": "multiple_choice",
+      "stem": "There are 8 oranges in each bag for sale at a store. Which table shows the relationship between the number of bags and the number of oranges in the bags?",
+      "options": [
+        {
+          "id": "F",
+          "text": "Table F shows (2 bags, 8 oranges), (3 bags, 16 oranges), (4 bags, 24 oranges), (5 bags, 32 oranges)."
+        },
+        {
+          "id": "H",
+          "text": "Table H shows (2 bags, 10 oranges), (3 bags, 11 oranges), (4 bags, 12 oranges), (5 bags, 13 oranges)."
+        },
+        {
+          "id": "G",
+          "text": "Table G shows (2 bags, 16 oranges), (3 bags, 24 oranges), (4 bags, 32 oranges), (5 bags, 40 oranges)."
+        },
+        {
+          "id": "J",
+          "text": "Table J shows (2 bags, 16 oranges), (3 bags, 32 oranges), (4 bags, 64 oranges), (5 bags, 128 oranges)."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the table that shows the relationship between the number of bags and the number of oranges in the bags, the student should have multiplied each number of bags by 8 and then used the result to confirm each number of oranges listed in the table (2 × 8 = 16, 3 × 8 = 24, 4 x 8 = 32, and 5 × 8 = 40).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely chose the table with multiples of 8 (numbers like 8, 16, 24, and 32 that can be found when multiplying by 8) but did not consider the relationship between each number of bags and each number of oranges in the table. The student needs to focus on understanding the relationship between numbers paired in a table.",
+          "H": "The student likely added 8 to each number of bags instead of multiplying by 8. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "J": "The student likely chose the table showing the correct relationship between the numbers in the first pair in the table but did not look at the remaining pairs of numbers in the table. The student needs to focus on understanding the relationship between numbers paired in a table."
+        },
+        "remediationTip": "When a problem describes a constant rate, such as '8 oranges in each bag,' this indicates a multiplication relationship. Verify the rule for all pairs in the table."
+      }
+    },
+    {
+      "id": "2019-11",
+      "itemNumber": 11,
+      "itemType": "multiple_choice",
+      "stem": "Which figure CANNOT be classified as a prism?\n[Four 3D figures are shown.]",
+      "options": [
+        {
+          "id": "A",
+          "text": "Figure A: A cube (rectangular prism)."
+        },
+        {
+          "id": "C",
+          "text": "Figure C: A cylinder."
+        },
+        {
+          "id": "B",
+          "text": "Figure B: A triangular prism."
+        },
+        {
+          "id": "D",
+          "text": "Figure D: A rectangular prism."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the figure that CANNOT be classified as a prism, the student should have identified the characteristics of a prism (1. bases (sides) that are polygons (closed shapes with at least three sides), 2. bases that are the same size and shape, 3. bases that are parallel to each other (never touch), and 4. bases that are connected by rectangles). The first figure is a prism because it has square bases that are parallel to each other, are the same size, and are connected by rectangles. The second figure is a prism because it has triangular bases that are parallel to each other, are the same size and shape, and are connected by rectangles. The fourth figure is a prism because it has rectangular bases that are parallel to each other, are the same size and shape, and are connected by rectangles. The student should have recognized that the third figure is a cylinder and CANNOT be classified as a prism because the bases are circles and circles are not polygons.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not recognize that a cube is a special prism in which all of the faces are the same-size square. The student needs to focus on understanding the characteristics of prisms.",
+          "B": "The student likely did not recognize that a prism could have triangular bases. The student needs to focus on understanding the characteristics of prisms.",
+          "D": "The student likely did not understand the characteristics of a prism. The student needs to focus on understanding the characteristics of prisms."
+        },
+        "remediationTip": "Remember that prisms must have bases that are polygons (straight-sided shapes). A cylinder has circular bases, which are not polygons, so it is not a prism."
+      }
+    },
+    {
+      "id": "2019-12",
+      "itemNumber": 12,
+      "itemType": "multiple_choice",
+      "stem": "Stacy used 21 feet of ribbon to make bows. She used 3 feet of ribbon for each bow.\nWhich equation can be used to find the number of bows Stacy made with this ribbon?",
+      "options": [
+        {
+          "id": "F",
+          "text": "21 × 3 = 63"
+        },
+        {
+          "id": "G",
+          "text": "21 ÷ 3 = 7"
+        },
+        {
+          "id": "H",
+          "text": "21 + 3 = 24"
+        },
+        {
+          "id": "J",
+          "text": "21 - 3 = 18"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "G"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the equation that can be used to find the number of bows Stacy made with the ribbon (7), the student should have divided the total amount of ribbon (21 feet) by the same amount of ribbon used for each bow (3 feet).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely thought the values should be multiplied instead of divided. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "H": "The student likely thought the values should be added instead of divided. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "J": "The student likely thought the values should be subtracted instead of divided. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems."
+        },
+        "remediationTip": "When a total amount is divided into equal smaller amounts, it's a division problem. Look for keywords like 'for each' to indicate division."
+      }
+    },
+    {
+      "id": "2019-13",
+      "itemNumber": 13,
+      "itemType": "multiple_choice",
+      "stem": "Fraction strips are shown.\n[Fraction strip model showing a whole, a strip divided into 6 equal parts, and a strip divided into 8 equal parts. 5 parts are shaded in the 'sixths' strip, and 5 parts are shaded in the 'eighths' strip.]\nWhich comparison and explanation are true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5/6 < 5/8, because eighths are larger than sixths"
+        },
+        {
+          "id": "B",
+          "text": "5/6 < 5/8, because sixths are larger than eighths"
+        },
+        {
+          "id": "C",
+          "text": "5/6 > 5/8, because eighths are larger than sixths"
+        },
+        {
+          "id": "D",
+          "text": "5/6 > 5/8, because sixths are larger than eighths"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.3(H)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which comparison and explanation are true, the student could have colored in 5 of the 6 parts in the second row of the fraction strip model to represent 5/6 and 5 of the 8 parts in the third row of the model to represent 5/8. The student should have recognized that 5/6 of a row is greater than (>) 5/8 of a row. The student also should have recognized that the parts in the second row of the model (sixths) are larger than the parts in the third row of the model (eighths), so 5/6 > 5/8, because sixths are larger than eighths.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely compared the 8 and 6 in the denominators (bottom numbers) of the fractions, found that 6 is less than (<) 8, and made the incorrect assumption that eighths are larger than sixths. The student likely did not use the fraction strip model to compare eighths to sixths. Thestudent needs to focus on understanding how to compare fractions with the same numerator (top number) but different denominators.",
+          "B": "The student likely confused the comparison symbol for greater than (>) with the comparison symbol for less than (<) when comparing 5/6 and 5/8. The student needs to focus on understanding how to use comparison symbols to compare fractions.",
+          "C": "The student likely used the comparison symbol correctly to compare 5/6 and 5/8 but did not pay attention to the explanation of why the comparison is true. The student needs to focus on using words to describe why comparisons of fractions are true."
+        },
+        "remediationTip": "When comparing fractions with the same numerator, the fraction with the smaller denominator represents larger pieces, and therefore a larger total amount. Use fraction strips or visual models to confirm."
+      }
+    },
+    {
+      "id": "2019-14",
+      "itemNumber": 14,
+      "itemType": "griddable_numeric",
+      "stem": "Gina's journal has a square cover with the side length shown.\n[Image of a square with a letter 'G' inside a heart, and one side labeled '24 cm'.]\nWhat is the perimeter of the cover of Gina's journal in centimeters?",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "96",
+        "acceptedValues": [
+          "96"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.7(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the perimeter of (distance around) the cover of Gina's journal, the student should have first recognized that each side of the square is the same length (24 centimeters). Then the student could have added all of the side lengths (24 + 24 + 24 + 24 = 96). The student could have also multiplied the given side length (24 cm) by the 4 sides (24 × 4 = 96).",
+        "remediationTip": "Remember that a square has four equal sides. The perimeter is the sum of all side lengths, so multiply the side length by 4."
+      }
+    },
+    {
+      "id": "2019-15",
+      "itemNumber": 15,
+      "itemType": "multiple_choice",
+      "stem": "Roger has two boxes of nails. One box has 438 nails, and the other box has 375 nails.\nHow many nails does Roger have in these two boxes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "813"
+        },
+        {
+          "id": "B",
+          "text": "703"
+        },
+        {
+          "id": "C",
+          "text": "814"
+        },
+        {
+          "id": "D",
+          "text": "713"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of nails Roger has in these two boxes, the student should have added 438 to 375 (438 + 375 = 813).",
+        "incorrectOptionExplanations": {
+          "B": "The student likely added the values but did not regroup to the tens place (second digit from the right) and the hundreds place (leftmost digit). The student needs to focus on understanding how to regroup when adding.",
+          "C": "The student likely attempted to add the values but made an error when adding the digits 8 and 5 in the ones place (rightmost digit), resulting in 8 + 5 → 14. The student needs to focus on adding numbers accurately.",
+          "D": "The student likely added the values but did not regroup to the hundreds place (leftmost digit). The student needs to focus on understanding how to regroup when adding."
+        },
+        "remediationTip": "When adding multi-digit numbers, pay close attention to regrouping (carrying over) values to the next place value column."
+      }
+    },
+    {
+      "id": "2019-16",
+      "itemNumber": 16,
+      "itemType": "multiple_choice",
+      "stem": "The shaded figure on the grid represents Erin's rectangular lawn.\n[Image of a grid with a shaded rectangle. The rectangle is 6 units high and 12 units wide. A key shows ' = 1 square meter'.]\nWhat is the area in square meters of Erin's lawn?",
+      "options": [
+        {
+          "id": "F",
+          "text": "18 square meters"
+        },
+        {
+          "id": "G",
+          "text": "36 square meters"
+        },
+        {
+          "id": "H",
+          "text": "62 square meters"
+        },
+        {
+          "id": "J",
+          "text": "72 square meters"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the area of (amount of space covered by) Erin's lawn, the student should have determined the number of rows and the number of squares in each row of the shaded figure representing Erin's lawn. The shaded figure covers 6 rows, and each row is 12 squares long. The student then could have multiplied 12 by 6 or could have counted the number of squares covered by the shaded figure (72). Because the shaded figure covers 72 squares, it represents an area of 72 square meters.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely determined that there are 12 squares along each long side of the shaded figure and 6 squares along each short side of the shaded figure but added 12 and 6 instead of multiplying 12 by 6 (12 + 6 = 18). The student needs to focus on understanding area and how to calculate it.",
+          "G": "The student likely determined that there are 12 squares along each long side of the shaded figure and 6 squares along each short side of the shaded figure but calculated the perimeter (distance around the outside) of the shaded figure instead of the area of the shaded figure (12 + 12 + 6 + 6 = 36). The student needs to focus on understanding area and how to calculate it.",
+          "H": "The student likely did not regroup to the tens place (leftmost digit) when multiplying 12 times 6 (12 x 6 → 62). The student needs to focus on understanding how to regroup when multiplying."
+        },
+        "remediationTip": "Area is the total number of square units that cover a surface. For a rectangle, multiply the length by the width. Be careful not to confuse area with perimeter."
+      }
+    },
+    {
+      "id": "2019-17",
+      "itemNumber": 17,
+      "itemType": "multiple_choice",
+      "stem": "Models R and T are shown.\n[Model R is a circle divided into 5 parts, one large part is shaded and the other 4 are smaller and unshaded. Model T is a circle divided into 4 equal parts, one part is shaded.]\nWhich statement is true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The shaded parts of Model R and Model T are different sizes, but each model represents the same fraction of the whole."
+        },
+        {
+          "id": "B",
+          "text": "The shaded part of Model R cannot be written as the fraction 1/5, because the parts are not all equal in size."
+        },
+        {
+          "id": "C",
+          "text": "The shaded part of Model T is 1/4, because the parts are all equal in size."
+        },
+        {
+          "id": "D",
+          "text": "The total number of parts in Model R is 5, so 1/5 of Model R is shaded."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.3(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student should have identified the shaded part of Model R as larger than the other parts. Then the student should have understood that, in order for 1/5 of the model to be shaded, 1 of 5 equal-size parts would have to be shaded.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely did not consider that the shaded parts of Model R and Model T must be the same size to represent the same fraction of the whole (1/5). The student needs to focus on understanding that the parts of a fraction model must be equal in size to represent a fraction of the total number of pieces.",
+          "C": "The student likely considered the denominator (bottom number) of the fraction represented by Model T to be 4 because there are 4 unshaded parts. The student needs to focus on understanding that a fraction is composed of a numerator (top number) represented by designated parts (shaded parts in this problem) and a denominator that is equal to the total number of parts in a whole.",
+          "D": "The student likely did not consider that the shaded part of Model R is not 1 of 5 equal-size parts and composed the fraction represented by Model R as 1 shaded part out of a total of 5 parts. The student needs to focus on understanding that the parts of a fraction model must be equal in size to represent a fraction of the total number of pieces."
+        },
+        "remediationTip": "For a fraction to correctly represent a part of a whole, all parts of the whole must be equal in size. If parts are not equal, the fraction cannot be used to describe them."
+      }
+    },
+    {
+      "id": "2019-18",
+      "itemNumber": 18,
+      "itemType": "multiple_choice",
+      "stem": "A group of 27 students played a game with the hoops shown. An equal number of the students shared each hoop.\n[Image showing 9 hoops arranged in a 3x3 grid.]\nHow many students shared each hoop?",
+      "options": [
+        {
+          "id": "F",
+          "text": "3"
+        },
+        {
+          "id": "G",
+          "text": "18"
+        },
+        {
+          "id": "H",
+          "text": "9"
+        },
+        {
+          "id": "J",
+          "text": "36"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(H)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of students who shared each hoop, the student should have divided the 27 students in the problem by 9 hoops, resulting in 3 students sharing each hoop (27 ÷ 9 = 3).",
+        "incorrectOptionExplanations": {
+          "G": "The student likely subtracted 9 from 27 instead of dividing 27 by 9. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "H": "The student chose the number of hoops given in the problem. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems.",
+          "J": "The student likely added 9 to 27 instead of dividing 27 by 9. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems."
+        },
+        "remediationTip": "When a total number of items or people needs to be distributed equally among groups, use division. Identify the total and the number of groups."
+      }
+    },
+    {
+      "id": "2019-19",
+      "itemNumber": 19,
+      "itemType": "multiple_choice",
+      "stem": "Point P on the number line represents two equivalent fractions.\n[Image of a number line from 0 to 1, divided into 4 equal sections. Point P is at the end of the first section.]\nWhich two equivalent fractions can point P represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "1/4 and 1/8"
+        },
+        {
+          "id": "B",
+          "text": "1/3 and 2/6"
+        },
+        {
+          "id": "C",
+          "text": "1/4 and 2/8"
+        },
+        {
+          "id": "D",
+          "text": "1/4 and 3/4"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "C"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.3(F)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the equivalent fractions that point P can represent, the student could have first identified that point P was located at the end of the first section of 4 same-size sections between 0 and 1 on the number line, or 1/4 of the way from 0 to 1. Then the student could have added marks at the midpoints (halfway points) of each section to divide the number line into eighths and recognized that point P can also represent a location that is 2/8 of the way from 0 to 1.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely identified that point P can represent 1/4 but did not know how to find the equivalent fraction with a denominator (bottom number) of 8. The student likely chose 1/4 and another fraction with the same numerator (top number) of 1. The student needs to focus on understanding how to represent equivalent fractions on number lines.",
+          "B": "The student likely identified that point P is located at the end of the first section from 0 on the number line, identified that there are three sections between point P and 1, and thought the fraction represented was 1/3 instead of 1/4. Then the student likely found the midpoints of the sections on the number line, counted the number of sections between 0 and point P (2), and counted the number of sections between point P and 1 (6) to determine that the fraction 2/6 is equivalent to 1/3. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections.",
+          "D": "The student likely identified that point P can represent 1/4 but did not understand how to find an equivalent fraction. The student likely chose 1/4 and another fraction with the same denominator (bottom number) of 4. The student needs to focus on understanding how to represent equivalent fractions on number lines."
+        },
+        "remediationTip": "To find equivalent fractions on a number line, divide each existing section into smaller equal parts. The new fraction will have a larger denominator but represent the same point if the numerator is also scaled proportionally."
+      }
+    },
+    {
+      "id": "2019-20",
+      "itemNumber": 20,
+      "itemType": "multiple_choice",
+      "stem": "There are 6 photographs on each page of an album. One page of the album is shown.\n[Image showing a page of an album with 6 photographs arranged in a 2x3 grid. The photos show various people and a dog.]\nHow many photographs are on 9 pages of the album?",
+      "options": [
+        {
+          "id": "F",
+          "text": "48"
+        },
+        {
+          "id": "G",
+          "text": "45"
+        },
+        {
+          "id": "H",
+          "text": "15"
+        },
+        {
+          "id": "J",
+          "text": "54"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.4(D)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of photographs on 9 pages of the album, the student could have multiplied the 6 photographs on each page by 9 pages (6 x 9 = 54).",
+        "incorrectOptionExplanations": {
+          "F": "The student likely multiplied 6 by the additional 8 pages of photographs that are not shown, omitting the photographs on the page already shown in the problem (6 × 8 = 48). The student needs to focus on attending to details in questions.",
+          "G": "The student likely understood that multiplication should be used to solve the problem but confused the product (answer) of 6 x 9 (54) with the product of 5 × 9 (45). The student needs to focus on multiplying numbers accurately.",
+          "H": "The student likely added 6 to 9 instead of multiplying 6 by 9. The student needs to focus on understanding the mathematical operations (+, -, ×, ÷) needed to solve real-world problems."
+        },
+        "remediationTip": "When asked to find a total amount for multiple groups of equal size, use multiplication. Double-check your multiplication facts."
+      }
+    },
+    {
+      "id": "2019-21",
+      "itemNumber": 21,
+      "itemType": "multiple_choice",
+      "stem": "Four people at a snack bar each bought a drink. The table shows the amount of money each person gave the cashier and the amount of money each person got back in change.\n[Table with columns: Name, Amount Given to Cashier (cents), Amount of Change (cents). Rows: Caleb (55, 3), Andrew (60, 8), Morgan (75, 23), Trish (100, 48).]\nBased on the relationship shown in the table, which statement is true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A drink at the snack bar costs 52 cents, because the amount given to the cashier minus 52 equals the amount of change."
+        },
+        {
+          "id": "B",
+          "text": "A drink at the snack bar costs 52 cents, because the amount given to the cashier plus 52 equals the amount of change."
+        },
+        {
+          "id": "C",
+          "text": "A drink at the snack bar costs 48 cents, because the amount given to the cashier minus 48 equals the amount of change."
+        },
+        {
+          "id": "D",
+          "text": "A drink at the snack bar costs 48 cents, because the amount given to the cashier plus 48 equals the amount of change."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "A"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(E)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student should have found the relationship between each amount of money given to the cashier and each corresponding (paired) amount of change in the table. The student should have seen that each amount of money given to the cashier is 52 cents more than each amount of change received, so each drink must cost 52 cents (55 – 3 = 52, 60 – 8 = 52, 75 – 23 = 52, and 100 – 48 = 52).",
+        "incorrectOptionExplanations": {
+          "B": "The student likely looked at the corresponding numbers from right to left in the table and saw an additive (+) relationship (3 + 52 = 55, 8 + 52 = 60, 23 + 52 = 73, and 48 + 52 = 100) but did not consider that this relationship does not match the wording “amount given to the cashier plus 52 equals the amount of change\" in the answer choice. The student needs to focus on attending to the details of verbal descriptions of relationships between numbers paired in a table.",
+          "C": "The student likely understood that when an amount of money is given to a cashier, subtraction (–) is used to find the amount of change. The student likely only looked at the last pair of numbers in the table and made an error in subtracting (100 – 48 → 48). The student needs to focus on subtracting numbers accurately.",
+          "D": "The student likely looked at the corresponding numbers from right to left in the table and saw an additive (+) relationship but did not consider that this relationship does not match the wording \"amount given to the cashier plus 48 equals the amount of change.\" The student likely only looked at the last pair of numbers in the table and made an error in adding (48 + 48 → 100). The student needs to focus on understanding relationships between numbers paired in a table and adding numbers accurately."
+        },
+        "remediationTip": "To find the cost of an item when given the amount paid and the change, subtract the change from the amount paid. This relationship should hold true for all entries in the table."
+      }
+    },
+    {
+      "id": "2019-22",
+      "itemNumber": 22,
+      "itemType": "multiple_choice",
+      "stem": "A school keeps boxes of paper of different colors in a room. The table shows how many boxes of each color are in the room.\n[Table: Boxes of Paper with columns Color (White, Yellow, Blue, Red) and Number (48, 24, 42, 18).]\nWhich answer choice does NOT represent the information in the table?",
+      "options": [
+        {
+          "id": "F",
+          "text": "Pictograph with tally marks: White (9 bundles of 5, plus 3), Yellow (4 bundles of 5, plus 4), Blue (8 bundles of 5, plus 2), Red (3 bundles of 5, plus 3)."
+        },
+        {
+          "id": "H",
+          "text": "Bar graph: White (48), Yellow (24), Blue (46), Red (16)."
+        },
+        {
+          "id": "G",
+          "text": "Pictograph with box icons: White (4 boxes), Yellow (2 boxes), Blue (3 1/2 boxes), Red (1 1/2 boxes). Key: Each box means 12 boxes."
+        },
+        {
+          "id": "J",
+          "text": "Pictograph with box icons: White (8 boxes), Yellow (4 boxes), Blue (7 boxes), Red (3 boxes). Key: Each box means 6 boxes."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Readiness",
+        "teks": "3.8(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the answer choice that does NOT represent the information in the table, the student should have seen that the first, second, and fourth answer choices represent the values 48 for White, 24 for Yellow, 42 for Blue, and 18 for Red. While the bar graph in this third answer choice does represent 48 for White and 24 for Yellow, it incorrectly represents the value for Blue as 46 and the value for Red as 16.",
+        "incorrectOptionExplanations": {
+          "F": "The student chose an answer choice that does represent the information in the table instead of one that does NOT, or the student made an error in counting the bundles of tally marks (groups of 5 tally marks) in the table. The student needs to focus on attending to the details of the question and/or the student needs to focus on understanding how tally marks are used to represent data in tables.",
+          "G": "The student chose an answer choice that does represent the information in the table instead of one that does NOT, or the student made an error in using the key of the pictograph (graph that uses picture icons to represent numbers) to understand that each icon represents 12 boxes and each half icon represents 6 (half of 12). The student needs to focus on attending to the details of the question and/or the student needs to focus on understanding how icons and half icons are used to represent data in a pictograph.",
+          "J": "The student chose an answer choice that does represent the information in the table instead of one that does NOT, or the student made an error in using the key of the pictograph (graph that uses picture icons to represent numbers) to understand that each icon represents 6 boxes. The student needs to focus on attending to the details of the question and/or the student needs to focus on understanding how icons are used to represent data in a pictograph."
+        },
+        "remediationTip": "When interpreting data representations, carefully compare each data point in the graph or pictograph against the original table. Look for any discrepancies or misrepresentations."
+      }
+    },
+    {
+      "id": "2019-23",
+      "itemNumber": 23,
+      "itemType": "multiple_choice",
+      "stem": "Ms. Patterson works for a company. Which factor would most likely affect the amount of money Ms. Patterson gets paid by the company?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The amount of money Ms. Patterson has to pay in bills"
+        },
+        {
+          "id": "B",
+          "text": "The size of Ms. Patterson's family"
+        },
+        {
+          "id": "C",
+          "text": "The amount of money Ms. Patterson saves every month"
+        },
+        {
+          "id": "D",
+          "text": "The work experience Ms. Patterson has"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "D"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.9(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the factor that would most likely affect the amount of money Ms. Patterson gets paid by the company, the student should have recognized that certain factors like education and work experience are considered by companies when deciding the amounts of money to pay workers.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely understood that Ms. Patterson would need money to pay bills but did not realize that a company would probably not take this into consideration when determining the amount Ms. Patterson gets paid. The student needs to focus on understanding the factors that companies use to determine the amounts of money to pay workers.",
+          "B": "The student likely understood that Ms. Patterson would need money to pay for family expenses but did not realize that a company would probably not take this into consideration when determining the amount Ms. Patterson gets paid. The student needs to focus on understanding the factors that companies use to determine the amounts of money to pay workers.",
+          "C": "The student likely understood that Ms. Patterson would probably save some of the money she earns but did not realize that a company would probably not take this into consideration when determining the amount Ms. Patterson gets paid. The student needs to focus on understanding the factors that companies use to determine the amounts of money to pay workers."
+        },
+        "remediationTip": "Understand that a person's income from a company is typically based on their skills, experience, and the value they bring to the company, not personal expenses or savings."
+      }
+    },
+    {
+      "id": "2019-24",
+      "itemNumber": 24,
+      "itemType": "griddable_numeric",
+      "stem": "Samantha, Gordon, and Diego each brought an ice chest to a picnic.\n• The weight of Samantha's ice chest was 83 pounds.\n• The weight of Gordon's ice chest was 28 pounds.\n• The weight of Diego's ice chest was 37 pounds.\nWhat was the difference in pounds between the weight of Samantha's ice chest and the combined weight of Gordon's and Diego's ice chests?",
+      "directions": "Record your answer and fill in the bubbles on your answer document. Be sure to use the correct place value.",
+      "answerRule": {
+        "kind": "numeric_equivalent",
+        "canonicalValue": "18",
+        "acceptedValues": [
+          "18"
+        ]
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the difference between the weight of Samantha's ice chest and the combined weight of Gordon's and Diego's ice chests, the student should have interpreted that the word \"difference\" in the question meant that subtraction ( – ) was necessary and that the word “combined” meant addition (+) was necessary. The student could have first added the weights of Gordon's ice chest (28 pounds) and Diego's ice chest (37 pounds) to get the combined weight of 65 pounds (28 + 37 = 65). Then the student could have subtracted 65 pounds from the weight of Samantha's ice chest (83 pounds), resulting in a difference of 18 pounds (83 – 65 = 18). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "remediationTip": "For multi-step word problems, break them down: first, combine the necessary values (addition for 'combined'), then find the difference between that total and another value (subtraction for 'difference')."
+      }
+    },
+    {
+      "id": "2019-25",
+      "itemNumber": 25,
+      "itemType": "multiple_choice",
+      "stem": "A model of Mr. Estrada's rectangular calculator is shown. Use the ruler provided to measure the length and width of the calculator to the nearest centimeter.\n[Image of a calculator and a partial ruler for measurement. The calculator measures approximately 10 cm in length and 6 cm in width.]\nWhich measurement is closest to the perimeter of the calculator in centimeters?",
+      "options": [
+        {
+          "id": "A",
+          "text": "10 cm"
+        },
+        {
+          "id": "B",
+          "text": "32 cm"
+        },
+        {
+          "id": "C",
+          "text": "16 cm"
+        },
+        {
+          "id": "D",
+          "text": "36 cm"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.7(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the perimeter (distance around the outside) of the calculator, the student should have used the centimeter side of the ruler provided to measure the length and width of the calculator and then added all of the side lengths together. The student should have lined up the corner of the calculator with the zero on the ruler to find the length of approximately 10 centimeters and the width of approximately 6 centimeters. The student could have found the perimeter by adding 10 + 10 + 6 + 6 = 32.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely only measured the length of the calculator and chose the answer choice indicating the length instead of the perimeter of the calculator. The student needs to focus on attending to details in questions.",
+          "C": "The student likely added one 10-centimeter side length and one 6-centimeter side length of the calculator, leaving out the other two side lengths that are needed to complete the perimeter. The student needs to focus on understanding perimeter and how to calculate it.",
+          "D": "The student likely lined up the corner of the calculator incorrectly with the 1-centimeter mark on the ruler instead of the zero. This error would have given a length of approximately 11 centimeters and a width of approximately 7 centimeters, leading to a perimeter calculation of 11 + 11 + 7 + 7 = 36. The student needs to focus on understanding how to properly use and read measurement tools."
+        },
+        "remediationTip": "When measuring with a ruler, always align the object's edge with the zero mark for accurate results. Remember that perimeter is the sum of all sides of a shape."
+      }
+    },
+    {
+      "id": "2019-26",
+      "itemNumber": 26,
+      "itemType": "multiple_choice",
+      "stem": "There are 3 basketball teams practicing together in a gym.\n• Each team has 10 players.\n• All of the players are used to make 6 groups during the practice.\n• There is an equal number of players in each group.\nHow many players are in each group?",
+      "options": [
+        {
+          "id": "F",
+          "text": "180"
+        },
+        {
+          "id": "G",
+          "text": "6"
+        },
+        {
+          "id": "H",
+          "text": "24"
+        },
+        {
+          "id": "J",
+          "text": "5"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.4(K)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number of players in each group (5), the student could have multiplied the 3 teams by 10 players on each team to get 30 players in all, and then the student could have divided 30 by the 6 groups (3 × 10 ÷ 6 = 5). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely multiplied by 6 instead of dividing by 6 in the second step of the problem (3 x 10 x 6 = 180). The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them.",
+          "G": "The student likely made an error when dividing 30 by 6 in the second step of the problem (30 ÷ 6 → 6). The student needs to focus on dividing numbers accurately.",
+          "H": "The student likely subtracted 6 instead of dividing by 6 in the second step of the problem (3 × 10 − 6 = 24). The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) needed to solve them."
+        },
+        "remediationTip": "When solving multi-step problems, first find the total quantity (e.g., total players) using multiplication. Then, distribute that total equally among groups using division."
+      }
+    },
+    {
+      "id": "2019-27",
+      "itemNumber": 27,
+      "itemType": "multiple_choice",
+      "stem": "Which answer choice does NOT describe the number 7,140?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The sum of seven thousands and fourteen tens"
+        },
+        {
+          "id": "B",
+          "text": "The sum of seven thousands, one hundred, and forty tens"
+        },
+        {
+          "id": "C",
+          "text": "The sum of seven thousands, one hundred, and four tens"
+        },
+        {
+          "id": "D",
+          "text": "The sum of seven thousands, one hundred, and forty ones"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Readiness",
+        "teks": "3.2(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the answer choice that does NOT describe the number 7,140, the student should have first understood that 7,140 is made up of 7 thousands, 1 hundred, 4 tens, and 0 ones. Then the student should have understood that there are many ways to add numbers to make 7,140. The first, third, and fourth answer choices are all different ways to make 7,140. This answer choice is NOT a way to make 7,140 because the sum of 7 thousands, 1 hundred, and 40 tens is 7,500.",
+        "incorrectOptionExplanations": {
+          "A": "The student chose an answer choice that does describe the number 7,140 instead of one that does NOT, or the student did not understand that 14 tens is equal to 1 hundred and 4 tens. The student needs to focus on attending to the details of a question and/or the student needs to focus on understanding how numbers can be composed (put together) and decomposed (taken apart) in different ways.",
+          "C": "The student chose an answer choice that does describe the number 7,140 instead of one that does NOT, or the student made an error in understanding how the number 7,140 can be described in words. The student needs to focus on attending to the details of a question and/or the student needs to focus on understanding how numbers can be described in words.",
+          "D": "The student chose an answer choice that does describe the number 7,140 instead of one that does NOT, or the student did not understand that 40 ones is equal to 4 tens. The student needs to focus on attending to the details of a question and/or the student needs to focus on understanding how numbers can be composed (put together) and decomposed (taken apart) in different ways."
+        },
+        "remediationTip": "Carefully convert each part of a number description (e.g., 'fourteen tens') into its numerical value before summing. Pay attention to place value in multi-digit numbers."
+      }
+    },
+    {
+      "id": "2019-28",
+      "itemNumber": 28,
+      "itemType": "multiple_choice",
+      "stem": "There are 18 spoons in a drawer. This expression represents the number of forks in the same drawer.\n2 × 18\nWhich statement is true?",
+      "options": [
+        {
+          "id": "F",
+          "text": "There are 2 more spoons than forks in the drawer."
+        },
+        {
+          "id": "G",
+          "text": "There are 2 more forks than spoons in the drawer."
+        },
+        {
+          "id": "H",
+          "text": "There are 2 times as many forks as spoons in the drawer."
+        },
+        {
+          "id": "J",
+          "text": "There are 2 times as many spoons as forks in the drawer."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "H"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Supporting",
+        "teks": "3.5(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine which statement is true, the student should have interpreted the multiplication ( × ) symbol in the expression as “times as many.\" There are 18 spoons in the drawer and 2 x 18 forks in the drawer, indicating that the number of forks is “2 times” the 18 spoons in the drawer.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely confused the words describing addition (+), “more than,” with the words describing multiplication, \"times as many,\" and reversed the numbers of spoons and forks in the drawer. The student needs to focus on understanding how to describe a multiplication expression using words such as \"times as many\" or \"times as much.\" The student also needs to focus on understanding the greater and lesser values when using words to describe these expressions.",
+          "G": "The student likely confused the words describing addition ( + ), “more than,” with the words describing multiplication, “times as many.\" The student needs to focus on understanding how to describe a multiplication expression using words such as “times as many” or “times as much.”",
+          "J": "The student likely reversed the numbers of spoons and forks in the drawer. The student needs to focus on understanding the greater and lesser values when using words to describe multiplication expressions such as \"times as many\" or \"times as much.\""
+        },
+        "remediationTip": "Understand that '2 × 18' means '2 times as many as 18'. Carefully identify which quantity is being multiplied and which is the base amount to avoid reversing the relationship."
+      }
+    },
+    {
+      "id": "2019-29",
+      "itemNumber": 29,
+      "itemType": "multiple_choice",
+      "stem": "Javier rode his bike a distance of 1/2 mile from his house. On which number line does point J represent Javier's position after riding his bike?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Number line A shows point J at 1/4 between 0 and 1 mile, with 4 equal sections marked."
+        },
+        {
+          "id": "B",
+          "text": "Number line B shows point J exactly halfway between 0 and 1 mile, with 2 equal sections marked."
+        },
+        {
+          "id": "C",
+          "text": "Number line C shows point J at 2/3 of the way between 0 and 1 mile, with 3 equal sections marked after J."
+        },
+        {
+          "id": "D",
+          "text": "Number line D shows point J at 1/2 of the way between 0 and 1 mile, but the numbering starts from the right (1 mile on the left, 0 on the right)."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 1,
+        "readinessType": "Supporting",
+        "teks": "3.7(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the number line on which point J represents a position that is 1/2 mile from 0, or Javier's house, the student should have found the point that is at the end of the first of 2 same-size sections from 0 to the 1-mile mark, or halfway between 0 and the 1-mile mark.",
+        "incorrectOptionExplanations": {
+          "A": "The student likely considered the fraction 1/2 to be represented on a number line as a point at the end of the first section from 0 with 2 same-size sections between point J and the 1-mile mark. The student needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections.",
+          "C": "The student likely considered only the numerator (top number) of the fraction and found the number line where point J was one section back from the 1-mile mark. The student needs to focus on understanding that a fraction is composed of a numerator and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections. The student also needs to focus on moving from left to right on a number line with representing fractions.",
+          "D": "The student likely moved from right to left on the number line and considered the fraction 1/2 to be represented on a number line as a point at the end of the first section from 1 with 2 same-size sections between point J and 0. The student needs to focus on moving from left to right on a number line when representing fractions. The student also needs to focus on understanding that a fraction is composed of a numerator (top number) and a denominator (bottom number) and that, when representing a fraction on a number line that goes from 0 to 1, the denominator is represented by the total number of sections."
+        },
+        "remediationTip": "When representing fractions on a number line from 0 to 1, the denominator indicates the total number of equal parts the line is divided into, and the numerator indicates how many of those parts to count from 0."
+      }
+    },
+    {
+      "id": "2019-30",
+      "itemNumber": 30,
+      "itemType": "multiple_choice",
+      "stem": "The figures shown can be sorted into groups.\n[Image showing five geometric figures: a pentagon, a parallelogram, a triangle, a trapezoid, and a rectangle.]\nWhich list shows a correct way to group these figures?",
+      "options": [
+        {
+          "id": "F",
+          "text": "1 triangle, 3 quadrilaterals, and 1 pentagon"
+        },
+        {
+          "id": "G",
+          "text": "1 triangle and 4 quadrilaterals"
+        },
+        {
+          "id": "H",
+          "text": "1 triangle, 3 quadrilaterals, and 1 hexagon"
+        },
+        {
+          "id": "J",
+          "text": "1 triangle, 2 quadrilaterals, and 2 pentagons"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "F"
+      },
+      "metadata": {
+        "reportingCategory": 3,
+        "readinessType": "Readiness",
+        "teks": "3.6(A)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the correct way to group the figures, the student should have classified each figure according to its attributes (characteristics). The first figure is a pentagon because it has five sides. The second, fourth, and fifth figures are quadrilaterals because they each have four sides. The third figure is a triangle because it has three sides.",
+        "incorrectOptionExplanations": {
+          "G": "The student likely confused the pentagon for a quadrilateral. The student needs to focus on understanding the attributes of quadrilaterals and pentagons.",
+          "H": "The student likely confused the pentagon for a hexagon (figure with six sides). The student needs to focus on understanding the attributes of pentagons and hexagons.",
+          "J": "The student likely confused one of the quadrilaterals for a pentagon. The student needs to focus on understanding the attributes of quadrilaterals and pentagons."
+        },
+        "remediationTip": "Review the definitions of polygons based on their number of sides: triangles (3 sides), quadrilaterals (4 sides), pentagons (5 sides), hexagons (6 sides), etc."
+      }
+    },
+    {
+      "id": "2019-31",
+      "itemNumber": 31,
+      "itemType": "multiple_choice",
+      "stem": "Dana used the money shown to buy a snack.\n[Image of a dollar bill and several coins: one $1 bill, one quarter ($0.25), one nickel ($0.05), and two pennies ($0.01 each).]\nWhat amount of money did Dana use to buy the snack?",
+      "options": [
+        {
+          "id": "A",
+          "text": "$1.37"
+        },
+        {
+          "id": "B",
+          "text": "$1.32"
+        },
+        {
+          "id": "C",
+          "text": "$1.40"
+        },
+        {
+          "id": "D",
+          "text": "$1.27"
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "B"
+      },
+      "metadata": {
+        "reportingCategory": 4,
+        "readinessType": "Supporting",
+        "teks": "3.4(C)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the amount of money Dana used to buy the snack, the student could have added the values of the 1 dollar, 1 quarter, 1 nickel, and 2 pennies shown using dollar notation ($1.00 + $0.25 + $0.05 + $0.01 + $0.01 = $1.32). The student could have also thought about the values in terms of cents and then changed to dollar notation (100 + 25 + 5 + 1 + 1 = 132 cents = $1.32).",
+        "incorrectOptionExplanations": {
+          "A": "The student likely confused the nickel for a dime and added $0.10 instead of $0.05 ($1.00 + $0.25 + $0.10 + $0.01 + $0.01 = $1.37). The student needs to focus on distinguishing between nickels and dimes and understanding the values of the coins.",
+          "C": "The student likely confused the pennies for nickels and added $0.05 instead of $0.01 for each one ($1.00 + $0.25 + $0.05 + $0.05 + $0.05 = $1.40). The student needs to focus on distinguishing between pennies and nickels and understanding the values of the coins.",
+          "D": "The student likely omitted the nickel when determining the value of the dollar bill and coins ($1.00 + $0.25 + $0.01 + $0.01 = $1.27). The student needs to focus on accurately determining the value of a collection of bills and coins."
+        },
+        "remediationTip": "Accurately identify and sum the value of each coin and bill. Practice distinguishing between different coins, especially nickels, dimes, and pennies."
+      }
+    },
+    {
+      "id": "2019-32",
+      "itemNumber": 32,
+      "itemType": "multiple_choice",
+      "stem": "Yolanda made 11 sandwiches for a picnic. She used 2 pieces of bread for each sandwich.\nWhich strip diagram can be used to find the number of pieces of bread Yolanda used?",
+      "options": [
+        {
+          "id": "F",
+          "text": "Strip diagram F shows 11 equal sections, each labeled '11'. The total is unknown ('?')."
+        },
+        {
+          "id": "G",
+          "text": "Strip diagram G shows two sections labeled '2' and '2'. The total is unknown ('?')."
+        },
+        {
+          "id": "H",
+          "text": "Strip diagram H shows two sections labeled '2' and '11'. The total is unknown ('?')."
+        },
+        {
+          "id": "J",
+          "text": "Strip diagram J shows 11 equal sections, each labeled '2'. The total is unknown ('?')."
+        }
+      ],
+      "answerRule": {
+        "kind": "single_choice",
+        "correct": "J"
+      },
+      "metadata": {
+        "reportingCategory": 2,
+        "readinessType": "Readiness",
+        "teks": "3.5(B)",
+        "maxPoints": 1
+      },
+      "rationale": {
+        "correctExplanation": "To determine the strip diagram that can be used, the student should have understood that the strip diagram should use same-size sections to model the multiplication problem 2 × 11 = ?, where “?” represents the total number of pieces of bread Yolanda used. The strip diagram shows 11 same-size sections representing the sandwiches labeled with a 2 in each section to represent the number of pieces of bread used for each sandwich.",
+        "incorrectOptionExplanations": {
+          "F": "The student likely confused what the numbers labeled in each section represent and chose a strip diagram that represents 11 × 11 instead of 2 × 11. The student needs to focus on understanding how to use strip diagrams to represent multiplication problems.",
+          "G": "The student likely confused what the number of same-size sections represent and chose a strip diagram that represents 2 x 2 instead of 2 x 11. The student needs to focus on understanding how to use strip diagrams to represent multiplication problems.",
+          "H": "The student likely confused a strip diagram modeling addition (2 + 11) instead of multiplication (2 x 11). The student needs to focus on understanding how to use strip diagrams to represent multiplication problems."
+        },
+        "remediationTip": "A strip diagram for multiplication should show the number of groups (sandwiches) and the quantity in each group (pieces of bread), with the total as the unknown. Each section should represent the quantity per group."
+      }
+    }
+  ]
+}
