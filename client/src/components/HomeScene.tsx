@@ -161,7 +161,7 @@ export default function HomeScene({
                   <span style={{ color: '#3E2723', fontWeight: 800, fontFamily: '"Comic Sans MS", "Comic Sans", cursive', fontSize: '1.2rem', padding: '0 8px' }}>{activeUser?.replace('_', ' ').toUpperCase()}</span>
                   <button className="secondary-button" style={{ padding: '8px 16px', fontSize: '0.9rem' }} onClick={onLogout}>Log Out</button>
                 </div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#3E2723', paddingRight: '4px' }}>
+                <div style={{ fontSize: '1rem', fontWeight: 600, color: '#3E2723', paddingRight: '4px' }}>
                   Need help with the application? Email: <a href="mailto:raj.srivastava@gmail.com" style={{ color: '#0369a1', textDecoration: 'underline' }}>raj.srivastava@gmail.com</a>
                 </div>
               </div>
