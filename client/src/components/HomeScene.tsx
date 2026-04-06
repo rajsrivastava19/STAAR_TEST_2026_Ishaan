@@ -179,6 +179,9 @@ export default function HomeScene({
               <p style={{ fontSize: '1.15rem', lineHeight: 1.5, margin: 0 }}>
                 Pick a Mountain below and start exploring. Get ready to stomp through your math skills with instant feedback and step-by-step review!
               </p>
+              <p style={{ fontSize: '1.05rem', lineHeight: 1.5, margin: '12px 0 0 0', fontWeight: 600 }}>
+                Need help with the application? Email: <a href="mailto:raj.srivastava@gmail.com" style={{ color: '#0369a1', textDecoration: 'underline' }}>raj.srivastava@gmail.com</a>
+              </p>
             </div>
           </div>
 
