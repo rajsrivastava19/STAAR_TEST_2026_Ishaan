@@ -1,6 +1,6 @@
 import { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import type { AttemptState, ExamBundle, Manifest, ManifestEntry, Question } from './types';
-import { loginUser, getUser, saveScore, saveAttempt, getAllUsers, toggleLevel, type AttemptRecord } from './firebase';
+import { loginUser, getUser, saveScore, saveAttempt, getAllUsers, toggleLevel, deleteUser, type AttemptRecord } from './firebase';
 import HomeScene from './components/HomeScene';
 
 const TIER_DIMS: Record<string, { w: number; h: number }> = {
@@ -678,6 +678,33 @@ function App() {
             })));
           };
 
+          const handleDeleteUser = async (userId: string, userName: string) => {
+            if (userId === ADMIN_ID) {
+              window.alert('Cannot delete the admin account.');
+              return;
+            }
+            const confirmed = window.confirm(
+              `⚠️ Permanently delete "${userName}" (${userId})?\n\nThis will remove ALL of their data including scores, attempt history, and login credentials.\n\nThis action CANNOT be undone.`
+            );
+            if (!confirmed) return;
+            try {
+              await deleteUser(userId);
+              setAdminSelectedUser(null);
+              // Reload admin users
+              const users = await getAllUsers();
+              setAdminUsers(users.map(u => ({
+                id: u.id,
+                name: `${u.data.firstName} ${u.data.lastName}`,
+                logins: u.data.loginCount || 0,
+                scores: u.data.scores || {},
+                history: u.data.history || [],
+              })));
+            } catch (err) {
+              console.error('Failed to delete user:', err);
+              window.alert('Failed to delete user. Check console for details.');
+            }
+          };
+
           const selected = allUsers.find(u => u.id === adminSelectedUser) || null;
 
           return (
@@ -738,9 +765,20 @@ function App() {
                         const bestScore = user.history.length > 0 ? Math.max(...user.history.map(a => a.percent)) : 0;
                         return (
                           <div style={{ background: 'rgba(255,255,255,0.5)', borderRadius: '16px', padding: '24px', border: '2px solid rgba(0,0,0,0.08)' }}>
-                            <div style={{ marginBottom: '20px' }}>
-                              <h3 style={{ margin: 0, fontSize: '1.8rem', color: 'var(--earth-dark)', textTransform: 'capitalize' }}>{user.name}</h3>
-                              <p style={{ margin: '4px 0 0', fontSize: '0.85rem', color: 'var(--text-light)' }}>ID: {user.id}</p>
+                            <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px' }}>
+                              <div>
+                                <h3 style={{ margin: 0, fontSize: '1.8rem', color: 'var(--earth-dark)', textTransform: 'capitalize' }}>{user.name}</h3>
+                                <p style={{ margin: '4px 0 0', fontSize: '0.85rem', color: 'var(--text-light)' }}>ID: {user.id}</p>
+                              </div>
+                              {user.id !== ADMIN_ID && (
+                                <button
+                                  className="danger-button"
+                                  style={{ padding: '8px 16px', fontSize: '0.85rem', borderRadius: '10px', fontWeight: 800 }}
+                                  onClick={() => handleDeleteUser(user.id, user.name)}
+                                >
+                                  🗑️ Delete Account
+                                </button>
+                              )}
                             </div>
 
                             {/* Stats Row */}

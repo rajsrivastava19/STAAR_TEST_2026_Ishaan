@@ -4,6 +4,7 @@ import {
   doc,
   getDoc,
   setDoc,
+  deleteDoc,
   updateDoc,
   collection,
   getDocs,
@@ -184,4 +185,12 @@ export async function toggleLevel(
 
   await updateDoc(userRef, { scores });
   return scores;
+}
+
+/**
+ * Admin: permanently delete a user account and all associated data.
+ */
+export async function deleteUser(userId: string): Promise<void> {
+  const userRef = doc(usersCol, userId);
+  await deleteDoc(userRef);
 }
